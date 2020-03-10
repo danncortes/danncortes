@@ -1,0 +1,61 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest/globals": true
+  },
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true,
+      "modules": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "prettier",
+    "jest"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error"
+    ],
+    "react/jsx-filename-extension": 0,
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "arrow-parens": [
+      2,
+      "always"
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "no-unused-expressions": 0,
+    "react/destructuring-assignment": [
+      0,
+      "never"
+    ],
+    "react/prop-types": 1,
+    "react/require-default-props": 0,
+    "react/forbid-prop-types": 0,
+    "import/no-named-as-default": 0,
+    "react/no-unused-state": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "import/prefer-default-export": 1,
+    "no-extra-boolean-cast": 0,
+    "camelcase": 0,
+    "react/no-did-update-set-state": 0
+  },
+  "parser": "babel-eslint"
+}

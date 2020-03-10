@@ -1,0 +1,13 @@
+.section-title {
+  color: darkgoldenrod;
+  padding-bottom: 6px;
+  margin-bottom: 14px;
+}
+
+.contanct-item-title {
+  color: darkgoldenrod;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
