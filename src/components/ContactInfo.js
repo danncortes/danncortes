@@ -26,8 +26,10 @@ const renderIcon = (icons, icon) => {
 };
 
 const ContactInfoItem = (item, props) => {
-  const { title, value, label, type, icon } = item;
-  const { titles, icons, mode } = props;
+  const {
+    title, value, label, type, icon
+  } = item;
+  const { titles, icons } = props;
 
   const contactElement = () => {
     let element = (
@@ -82,8 +84,15 @@ const ContactInfoItem = (item, props) => {
   );
 };
 
+ContactInfoItem.propTypes = {
+  titles: PropTypes.bool,
+  icons: PropTypes.bool
+};
+
 export const ContactInfo = (props) => {
-  const { info, mode, titles, icons, className } = props;
+  const {
+    info, mode, titles, icons, className
+  } = props;
   const itemClass = mode === 'list' ? 'mb-4' : 'mb-1 mr-4';
   const containerClass = mode === 'inline' ? 'flex flex-wrap lg:w-5/6' : '';
 
@@ -91,7 +100,11 @@ export const ContactInfo = (props) => {
     <ul className={`${className} ${containerClass}`}>
       {info.map((item) => (
         <li key={`${item.title}`} className={`${itemClass}`}>
-          {ContactInfoItem(item, { mode, titles, icons })}
+          {ContactInfoItem(item, {
+            mode,
+            titles,
+            icons
+          })}
         </li>
       ))}
     </ul>

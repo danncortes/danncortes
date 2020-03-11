@@ -8,6 +8,10 @@
   color: darkgoldenrod;
 }
 
+.color-primary {
+  color: darkgoldenrod;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
