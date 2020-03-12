@@ -4,6 +4,7 @@ import { Avatar } from '../Avatar';
 import { ContactInfo } from '../ContactInfo';
 import resumeMock from './resume-mock';
 import TechStack from '../TechStack';
+import Tags from '../Tags';
 
 const ResumeWrapper = styled.div`
   font-family: 'Montserrat', sans-serif;
@@ -20,16 +21,37 @@ const Resume = () => (
           <Avatar mode="circle" className="mb-10" />
 
           {/* Main Tech Stack */}
-          <TechStack
-            data={resumeMock.mainTechStack}
-            className="mb-4"
-            type="pill"
-            height={10}
-            titleClasses="mb-1 text-sm text-blue-700"
-            levelClasses="mb-1"
-            bgColor="#ddd"
-            color="darkgoldenrod"
-          />
+          <div className="mb-8">
+            <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{resumeMock.mainTechStack.title}</h3>
+            <TechStack
+              data={resumeMock.mainTechStack.data}
+              height={10}
+              titleClasses="mb-1 text-sm text-blue-700"
+              levelClasses="mb-1"
+              bgColor="#ddd"
+              color="darkgoldenrod"
+            />
+          </div>
+
+          {/* Other Tools */}
+          <div className="mb-8">
+            <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{resumeMock.otherTools.title}</h3>
+            <Tags
+              tags={resumeMock.otherTools.data}
+              className="flex flex-wrap"
+              itemClass="border-gray-300 border mr-2 mb-2 text-sm text-blue-700 py-1 px-2 rounded-md"
+            />
+          </div>
+
+          {/* Other Tools */}
+          <div className="mb-8">
+            <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{resumeMock.skills.title}</h3>
+            <Tags
+              tags={resumeMock.skills.data}
+              className="flex flex-wrap"
+              itemClass="border-gray-300 border mr-2 mb-2 text-sm text-blue-700 py-1 px-2 rounded-md"
+            />
+          </div>
         </div>
 
         {/* Right Column */}
@@ -45,7 +67,7 @@ const Resume = () => (
             mode="inline"
             className="mb-8 text-xs"
           />
-          <h3 className="section-title border-b text-sm font-bold">PROFILE</h3>
+          <h3 className="section-title border-b text-sm">PROFILE</h3>
           <div className="font-medium">
             {resumeMock.profileSummary.split('\n').map((item) => (
               <p key={item}>{item}</p>

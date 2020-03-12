@@ -98,9 +98,13 @@ export default ExperienceLevel;
 
 ExperienceLevel.propTypes = {
   type: (props, propName) => {
-    if (PropTypes.string && ['pill', 'bar'].includes(props[propName])) {
+    if (PropTypes.string && ['pill', 'bar', 'dots'].includes(props[propName])) {
       return null;
     }
     throw Error('Mode Prop not Valid');
   }
 }
+
+ExperienceLevel.defaultProps = {
+  type: 'dots'
+};

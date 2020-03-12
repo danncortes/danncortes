@@ -15,43 +15,39 @@ const TechStack = ({
   color,
   levelClasses
 }) => {
-  const { title, data: stacks } = data;
 
   return (
-    <div className={className}>
-      <h3 className="color-primary mb-3 font-semibold">{title}</h3>
-      <ul>
-        {stacks.map((tech) => (
-          <Tech
-            key={tech.name}
-            className="mb-3"
-            name={tech.name}
-            experience={tech.experience}
-            titleClasses={titleClasses}
-            showExperience={showExperience}
-            experienceLevel={(
-              <ExperienceLevel
-                className={levelClasses}
-                level={tech.level}
-                scale={tech.scale}
-                bgColor={bgColor}
-                color={color}
-                height={height}
-                width={width}
-                type={type}
-              />
-            )}
-          />
-        ))}
-      </ul>
-    </div>
+    <ul className={className}>
+      {data.map((tech) => (
+        <Tech
+          key={tech.name}
+          className="mb-3"
+          name={tech.name}
+          experience={tech.experience}
+          titleClasses={titleClasses}
+          showExperience={showExperience}
+          experienceLevel={(
+            <ExperienceLevel
+              className={levelClasses}
+              level={tech.level}
+              scale={tech.scale}
+              bgColor={bgColor}
+              color={color}
+              height={height}
+              width={width}
+              type={type}
+            />
+          )}
+        />
+      ))}
+    </ul>
   );
 };
 
 export default TechStack;
 
 TechStack.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.array,
   className: PropTypes.string,
   height: PropTypes.number,
   width: PropTypes.number,
