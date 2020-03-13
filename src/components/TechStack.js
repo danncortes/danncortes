@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Tech from './Tech';
-import ExperienceLevel from './ExperienceLevel';
+import ToolLevel from './ToolLevel';
 
 const TechStack = ({
   data,
@@ -27,7 +27,7 @@ const TechStack = ({
           titleClasses={titleClasses}
           showExperience={showExperience}
           experienceLevel={(
-            <ExperienceLevel
+            <ToolLevel
               className={levelClasses}
               level={tech.level}
               scale={tech.scale}

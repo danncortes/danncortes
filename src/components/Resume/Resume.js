@@ -5,6 +5,7 @@ import { ContactInfo } from '../ContactInfo';
 import resumeMock from './resume-mock';
 import TechStack from '../TechStack';
 import Tags from '../Tags';
+import WorkExperience from '../WorkExperience';
 
 const ResumeWrapper = styled.div`
   font-family: 'Montserrat', sans-serif;
@@ -39,7 +40,7 @@ const Resume = () => (
             <Tags
               tags={resumeMock.otherTools.data}
               className="flex flex-wrap"
-              itemClass="border-gray-300 border mr-2 mb-2 text-sm text-blue-700 py-1 px-2 rounded-md"
+              itemClass="border-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-md"
             />
           </div>
 
@@ -49,7 +50,7 @@ const Resume = () => (
             <Tags
               tags={resumeMock.skills.data}
               className="flex flex-wrap"
-              itemClass="border-gray-300 border mr-2 mb-2 text-sm text-blue-700 py-1 px-2 rounded-md"
+              itemClass="border-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-md"
             />
           </div>
         </div>
@@ -60,6 +61,8 @@ const Resume = () => (
           <h1 className="text-lg mb-4" style={{ color: 'darkgoldenrod' }}>
             Senior Front-End Developer
           </h1>
+
+          {/* Contact Info */}
           <ContactInfo
             info={resumeMock.contactInfo}
             icons
@@ -67,12 +70,26 @@ const Resume = () => (
             mode="inline"
             className="mb-8 text-xs"
           />
+          
+          {/* Profile Info */}
           <h3 className="section-title border-b text-sm">PROFILE</h3>
-          <div className="font-medium">
+          <section className="font-medium mb-8">
             {resumeMock.profileSummary.split('\n').map((item) => (
               <p key={item}>{item}</p>
             ))}
-          </div>
+          </section>
+          
+          {/* Experience Info */}
+          <h3 className="section-title border-b text-sm">WORK EXPERIENCE</h3>
+          <section>
+            {resumeMock.experience.map((experience, i) => (
+              <WorkExperience
+                className="mb-10"
+                key={`${i}-${experience.companyName}`}
+                experience={experience}
+              />
+            ))}
+          </section>
         </div>
       </div>
     </div>

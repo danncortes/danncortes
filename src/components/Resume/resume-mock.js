@@ -106,5 +106,30 @@ export default {
       'UX Design',
       'UI Design'
     ]
-  }
+  },
+  experience: [
+    {
+      companyName: 'Endava',
+      companySummary: 'Endava description',
+      position: 'Engineer',
+      from: 1509494400000,
+      to: '',
+      location: 'Remote',
+      responsabilities: 'Responsability description',
+      logo: '',
+      details: 'Job details \n more job details'
+    },
+
+    {
+      companyName: 'Endava',
+      companySummary: 'Endava description',
+      position: 'Engineer',
+      from: 1509494400000,
+      to: 1555459200000,
+      location: 'Medellin - Colombia',
+      responsabilities: 'Responsability description',
+      logo: '',
+      details: 'Job details \n more job details'
+    }
+  ]
 };
