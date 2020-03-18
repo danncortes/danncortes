@@ -6,6 +6,7 @@ import resumeMock from './resume-mock';
 import TechStack from '../TechStack';
 import Tags from '../Tags';
 import WorkExperience from '../WorkExperience';
+import Course from '../Course';
 
 const ResumeWrapper = styled.div`
   font-family: 'Montserrat', sans-serif;
@@ -44,7 +45,7 @@ const Resume = () => (
             />
           </div>
 
-          {/* Other Tools */}
+          {/* Skills */}
           <div className="mb-8">
             <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{resumeMock.skills.title}</h3>
             <Tags
@@ -52,6 +53,18 @@ const Resume = () => (
               className="flex flex-wrap"
               itemClass="border-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-md"
             />
+          </div>
+
+          {/* Courses */}
+          <div className="mb-8">
+            <h3 className="color-primary mb-3 font-semibold uppercase text-sm">COURSES</h3>
+            {resumeMock.courses.map((course, i) => (
+              <Course
+                key={`${i}-${course.name}`}
+                course={course}
+                className={'text-sm text-gray-600 mb-4'}
+              />
+            ))}
           </div>
         </div>
 

@@ -109,27 +109,48 @@ export default {
   },
   experience: [
     {
-      companyName: 'Endava',
-      companySummary: 'Endava description',
-      position: 'Engineer',
-      from: 1509494400000,
+      companyName: 'Truelogic Software',
+      companySummary: 'Company description',
+      position: 'Senior Front-End Developer',
+      from: 1555459200000,
       to: '',
       location: 'Remote',
       responsabilities: 'Responsability description',
       logo: '',
-      details: 'Job details \n more job details'
+      details: 'Working for a US-based customer project using JavaScript, HTML and CSS technologies while applying the principles of Scrum \n Working on the creation and maintenance of Vue Js features for an Automated Cryo Specimen Management System App \n Used Jest for Vue Js testing',
+      projects: []
     },
 
     {
       companyName: 'Endava',
-      companySummary: 'Endava description',
-      position: 'Engineer',
+      companySummary: 'Company description',
+      position: 'Web Application Engineer',
       from: 1509494400000,
       to: 1555459200000,
       location: 'Medellin - Colombia',
       responsabilities: 'Responsability description',
       logo: '',
-      details: 'Job details \n more job details'
+      details: 'Worked on different projects for US-based customers using JavaScript, HTML and CSS technologies while applying the principles of Scrum \n Working on the creation and maintenance of React features for an e-commerce website \n Enhanced accessibility for React components \n Used Jest and Enzyme for React testing',
+      projects: [
+        {
+          name: '',
+          from: null,
+          to: null,
+          description: ''
+        }
+      ]
+    }
+  ],
+  courses: [
+    {
+      name: 'React',
+      date: 1554076800000,
+      site: 'www.udemy.com'
+    },
+    {
+      name: 'NodeJS',
+      date: 1554076800000,
+      site: 'www.udemy.com'
     }
   ]
 };
