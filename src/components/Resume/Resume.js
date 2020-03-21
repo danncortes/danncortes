@@ -7,6 +7,7 @@ import TechStack from '../TechStack';
 import Tags from '../Tags';
 import WorkExperience from '../WorkExperience';
 import Course from '../Course';
+import Education from '../Education';
 
 const ResumeWrapper = styled.div`
   font-family: 'Montserrat', sans-serif;
@@ -64,6 +65,29 @@ const Resume = () => (
                 course={course}
                 className={'text-sm text-gray-600 mb-4'}
               />
+            ))}
+          </div>
+
+          {/* Languages */}
+          <div className="mb-8">
+            <h3 className="color-primary mb-3 font-semibold uppercase text-sm">LANGUAGES</h3>
+            {resumeMock.languages.map((language, i) => (
+              <div className="mb-4" key={`${i}-${language.name}`}>
+                <p className="text-sm">{language.name}</p>
+                <p className="text-xs text-gray-600 font-medium">{language.level}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Education */}
+          <div className="mb-8">
+            <h3 className="color-primary mb-3 font-semibold uppercase text-sm">Education</h3>
+            {resumeMock.education.map((education, i) => (
+              <Education
+              key={`${i}-${education.title}`}
+              education={education}
+              className={'mb-5 text-xs font-medium text-gray-600'}
+            />
             ))}
           </div>
         </div>
