@@ -2,6 +2,7 @@
   "name": "danncortes-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://danncortes.github.io/danncortes",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
@@ -26,6 +27,8 @@
     "watch:css": "tailwind build src/styles.css -o src/index.css",
     "start": "npm run watch:css && PORT=3001 react-scripts start",
     "build": "npm run build:style && react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "git push origin master -f && gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -47,6 +50,7 @@
   "devDependencies": {
     "autoprefixer": "^9.7.4",
     "eslint-plugin-react": "^7.19.0",
+    "gh-pages": "^2.2.0",
     "postcss-cli": "^7.1.0",
     "tailwindcss": "^1.2.0"
   }
