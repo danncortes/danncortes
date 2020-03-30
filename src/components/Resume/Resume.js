@@ -36,7 +36,9 @@ const Resume = ({className}) => {
           {/* Left Column */}
           <div className="col-span-2 pr-6 border-r">
             {/* Avatar */}
-            <Avatar mode="circle" className="mb-10" />
+            <div className="mx-auto w-4/5">
+              <Avatar mode="circle" className="mb-10" />
+            </div>
 
             {/* Main Tech Stack */}
             <div className="mb-8">

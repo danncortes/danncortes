@@ -7,7 +7,7 @@ const Course = ({ course, className }) => {
   return (
     <div className={className}>
       <p className="text-blue-700">{name}</p>
-      <p className="text-xs font-medium">{dayjs(date).format('MMM-YYYY')}</p>
+      <p className="text-xs font-medium">{dayjs(date).format('YYYY')}</p>
       <a
         href={site}
         target="_blank"
