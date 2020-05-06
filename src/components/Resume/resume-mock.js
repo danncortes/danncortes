@@ -6,40 +6,61 @@ export default {
     {
       title: 'Email',
       label: 'danncortes@gmail.com',
-      value: 'danncortes@gmail.com',
+      value: 'mailto:danncortes@gmail.com',
+      link: true,
       type: 'email',
-      icon: 'envelope'
+      icon: ['fas', 'envelope']
     },
     {
       title: 'Phone',
-      label: '+41767251794',
-      value: '+41767251794',
+      label: '+41 76 725 1794',
+      value: '+41 76 725 1794',
+      link: false,
       type: 'phone',
-      icon: 'phone'
+      icon: ['fas', 'phone']
     },
     {
       title: 'Location',
       label: 'Luzern - Switzerland',
-      value: 'Luzern+Switzerland',
+      value: 'https://www.google.com.co/maps/search/Luzern+Switzerland',
+      link: true,
       type: 'map',
-      icon: 'map-marker-alt'
+      icon: ['fas', 'map-marker-alt']
     },
     {
       title: 'LinkedIn',
       label: 'linkedin.com/in/danncortes',
       value: 'http://linkedin.com/in/danncortes',
+      link: true,
       type: 'link',
-      icon: 'linkedin'
+      icon: ['fab', 'linkedin']
     },
     {
       title: 'Github',
       label: 'github.com/danncortes',
       value: 'https://github.com/danncortes',
+      link: true,
       type: 'link',
-      icon: 'github'
+      icon: ['fab', 'github']
     }
   ],
-
+  personalInfo: [
+    {
+      title: 'Marital Status',
+      value: 'Married',
+      icon: ['fas', 'ring']
+    },
+    {
+      title: 'Nationality',
+      value: 'Colombian',
+      icon: ['fas', 'globe-americas']
+    },
+    {
+      title: 'Visa',
+      value: 'Swiss B-Permit',
+      icon: ['fas', 'id-card']
+    }
+  ],
   mainTechStack: {
     title: 'Main Tech Stack',
     data: [

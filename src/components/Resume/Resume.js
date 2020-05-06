@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import PropTypes from 'prop-types'
 import styled from 'styled-components';
 import { Avatar } from '../Avatar';
-import { ContactInfo } from '../ContactInfo';
+import { PersonalData } from '../PersonalData';
 import resumeMock from './resume-mock';
 import TechStack from '../TechStack';
 import Tags from '../Tags';
@@ -11,10 +11,20 @@ import Course from '../Course';
 import Education from '../Education';
 import ReactToPrint from 'react-to-print';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faPrint
-} from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import {
+  faPrint,
+  faEnvelope,
+  faMap,
+  faMapMarkerAlt,
+  faPhone,
+  faRing,
+  faGlobeAmericas,
+  faIdCard
+} from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faEnvelope, faMap, faMapMarkerAlt, faPhone, faRing, faGlobeAmericas, faIdCard);
 
 library.add(faPrint);
 
@@ -23,7 +33,7 @@ const ResumeWrapper = styled.div`
   color: #555;
 `;
 
-const Resume = ({className}) => {
+const Resume = ({ className }) => {
   const componentRef = useRef();
   return (
     <ResumeWrapper className={`resume ${className}`}>
@@ -101,10 +111,10 @@ const Resume = ({className}) => {
               <h3 className="color-primary mb-3 font-semibold uppercase text-sm">Education</h3>
               {resumeMock.education.map((education, i) => (
                 <Education
-                key={`${i}-${education.title}`}
-                education={education}
-                className={'mb-5 text-xs font-medium text-gray-600'}
-              />
+                  key={`${i}-${education.title}`}
+                  education={education}
+                  className={'mb-5 text-xs font-medium text-gray-600'}
+                />
               ))}
             </div>
           </div>
@@ -116,15 +126,22 @@ const Resume = ({className}) => {
               Senior Front-End Developer
             </h1>
 
-            {/* Contact Info */}
-            <ContactInfo
-              info={resumeMock.contactInfo}
+            {/* Personal Data */}
+            <PersonalData
+              data={resumeMock.contactInfo}
+              icons
+              titles={false}
+              mode="inline"
+              className="text-xs"
+            />
+            <PersonalData
+              data={resumeMock.personalInfo}
               icons
               titles={false}
               mode="inline"
               className="mb-8 text-xs"
             />
-            
+
             {/* Profile Info */}
             <h3 className="section-title border-b text-sm">PROFILE</h3>
             <section className="font-medium mb-8">
@@ -132,7 +149,7 @@ const Resume = ({className}) => {
                 <p key={item}>{item}</p>
               ))}
             </section>
-            
+
             {/* Experience Info */}
             <h3 className="section-title border-b text-sm">WORK EXPERIENCE</h3>
             <section>
