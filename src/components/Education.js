@@ -14,7 +14,7 @@ const Education = ({ education, className }) => {
   return (
     <div className={className}>
       <p className="text-sm text-gray-700 font-semibold">{title}</p>
-      <p>{dayjs(from).format('MMM-YYYY')} - {dayjs(to).format('MMM-YYYY')}</p>
+      <p>{dayjs(from).format('MMM YYYY')} - {dayjs(to).format('MMM YYYY')}</p>
       <p>{place}</p>
       <p><FontAwesomeIcon icon="map-marker-alt" /> {location}</p>
     </div>

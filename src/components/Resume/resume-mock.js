@@ -1,6 +1,6 @@
 export default {
   profileSummary:
-    'Design and development of web projects using JavaScript, HTML and CSS. \n + 5 years of experience in JavaScript and Scrum Development \n + 12 years of experience in UI Design, HTML y CSS \n + 15 years of experience in Graphic Arts \n Strong organizational skills, always striving for excellence in quality \n while working under tight deadlines',
+    'Self-motivated and self-taught Front-End developer who is passionate about developing visually appealing user-centric web applications \n Strong organizational skills, always striving for excellence in quality. \n Always keeping abreast of technology trends and best practices',
 
   contactInfo: [
     {
@@ -83,6 +83,12 @@ export default {
         scale: 9
       },
       {
+        name: 'TypeScript',
+        experience: 24,
+        level: 5,
+        scale: 9
+      },
+      {
         name: 'NodeJS',
         experience: 12,
         level: 5,
@@ -111,9 +117,13 @@ export default {
       'Jest',
       'Bootstrap',
       'Google Materials',
+      'Express',
+      'MongoDB',
       'Tailwind',
       'LESS',
-      'SASS'
+      'SASS',
+      'Adobe Illustrator',
+      'Adobe Photoshop'
     ]
   },
 
@@ -121,8 +131,9 @@ export default {
     title: 'Skills',
     data: [
       'Unit Testing',
-      'Scrum Development',
+      'Scrum',
       'Agile',
+      'API development',
       'Responsive Design',
       'UX Design',
       'UI Design'
@@ -135,7 +146,7 @@ export default {
       position: 'Senior Front-End Developer',
       from: 1555459200000,
       to: '',
-      location: 'Remote',
+      location: 'Luzern - Remote',
       details: 'Working for a US-based customer project using JavaScript, VueJS, ReactJS, HTML and CSS technologies while applying agile development',
       projects: [{
         name: 'Patient Specimens Inventory Apps',
@@ -147,10 +158,10 @@ export default {
     {
       companyName: 'Endava',
       link: '',
-      position: 'Engineer Front-End Developer',
+      position: 'Senior Front-End Developer',
       from: 1509494400000,
       to: 1555459200000,
-      location: 'Medellin - Colombia',
+      location: 'Medellin, Colombia',
       details: 'Worked on different projects for US-based customers using JavaScript, HTML and CSS technologies while applying the principles of Scrum',
       projects: [
         {
@@ -167,7 +178,7 @@ export default {
       position: 'Senior Front-End Developer',
       from: 1443052800000,
       to: 1509494400000,
-      location: 'Medellin - Colombia',
+      location: 'Medellin, Colombia',
       details: 'Worked on different projects for US-based customers using JavaScript, HTML and CSS technologies while applying the principles of Scrum',
       projects: [
         {
@@ -194,7 +205,7 @@ export default {
       position: 'Senior Web Developer',
       from: 1393632000000,
       to: 1441065600000,
-      location: 'Caracas - Remote',
+      location: 'Caracas, Venezuela - Remote',
       about: 'DADA is a social network where people speak to each other through drawings that you can collect on the Ethereum blockchain',
       details: 'Developed UI and UX solutions to implement a horizontal scroll navigation for the whole website \n Designed UI features across the platform',
       projects: [],
@@ -206,7 +217,7 @@ export default {
       position: 'UI Web Developer',
       from: 1343779200000,
       to: 1393632000000,
-      location: 'Caracas',
+      location: 'Caracas, Venezuela',
       about: '',
       details: 'Designed UI solutions for multiple clients using HTML, CSS and Jquery \n Worker on designing and implementing of a insurance products website for mobile devices using PHP and Bootstrap \n Participated in the design and implementation of a web and web mobile app used to look for products based on Geolocation \n Utilized HTML, CSS, Bootstrap, Jquery, Jquery Mobile, Google Maps API',
       projects: [],
@@ -218,7 +229,7 @@ export default {
       position: 'Senior Web Designer',
       from: 1288569600000,
       to: 1343779200000,
-      location: 'Caracas',
+      location: 'Caracas, Venezuela',
       about: '',
       details: 'Developed and customized customer\'s minisites \n Set up graphic proposals and subsequently each minisite\'s layouts in HTML + CSS \n Worked on UI designs based on the corporate image guidelines for each brand or company',
       projects: [],
@@ -230,7 +241,7 @@ export default {
       position: 'Web Designer / Graphic Designer',
       from: 1280620800000,
       to: 1441065600000,
-      location: 'Caracas',
+      location: 'Caracas, Venezuela',
       about: '',
       details: 'Designed UI solutions for multiple clients using HTML, CSS and Jquery \n Worker on designing and implementing of a insurance products website for mobile devices using PHP and Bootstrap \n Participated in the design and implementation of a web and web mobile app used to look for products based on Geolocation \n Utilized HTML, CSS, Bootstrap, Jquery, Jquery Mobile, Google Maps API',
       projects: [],
@@ -302,11 +313,11 @@ export default {
   languages: [
     {
       name: 'Spanish',
-      level: 'Native proficiency'
+      level: 'Native language'
     },
     {
       name: 'English',
-      level: 'Profesional working proficiency'
+      level: 'Professional working proficiency'
     },
     {
       name: 'German',

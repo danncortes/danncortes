@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const WrapperTagItem = ({ type, value, link, children }) => {
+  const className = 'font-medium text-blue-800 break-all'
   if (link) {
     const target = (type === 'email') ? null : '_blank'
     const rel = (type === 'email') ? null : 'noopener noreferrer'
     return (
       <a
-        className="font-medium text-blue-800 break-all"
+        className={className}
         href={value}
         target={target}
         rel={rel}
@@ -17,7 +18,7 @@ const WrapperTagItem = ({ type, value, link, children }) => {
       </a>
     )
   }
-  return <p>{children}</p>
+  return <p className={className}>{children}</p>
 }
 
 WrapperTagItem.propTypes = {

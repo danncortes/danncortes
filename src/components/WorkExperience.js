@@ -19,7 +19,7 @@ const WorkExperience = ({ experience, className }) => {
           <h3 className="text-2xl">{companyName}</h3>
           <h4 className="color-primary text-base">{position}</h4>
           <p className=" text-gray-600">
-            {dayjs(from).format('MMM-YYYY')} - {to ? dayjs(to).format('MMM-YYYY') : 'Currently'}
+            {dayjs(from).format('MMM YYYY')} - {to ? dayjs(to).format('MMM YYYY') : 'Currently'}
             {<span className="px-2">|</span>}
             <span className="text-xs"><FontAwesomeIcon icon="map-marker-alt" /> {location}</span>
           </p>
