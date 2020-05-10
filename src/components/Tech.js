@@ -24,7 +24,7 @@ export const Tech = ({
       {experienceLevel}
       {experience && showExperience && (
         <p className="text-xs text-gray-600 font-medium">
-          {`${yearExperience} Years of exp.`}
+          {`${yearExperience} years of exp.`}
         </p>
       )}
     </div>

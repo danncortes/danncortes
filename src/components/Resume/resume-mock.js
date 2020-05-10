@@ -151,13 +151,13 @@ export default {
       projects: [{
         name: 'Patient Specimens Inventory Apps',
         description: 'Patient Specimens Inventory Management Web Apps for Cryogenic Storage in Clinics on VueJS and JavaScript',
-        responsabilities: 'Design, implement and maintain components and features using VueJS.\n Test features using Jest \n Gathering information, create tasks and specify requirements and acceptance criteria for new features'
+        responsabilities: 'Designing, implementing and maintaining components and features using VueJS\n Testing features using Jest \n Gathering information, creating tasks and specifying requirements and acceptance criteria for new features\nLeading technical interviews of candidates'
       }],
       logo: 'data:image/png;base64,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'
     },
     {
       companyName: 'Endava',
-      link: '',
+      link: 'https://www.endava.com/',
       position: 'Senior Front-End Developer',
       from: 1509494400000,
       to: 1555459200000,
@@ -174,7 +174,7 @@ export default {
     },
     {
       companyName: 'Velocity Partners',
-      link: '',
+      link: 'https://www.endava.com/',
       position: 'Senior Front-End Developer',
       from: 1443052800000,
       to: 1509494400000,
@@ -183,17 +183,17 @@ export default {
       projects: [
         {
           name: '3D laser printer',
-          description: 'Machine diagnostic tool for 3D laser printer using ReactJS and NodeJS',
-          responsabilities: 'Worked on the creation of a command line based feature in Node Js to run tests connected through SSH console \n Co-developed a React application which connects to a 3D laser printer through an API with the aim of displaying status info and performing diagnostic test for printer hardware components \n Used Redux for data state management \n Used Jest and Enzyme for application testing'
+          description: 'Machine diagnostic tool for 3D laser printer manufacturer using ReactJS and NodeJS',
+          responsabilities: 'Worked on the creation of a command line based feature in NodeJS to run tests connected through SSH console \n Co-developed a React application which connects to a 3D laser printer through an API with the aim of displaying status info and performing diagnostic test for printer hardware components \n Used Redux for data state management \n Used Jest and Enzyme for application testing'
         },
         {
           name: 'Application connection platform',
-          description: '',
+          description: 'On-demand multi-tenant cloud integration platform',
           responsabilities: 'Participated in the development of UI features improvements for a platform which offers connectors in order to integrate applications and data \n Created new UI features using GWT \n Developed a dashboard application using Angular 4 and SCSS connected to a Rest API in order to have full control of the data related to connectors, OS, browsers, and clients in the platform'
         },
         {
           name: 'Loyalty programs management application',
-          description: 'Loyalty programs management application for a Bank in the US developed in AngularJS',
+          description: 'Loyalty programs management application for a US Bank developed in AngularJS',
           responsabilities: 'Co-created a web application for customers and merchants to create and manage loyalty programs and track statistics \n Utilized AngularJS, Angular Materials and Charts.js'
         }
       ],
@@ -201,7 +201,7 @@ export default {
     },
     {
       companyName: 'Dada',
-      link: '',
+      link: 'https://dada.nyc/',
       position: 'Senior Web Developer',
       from: 1393632000000,
       to: 1441065600000,
@@ -219,13 +219,13 @@ export default {
       to: 1393632000000,
       location: 'Caracas, Venezuela',
       about: '',
-      details: 'Designed UI solutions for multiple clients using HTML, CSS and Jquery \n Worker on designing and implementing of a insurance products website for mobile devices using PHP and Bootstrap \n Participated in the design and implementation of a web and web mobile app used to look for products based on Geolocation \n Utilized HTML, CSS, Bootstrap, Jquery, Jquery Mobile, Google Maps API',
+      details: 'Designed UI solutions for multiple clients using HTML, CSS and Jquery \n Worked on the design and implementation of a mobile-responsive website for insurance products using PHP and Bootstrap \n Participated in the design and implementation of a web and web mobile app used to look for products based on Geolocation \n Utilized HTML, CSS, Bootstrap, Jquery, Jquery Mobile, Google Maps API',
       projects: [],
       logo: ''
     },
     {
       companyName: 'Bumeran.com',
-      link: '',
+      link: 'http://www.bumeran.com/',
       position: 'Senior Web Designer',
       from: 1288569600000,
       to: 1343779200000,
@@ -243,7 +243,7 @@ export default {
       to: 1441065600000,
       location: 'Caracas, Venezuela',
       about: '',
-      details: 'Designed UI solutions for multiple clients using HTML, CSS and Jquery \n Worker on designing and implementing of a insurance products website for mobile devices using PHP and Bootstrap \n Participated in the design and implementation of a web and web mobile app used to look for products based on Geolocation \n Utilized HTML, CSS, Bootstrap, Jquery, Jquery Mobile, Google Maps API',
+      details: 'Offered web development services to clients in the pharmaceutical industry\n Created web applications to manage loyalty programs for pharmaceutical products using PHP, HTML and CSS\n Created website portfolios for medical products',
       projects: [],
       logo: ''
     }

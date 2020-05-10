@@ -1,0 +1,7 @@
+.break-page {
+  display: none;
+}
+
+.resume-print-version .break-page{
+  display: block;
+}
