@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7035576b5f02a6ed3d3ef19bc4c51c9f",
+    "revision": "31400db86f0c1240bb1194d805930c77",
     "url": "/danncortes/index.html"
   },
   {
-    "revision": "9a40d44bb72ef2427fde",
-    "url": "/danncortes/static/css/main.1695d73c.chunk.css"
+    "revision": "c9dbcb6b26d1dd2ebedd",
+    "url": "/danncortes/static/css/main.c764635b.chunk.css"
   },
   {
-    "revision": "7155ae22bc243c09b55a",
-    "url": "/danncortes/static/js/2.2df9815b.chunk.js"
+    "revision": "049ed19515b99367a3af",
+    "url": "/danncortes/static/js/2.78f9181b.chunk.js"
   },
   {
     "revision": "98d15dd566f2d3be3c99e71112d22e2b",
-    "url": "/danncortes/static/js/2.2df9815b.chunk.js.LICENSE.txt"
+    "url": "/danncortes/static/js/2.78f9181b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9a40d44bb72ef2427fde",
-    "url": "/danncortes/static/js/main.3d6266fc.chunk.js"
+    "revision": "c9dbcb6b26d1dd2ebedd",
+    "url": "/danncortes/static/js/main.1e940994.chunk.js"
   },
   {
     "revision": "6a38a124ffe6cfd843b0",
