@@ -68,11 +68,11 @@ const WorkExperience = ({ experience, className }) => {
                 {projects.map((item) => (
                   <li key={item.name} className="mb-6">
                     <p className="font-semibold text-blue-600 mb-1">{item.name}</p>
-                    {item.description && <p className="mb-1 text-gray-600">{item.description}</p>}
+                    {item.description && <p className="mb-1">{item.description}</p>}
                     <p className="font-semibold">Responsabilities</p>
                     <ul className="list-disc pl-4 mb-4">
                       {item.responsabilities.split('\n').map((item) => (
-                        <li key={item} className="text-gray-600">{item}</li>
+                        <li key={item}>{item}</li>
                       ))}
                     </ul>
                   </li>

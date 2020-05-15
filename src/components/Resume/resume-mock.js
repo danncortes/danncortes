@@ -1,4 +1,6 @@
 export default {
+  name: 'Daniel Cortés',
+  title: 'Senior Front-End Developer',
   profileSummary:
     'Self-motivated and self-taught Front-End developer who is passionate about developing visually appealing user-centric web applications \n Strong organizational skills, always striving for excellence in quality. \n Always keeping abreast of technology trends and best practices',
 

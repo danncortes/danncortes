@@ -34,11 +34,17 @@ const ResumeWrapper = styled.div`
   color: #555;
 `;
 
+const COURSES = 'Courses';
+const LANGUAGES = 'Languages';
+const EDUCATION = 'Education';
+const PROFILE = 'Profile';
+const WORK_EXPERIENCE = "Work Experience";
+
 const ResumeContent = () => (
-  <div className="resume__cont max-w-screen-lg mx-auto bg-white px-6 py-10">
+  <div className="resume__cont max-w-screen-lg mx-auto bg-white px-6 py-4 sm:py-10">
     <div className="grid grid-cols-7 gap-8">
       {/* Left Column */}
-      <div className="col-span-2 pr-6 border-r">
+      <div className="col-span-2 pr-6 border-r hidden sm:block print:block">
         {/* Avatar */}
         <div className="mx-auto w-4/5">
           <Avatar mode="circle" className="mb-10" />
@@ -51,6 +57,7 @@ const ResumeContent = () => (
             data={resumeMock.mainTechStack.data}
             height={10}
             titleClasses="mb-1 text-sm text-blue-700"
+            stackClasses="mb-3"
             levelClasses="mb-1"
             bgColor="#ddd"
             color="darkgoldenrod"
@@ -67,6 +74,7 @@ const ResumeContent = () => (
           />
         </div>
         <div className="break-page p-4"></div>
+
         {/* Skills */}
         <div className="mb-8">
           <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{resumeMock.skills.title}</h3>
@@ -79,7 +87,7 @@ const ResumeContent = () => (
 
         {/* Courses */}
         <div className="mb-8">
-          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">COURSES</h3>
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{COURSES}</h3>
           {resumeMock.courses.map((course, i) => (
             <Course
               key={`${i}-${course.name}`}
@@ -92,7 +100,7 @@ const ResumeContent = () => (
         {/* Languages */}
         <div className="break-page p-4"></div>
         <div className="mb-8">
-          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">LANGUAGES</h3>
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{LANGUAGES}</h3>
           {resumeMock.languages.map((language, i) => (
             <div className="mb-4" key={`${i}-${language.name}`}>
               <p className="text-sm">{language.name}</p>
@@ -103,7 +111,7 @@ const ResumeContent = () => (
 
         {/* Education */}
         <div className="mb-8">
-          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">Education</h3>
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{EDUCATION}</h3>
           {resumeMock.education.map((education, i) => (
             <Education
               key={`${i}-${education.title}`}
@@ -115,11 +123,17 @@ const ResumeContent = () => (
       </div>
 
       {/* Right Column */}
-      <div className="col-span-5">
-        <h2 className="text-4xl font-medium">Daniel Cortés</h2>
+      <div className="col-span-7 sm:col-span-5 print:col-span-5">
+
+        {/* Avatar mobile */}
+        <div className="mx-auto w-2/5 sm:hidden print:hidden">
+          <Avatar mode="circle" className="mb-8" />
+        </div>
+
+        <h2 className="text-4xl font-medium">{resumeMock.name}</h2>
         <h1 className="text-lg mb-4" style={{ color: 'darkgoldenrod' }}>
-          Senior Front-End Developer
-            </h1>
+          {resumeMock.title}
+        </h1>
 
         {/* Personal Data */}
         <PersonalData
@@ -138,15 +152,50 @@ const ResumeContent = () => (
         />
 
         {/* Profile Info */}
-        <h3 className="section-title border-b text-sm">PROFILE</h3>
+        <h3 className="section-title border-b text-sm uppercase">{PROFILE}</h3>
         <ul className="font-medium mb-8 list-disc pl-4">
           {resumeMock.profileSummary.split('\n').map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
 
+        {/* Main Tech Stack - Mobile */}
+        <div className="mb-8 sm:hidden print:hidden">
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{resumeMock.mainTechStack.title}</h3>
+          <TechStack
+            data={resumeMock.mainTechStack.data}
+            height={10}
+            titleClasses="mb-1 text-sm text-blue-700"
+            className="flex flex-wrap justify-start"
+            stackClasses="mx-2 my-3"
+            levelClasses="mb-1"
+            bgColor="#ddd"
+            color="darkgoldenrod"
+          />
+        </div>
+
+        {/* Other tools - Mobile */}
+        <div className="mb-8 sm:hidden print:hidden">
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{resumeMock.otherTools.title}</h3>
+          <Tags
+            tags={resumeMock.otherTools.data}
+            className="flex flex-wrap"
+            itemClass="border-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-md"
+          />
+        </div>
+
+        {/* Skills - Mobile */}
+        <div className="mb-8 sm:hidden print:hidden">
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{resumeMock.skills.title}</h3>
+          <Tags
+            tags={resumeMock.skills.data}
+            className="flex flex-wrap"
+            itemClass="border-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-md"
+          />
+        </div>
+
         {/* Experience Info */}
-        <h3 className="section-title border-b text-sm">WORK EXPERIENCE</h3>
+        <h3 className="section-title border-b text-sm uppercase">{WORK_EXPERIENCE}</h3>
         <section>
           {resumeMock.experience.map((experience, i) => (
             <WorkExperience
@@ -156,6 +205,41 @@ const ResumeContent = () => (
             />
           ))}
         </section>
+
+        {/* Courses - Mobile */}
+        <div className="mb-8 sm:hidden print:hidden">
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{COURSES}</h3>
+          {resumeMock.courses.map((course, i) => (
+            <Course
+              key={`${i}-${course.name}`}
+              course={course}
+              className={'text-sm text-gray-600 mb-4'}
+            />
+          ))}
+        </div>
+
+        {/* Languages - Mobile */}
+        <div className="mb-8 sm:hidden print:hidden">
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{LANGUAGES}</h3>
+          {resumeMock.languages.map((language, i) => (
+            <div className="mb-4" key={`${i}-${language.name}`}>
+              <p className="text-sm">{language.name}</p>
+              <p className="text-xs text-gray-600 font-medium">{language.level}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Education - Mobile */}
+        <div className="mb-8 sm:hidden print:hidden">
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{EDUCATION}</h3>
+          {resumeMock.education.map((education, i) => (
+            <Education
+              key={`${i}-${education.title}`}
+              education={education}
+              className={'mb-5 text-xs font-medium text-gray-600'}
+            />
+          ))}
+        </div>
       </div>
     </div>
   </div>

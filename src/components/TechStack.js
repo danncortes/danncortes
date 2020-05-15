@@ -13,7 +13,8 @@ const TechStack = ({
   showExperience,
   bgColor,
   color,
-  levelClasses
+  levelClasses,
+  stackClasses
 }) => {
 
   return (
@@ -21,7 +22,7 @@ const TechStack = ({
       {data.map((tech) => (
         <Tech
           key={tech.name}
-          className="mb-3"
+          className={stackClasses}
           name={tech.name}
           experience={tech.experience}
           titleClasses={titleClasses}
@@ -56,7 +57,8 @@ TechStack.propTypes = {
   showExperience: PropTypes.bool,
   bgColor: PropTypes.string,
   color: PropTypes.string,
-  levelClasses: PropTypes.string
+  levelClasses: PropTypes.string,
+  stackClasses: PropTypes.string
 };
 
 TechStack.defaultProps = {

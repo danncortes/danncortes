@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/">
-            <Resume className="p-6 bg-gray-200 h-100" />
+            <Resume className="pt-4 sm:p-6 sm:bg-gray-200 h-100" />
           </Route>
         </Switch>
       </div>
