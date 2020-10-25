@@ -2,7 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import profileImg from '../assets/profile-pic-md.png';
 
-export const Avatar = (props) => {
+type Props = {
+  mode: string;
+  className: string;
+};
+
+export const Avatar = (props: Props) => {
   const { mode } = props;
   let imgModeClass = '';
 
@@ -25,8 +30,8 @@ export const Avatar = (props) => {
 };
 
 Avatar.propTypes = {
-  mode: (props, propName) => {
-    if (PropTypes.string && ['circle', 'rounded'].includes(props[propName])) {
+  mode: (props: Props, propName: keyof Props) => {
+    if (PropTypes.string && ['circle', 'rounded'].includes(props['mode'])) {
       return null;
     }
     throw Error('Mode Prop not Valid');

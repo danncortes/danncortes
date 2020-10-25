@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { TechT } from '../Types';
 
 export const Tech = ({
   name,
@@ -8,13 +9,14 @@ export const Tech = ({
   experienceLevel,
   titleClasses,
   showExperience
-}) => {
+}: TechT) => {
+  let yearExperience: number | null = null;
+  let yearExpStr: string = '';
 
-  let yearExperience = ''
   if (experience && showExperience) {
-    yearExperience = Math.round((experience / 12) * 10) / 10
+    yearExperience = Math.round((experience / 12) * 10) / 10;
     if (yearExperience > 1 && yearExperience % 1 > 0) {
-      yearExperience = `${Math.floor(yearExperience)}+`
+      yearExpStr = `${Math.floor(yearExperience)}+`;
     }
   }
 
@@ -24,20 +26,11 @@ export const Tech = ({
       {experienceLevel}
       {experience && showExperience && (
         <p className="text-xs text-gray-600 font-medium">
-          {`${yearExperience} years of exp.`}
+          {`${yearExpStr} years of exp.`}
         </p>
       )}
     </div>
-  )
+  );
 };
 
 export default Tech;
-
-Tech.propTypes = {
-  name: PropTypes.string,
-  experience: PropTypes.number,
-  className: PropTypes.string,
-  experienceLevel: PropTypes.object,
-  titleClasses: PropTypes.string,
-  showExperience: PropTypes.bool
-};

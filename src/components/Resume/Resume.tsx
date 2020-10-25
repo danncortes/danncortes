@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Avatar } from '../Avatar';
 import { PersonalData } from '../PersonalData';
@@ -13,7 +13,13 @@ import ReactToPrint from 'react-to-print';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import './Resume.css'
+import {
+  CourseData,
+  WorkExpData,
+  LanguageData,
+  EducationModel
+} from '../../Types';
+import './Resume.css';
 import {
   faPrint,
   faEnvelope,
@@ -25,7 +31,16 @@ import {
   faIdCard
 } from '@fortawesome/free-solid-svg-icons';
 
-library.add(fab, faEnvelope, faMap, faMapMarkerAlt, faPhone, faRing, faGlobeAmericas, faIdCard);
+library.add(
+  fab,
+  faEnvelope,
+  faMap,
+  faMapMarkerAlt,
+  faPhone,
+  faRing,
+  faGlobeAmericas,
+  faIdCard
+);
 
 library.add(faPrint);
 
@@ -38,7 +53,7 @@ const COURSES = 'Courses';
 const LANGUAGES = 'Languages';
 const EDUCATION = 'Education';
 const PROFILE = 'Profile';
-const WORK_EXPERIENCE = "Work Experience";
+const WORK_EXPERIENCE = 'Work Experience';
 
 const ResumeContent = () => (
   <div className="resume__cont max-w-screen-lg mx-auto bg-white px-6 py-4 sm:py-10">
@@ -52,7 +67,9 @@ const ResumeContent = () => (
 
         {/* Main Tech Stack */}
         <div className="mb-8">
-          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{resumeMock.mainTechStack.title}</h3>
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">
+            {resumeMock.mainTechStack.title}
+          </h3>
           <TechStack
             data={resumeMock.mainTechStack.data}
             height={10}
@@ -66,29 +83,36 @@ const ResumeContent = () => (
 
         {/* Other Tools */}
         <div className="mb-8">
-          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{resumeMock.otherTools.title}</h3>
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">
+            {resumeMock.otherTools.title}
+          </h3>
           <Tags
             tags={resumeMock.otherTools.data}
             className="flex flex-wrap"
-            itemClass="border-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-md"
+            itemClass="bg-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-md"
           />
         </div>
         <div className="break-page p-4"></div>
 
         {/* Skills */}
+        <div className="break-page p-6"></div>
         <div className="mb-8">
-          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{resumeMock.skills.title}</h3>
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">
+            {resumeMock.skills.title}
+          </h3>
           <Tags
             tags={resumeMock.skills.data}
             className="flex flex-wrap"
-            itemClass="border-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-md"
+            itemClass="bg-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-md"
           />
         </div>
 
         {/* Courses */}
         <div className="mb-8">
-          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{COURSES}</h3>
-          {resumeMock.courses.map((course, i) => (
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">
+            {COURSES}
+          </h3>
+          {resumeMock.courses.map((course: CourseData, i) => (
             <Course
               key={`${i}-${course.name}`}
               course={course}
@@ -100,19 +124,25 @@ const ResumeContent = () => (
         {/* Languages */}
         <div className="break-page p-4"></div>
         <div className="mb-8">
-          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{LANGUAGES}</h3>
-          {resumeMock.languages.map((language, i) => (
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">
+            {LANGUAGES}
+          </h3>
+          {resumeMock.languages.map((language: LanguageData, i) => (
             <div className="mb-4" key={`${i}-${language.name}`}>
               <p className="text-sm">{language.name}</p>
-              <p className="text-xs text-gray-600 font-medium">{language.level}</p>
+              <p className="text-xs text-gray-600 font-medium">
+                {language.level}
+              </p>
             </div>
           ))}
         </div>
 
         {/* Education */}
         <div className="mb-8">
-          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{EDUCATION}</h3>
-          {resumeMock.education.map((education, i) => (
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">
+            {EDUCATION}
+          </h3>
+          {resumeMock.education.map((education: EducationModel, i) => (
             <Education
               key={`${i}-${education.title}`}
               education={education}
@@ -124,7 +154,6 @@ const ResumeContent = () => (
 
       {/* Right Column */}
       <div className="col-span-7 sm:col-span-5 print:col-span-5">
-
         {/* Avatar mobile */}
         <div className="mx-auto w-2/5 sm:hidden print:hidden">
           <Avatar mode="circle" className="mb-8" />
@@ -138,14 +167,14 @@ const ResumeContent = () => (
         {/* Personal Data */}
         <PersonalData
           data={resumeMock.contactInfo}
-          icons
+          icons={true}
           titles={false}
           mode="inline"
           className="text-xs"
         />
         <PersonalData
           data={resumeMock.personalInfo}
-          icons
+          icons={true}
           titles={false}
           mode="inline"
           className="mb-6 text-xs"
@@ -161,7 +190,9 @@ const ResumeContent = () => (
 
         {/* Main Tech Stack - Mobile */}
         <div className="mb-8 sm:hidden print:hidden">
-          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{resumeMock.mainTechStack.title}</h3>
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">
+            {resumeMock.mainTechStack.title}
+          </h3>
           <TechStack
             data={resumeMock.mainTechStack.data}
             height={10}
@@ -176,7 +207,9 @@ const ResumeContent = () => (
 
         {/* Other tools - Mobile */}
         <div className="mb-8 sm:hidden print:hidden">
-          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{resumeMock.otherTools.title}</h3>
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">
+            {resumeMock.otherTools.title}
+          </h3>
           <Tags
             tags={resumeMock.otherTools.data}
             className="flex flex-wrap"
@@ -186,7 +219,9 @@ const ResumeContent = () => (
 
         {/* Skills - Mobile */}
         <div className="mb-8 sm:hidden print:hidden">
-          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{resumeMock.skills.title}</h3>
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">
+            {resumeMock.skills.title}
+          </h3>
           <Tags
             tags={resumeMock.skills.data}
             className="flex flex-wrap"
@@ -195,21 +230,27 @@ const ResumeContent = () => (
         </div>
 
         {/* Experience Info */}
-        <h3 className="section-title border-b text-sm uppercase">{WORK_EXPERIENCE}</h3>
+        <h3 className="section-title border-b text-sm uppercase">
+          {WORK_EXPERIENCE}
+        </h3>
         <section>
-          {resumeMock.experience.map((experience, i) => (
-            <WorkExperience
-              className="mb-10"
-              key={`${i}-${experience.companyName}`}
-              experience={experience}
-            />
-          ))}
+          {resumeMock.experience.length
+            ? resumeMock.experience.map((experience: WorkExpData, i) => (
+                <WorkExperience
+                  className="mb-10"
+                  key={`${i}-${experience.companyName}`}
+                  experience={experience}
+                />
+              ))
+            : ''}
         </section>
 
         {/* Courses - Mobile */}
         <div className="mb-8 sm:hidden print:hidden">
-          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{COURSES}</h3>
-          {resumeMock.courses.map((course, i) => (
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">
+            {COURSES}
+          </h3>
+          {resumeMock.courses.map((course: CourseData, i) => (
             <Course
               key={`${i}-${course.name}`}
               course={course}
@@ -220,18 +261,24 @@ const ResumeContent = () => (
 
         {/* Languages - Mobile */}
         <div className="mb-8 sm:hidden print:hidden">
-          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{LANGUAGES}</h3>
-          {resumeMock.languages.map((language, i) => (
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">
+            {LANGUAGES}
+          </h3>
+          {resumeMock.languages.map((language: LanguageData, i) => (
             <div className="mb-4" key={`${i}-${language.name}`}>
               <p className="text-sm">{language.name}</p>
-              <p className="text-xs text-gray-600 font-medium">{language.level}</p>
+              <p className="text-xs text-gray-600 font-medium">
+                {language.level}
+              </p>
             </div>
           ))}
         </div>
 
         {/* Education - Mobile */}
         <div className="mb-8 sm:hidden print:hidden">
-          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">{EDUCATION}</h3>
+          <h3 className="color-primary mb-3 font-semibold uppercase text-sm">
+            {EDUCATION}
+          </h3>
           {resumeMock.education.map((education, i) => (
             <Education
               key={`${i}-${education.title}`}
@@ -243,30 +290,35 @@ const ResumeContent = () => (
       </div>
     </div>
   </div>
-)
+);
 
+const Resume = (props: { className: string }) => {
+  const { className } = props;
+  const componentRef: any = useRef();
 
-const Resume = ({ className }) => {
-  const componentRef = useRef();
   return (
     <ResumeWrapper className={`resume ${className}`}>
       <ReactToPrint
         removeAfterPrint={true}
-        trigger={() => <p className="font-semibold text-xs text-center mb-3 cursor-pointer"><FontAwesomeIcon icon="print" /> Print or Download</p>}
+        trigger={() => (
+          <p className="font-semibold text-xs text-center mb-3 cursor-pointer">
+            <FontAwesomeIcon icon="print" /> Print or Download
+          </p>
+        )}
         content={() => componentRef.current}
       />
-      <div style={{ display: 'none' }} >
-        <div ref={componentRef} className="resume-print-version" >
+      <div style={{ display: 'none' }}>
+        <div ref={componentRef} className="resume-print-version">
           <ResumeContent />
         </div>
       </div>
       <ResumeContent />
     </ResumeWrapper>
-  )
+  );
 };
 
 export default Resume;
 
 Resume.propTypes = {
   className: PropTypes.string
-}
+};
