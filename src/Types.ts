@@ -1,5 +1,3 @@
-import { IconName, IconPrefix } from '@fortawesome/fontawesome-common-types';
-
 export type TechData = {
   name: string;
   level: number;
@@ -16,7 +14,7 @@ export type TechT = {
   showExperience?: boolean;
 };
 
-type LevelTypeUnion = 'pill' | 'bar' | 'dots';
+type LevelTypeUnion = "pill" | "bar" | "dots";
 
 export type TechStackProps = {
   data: TechData[];
@@ -110,7 +108,7 @@ export type PersonalDataProps = {
   data: ContactInfoModel[];
   icons: boolean;
   titles?: boolean;
-  mode?: 'list' | 'inline';
+  mode?: "list" | "inline";
   className?: string;
 };
 

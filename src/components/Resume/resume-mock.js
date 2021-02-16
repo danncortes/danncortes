@@ -144,7 +144,7 @@ export default {
   experience: [
     {
       companyName: 'Assentis Technologies AG',
-      nameNote: 'Smart Communication',
+      nameNote: 'Smart Communications',
       link: 'https://assentis.com/',
       position: 'Senior Front-End Developer',
       from: 1601510400000,

@@ -1,6 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const CreateFileWebpack = require('create-file-webpack');
+
 const path = require('path');
 
 const config = {
@@ -34,6 +36,11 @@ const config = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html'
+    }),
+    new CreateFileWebpack({
+      path: './build',
+      fileName: 'CNAME',
+      content: 'danncortes.com'
     })
   ],
   resolve: {

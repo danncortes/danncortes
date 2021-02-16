@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import dayjs from 'dayjs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -28,23 +28,18 @@ const WorkExperience = ({
     link
   } = experience;
 
-  const renderLogo = () => {
-    const img = (
-      <img className="w-32 h-12 object-scale-down" src={logo} alt="" />
-    );
-    if (link) {
-      return (
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          {img}
-        </a>
-      );
-    }
-    return img;
+  const renderLogo = (): ReactElement => {
+    const img = <img className="w-32 h-12 object-scale-down" src={logo} alt="" />
+    
+    return link ?
+      (<a href={link} target="_blank" rel="noopener noreferrer">
+        {img}
+      </a> ) :
+      img
   };
 
   return (
     <>
-      {/* {companyName === 'Dada' && <div className="break-page p-4"></div>} */}
       <div className={`font-medium text-sm ${className}`}>
         <div className="mb-4 flex justify-between">
           <div>
