@@ -72,6 +72,7 @@ export type ProjectData = {
 
 export type WorkExpData = {
   companyName: string;
+  nameNote?: string;
   about?: string;
   link: string;
   position: string;

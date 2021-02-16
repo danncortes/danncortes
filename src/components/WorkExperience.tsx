@@ -16,6 +16,7 @@ const WorkExperience = ({
 }) => {
   const {
     companyName,
+    nameNote,
     position,
     from,
     to,
@@ -43,11 +44,11 @@ const WorkExperience = ({
 
   return (
     <>
-      {companyName === 'Dada' && <div className="break-page p-4"></div>}
+      {/* {companyName === 'Dada' && <div className="break-page p-4"></div>} */}
       <div className={`font-medium text-sm ${className}`}>
         <div className="mb-4 flex justify-between">
           <div>
-            <h3 className="text-2xl">{companyName}</h3>
+            <h3 className="text-xl font-semibold">{companyName} {nameNote && (<span className="text-sm font-medium">({nameNote})</span>)}</h3>
             <h4 className="color-primary text-base">{position}</h4>
             <p className=" text-gray-600">
               {dayjs(from).format('MMM YYYY')} -{' '}
@@ -68,9 +69,6 @@ const WorkExperience = ({
         </ul>
         {projects.length > 0 && (
           <>
-            {companyName === 'Endava' && (
-              <div className="break-page p-12"></div>
-            )}
             <h3 className="font-semibold color-primary mb-2">
               Project{projects.length > 1 && 's'}
             </h3>
@@ -89,9 +87,15 @@ const WorkExperience = ({
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
+                  {item.name === 'Application connection platform' && (
+                    <div className="break-page p-8"></div>
+                  )}
                 </li>
               ))}
             </ul>
+            {companyName === 'Truelogic Software' && (
+              <div className="break-page p-10"></div>
+            )}
           </>
         )}
       </div>

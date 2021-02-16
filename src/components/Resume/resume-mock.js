@@ -68,43 +68,43 @@ export default {
     data: [
       {
         name: 'JavaScript',
-        experience: 72,
+        experience: 76,
         level: 8,
         scale: 9
       },
       {
         name: 'ReactJS',
-        experience: 27,
+        experience: 31,
         level: 7,
         scale: 9
       },
       {
         name: 'VueJS',
-        experience: 12,
+        experience: 18,
         level: 7,
         scale: 9
       },
       {
         name: 'TypeScript',
-        experience: 24,
-        level: 5,
+        experience: 28,
+        level: 6,
         scale: 9
       },
       {
         name: 'NodeJS',
-        experience: 12,
+        experience: 16,
         level: 5,
         scale: 9
       },
       {
         name: 'HTML',
-        experience: 156,
+        experience: 160,
         level: 8,
         scale: 9
       },
       {
         name: 'CSS',
-        experience: 156,
+        experience: 160,
         level: 8,
         scale: 9
       }
@@ -143,6 +143,20 @@ export default {
   },
   experience: [
     {
+      companyName: 'Assentis Technologies AG',
+      nameNote: 'Smart Communication',
+      link: 'https://assentis.com/',
+      position: 'Senior Front-End Developer',
+      from: 1601510400000,
+      to: null,
+      location: 'Rotkreuz - Switzerland',
+      details:
+        'Working on PDF document editor using ReactJS, React Hooks, TypeScript and pubsubJS',
+      projects: [],
+      logo:
+        'data:image/png;base64,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'
+    },
+    {
       companyName: 'Truelogic Software',
       link: 'https://www.truelogicsoftware.com/',
       position: 'Senior Front-End Developer',
@@ -150,7 +164,7 @@ export default {
       to: 1600387200000,
       location: 'Luzern - Remote',
       details:
-        'Working for a US-based customer project using JavaScript, VueJS, ReactJS, HTML and CSS technologies while applying agile development',
+        'Worked for a US-based customer project using JavaScript, VueJS, ReactJS, HTML and CSS technologies while applying agile development',
       projects: [
         {
           name: 'Patient Specimens Inventory Apps',
@@ -186,6 +200,7 @@ export default {
     },
     {
       companyName: 'Velocity Partners',
+      nameNote: 'Endava',
       link: 'https://www.endava.com/',
       position: 'Senior Front-End Developer',
       from: 1443052800000,

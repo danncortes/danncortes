@@ -89,7 +89,7 @@ const ResumeContent = () => (
           <Tags
             tags={resumeMock.otherTools.data}
             className="flex flex-wrap"
-            itemClass="bg-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-md"
+            itemClass="bg-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-sm"
           />
         </div>
         <div className="break-page p-4"></div>
@@ -103,7 +103,7 @@ const ResumeContent = () => (
           <Tags
             tags={resumeMock.skills.data}
             className="flex flex-wrap"
-            itemClass="bg-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-md"
+            itemClass="bg-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-sm"
           />
         </div>
 
@@ -213,7 +213,7 @@ const ResumeContent = () => (
           <Tags
             tags={resumeMock.otherTools.data}
             className="flex flex-wrap"
-            itemClass="border-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-md"
+            itemClass="border-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-sm"
           />
         </div>
 
@@ -225,7 +225,7 @@ const ResumeContent = () => (
           <Tags
             tags={resumeMock.skills.data}
             className="flex flex-wrap"
-            itemClass="border-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-md"
+            itemClass="border-gray-300 border mr-2 mb-2 text-sm text-blue-700 px-2 rounded-sm"
           />
         </div>
 
@@ -237,7 +237,7 @@ const ResumeContent = () => (
           {resumeMock.experience.length
             ? resumeMock.experience.map((experience: WorkExpData, i) => (
                 <WorkExperience
-                  className="mb-10"
+                  className="mb-8"
                   key={`${i}-${experience.companyName}`}
                   experience={experience}
                 />

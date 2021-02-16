@@ -14,7 +14,7 @@ const WrapperTagItem = ({
   link: ContactInfoModel['link'];
   children: React.ReactNode;
 }) => {
-  const className = 'font-medium text-blue-800 break-all';
+  const className = 'font-medium text-blue-700 break-all';
   if (link) {
     const target = type === 'email' ? '' : '_blank';
     const rel = type === 'email' ? '' : 'noopener noreferrer';
