@@ -14,14 +14,6 @@ export default {
       icon: ['fas', 'envelope']
     },
     {
-      title: 'Phone',
-      label: '+41 76 725 1794',
-      value: '+41 76 725 1794',
-      link: false,
-      type: 'phone',
-      icon: ['fas', 'phone']
-    },
-    {
       title: 'Location',
       label: 'Luzern - Switzerland',
       value: 'https://www.google.com.co/maps/search/Luzern+Switzerland',
