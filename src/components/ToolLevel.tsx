@@ -1,7 +1,7 @@
 import React from 'react';
 import { ExperienceLevelDotProps, BarExperienceLevelProps } from '../Types';
 
-const ExpecienteLevelDot = ({
+const ExperienceLevelDot = ({
   scale,
   level,
   height,
@@ -34,11 +34,11 @@ const ExpecienteLevelDot = ({
   return <div className={`flex ${className}`}>{dots}</div>;
 };
 
-ExpecienteLevelDot.defaultProps = {
+ExperienceLevelDot.defaultProps = {
   className: ''
 };
 
-const ExpecienteLevelBar = ({
+const ExperienceLevelBar = ({
   scale,
   level,
   height,
@@ -72,7 +72,7 @@ const ExpecienteLevelBar = ({
   );
 };
 
-ExpecienteLevelBar.defaultProps = {
+ExperienceLevelBar.defaultProps = {
   className: '',
   type: ''
 };
@@ -81,9 +81,9 @@ const ExperienceLevel = (props: BarExperienceLevelProps) => {
   const { type } = props;
 
   if (type === 'bar' || type === 'pill') {
-    return <ExpecienteLevelBar {...props} />;
+    return <ExperienceLevelBar {...props} />;
   }
-  return <ExpecienteLevelDot {...props} />;
+  return <ExperienceLevelDot {...props} />;
 };
 
 export default ExperienceLevel;
