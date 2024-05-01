@@ -1,17 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: sienna;
+  --primary-color-700: chocolate;
+}
+
 .section-title {
-  color: darkgoldenrod;
+  color: var(--primary-color);
   padding-bottom: 6px;
   margin-bottom: 14px;
 }
 
 .contanct-item-title {
-  color: darkgoldenrod;
+  color: var(--primary-color);
 }
 
 .color-primary {
-  color: darkgoldenrod;
+  color: var(--primary-color);
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

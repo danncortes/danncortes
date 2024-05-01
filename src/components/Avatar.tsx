@@ -31,7 +31,7 @@ export const Avatar = (props: Props) => {
 
 Avatar.propTypes = {
   mode: (props: Props, propName: keyof Props) => {
-    if (PropTypes.string && ['circle', 'rounded'].includes(props['mode'])) {
+    if (['circle', 'rounded'].includes(props['mode'])) {
       return null;
     }
     throw Error('Mode Prop not Valid');

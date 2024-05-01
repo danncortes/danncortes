@@ -66,7 +66,9 @@ const config = {
 module.exports = (env, argv) => {
   if (argv.mode === 'development') {
     config.devServer = {
-      contentBase: path.join(__dirname, 'build'),
+      static: {
+        directory: path.join(__dirname, 'build')
+      },
       compress: true,
       port: 3001
     };

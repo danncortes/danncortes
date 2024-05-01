@@ -29,13 +29,22 @@ const WorkExperience = ({
   } = experience;
 
   const renderLogo = (): ReactElement => {
-    const img = <img className="w-32 h-12 object-scale-down" src={logo} alt="" />
-    
-    return link ?
-      (<a href={link} target="_blank" rel="noopener noreferrer">
+    const img = (
+      <img
+        className="w-32 h-12 object-scale-down"
+        src={logo}
+        alt=""
+        aria-label={companyName}
+      />
+    );
+
+    return link ? (
+      <a href={link} target="_blank" rel="noopener noreferrer">
         {img}
-      </a> ) :
+      </a>
+    ) : (
       img
+    );
   };
 
   return (
@@ -43,7 +52,12 @@ const WorkExperience = ({
       <div className={`font-medium text-sm ${className}`}>
         <div className="mb-4 flex justify-between">
           <div>
-            <h3 className="text-xl font-semibold">{companyName} {nameNote && (<span className="text-sm font-medium">({nameNote})</span>)}</h3>
+            <h3 className="text-xl font-semibold">
+              {companyName}{' '}
+              {nameNote && (
+                <span className="text-sm font-medium">({nameNote})</span>
+              )}
+            </h3>
             <h4 className="color-primary text-base">{position}</h4>
             <p className=" text-gray-600">
               {dayjs(from).format('MMM YYYY')} -{' '}
@@ -70,9 +84,7 @@ const WorkExperience = ({
             <ul>
               {projects.map((item) => (
                 <li key={item.name} className="mb-6">
-                  <p className="font-semibold text-blue-600 mb-1">
-                    {item.name}
-                  </p>
+                  <p className="font-semibold text-sky-700 mb-1">{item.name}</p>
                   {item.description && (
                     <p className="mb-1">{item.description}</p>
                   )}

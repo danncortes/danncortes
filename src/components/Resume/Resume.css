@@ -2,6 +2,11 @@
   display: none;
 }
 
-.resume-print-version .break-page{
+.resume-print-version .break-page {
   display: block;
+}
+
+.resume-wrapper {
+  font-family: 'Montserrat', sans-serif;
+  color: #555;
 }

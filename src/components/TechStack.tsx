@@ -17,7 +17,7 @@ const TechStack = ({
   showExperience
 }: TechStackProps) => {
   return (
-    <ul className={className}>
+    <div className={className}>
       {data.map((tech: TechData) => (
         <Tech
           key={tech.name}
@@ -40,7 +40,7 @@ const TechStack = ({
           }
         />
       ))}
-    </ul>
+    </div>
   );
 };
 

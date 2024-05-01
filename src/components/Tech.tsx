@@ -10,24 +10,23 @@ export const Tech = ({
   titleClasses,
   showExperience
 }: TechT) => {
-  
-  const yearsExperience: string = ((): string  => {
+  const yearsExperience: string = ((): string => {
     if (experience && showExperience) {
-      const yearsExperience : number = Math.round((experience / 12) * 10) / 10;
+      const yearsExperience: number = Math.round((experience / 12) * 10) / 10;
       if (yearsExperience > 1 && yearsExperience % 1 > 0) {
         return `${Math.floor(yearsExperience)}+`;
       }
-      return `${yearsExperience}`
+      return `${yearsExperience}`;
     }
-    return ''
-  })()
+    return '';
+  })();
 
   return (
     <div className={className}>
       <h4 className={titleClasses}>{name}</h4>
       {experienceLevel}
       {experience && showExperience && (
-        <p className="text-xs text-gray-600 font-medium">
+        <p className="text-xs text-gray-500 font-medium">
           {`${yearsExperience} years of exp.`}
         </p>
       )}

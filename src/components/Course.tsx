@@ -6,14 +6,14 @@ import { CourseProps } from '../Types';
 const Course = ({ course, className }: CourseProps) => {
   const { name, date, site } = course;
   return (
-    <div className={className}>
-      <p className="text-blue-700">{name}</p>
-      <p className="text-xs font-medium">{dayjs(date).format('YYYY')}</p>
+    <div className={className + ' font-medium'}>
+      <p className="text-sky-700">{name}</p>
+      <p className="text-xs">{dayjs(date).format('YYYY')}</p>
       <a
         href={site}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-xs font-medium hover:underline"
+        className="text-xs hover:underline"
       >
         {site}
       </a>

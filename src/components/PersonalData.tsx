@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { PersonalDataProps, ContactInfoModel } from '../Types';
 
@@ -14,7 +13,7 @@ const WrapperTagItem = ({
   link: ContactInfoModel['link'];
   children: React.ReactNode;
 }) => {
-  const className = 'font-medium text-blue-700 break-all';
+  const className = 'font-medium text-sky-700 break-all';
   if (link) {
     const target = type === 'email' ? '' : '_blank';
     const rel = type === 'email' ? '' : 'noopener noreferrer';

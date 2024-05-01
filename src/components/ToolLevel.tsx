@@ -10,11 +10,12 @@ const ExpecienteLevelDot = ({
   className
 }: ExperienceLevelDotProps) => {
   const dots = [];
+
   for (let i = 0; i < scale; i++) {
     let bg = bgColor;
 
     if (i < level) {
-      bg = color;
+      bg = color ?? 'var(--primary-color)';
     }
 
     dots.push(
@@ -64,7 +65,7 @@ const ExpecienteLevelBar = ({
         style={{
           width: `${widthLevel}%`,
           height: `${height}px`,
-          backgroundColor: color
+          backgroundColor: color ?? 'var(--primary-color)'
         }}
       ></div>
     </div>

@@ -14,13 +14,13 @@ export type TechT = {
   showExperience?: boolean;
 };
 
-type LevelTypeUnion = "pill" | "bar" | "dots";
+type LevelTypeUnion = 'pill' | 'bar' | 'dots';
 
 export type TechStackProps = {
   data: TechData[];
   height: number;
   bgColor: string;
-  color: string;
+  color?: string;
   type?: LevelTypeUnion;
   width?: number;
   className?: string;
@@ -34,7 +34,7 @@ export interface ExperienceLevelDotProps {
   scale: number;
   level: number;
   height: number;
-  color: string;
+  color?: string;
   bgColor: string;
   className?: string;
 }
@@ -108,7 +108,7 @@ export type PersonalDataProps = {
   data: ContactInfoModel[];
   icons: boolean;
   titles?: boolean;
-  mode?: "list" | "inline";
+  mode?: 'list' | 'inline';
   className?: string;
 };
 
