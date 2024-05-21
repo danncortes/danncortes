@@ -4,26 +4,27 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { EducationModel } from '../Types';
 
 library.add(faMapMarkerAlt);
 
-const Education = ({
-  education,
-  className
-}: {
-  education: EducationModel;
-  className: string;
-}) => {
+export type EducationModel = {
+  title: string;
+  from: number;
+  to: number;
+  place: string;
+  location: string;
+};
+
+const Education = ({ education }: { education: EducationModel }) => {
   const { title, from, to, place, location } = education;
   return (
-    <div className={className}>
-      <p className="text-sm text-gray-700 font-semibold">{title}</p>
-      <p>
+    <div className="education">
+      <p className="education__title">{title}</p>
+      <p className="education__date">
         {dayjs(from).format('MMM YYYY')} - {dayjs(to).format('MMM YYYY')}
       </p>
-      <p>{place}</p>
-      <p>
+      <p className="education__place">{place}</p>
+      <p className="education__icon">
         <FontAwesomeIcon icon="map-marker-alt" /> {location}
       </p>
     </div>
@@ -33,6 +34,5 @@ const Education = ({
 export default Education;
 
 Education.propTypes = {
-  education: PropTypes.object,
-  className: PropTypes.string
+  education: PropTypes.object
 };

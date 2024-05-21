@@ -1,23 +1,21 @@
 import React from 'react';
-import { TagProps } from '../Types';
 
-const Tags = ({ tags, className, itemClass }: TagProps) => {
+export type TagProps = {
+  tags: string[];
+};
+
+const Tags = ({ tags }: TagProps) => {
   return (
-    <ul className={className}>
+    <ul className="tag-list flex flex-wrap">
       {tags.length
         ? tags.map((tag, i) => (
-            <li className={itemClass} key={i + tag}>
+            <li className="tag-list__tag" key={i + tag}>
               {tag}
             </li>
           ))
         : ''}
     </ul>
   );
-};
-
-Tags.defaultProps = {
-  className: '',
-  itemClass: ''
 };
 
 export default Tags;

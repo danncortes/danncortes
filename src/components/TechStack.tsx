@@ -1,40 +1,48 @@
 import React from 'react';
-import Tech from './Tech';
-import ToolLevel from './ToolLevel';
-import { TechData, TechStackProps } from '../Types';
+import Technology from './Technology';
+import ToolLevel, { LevelTypeUnion } from './ToolLevel';
+
+export type TechData = {
+  name: string;
+  level: number;
+  scale: number;
+  experience: number;
+};
+
+export type TechStackProps = {
+  data: TechData[];
+  height: number;
+  bgColor: string;
+  showExperience: boolean;
+  primaryColor?: string;
+  type?: LevelTypeUnion;
+  className?: string;
+};
 
 const TechStack = ({
   data,
   height,
   bgColor,
+  primaryColor,
   type,
-  color,
-  width,
   className,
-  titleClasses,
-  levelClasses,
-  stackClasses,
-  showExperience
+  showExperience = true
 }: TechStackProps) => {
   return (
-    <div className={className}>
+    <div className={`techstack ${className ?? ''}`}>
       {data.map((tech: TechData) => (
-        <Tech
+        <Technology
           key={tech.name}
-          className={stackClasses}
           name={tech.name}
           experience={tech.experience}
-          titleClasses={titleClasses}
           showExperience={showExperience}
           experienceLevel={
             <ToolLevel
-              className={levelClasses}
               level={tech.level}
               scale={tech.scale}
               bgColor={bgColor}
-              color={color}
+              primaryColor={primaryColor}
               height={height}
-              width={width}
               type={type}
             />
           }

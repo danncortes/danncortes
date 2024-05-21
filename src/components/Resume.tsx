@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import PropTypes from 'prop-types';
 import ReactToPrint from 'react-to-print';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -14,8 +13,7 @@ import {
   faGlobeAmericas,
   faIdCard
 } from '@fortawesome/free-solid-svg-icons';
-import './Resume.css';
-import ResumeContent from '../ResumeContent';
+import ResumeContent from './ResumeContent';
 
 library.add(
   fab,
@@ -29,16 +27,15 @@ library.add(
   faPrint
 );
 
-const Resume = (props: { className: string }) => {
-  const { className } = props;
+const Resume = () => {
   const componentRef: any = useRef();
 
   return (
-    <div className={`resume-wrapper resume ${className}`}>
+    <div className="resume-wrapper resume">
       <ReactToPrint
         removeAfterPrint={true}
         trigger={() => (
-          <p className="font-semibold text-xs text-center mb-3 cursor-pointer">
+          <p className="resume__print-tag mb-3 font-semibold">
             <FontAwesomeIcon icon="print" /> Print or Download
           </p>
         )}
@@ -55,7 +52,3 @@ const Resume = (props: { className: string }) => {
 };
 
 export default Resume;
-
-Resume.propTypes = {
-  className: PropTypes.string
-};

@@ -1,17 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { TechT } from '../Types';
 
-export const Tech = ({
+export type Technology = {
+  name: string;
+  experience: number;
+  experienceLevel: React.ReactNode;
+  showExperience: boolean;
+};
+
+export const Technology = ({
   name,
   experience,
-  className,
   experienceLevel,
-  titleClasses,
-  showExperience
-}: TechT) => {
+  showExperience = true
+}: Technology) => {
+  const showExp: boolean = Boolean(experience) && showExperience;
+
   const yearsExperience: string = ((): string => {
-    if (experience && showExperience) {
+    if (showExp) {
       const yearsExperience: number = Math.round((experience / 12) * 10) / 10;
       if (yearsExperience > 1 && yearsExperience % 1 > 0) {
         return `${Math.floor(yearsExperience)}+`;
@@ -22,11 +27,11 @@ export const Tech = ({
   })();
 
   return (
-    <div className={className}>
-      <h4 className={titleClasses}>{name}</h4>
+    <div className="technology">
+      <h4 className="technology__title">{name}</h4>
       {experienceLevel}
-      {experience && showExperience && (
-        <p className="text-xs text-gray-500 font-medium">
+      {showExp && (
+        <p className="technology__experience">
           {`${yearsExperience} years of exp.`}
         </p>
       )}
@@ -34,4 +39,4 @@ export const Tech = ({
   );
 };
 
-export default Tech;
+export default Technology;

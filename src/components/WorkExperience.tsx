@@ -3,17 +3,30 @@ import dayjs from 'dayjs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { WorkExpData } from '../Types';
 
 library.add(faMapMarkerAlt);
 
-const WorkExperience = ({
-  experience,
-  className
-}: {
-  experience: WorkExpData;
-  className: string;
-}) => {
+export type ProjectData = {
+  name: string;
+  description: string;
+  responsibilities: string;
+};
+
+export type WorkExpData = {
+  companyName: string;
+  nameNote?: string;
+  about?: string;
+  link: string;
+  position: string;
+  from: number;
+  to: number | null;
+  location: string;
+  details: string;
+  projects: ProjectData[];
+  logo: string;
+};
+
+const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
   const {
     companyName,
     nameNote,
@@ -31,7 +44,7 @@ const WorkExperience = ({
   const renderLogo = (): ReactElement => {
     const img = (
       <img
-        className="w-32 h-12 object-scale-down"
+        className="experience__company-logo"
         src={logo}
         alt=""
         aria-label={companyName}
@@ -48,65 +61,65 @@ const WorkExperience = ({
   };
 
   return (
-    <>
-      <div className={`font-medium text-sm ${className}`}>
-        <div className="mb-4 flex justify-between">
-          <div>
-            <h3 className="text-xl font-semibold">
-              {companyName}{' '}
-              {nameNote && (
-                <span className="text-sm font-medium">({nameNote})</span>
-              )}
-            </h3>
-            <h4 className="color-primary text-base">{position}</h4>
-            <p className=" text-gray-600">
-              {dayjs(from).format('MMM YYYY')} -{' '}
-              {to ? dayjs(to).format('MMM YYYY') : 'Currently'}
-              {<span className="px-2">|</span>}
-              <span className="text-xs">
-                <FontAwesomeIcon icon="map-marker-alt" /> {location}
-              </span>
-            </p>
-          </div>
-          {logo && renderLogo()}
-        </div>
-        <p className="mb-4">{about && about}</p>
-        <ul className="list-disc pl-4 mb-4">
-          {details.split('\n').map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-        {projects.length > 0 && (
-          <>
-            <h3 className="font-semibold color-primary mb-2">
-              Project{projects.length > 1 && 's'}
-            </h3>
-            <ul>
-              {projects.map((item) => (
-                <li key={item.name} className="mb-6">
-                  <p className="font-semibold text-sky-700 mb-1">{item.name}</p>
-                  {item.description && (
-                    <p className="mb-1">{item.description}</p>
-                  )}
-                  <p className="font-semibold">Responsibilities</p>
-                  <ul className="list-disc pl-4 mb-4">
-                    {item.responsibilities.split('\n').map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                  {item.name === 'Application connection platform' && (
-                    <div className="break-page p-8"></div>
-                  )}
-                </li>
-              ))}
-            </ul>
-            {companyName === 'Truelogic Software' && (
-              <div className="break-page p-10"></div>
+    <div className="experience__item">
+      <div className="experience__header flex justify-between">
+        <div>
+          <h3 className="experience__company-name">
+            {companyName}{' '}
+            {nameNote && (
+              <span className="experience__company-note">({nameNote})</span>
             )}
-          </>
-        )}
+          </h3>
+          <h4 className="experience__position color-primary">{position}</h4>
+          <p className="experience__time">
+            {dayjs(from).format('MMM YYYY')} -{' '}
+            {to ? dayjs(to).format('MMM YYYY') : 'Currently'}
+            {<span>|</span>}
+            <span className=" experience__location">
+              <FontAwesomeIcon icon="map-marker-alt" /> {location}
+            </span>
+          </p>
+        </div>
+        {logo && renderLogo()}
       </div>
-    </>
+      {about && <p className="experience__about">{about}</p>}
+      <ul className="experience__job-profile">
+        {details.split('\n').map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+      {projects.length > 0 && (
+        <>
+          <h3 className="color-primary">Project{projects.length > 1 && 's'}</h3>
+          <ul>
+            {projects.map((item) => (
+              <li key={item.name} className="experience__project">
+                <p className="experience__project-name color-secondary">
+                  {item.name}
+                </p>
+                {item.description && (
+                  <p className="experience__project-description">
+                    {item.description}
+                  </p>
+                )}
+                <p className="font-semibold">Responsibilities</p>
+                <ul className="experience__project-responsibilities">
+                  {item.responsibilities.split('\n').map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+                {item.name === 'Application connection platform' && (
+                  <div className="break-page"></div>
+                )}
+              </li>
+            ))}
+          </ul>
+          {companyName === 'Truelogic Software' && (
+            <div className="break-page"></div>
+          )}
+        </>
+      )}
+    </div>
   );
 };
 

@@ -1,37 +1,50 @@
 import React from 'react';
-import { ExperienceLevelDotProps, BarExperienceLevelProps } from '../Types';
+
+export type LevelTypeUnion = 'pill' | 'bar' | 'dots';
+
+export interface ExperienceLevelDotProps {
+  scale: number;
+  level: number;
+  height: number;
+  bgColor: string;
+  primaryColor?: string;
+}
+
+export interface BarExperienceLevelProps extends ExperienceLevelDotProps {
+  type?: LevelTypeUnion;
+  width?: number;
+}
 
 const ExperienceLevelDot = ({
   scale,
   level,
   height,
-  color,
-  bgColor,
-  className
+  primaryColor,
+  bgColor
 }: ExperienceLevelDotProps) => {
   const dots = [];
 
   for (let i = 0; i < scale; i++) {
-    let bg = bgColor;
+    let backgroundColor = primaryColor ?? 'var(--primary-color)';
 
-    if (i < level) {
-      bg = color ?? 'var(--primary-color)';
+    if (i > level) {
+      backgroundColor = bgColor;
     }
 
     dots.push(
       <div
         key={i}
-        className="rounded-full mr-1 border-solid"
+        className="tool-level__dot rounded-full"
         style={{
           width: `${height}px`,
           height: `${height}px`,
-          backgroundColor: bg
+          backgroundColor
         }}
       />
     );
   }
 
-  return <div className={`flex ${className}`}>{dots}</div>;
+  return <div className="flex">{dots}</div>;
 };
 
 ExperienceLevelDot.defaultProps = {
@@ -43,9 +56,8 @@ const ExperienceLevelBar = ({
   level,
   height,
   width,
-  color,
+  primaryColor,
   bgColor,
-  className,
   type
 }: BarExperienceLevelProps) => {
   const widthLevel = (level * 100) / scale;
@@ -53,7 +65,7 @@ const ExperienceLevelBar = ({
 
   return (
     <div
-      className={`flex ${className} ${type === 'pill' && 'rounded-full'}`}
+      className={`flex ${type === 'pill' && 'rounded-full'}`}
       style={{
         width: widthContainer,
         height: `${height}px`,
@@ -65,7 +77,7 @@ const ExperienceLevelBar = ({
         style={{
           width: `${widthLevel}%`,
           height: `${height}px`,
-          backgroundColor: color ?? 'var(--primary-color)'
+          backgroundColor: primaryColor ?? 'var(--primary-color)'
         }}
       ></div>
     </div>

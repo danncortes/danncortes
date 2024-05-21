@@ -1,6 +1,22 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { PersonalDataProps, ContactInfoModel } from '../Types';
+
+export type PersonalDataProps = {
+  data: ContactInfoModel[];
+  icons: boolean;
+  titles?: boolean;
+  mode?: 'list' | 'inline';
+  className?: string;
+};
+
+export type ContactInfoModel = {
+  title: string;
+  value: string;
+  icon: any;
+  label?: string;
+  link?: boolean;
+  type?: string;
+};
 
 const WrapperTagItem = ({
   type,
@@ -13,7 +29,8 @@ const WrapperTagItem = ({
   link: ContactInfoModel['link'];
   children: React.ReactNode;
 }) => {
-  const className = 'font-medium text-sky-700 break-all';
+  const className = 'personal-data__content';
+
   if (link) {
     const target = type === 'email' ? '' : '_blank';
     const rel = type === 'email' ? '' : 'noopener noreferrer';
@@ -37,7 +54,9 @@ const PersonalDataItem = (
       {titles && <h4 className="contanct-item-title">{title}</h4>}
       {
         <WrapperTagItem type={type} value={value} link={link}>
-          {icons && <FontAwesomeIcon className="mr-1" icon={icon} />}
+          {icons && (
+            <FontAwesomeIcon className="personal-data__icon" icon={icon} />
+          )}
           {link ? label : value}
         </WrapperTagItem>
       }
@@ -47,13 +66,12 @@ const PersonalDataItem = (
 
 export const PersonalData = (props: PersonalDataProps) => {
   const { data, mode, titles, icons, className } = props;
-  const itemClass = mode === 'list' ? 'mb-4' : 'mb-1 mr-4';
-  const containerClass = mode === 'inline' ? 'flex flex-wrap lg:w-5/6' : '';
+  const containerClass = mode === 'inline' ? 'flex flex-wrap' : '';
 
   return (
-    <ul className={`${className} ${containerClass}`}>
+    <ul className={`personal-data ${className} ${containerClass}`}>
       {data.map((item: ContactInfoModel) => (
-        <li key={`${item.title}`} className={`${itemClass}`}>
+        <li key={`${item.title}`} className="personal-data__item">
           {PersonalDataItem(item, {
             titles,
             icons

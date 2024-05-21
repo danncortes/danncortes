@@ -1,6 +1,5 @@
 import React from 'react';
-import Resume from './components/Resume/Resume';
-import './App.css';
+import Resume from './components/Resume';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -9,7 +8,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/">
-            <Resume className="pt-4 sm:p-6 sm:bg-gray-200 h-100" />
+            <Resume />
           </Route>
         </Switch>
       </div>

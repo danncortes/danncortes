@@ -2,6 +2,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CreateFileWebpack = require('create-file-webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const path = require('path');
 
@@ -17,7 +19,7 @@ const config = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
@@ -41,7 +43,8 @@ const config = {
       path: './build',
       fileName: 'CNAME',
       content: 'danncortes.com'
-    })
+    }),
+    new MiniCssExtractPlugin()
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
@@ -59,7 +62,13 @@ const config = {
           chunks: 'all'
         }
       }
-    }
+    },
+    minimize: true,
+    minimizer: [
+      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+      // `...`,
+      new CssMinimizerPlugin()
+    ]
   }
 };
 
