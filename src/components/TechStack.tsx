@@ -14,6 +14,7 @@ export type TechStackProps = {
   height: number;
   bgColor: string;
   showExperience: boolean;
+  showLevel: boolean;
   primaryColor?: string;
   type?: LevelTypeUnion;
   className?: string;
@@ -26,7 +27,8 @@ const TechStack = ({
   primaryColor,
   type,
   className,
-  showExperience = true
+  showExperience,
+  showLevel
 }: TechStackProps) => {
   return (
     <div className={`techstack ${className ?? ''}`}>
@@ -37,14 +39,16 @@ const TechStack = ({
           experience={tech.experience}
           showExperience={showExperience}
           experienceLevel={
-            <ToolLevel
-              level={tech.level}
-              scale={tech.scale}
-              bgColor={bgColor}
-              primaryColor={primaryColor}
-              height={height}
-              type={type}
-            />
+            showLevel && (
+              <ToolLevel
+                level={tech.level}
+                scale={tech.scale}
+                bgColor={bgColor}
+                primaryColor={primaryColor}
+                height={height}
+                type={type}
+              />
+            )
           }
         />
       ))}
@@ -55,5 +59,6 @@ const TechStack = ({
 export default TechStack;
 
 TechStack.defaultProps = {
-  showExperience: true
+  showExperience: true,
+  showLevel: false
 };

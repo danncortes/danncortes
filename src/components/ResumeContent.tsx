@@ -6,7 +6,7 @@ import PersonalData from './PersonalData';
 import Tags from './Tags';
 import TechStack from './TechStack';
 import WorkExperience from './WorkExperience';
-import resumeData from '../data';
+import resumeData from '../data.json';
 import ComponentTemplate from './ComponentTemplate';
 
 export type LanguageData = {
@@ -31,6 +31,7 @@ const ResumeContent = () => (
             height={10}
             bgColor="#ddd"
             primaryColor="peru"
+            showLevel={resumeData.mainTechStack.showLevel}
           />
         </ComponentTemplate>
 
@@ -118,6 +119,7 @@ const ResumeContent = () => (
             height={10}
             bgColor="#ddd"
             primaryColor="peru"
+            showLevel={resumeData.mainTechStack.showLevel}
           />
         </ComponentTemplate>
 

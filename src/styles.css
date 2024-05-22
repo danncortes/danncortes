@@ -166,7 +166,7 @@ html {
 
 /* Technology */
 .technology__title {
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--secondary-color);
   margin-bottom: 0.15rem;
@@ -176,7 +176,7 @@ html {
   font-size: 0.75rem;
   font-weight: 500;
   color: #6b7280;
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
 }
 
 /* Tool-level */

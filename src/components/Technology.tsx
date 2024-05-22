@@ -11,7 +11,7 @@ export const Technology = ({
   name,
   experience,
   experienceLevel,
-  showExperience = true
+  showExperience
 }: Technology) => {
   const showExp: boolean = Boolean(experience) && showExperience;
 
