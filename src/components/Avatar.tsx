@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import profileImg from '../assets/profile-pic-md.png';
+import profileImg from '../assets/profile-pic.png';
 
 type Props = {
   mode: string;
@@ -23,9 +23,11 @@ export const Avatar = (props: Props) => {
   }
 
   return (
-    <div className={`avatar ${props.className}`}>
-      <img className={imgModeClass} src={profileImg} alt="Profile Pic" />
-    </div>
+    profileImg && (
+      <div className={`avatar ${props.className}`}>
+        <img className={imgModeClass} src={profileImg} alt="Profile Pic" />
+      </div>
+    )
   );
 };
 

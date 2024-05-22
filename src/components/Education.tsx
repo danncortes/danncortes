@@ -2,7 +2,7 @@ import React from 'react';
 import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 library.add(faMapMarkerAlt);

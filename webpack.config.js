@@ -9,7 +9,9 @@ const path = require('path');
 
 const config = {
   name: 'react-base-ts-webpack',
-  entry: './src/index.tsx',
+  entry: {
+    app: './src/index.tsx'
+  },
   module: {
     rules: [
       {
@@ -51,23 +53,30 @@ const config = {
   },
   output: {
     filename: '[name].bundle.js',
+    chunkFilename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'build')
   },
   optimization: {
+    usedExports: true,
     splitChunks: {
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
           name: 'vendor',
           chunks: 'all'
+        },
+        'font-awesome': {
+          test: /[\\/]node_modules[\\/](@fortawesome)[\\/]/,
+          name: 'font-awesome',
+          chunks: 'all'
         }
       }
     },
-    minimize: true,
     minimizer: [
       // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
       // `...`,
-      new CssMinimizerPlugin()
+      new CssMinimizerPlugin(),
+      '...'
     ]
   }
 };
@@ -83,6 +92,7 @@ module.exports = (env, argv) => {
     };
     config.devtool = 'source-map';
     config.plugins.push(new BundleAnalyzerPlugin({ analyzerPort: 8889 }));
+    config.optimization.usedExports = true;
   }
   return config;
 };
