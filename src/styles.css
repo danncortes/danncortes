@@ -4,6 +4,7 @@
 html {
   font-size: 16px;
   line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
 }
 
 :root {
@@ -84,6 +85,7 @@ html {
 /* Resume */
 .resume-print-version .break-page {
   display: block;
+  padding: 1rem;
 }
 
 .resume__print-tag {
@@ -94,7 +96,6 @@ html {
 }
 
 .resume-wrapper {
-  font-family: 'Montserrat', sans-serif;
   color: #555;
   padding: 1.5rem 0 0 0;
   background-color: transparent;
@@ -214,6 +215,22 @@ html {
 .course__site {
   font-size: 0.75rem;
   color: #6b7280;
+}
+
+.resume-print-version .courses {
+  display: block;
+}
+
+.resume-print-version .course {
+  display: flex;
+  align-items: start;
+  padding: 0;
+  margin-bottom: 0.4rem;
+}
+
+.resume-print-version .course__name,
+.resume-print-version .course__date {
+  margin-right: 0.5rem;
 }
 
 /* Language */
@@ -367,12 +384,10 @@ html {
   }
 
   .courses {
-    gap: 0.7rem;
+    gap: 0.8rem;
   }
 
   .course {
-    border: 1px solid #e2e8f0;
-    border-radius: 0.2rem;
     padding: 0.6rem;
   }
 }
@@ -417,7 +432,7 @@ html {
   }
 
   .personal-data {
-    width: 83%;
+    width: 80%;
   }
 }
 

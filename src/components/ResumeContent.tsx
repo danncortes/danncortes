@@ -138,6 +138,9 @@ const ResumeContent = () => (
         >
           <Tags tags={resumeData.skills.data} />
         </ComponentTemplate>
+        <div className="break-page"></div>
+        <div className="break-page"></div>
+        <div className="break-page"></div>
 
         {/* Experience Info */}
         <ComponentTemplate title="Work Experience">

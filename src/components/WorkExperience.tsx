@@ -62,6 +62,15 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
 
   return (
     <div className="experience__item">
+      {companyName === 'Dada' && (
+        <>
+          <div className="break-page"></div>
+          <div className="break-page"></div>
+          <div className="break-page"></div>
+          <div className="break-page"></div>
+          <div className="break-page"></div>
+        </>
+      )}
       <div className="experience__header flex justify-between">
         <div>
           <h3 className="experience__company-name">
@@ -88,6 +97,9 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
           <li key={item}>{item}</li>
         ))}
       </ul>
+
+      {companyName === 'Endava' && <div className="break-page"></div>}
+
       {projects.length > 0 && (
         <>
           <h3 className="color-primary">Project{projects.length > 1 && 's'}</h3>
@@ -108,15 +120,9 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
-                {item.name === 'Application connection platform' && (
-                  <div className="break-page"></div>
-                )}
               </li>
             ))}
           </ul>
-          {companyName === 'Truelogic Software' && (
-            <div className="break-page"></div>
-          )}
         </>
       )}
     </div>

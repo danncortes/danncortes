@@ -10,24 +10,40 @@ export type CourseData = {
 
 export type CourseProps = {
   course: CourseData;
+  showYear: boolean;
 };
 
-const Course = ({ course }: CourseProps) => {
+const Course = ({ course, showYear }: CourseProps) => {
   const { name, date, site } = course;
   return (
-    <div className="course">
-      <p className="course__name">{name}</p>
-      <p className="course__date">{dayjs(date).format('YYYY')}</p>
-      <a
-        href={site}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="course__site"
-      >
-        {site}
-      </a>
-    </div>
+    <>
+      <div className="course">
+        <p className="course__name">{name}</p>
+        {showYear && (
+          <p className="course__date">{dayjs(date).format('YYYY')}</p>
+        )}
+        <a
+          href={site}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="course__site"
+        >
+          {site}
+        </a>
+      </div>
+      {name ===
+        'The Complete JavaScript Course: Build a Real-World Project' && (
+        <>
+          <div className="break-page"></div>
+          <div className="break-page"></div>
+        </>
+      )}
+    </>
   );
 };
 
 export default Course;
+
+Course.defaultProps = {
+  showYear: false
+};

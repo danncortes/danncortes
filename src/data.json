@@ -20,6 +20,14 @@
       "icon": ["fas", "map-marker-alt"]
     },
     {
+      "title": "Phone",
+      "label": "+41 76 725 1794",
+      "value": "+41 76 725 1794",
+      "link": false,
+      "type": "phone",
+      "icon": ["fas", "phone"]
+    },
+    {
       "title": "LinkedIn",
       "label": "linkedin.com/in/danncortes",
       "value": "http://linkedin.com/in/danncortes",
