@@ -53,7 +53,6 @@ const config = {
   },
   output: {
     filename: '[name].bundle.js',
-    chunkFilename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'build')
   },
   optimization: {
@@ -61,13 +60,8 @@ const config = {
     splitChunks: {
       cacheGroups: {
         vendor: {
-          test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+          test: /[\\/]node_modules[\\/]/,
           name: 'vendor',
-          chunks: 'all'
-        },
-        'font-awesome': {
-          test: /[\\/]node_modules[\\/](@fortawesome)[\\/]/,
-          name: 'font-awesome',
           chunks: 'all'
         }
       }
