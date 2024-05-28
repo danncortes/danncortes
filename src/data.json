@@ -245,6 +245,24 @@
   ],
   "courses": [
     {
+      "name": "OWASP Top 10: The Big Picture",
+      "date": 1698796800000,
+      "note": "",
+      "site": "http://www.pluralsight.com"
+    },
+    {
+      "name": "Angular 4 Security Using JSON Web Tokens",
+      "date": 1698796800000,
+      "note": "",
+      "site": "http://www.pluralsight.com"
+    },
+    {
+      "name": "OWASP Top 10: What's New",
+      "date": 1667260800000,
+      "note": "",
+      "site": "http://www.pluralsight.com"
+    },
+    {
       "name": "NodeJS",
       "date": 1583020800000,
       "note": "",

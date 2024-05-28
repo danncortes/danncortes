@@ -31,8 +31,7 @@ const Course = ({ course, showYear }: CourseProps) => {
           {site}
         </a>
       </div>
-      {name ===
-        'The Complete JavaScript Course: Build a Real-World Project' && (
+      {name === 'Git Complete: The definitive, step-by-step guide to Git' && (
         <>
           <div className="break-page"></div>
           <div className="break-page"></div>

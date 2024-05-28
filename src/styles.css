@@ -233,6 +233,10 @@ html {
   margin-right: 0.5rem;
 }
 
+.resume-print-version .course__site {
+  margin-top: 0.1rem;
+}
+
 /* Language */
 
 .language {
