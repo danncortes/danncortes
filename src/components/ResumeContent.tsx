@@ -19,11 +19,11 @@ const ResumeContent = () => (
     <div className="resume-content">
       <div className="resume-content__left">
         {/* Avatar */}
-        <Avatar mode="circle" className="hidden md-show" />
+        <Avatar mode="circle" className="avatar--left" />
 
         {/* Main Tech Stack */}
         <ComponentTemplate
-          className="hidden md-show md-no-underline"
+          className="techstack-component--left md-no-underline"
           title={resumeData.mainTechStack.title}
         >
           <TechStack
@@ -37,7 +37,7 @@ const ResumeContent = () => (
 
         {/* Other Tools */}
         <ComponentTemplate
-          className="hidden md-show md-no-underline"
+          className="other-tools-component--left md-no-underline"
           title={resumeData.otherTools.title}
         >
           <Tags tags={resumeData.otherTools.data} />
@@ -45,7 +45,7 @@ const ResumeContent = () => (
 
         {/* Skills */}
         <ComponentTemplate
-          className="hidden md-show md-no-underline"
+          className="skills-component--left md-no-underline"
           title={resumeData.skills.title}
         >
           <Tags tags={resumeData.skills.data} />
@@ -79,7 +79,7 @@ const ResumeContent = () => (
       </div>
 
       <div className="resume-content__right">
-        <Avatar mode="circle" className="md-hidden" />
+        <Avatar mode="circle" className="avatar--right" />
 
         <h1 className="resume-name">{resumeData.name}</h1>
         <h2 className="resume-title color-primary">{resumeData.title}</h2>
@@ -111,7 +111,7 @@ const ResumeContent = () => (
 
         {/* Main Tech Stack */}
         <ComponentTemplate
-          className="md-hidden"
+          className="techstack-component--right"
           title={resumeData.mainTechStack.title}
         >
           <TechStack
@@ -125,7 +125,7 @@ const ResumeContent = () => (
 
         {/* Other Tools */}
         <ComponentTemplate
-          className="md-hidden"
+          className="other-tools-component--right"
           title={resumeData.otherTools.title}
         >
           <Tags tags={resumeData.otherTools.data} />
@@ -133,14 +133,11 @@ const ResumeContent = () => (
 
         {/* Skills */}
         <ComponentTemplate
-          className="md-hidden"
+          className="other-tools-component--right"
           title={resumeData.skills.title}
         >
           <Tags tags={resumeData.skills.data} />
         </ComponentTemplate>
-        <div className="break-page"></div>
-        <div className="break-page"></div>
-        <div className="break-page"></div>
 
         {/* Experience Info */}
         <ComponentTemplate title="Work Experience">

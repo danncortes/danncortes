@@ -62,7 +62,7 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
 
   return (
     <div className="experience__item">
-      {companyName === 'Dada' && (
+      {['Endava', 'Ries Inc.'].includes(companyName) && (
         <>
           <div className="break-page"></div>
           <div className="break-page"></div>
@@ -97,8 +97,6 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
           <li key={item}>{item}</li>
         ))}
       </ul>
-
-      {companyName === 'Endava' && <div className="break-page"></div>}
 
       {projects.length > 0 && (
         <>

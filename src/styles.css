@@ -14,10 +14,6 @@ html {
 }
 
 /* Helpers */
-.hidden {
-  display: none;
-}
-
 .color-primary {
   color: var(--primary-color);
 }
@@ -81,12 +77,6 @@ html {
   margin-bottom: 2rem;
 }
 /* End Helpers */
-
-/* Resume */
-.resume-print-version .break-page {
-  display: block;
-  padding: 1rem;
-}
 
 .resume__print-tag {
   font-size: 0.75rem;
@@ -158,7 +148,22 @@ html {
   border-bottom: 1px solid #eee;
 }
 
-/* Tech-stack */
+.avatar {
+  width: min(80%, 180px);
+  margin: 0 auto 2rem;
+}
+
+.avatar--right {
+  display: none;
+}
+
+/* Techstack */
+.techstack-component--right,
+.other-tools-component--right,
+.skills-component-right {
+  display: none;
+}
+
 .techstack {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -215,26 +220,6 @@ html {
 .course__site {
   font-size: 0.75rem;
   color: #6b7280;
-}
-
-.resume-print-version .courses {
-  display: block;
-}
-
-.resume-print-version .course {
-  display: flex;
-  align-items: start;
-  padding: 0;
-  margin-bottom: 0.4rem;
-}
-
-.resume-print-version .course__name,
-.resume-print-version .course__date {
-  margin-right: 0.5rem;
-}
-
-.resume-print-version .course__site {
-  margin-top: 0.1rem;
 }
 
 /* Language */
@@ -372,7 +357,27 @@ html {
   margin-bottom: 0.25rem;
 }
 
-@media all and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
+  .techstack-component--left,
+  .other-tools-component--left,
+  .skills-component--left {
+    display: none;
+  }
+
+  .techstack-component--right,
+  .other-tools-component--right,
+  .skills-component--right {
+    display: block;
+  }
+
+  .avatar--left {
+    display: none;
+  }
+
+  .avatar--right {
+    display: block;
+  }
+
   .resume-content {
     flex-flow: column;
   }
@@ -396,25 +401,10 @@ html {
   }
 }
 
-@media (min-width: 640px) {
-  .sm-show {
-    display: block;
-  }
-
-  .sm-hidden {
-    display: none;
-  }
+@media only screen and (min-width: 640px) {
 }
 
-@media (min-width: 768px) {
-  .md-show {
-    display: block;
-  }
-
-  .md-hidden {
-    display: none;
-  }
-
+@media only screen and (min-width: 768px) {
   .resume-wrapper {
     background-color: #e2e8f0;
     padding: 1.5rem;
@@ -426,41 +416,25 @@ html {
   }
 }
 
-@media (min-width: 1024px) {
-  .lg-show {
-    display: block;
-  }
-
-  .lg-hidden {
-    display: none;
-  }
-
+@media only screen and (min-width: 1024px) {
   .personal-data {
     width: 80%;
   }
 }
 
-@media (min-width: 1280px) {
-  .xl-show {
-    display: block;
-  }
-
-  .xl-hidden {
-    display: none;
-  }
+@media only screen and (min-width: 1280px) {
 }
 
-@media (min-width: 1536px) {
-  .xxl-show {
-    display: block;
-  }
-
-  .xxl-hidden {
-    display: none;
-  }
+@media only screen and (min-width: 1536px) {
 }
 
-.avatar {
-  width: min(80%, 180px);
-  margin: 0 auto 2rem;
+@media print {
+  .break-page {
+    display: block;
+    padding-bottom: 1rem;
+  }
+
+  html {
+    font-size: 12px;
+  }
 }

@@ -31,8 +31,9 @@ const Course = ({ course, showYear }: CourseProps) => {
           {site}
         </a>
       </div>
-      {name === 'Git Complete: The definitive, step-by-step guide to Git' && (
+      {name === 'Angular 4 Security Using JSON Web Tokens' && (
         <>
+          <div className="break-page"></div>
           <div className="break-page"></div>
           <div className="break-page"></div>
         </>
