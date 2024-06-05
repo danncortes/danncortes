@@ -11,6 +11,8 @@ html {
   --primary-color: sienna;
   --primary-color-700: chocolate;
   --secondary-color: #0369a1;
+  --column-gap: 2rem;
+  --border-column-color: #e5e5e5;
 }
 
 /* Helpers */
@@ -110,13 +112,13 @@ html {
 
 .resume-content {
   display: flex;
-  gap: 2rem;
+  gap: var(--column-gap);
 }
 
 .resume-content__left {
   flex: 2 0 0;
-  padding-right: 1rem;
-  border-right: 1px solid #eee;
+  padding-right: 1.5rem;
+  border-right: 1px solid var(--border-column-color);
 }
 
 .resume-content__right {
@@ -166,8 +168,12 @@ html {
 
 .techstack {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   row-gap: 0.8rem;
+}
+
+.techstack-level {
+  margin: 0.2rem 0;
 }
 
 /* Technology */
@@ -175,14 +181,12 @@ html {
   font-size: 1rem;
   font-weight: 500;
   color: var(--secondary-color);
-  margin-bottom: 0.15rem;
 }
 
 .technology__experience {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 500;
   color: #6b7280;
-  margin-top: 0.1rem;
 }
 
 /* Tool-level */
@@ -289,6 +293,30 @@ html {
   margin-bottom: 2rem;
   font-weight: 500;
   font-size: 0.875rem;
+  position: relative;
+}
+
+.experience__item::before {
+  content: '';
+  border-top: 1px solid var(--border-column-color);
+  display: block;
+  position: absolute;
+  width: calc(var(--column-gap) - 0.8rem);
+  left: calc(var(--column-gap) * -1);
+  top: 0.9rem;
+}
+
+.experience__item::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 1000%;
+  background-color: var(--border-column-color);
+  left: calc(var(--column-gap) * -1);
+  top: 0.9rem;
+  transform: translate(-50%, -50%);
 }
 
 .experience__header {
@@ -429,12 +457,23 @@ html {
 }
 
 @media print {
+  html {
+    font-size: 13px;
+  }
+
   .break-page {
     display: block;
     padding-bottom: 1rem;
   }
 
-  html {
-    font-size: 12px;
+  .techstack {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .tag-list__tag {
+    padding: 0.08rem 0.4rem;
+    background-color: unset;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.3rem;
   }
 }

@@ -61,8 +61,8 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
   };
 
   return (
-    <div className="experience__item">
-      {['Endava', 'Ries Inc.'].includes(companyName) && (
+    <>
+      {['Dada'].includes(companyName) && (
         <>
           <div className="break-page"></div>
           <div className="break-page"></div>
@@ -71,59 +71,72 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
           <div className="break-page"></div>
         </>
       )}
-      <div className="experience__header flex justify-between">
-        <div>
-          <h3 className="experience__company-name">
-            {companyName}{' '}
-            {nameNote && (
-              <span className="experience__company-note">({nameNote})</span>
-            )}
-          </h3>
-          <h4 className="experience__position color-primary">{position}</h4>
-          <p className="experience__time">
-            {dayjs(from).format('MMM YYYY')} -{' '}
-            {to ? dayjs(to).format('MMM YYYY') : 'Currently'}
-            {<span>|</span>}
-            <span className=" experience__location">
-              <FontAwesomeIcon icon="map-marker-alt" /> {location}
-            </span>
-          </p>
+      <div className="experience__item">
+        <div className="experience__header flex justify-between">
+          <div>
+            <h3 className="experience__company-name">
+              {companyName}{' '}
+              {nameNote && (
+                <span className="experience__company-note">({nameNote})</span>
+              )}
+            </h3>
+            <h4 className="experience__position color-primary">{position}</h4>
+            <p className="experience__time">
+              {dayjs(from).format('MMM YYYY')} -{' '}
+              {to ? dayjs(to).format('MMM YYYY') : 'Currently'}
+              {<span>|</span>}
+              <span className=" experience__location">
+                <FontAwesomeIcon icon="map-marker-alt" /> {location}
+              </span>
+            </p>
+          </div>
+          {logo && renderLogo()}
         </div>
-        {logo && renderLogo()}
-      </div>
-      {about && <p className="experience__about">{about}</p>}
-      <ul className="experience__job-profile">
-        {details.split('\n').map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
+        {about && <p className="experience__about">{about}</p>}
+        <ul className="experience__job-profile">
+          {details.split('\n').map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
 
-      {projects.length > 0 && (
-        <>
-          <h3 className="color-primary">Project{projects.length > 1 && 's'}</h3>
-          <ul>
-            {projects.map((item) => (
-              <li key={item.name} className="experience__project">
-                <p className="experience__project-name color-secondary">
-                  {item.name}
-                </p>
-                {item.description && (
-                  <p className="experience__project-description">
-                    {item.description}
+        {projects.length > 0 && (
+          <>
+            <h3 className="color-primary">
+              Project{projects.length > 1 && 's'}
+            </h3>
+            <ul>
+              {projects.map((item) => (
+                <li key={item.name} className="experience__project">
+                  <p className="experience__project-name color-secondary">
+                    {item.name}
                   </p>
-                )}
-                <p className="font-semibold">Responsibilities</p>
-                <ul className="experience__project-responsibilities">
-                  {item.responsibilities.split('\n').map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </li>
-            ))}
-          </ul>
-        </>
-      )}
-    </div>
+                  {item.description && (
+                    <p className="experience__project-description">
+                      {item.description}
+                    </p>
+                  )}
+                  {['Truelogic Software'].includes(companyName) && (
+                    <>
+                      <div className="break-page"></div>
+                      <div className="break-page"></div>
+                      <div className="break-page"></div>
+                      <div className="break-page"></div>
+                      <div className="break-page"></div>
+                    </>
+                  )}
+                  <p className="font-semibold">Responsibilities</p>
+                  <ul className="experience__project-responsibilities">
+                    {item.responsibilities.split('\n').map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </div>
+    </>
   );
 };
 

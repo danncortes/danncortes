@@ -41,6 +41,7 @@ const TechStack = ({
           experienceLevel={
             showLevel && (
               <ToolLevel
+                className="techstack-level"
                 level={tech.level}
                 scale={tech.scale}
                 bgColor={bgColor}

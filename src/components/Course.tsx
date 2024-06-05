@@ -31,9 +31,8 @@ const Course = ({ course, showYear }: CourseProps) => {
           {site}
         </a>
       </div>
-      {name === 'Angular 4 Security Using JSON Web Tokens' && (
+      {name === 'NodeJS' && (
         <>
-          <div className="break-page"></div>
           <div className="break-page"></div>
           <div className="break-page"></div>
         </>

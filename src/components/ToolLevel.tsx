@@ -3,6 +3,7 @@ import React from 'react';
 export type LevelTypeUnion = 'pill' | 'bar' | 'dots';
 
 export interface ExperienceLevelDotProps {
+  className?: string;
   scale: number;
   level: number;
   height: number;
@@ -16,6 +17,7 @@ export interface BarExperienceLevelProps extends ExperienceLevelDotProps {
 }
 
 const ExperienceLevelDot = ({
+  className,
   scale,
   level,
   height,
@@ -44,7 +46,7 @@ const ExperienceLevelDot = ({
     );
   }
 
-  return <div className="flex">{dots}</div>;
+  return <div className={`flex ${className}`}>{dots}</div>;
 };
 
 ExperienceLevelDot.defaultProps = {
@@ -52,6 +54,7 @@ ExperienceLevelDot.defaultProps = {
 };
 
 const ExperienceLevelBar = ({
+  className,
   scale,
   level,
   height,
@@ -65,7 +68,7 @@ const ExperienceLevelBar = ({
 
   return (
     <div
-      className={`flex ${type === 'pill' && 'rounded-full'}`}
+      className={`flex ${type === 'pill' && 'rounded-full'} ${className}`}
       style={{
         width: widthContainer,
         height: `${height}px`,
