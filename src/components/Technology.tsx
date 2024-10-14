@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export type Technology = {
   name: string;
@@ -13,6 +14,7 @@ export const Technology = ({
   experienceLevel,
   showExperience
 }: Technology) => {
+  const { t } = useTranslation();
   const showExp: boolean = Boolean(experience) && showExperience;
 
   const yearsExperience: string = ((): string => {
@@ -32,7 +34,7 @@ export const Technology = ({
       {experienceLevel}
       {showExp && (
         <p className="technology__experience">
-          {`${yearsExperience} years of exp.`}
+          {`${yearsExperience} ${t('yOfExp')}`}
         </p>
       )}
     </div>

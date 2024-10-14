@@ -1,0 +1,34 @@
+{
+  "profileInfo": {
+    "title": "Senior Frontend Entwickler",
+    "summary": [
+      "Selbstmotivierter und autodidaktischer Frontend-Entwickler, leidenschaftlich darin, optisch ansprechende, benutzerzentrierte Webanwendungen zu erstellen. Verfügt über starke organisatorische Fähigkeiten und strebt konsequent nach höchster Qualität.",
+      "Hält sich stets über die neuesten Technologietrends und Best Practices auf dem Laufenden."
+    ]
+  },
+  "lucernSwitzerland": "Luzern, Schweiz",
+  "profile": "Profil",
+  "phone": "Telefon",
+  "personalInfo": {
+    "maritalStatus": "Familienstand",
+    "married": "Verheiratet",
+    "nationality": "Nationalität",
+    "colombian": "Kolumbianisch",
+    "permit": "Aufenthaltsbewilligung",
+    "permitType": "B Aufenthaltsbewilligung"
+  },
+  "techStack": "Technologie-Stack",
+  "otherTools": "Andere Tools",
+  "workExperience": "Berufserfahrung",
+  "courses": "Kurse",
+  "languages": "Sprachen",
+  "lang": {
+    "spanish": "Spanisch",
+    "english": "Englisch",
+    "german": "Deutsch"
+  },
+  "b2IndependentUser": "B2 - Selbständiger Sprachverwendung",
+  "native": "Muttersprache",
+  "education": "Ausbildung",
+  "yOfExp": "Jahre Erf."
+}

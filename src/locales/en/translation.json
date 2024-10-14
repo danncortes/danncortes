@@ -1,0 +1,34 @@
+{
+  "profileInfo": {
+    "title": "Senior Frontend Developer",
+    "summary": [
+      "Self-motivated and self-taught Frontend Developer passionate about creating visually appealing, user-centric web applications. Possesses strong organizational skills and consistently strives for excellence in quality",
+      "Always stays updated with the latest technology trends and best practices."
+    ]
+  },
+  "lucernSwitzerland": "Lucerne, Switzerland",
+  "profile": "Profile",
+  "phone": "Phone",
+  "personalInfo": {
+    "maritalStatus": "Marital Status",
+    "married": "Married",
+    "nationality": "Nationality",
+    "colombian": "Colombian",
+    "permit": "Permit",
+    "permitType": "B Permit"
+  },
+  "techStack": "Tech Stack",
+  "otherTools": "Other Tools",
+  "workExperience": "Work Experience",
+  "courses": "Courses",
+  "languages": "Languages",
+  "lang": {
+    "spanish": "Spanish",
+    "english": "English",
+    "german": "German"
+  },
+  "b2IndependentUser": "B2 - Independent User",
+  "native": "Native",
+  "education": "Education",
+  "yOfExp": "Years of Exp."
+}
