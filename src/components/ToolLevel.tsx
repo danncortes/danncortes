@@ -49,10 +49,6 @@ const ExperienceLevelDot = ({
   return <div className={`flex ${className}`}>{dots}</div>;
 };
 
-ExperienceLevelDot.defaultProps = {
-  className: ''
-};
-
 const ExperienceLevelBar = ({
   className,
   scale,
@@ -87,11 +83,6 @@ const ExperienceLevelBar = ({
   );
 };
 
-ExperienceLevelBar.defaultProps = {
-  className: '',
-  type: ''
-};
-
 const ExperienceLevel = (props: BarExperienceLevelProps) => {
   const { type } = props;
 
@@ -102,7 +93,3 @@ const ExperienceLevel = (props: BarExperienceLevelProps) => {
 };
 
 export default ExperienceLevel;
-
-ExperienceLevel.defaultProps = {
-  type: 'dots'
-};

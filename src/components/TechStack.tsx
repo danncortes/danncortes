@@ -13,8 +13,8 @@ export type TechStackProps = {
   data: TechData[];
   height: number;
   bgColor: string;
-  showExperience: boolean;
-  showLevel: boolean;
+  showExperience?: boolean;
+  showLevel?: boolean;
   primaryColor?: string;
   type?: LevelTypeUnion;
   className?: string;
@@ -27,8 +27,8 @@ const TechStack = ({
   primaryColor,
   type,
   className,
-  showExperience,
-  showLevel
+  showExperience = true,
+  showLevel = false
 }: TechStackProps) => {
   return (
     <div className={`techstack ${className ?? ''}`}>
@@ -58,8 +58,3 @@ const TechStack = ({
 };
 
 export default TechStack;
-
-TechStack.defaultProps = {
-  showExperience: true,
-  showLevel: false
-};

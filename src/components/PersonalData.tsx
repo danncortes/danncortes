@@ -1,9 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { t } from 'i18next';
 
 export type PersonalDataProps = {
   data: ContactInfoModel[];
-  icons: boolean;
+  icons?: boolean;
   titles?: boolean;
   mode?: 'list' | 'inline';
   className?: string;
@@ -57,7 +58,7 @@ const PersonalDataItem = (
           {icons && (
             <FontAwesomeIcon className="personal-data__icon" icon={icon} />
           )}
-          {link ? label : value}
+          {link ? t(label!) : t(value)}
         </WrapperTagItem>
       }
     </>
@@ -65,7 +66,7 @@ const PersonalDataItem = (
 };
 
 export const PersonalData = (props: PersonalDataProps) => {
-  const { data, mode, titles, icons, className } = props;
+  const { data, mode, titles, icons = false, className } = props;
   const containerClass = mode === 'inline' ? 'flex flex-wrap' : '';
 
   return (
@@ -80,12 +81,6 @@ export const PersonalData = (props: PersonalDataProps) => {
       ))}
     </ul>
   );
-};
-
-PersonalData.defaultProps = {
-  titles: true,
-  icons: false,
-  mode: 'list'
 };
 
 export default PersonalData;

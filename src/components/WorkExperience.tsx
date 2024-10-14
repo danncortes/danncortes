@@ -141,7 +141,3 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
 };
 
 export default WorkExperience;
-
-WorkExperience.defaultProps = {
-  className: ''
-};
