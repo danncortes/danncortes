@@ -312,9 +312,9 @@
     }
   ],
   "languages": [
-    { "name": "Spanish", "level": "Native language" },
-    { "name": "English", "level": "Professional working proficiency" },
-    { "name": "German", "level": "B1" }
+    { "name": "German", "level": "B2 - Independent User" },
+    { "name": "English", "level": "B2 - Independent User" },
+    { "name": "Spanish", "level": "Native language" }
   ],
   "education": [
     {
