@@ -1,7 +1,6 @@
 {
   "name": "Daniel Cortés",
-  "title": "Senior Frontend Developer",
-  "profileSummary": "Self-motivated and self-taught Frontend Developer passionate about creating visually appealing, user-centric web applications. Possesses strong organizational skills and consistently strives for excellence in quality. \n Always stays updated with the latest technology trends and best practices.",
+  "profileSummary": "profile.summary",
   "contactInfo": [
     {
       "title": "Email",
@@ -13,14 +12,14 @@
     },
     {
       "title": "Location",
-      "label": "Luzern - Switzerland",
+      "label": "lucernSwitzerland",
       "value": "https://www.google.com.co/maps/search/Luzern+Switzerland",
       "link": true,
       "type": "map",
       "icon": ["fas", "map-marker-alt"]
     },
     {
-      "title": "Phone",
+      "title": "phone",
       "label": "+41 76 725 1794",
       "value": "+41 76 725 1794",
       "link": false,
@@ -45,16 +44,24 @@
     }
   ],
   "personalInfo": [
-    { "title": "Marital Status", "value": "Married", "icon": ["fas", "ring"] },
     {
-      "title": "Nationality",
-      "value": "Colombian",
+      "title": "personalInfo.maritalStatus",
+      "value": "personalInfo.married",
+      "icon": ["fas", "ring"]
+    },
+    {
+      "title": "personalInfo.nationality",
+      "value": "personalInfo.colombian",
       "icon": ["fas", "globe-americas"]
     },
-    { "title": "Visa", "value": "Swiss B-Permit", "icon": ["fas", "id-card"] }
+    {
+      "title": "personalInfo.permit",
+      "value": "personalInfo.permitType",
+      "icon": ["fas", "id-card"]
+    }
   ],
   "mainTechStack": {
-    "title": "Main Tech Stack",
+    "title": "techStack",
     "data": [
       { "name": "JavaScript", "experience": 100, "level": 7, "scale": 9 },
       { "name": "TypeScript", "experience": 64, "level": 6, "scale": 9 },
@@ -68,7 +75,7 @@
     "showLevel": false
   },
   "otherTools": {
-    "title": "Other Tools",
+    "title": "otherTools",
     "data": [
       "Redux",
       "Vuex",
@@ -85,7 +92,7 @@
     ]
   },
   "skills": {
-    "title": "Skills",
+    "title": "skills",
     "data": [
       "Unit Testing",
       "Scrum",
@@ -312,9 +319,12 @@
     }
   ],
   "languages": [
-    { "name": "German", "level": "B2 - Independent User" },
-    { "name": "English", "level": "B2 - Independent User" },
-    { "name": "Spanish", "level": "Native language" }
+    { "name": "lang.german", "level": "b2IndependentUser" },
+    {
+      "name": "lang.english",
+      "level": "b2IndependentUser"
+    },
+    { "name": "lang.spanish", "level": "native" }
   ],
   "education": [
     {

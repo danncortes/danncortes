@@ -10,10 +10,10 @@ export type CourseData = {
 
 export type CourseProps = {
   course: CourseData;
-  showYear: boolean;
+  showYear?: boolean;
 };
 
-const Course = ({ course, showYear }: CourseProps) => {
+const Course = ({ course, showYear = false }: CourseProps) => {
   const { name, date, site } = course;
   return (
     <>
@@ -42,7 +42,3 @@ const Course = ({ course, showYear }: CourseProps) => {
 };
 
 export default Course;
-
-Course.defaultProps = {
-  showYear: false
-};
