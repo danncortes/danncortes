@@ -1,21 +1,24 @@
 {
   "profileInfo": {
-    "title": "Senior Frontend Entwickler",
+    "title": "$t(seniorFrontendDeveloper)",
     "summary": [
-      "Selbstmotivierter und autodidaktischer Frontend-Entwickler, leidenschaftlich darin, optisch ansprechende, benutzerzentrierte Webanwendungen zu erstellen. Verfügt über starke organisatorische Fähigkeiten und strebt konsequent nach höchster Qualität.",
-      "Hält sich stets über die neuesten Technologietrends und Best Practices auf dem Laufenden."
+      "Frontend-Entwickler mit 9 Jahren Erfahrung in JavaScript und TypeScript, spezialisiert auf die Entwicklung von leistungsstarken, responsiven und skalierbaren Webanwendungen. Vertraut mit Angular und React und immer darauf bedacht, sauberen Code und bewährte Praktiken zu nutzen. Erfahrung mit agilen Methoden, besonders Scrum.",
+      "Zielorientiert, gut organisiert und immer darauf aus, die neuesten Trends und Technologien im Blick zu behalten. Ein echter Teamplayer, der sich auf stetige Verbesserungen konzentriert und Lösungen liefert, die sowohl den Nutzern als auch den Geschäftsanforderungen gerecht werden."
     ]
   },
-  "lucernSwitzerland": "Luzern, Schweiz",
+  "lucerne": "Luzern",
+  "switzerland": "Schweiz",
+  "colombia": "Kolumbien",
+  "lucernSwitzerland": "$t(lucerne), $t(switzerland)",
   "profile": "Profil",
   "phone": "Telefon",
+  "permit": "Aufenthaltsbewilligung",
   "personalInfo": {
     "maritalStatus": "Familienstand",
     "married": "Verheiratet",
     "nationality": "Nationalität",
     "colombian": "Kolumbianisch",
-    "permit": "Aufenthaltsbewilligung",
-    "permitType": "B Aufenthaltsbewilligung"
+    "permitType": "B $t(permit)"
   },
   "techStack": "Technologie-Stack",
   "otherTools": "Andere Tools",
@@ -30,5 +33,118 @@
   "b2IndependentUser": "B2 - Selbständiger Sprachverwendung",
   "native": "Muttersprache",
   "education": "Ausbildung",
-  "yOfExp": "Jahre Erf."
+  "yOfExp": "Jahre Erf.",
+  "project": "Projekt",
+  "projects": "Projekte",
+  "responsibilities": "Verantwortlichkeiten",
+  "frontendDeveloper": "Frontend Entwickler",
+  "seniorFrontendDeveloper": "Senior $t(frontendDeveloper)",
+  "moreExpInfo": "Für zusätzliche Berufserfahrung vor 2015 besuchen Sie bitte:",
+  "experience": {
+    "smartCom": {
+      "intro": "Entwickler von Webanwendungsprodukten für die Versicherungs- und Finanzbranche unter Verwendung von JavaScript, TypeScript und Angular unter Anwendung von SCRUM-Prinzipien",
+      "projects": {
+        "reportDashboard": {
+          "description": "Nutzungs-Dashboard-Webanwendung, die in Angular entwickelt wurde",
+          "responsibilities": [
+            "Gestaltung und Implementierung von responsiven Benutzeroberflächen mit Fokus auf Benutzererfahrung unter Verwendung von Angular Bootstrap und ChartJS",
+            "Beitrag zum Architekturdesign und zur Leistungsoptimierung",
+            "Implementierung und Wartung von Angular-Komponenten, -Direktiven, -Services, -Pipes und -Modulen",
+            "Integration mit Backend-APIs und -Diensten zur Abfrage und Manipulation von Daten unter Verwendung des integrierten HTTP-Clients von Angular",
+            "Unit-Testing für Angular-Komponenten und -Dienste unter Verwendung der Testframeworks Jasmine und Karma"
+          ]
+        },
+        "documentEditor": {
+          "description": "Dokumentenerstellungs- und -bearbeitungs-Webanwendung in TypeScript und JavaScript",
+          "responsibilities": [
+            "Implementierung von Benutzeroberflächen unter Verwendung eines unternehmenseigenen UI-Frameworks mit HTML, CSS, LESS, JavaScript, jQuery und TypeScript",
+            "Unit-Testing mit Jasmine und Sinon-Testbibliotheken auf einem internen unternehmenseigenen JavaScript/TypeScript-Framework"
+          ]
+        }
+      }
+    },
+    "truelogic": {
+      "intro": "Arbeitete an einem kundenbezogenen Projekt in den USA mit JavaScript, VueJS, ReactJS, HTML und CSS-Technologien unter Anwendung agiler Entwicklung",
+      "projects": {
+        "specimensInventory": {
+          "description": "Verwaltung von Patientenspezimen-Inventar-Webanwendungen für kryogene Lagerung in Kliniken auf VueJS und JavaScript",
+          "responsibilities": [
+            "Gestaltung, Implementierung und Wartung von Komponenten und Funktionen unter Verwendung von VueJS",
+            "Testen von Funktionen mit Jest",
+            "Informationen sammeln, Aufgaben erstellen und Anforderungen sowie Akzeptanzkriterien für neue Funktionen spezifizieren",
+            "Leitung technischer Interviews von Kandidaten"
+          ]
+        }
+      }
+    },
+    "endava": {
+      "intro": "Arbeitete an verschiedenen Projekten für Kunden in den USA mit JavaScript, HTML und CSS-Technologien unter Anwendung der Prinzipien von Scrum",
+      "projects": {
+        "yogaAccessories": {
+          "description": "E-Shop für Yoga-Zubehör für die USA und Kanada, entwickelt mit ReactJS",
+          "responsibilities": [
+            "Wartung und Verbesserung von Komponenten durch Hinzufügen von Barrierefreiheit-Funktionen unter Verwendung von JavaScript, ReactJS, HTML und CSS",
+            "Verwendung von Jest und Enzyme für React-Tests"
+          ]
+        }
+      }
+    },
+    "velocity": {
+      "intro": "Arbeitete an verschiedenen Projekten für Kunden in den USA mit JavaScript, HTML und CSS-Technologien unter Anwendung der Prinzipien von Scrum",
+      "projects": {
+        "laserPrinter": {
+          "description": "Maschinendiagnosetool für einen Hersteller von 3D-Laserdruckern unter Verwendung von ReactJS und NodeJS",
+          "responsibilities": [
+            "Arbeitete an der Erstellung einer Befehlszeilenfunktion in NodeJS, um Tests über eine SSH-Konsole durchzuführen",
+            "Mitentwicklung einer React-Anwendung, die über eine API mit einem 3D-Laserdrucker verbunden ist, um Statusinformationen anzuzeigen und Diagnosetests für Druckerhardwarekomponenten durchzuführen",
+            "Verwendung von Redux für das Datenzustandsmanagement",
+            "Verwendung von Jest und Enzyme für Anwendungstests"
+          ]
+        },
+        "platformConnection": {
+          "description": "On-Demand-Multi-Tenant-Cloud-Integrationsplattform",
+          "responsibilities": [
+            "Beteiligung an der Entwicklung von UI-Funktionsverbesserungen für eine Plattform, die Connectoren bietet, um Anwendungen und Daten zu integrieren",
+            "Erstellung neuer UI-Funktionen mit GWT",
+            "Entwicklung einer Dashboard-Anwendung mit Angular 4 und SCSS, die mit einer REST-API verbunden ist, um vollständige Kontrolle über die Daten zu haben, die mit Connectoren, Betriebssystemen, Browsern und Clients in der Plattform verbunden sind"
+          ]
+        },
+        "loyaltyPrograms": {
+          "description": "Anwendung zur Verwaltung von Loyalitätsprogrammen für eine US-Bank, entwickelt in AngularJS",
+          "responsibilities": [
+            "Mitgestaltung einer Webanwendung für Kunden und Händler zur Erstellung und Verwaltung von Loyalitätsprogrammen und zur Verfolgung von Statistiken",
+            "Nutzung von AngularJS, Angular Materials und Charts.js"
+          ]
+        }
+      }
+    },
+    "dada": {
+      "intro": [
+        "Entwickelte UI- und UX-Lösungen zur Implementierung einer horizontalen Scrollnavigation für die gesamte Website.",
+        "Entwarf UI-Funktionen über die Plattform hinweg."
+      ]
+    },
+    "ries": {
+      "intro": [
+        "Entwarf UI-Lösungen für mehrere Kunden mit HTML, CSS und Jquery.",
+        "Arbeitete an der Gestaltung und Implementierung einer mobil-reaktiven Website für Versicherungsprodukte mit PHP und Bootstrap.",
+        "Nahm an der Gestaltung und Implementierung einer Web- und mobilen Webanwendung teil, die zur Produktsuche basierend auf Geolocation verwendet wird.",
+        "Nutzte HTML, CSS, Bootstrap, Jquery, Jquery Mobile, Google Maps API."
+      ]
+    },
+    "bumeran": {
+      "intro": [
+        "Entwickelte und passte die Miniseiten des Kunden an.",
+        "Erstellte grafische Vorschläge und anschließend die Layouts jeder Minisite in HTML + CSS.",
+        "Arbeitete an UI-Designs basierend auf den Corporate-Image-Richtlinien für jede Marke oder jedes Unternehmen."
+      ]
+    },
+    "ola": {
+      "intro": [
+        "Bot Webentwicklungsdienste für Kunden in der Pharmaindustrie an.",
+        "Erstellte Webanwendungen zur Verwaltung von Treueprogrammen für Pharmazeutika mit PHP, HTML und CSS.",
+        "Erstellte Website-Portfolios für medizinische Produkte."
+      ]
+    }
+  }
 }
