@@ -72,18 +72,21 @@ const config = {
       new CssMinimizerPlugin(),
       '...'
     ]
+  },
+  devServer: {
+    historyApiFallback: true // This tells the dev server to always fallback to index.html
   }
 };
 
 module.exports = (env, argv) => {
   if (argv.mode === 'development') {
-    config.devServer = {
+    config.devServer = Object.assign({}, config.devServer, {
       static: {
         directory: path.join(__dirname, 'build')
       },
       compress: true,
       port: 3001
-    };
+    });
     config.devtool = 'source-map';
     config.plugins.push(new BundleAnalyzerPlugin({ analyzerPort: 8889 }));
     config.optimization.usedExports = true;

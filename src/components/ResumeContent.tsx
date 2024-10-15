@@ -5,11 +5,11 @@ import Education, { EducationModel } from './Education';
 import PersonalData from './PersonalData';
 import Tags from './Tags';
 import TechStack from './TechStack';
-import WorkExperience from './WorkExperience';
+import WorkExperience from './work-experience/WorkExperience';
 import resumeData from '../data.json';
 import ComponentTemplate from './ComponentTemplate';
-import getLocalizedText from '../utils';
 import { useTranslation } from 'react-i18next';
+import LanguageButtons from './LanguageButtons';
 
 export type LanguageData = {
   name: string;
@@ -35,6 +35,7 @@ const ResumeContent = () => {
               height={10}
               bgColor="#ddd"
               primaryColor="peru"
+              showExpOnPrint={resumeData.mainTechStack.showExpOnPrint}
               showLevel={resumeData.mainTechStack.showLevel}
             />
           </ComponentTemplate>
@@ -87,12 +88,17 @@ const ResumeContent = () => {
 
         <div className="resume-content__right">
           <Avatar mode="circle" className="avatar--right" />
-
-          <h1 className="resume-name">{resumeData.name}</h1>
-
-          <h2 className="resume-title color-primary">
-            {t('profileInfo.title')}
-          </h2>
+          <div className="resume-header">
+            <div className="resume-header__left">
+              <h1 className="resume-name">{resumeData.name}</h1>
+              <h2 className="resume-title color-primary">
+                {t('profileInfo.title')}
+              </h2>
+            </div>
+            <div className="resume-header__right">
+              <LanguageButtons></LanguageButtons>
+            </div>
+          </div>
 
           {/* Personal Data */}
           <PersonalData
@@ -111,7 +117,7 @@ const ResumeContent = () => {
           />
 
           {/* Profile Info */}
-          <ComponentTemplate title={t('profile')}>
+          <ComponentTemplate>
             <ul className="profile">
               {[0, 1].map((item) => (
                 <li key={item}>{t(`profileInfo.summary.${item}`)}</li>
@@ -129,6 +135,7 @@ const ResumeContent = () => {
               height={10}
               bgColor="#ddd"
               primaryColor="peru"
+              showExpOnPrint={resumeData.mainTechStack.showExpOnPrint}
               showLevel={resumeData.mainTechStack.showLevel}
             />
           </ComponentTemplate>
@@ -162,6 +169,12 @@ const ResumeContent = () => {
                 : ''}
             </section>
           </ComponentTemplate>
+          <p className="more-info">
+            {t('moreExpInfo')}{' '}
+            <a target="blank" href="http://danncortes.com">
+              danncortes.com
+            </a>
+          </p>
         </div>
       </div>
     </div>

@@ -110,6 +110,14 @@ html {
   max-width: 1160px;
 }
 
+.resume-header {
+  display: flex;
+}
+
+.resume-header__left {
+  flex: auto;
+}
+
 .resume-content {
   display: flex;
   gap: var(--column-gap);
@@ -196,8 +204,8 @@ html {
 
 /* Tags */
 .tag-list__tag {
-  font-size: 0.875rem;
-  padding: 0.1rem 0.5rem;
+  font-size: 0.85rem;
+  padding: 0.08rem 0.5rem;
   color: var(--secondary-color);
   background-color: #e2e8f0;
   margin-bottom: 0.5rem;
@@ -284,7 +292,8 @@ html {
   font-weight: 500;
   margin-bottom: 2rem;
   padding-left: 1rem;
-  list-style-type: disc;
+  list-style: none;
+  padding: 0;
 }
 
 /* Experience  */
@@ -310,8 +319,8 @@ html {
   content: '';
   display: block;
   position: absolute;
-  width: 0.4rem;
-  height: 0.4rem;
+  width: 0.6rem;
+  height: 0.6rem;
   border-radius: 1000%;
   background-color: var(--border-column-color);
   left: calc(var(--column-gap) * -1);
@@ -360,7 +369,11 @@ html {
   padding-right: 0.5rem;
 }
 
-.experience__job-profile,
+.experience__job-profile {
+  margin-bottom: 1rem;
+}
+
+ul.experience__job-profile,
 .experience__project-responsibilities {
   padding-left: 1rem;
   margin-bottom: 1rem;
@@ -383,6 +396,28 @@ html {
 
 .experience__project-description {
   margin-bottom: 0.25rem;
+}
+
+.more-info {
+  font-size: 0.75rem;
+  color: #6b7280;
+  display: none;
+}
+
+.language-button {
+  cursor: pointer;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid #eee;
+  border-radius: 0.2rem;
+  margin-right: 0.5rem;
+  background: transparent;
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+.language-button--active {
+  border: 2px solid #98bfd4;
+  color: #555;
 }
 
 @media only screen and (max-width: 767px) {
@@ -444,9 +479,9 @@ html {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px), print {
   .personal-data {
-    width: 80%;
+    width: 76%;
   }
 }
 
@@ -458,7 +493,7 @@ html {
 
 @media print {
   html {
-    font-size: 13px;
+    font-size: 12.2px;
   }
 
   .break-page {
@@ -470,10 +505,22 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
 
+  .techstack--no-print-exp {
+    row-gap: 0.3rem;
+  }
+
   .tag-list__tag {
     padding: 0.08rem 0.4rem;
     background-color: unset;
     border: 1px solid #e2e8f0;
     border-radius: 0.3rem;
+  }
+
+  .no-show-print {
+    display: none;
+  }
+
+  .more-info {
+    display: block;
   }
 }
