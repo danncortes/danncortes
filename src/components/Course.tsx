@@ -6,6 +6,7 @@ export type CourseData = {
   date: number;
   note: string;
   site: string;
+  show?: boolean;
 };
 
 export type CourseProps = {
@@ -14,25 +15,28 @@ export type CourseProps = {
 };
 
 const Course = ({ course, showYear = false }: CourseProps) => {
-  const { name, date, site } = course;
+  const { name, date, site, show = true } = course;
   return (
     <>
-      <div className="course">
-        <p className="course__name">{name}</p>
-        {showYear && (
-          <p className="course__date">{dayjs(date).format('YYYY')}</p>
-        )}
-        <a
-          href={site}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="course__site"
-        >
-          {site}
-        </a>
-      </div>
-      {name === 'NodeJS' && (
+      {show && (
+        <div className="course">
+          <p className="course__name">{name}</p>
+          {showYear && (
+            <p className="course__date">{dayjs(date).format('YYYY')}</p>
+          )}
+          <a
+            href={site}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="course__site"
+          >
+            {site}
+          </a>
+        </div>
+      )}
+      {name === 'Advanced JavaScript' && (
         <>
+          <div className="break-page"></div>
           <div className="break-page"></div>
           <div className="break-page"></div>
         </>

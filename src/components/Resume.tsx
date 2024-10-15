@@ -1,9 +1,19 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import ReactToPrint from 'react-to-print';
 import ResumeContent from './ResumeContent';
 import { FontAwesomeIcon } from '../font-awesome';
+import { i18n, Language, supportedLanguages } from '../i18n';
+import { useParams } from 'react-router-dom';
 
 const Resume = () => {
+  const { lang } = useParams<{ lang: Language }>();
+
+  useEffect(() => {
+    if (supportedLanguages.includes(lang)) {
+      i18n.changeLanguage(lang);
+    }
+  }, [lang]);
+
   const componentRef: any = useRef();
 
   return (

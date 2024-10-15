@@ -2,20 +2,23 @@
   "profileInfo": {
     "title": "Senior Frontend Developer",
     "summary": [
-      "Self-motivated and self-taught Frontend Developer passionate about creating visually appealing, user-centric web applications. Possesses strong organizational skills and consistently strives for excellence in quality",
-      "Always stays updated with the latest technology trends and best practices."
+      "Frontend Developer with 9 years of experience with JavaScript and TypeScript, specializing in building high-performance, responsive, and scalable web applications. Proficient in Angular and React, with a strong commitment to clean code and best practices. Experienced in Agile methodologies, particularly Scrum.",
+      "Goal-oriented, organized, and always striving to stay up-to-date with the latest industry trends and technologies. A strong team player focused on continuous improvement and delivering solutions that meet both user and business needs."
     ]
   },
-  "lucernSwitzerland": "Lucerne, Switzerland",
+  "lucerne": "Lucerne",
+  "switzerland": "Switzerland",
+  "colombia": "Colombia",
+  "lucernSwitzerland": "$t(lucerne), $t(switzerland)",
   "profile": "Profile",
   "phone": "Phone",
+  "permit": "Permit",
   "personalInfo": {
     "maritalStatus": "Marital Status",
     "married": "Married",
     "nationality": "Nationality",
     "colombian": "Colombian",
-    "permit": "Permit",
-    "permitType": "B Permit"
+    "permitType": "B $t(permit)"
   },
   "techStack": "Tech Stack",
   "otherTools": "Other Tools",
@@ -30,5 +33,120 @@
   "b2IndependentUser": "B2 - Independent User",
   "native": "Native",
   "education": "Education",
-  "yOfExp": "Years of Exp."
+  "yOfExp": "Years of Exp.",
+  "project": "Project",
+  "projects": "Projects",
+  "responsibilities": "Responsibilities",
+  "frontendDeveloper": "Frontend Developer",
+  "seniorFrontendDeveloper": "Senior $t(frontendDeveloper)",
+  "moreExpInfo": "For additional work experience prior to 2015, please visit:",
+  "experience": {
+    "smartCom": {
+      "intro": "Developer web application products for the insurance and financial sectors using JavaScript, TypeScript, and Angular, applying SCRUM principles",
+      "projects": {
+        "reportDashboard": {
+          "description": "Usage dashboard web application developed in Angular",
+          "responsibilities": [
+            "Designed and implemented responsive user interfaces focused on user experience using Angular Bootstrap and ChartJS",
+            "Contributed to architecture design and performance optimization",
+            "Implemented and maintained Angular components, directives, services, pipes, and modules",
+            "Integration with backend APIs and services to fetch and manipulate data, using Angular's built-in HTTP client",
+            "Unit testing for Angular components and services using Jasmine and Karma testing frameworks"
+          ]
+        },
+        "documentEditor": {
+          "description": "Document generation and editing web application in TypeScript and JavaScript",
+          "responsibilities": [
+            "Implemented user interfaces utilizing a corporate UI framework with HTML, CSS, LESS, JavaScript, jQuery, and TypeScript",
+            "Unit testing with Jasmine and Sinon testing libraries on an internal corporate JavaScript/TypeScript framework"
+          ]
+        }
+      }
+    },
+    "truelogic": {
+      "intro": "Worked for a US-based customer project using JavaScript, VueJS, ReactJS, HTML and CSS technologies while applying agile development",
+      "projects": {
+        "specimensInventory": {
+          "description": "Patient Specimens Inventory Management Web Apps for Cryogenic Storage in Clinics on VueJS and JavaScript",
+          "responsibilities": [
+            "Designing, implementing and maintaining components and features using VueJS",
+            "Testing features using Jest",
+            "Gathering information, creating tasks and specifying requirements and acceptance criteria for new features",
+            "Leading technical interviews of candidates"
+          ]
+        }
+      }
+    },
+    "endava": {
+      "intro": "Worked on different projects for US-based customers using JavaScript, HTML and CSS technologies while applying the principles of Scrum",
+      "projects": {
+        "yogaAccessories": {
+          "description": "Yoga accessories e-shop retailer for USA and Canada developed using ReactJS",
+          "responsibilities": [
+            "Maintained and enhanced components adding accessibility features using JavaScript, ReactJS, HTML and CSS",
+            "Used Jest and Enzyme for React testing"
+          ]
+        }
+      }
+    },
+    "velocity": {
+      "intro": "Worked on different projects for US-based customers using JavaScript, HTML and CSS technologies while applying the principles of Scrum",
+      "projects": {
+        "laserPrinter": {
+          "description": "Machine diagnostic tool for 3D laser printer manufacturer using ReactJS and NodeJS",
+          "responsibilities": [
+            "Worked on the creation of a command line based feature in NodeJS to run tests connected through SSH console",
+            "Co-developed a React application which connects to a 3D laser printer through an API with the aim of displaying status info and performing diagnostic test for printer hardware components",
+            "Used Redux for data state management",
+            "Used Jest and Enzyme for application testing"
+          ]
+        },
+        "platformConnection": {
+          "description": "On-demand multi-tenant cloud integration platform",
+          "responsibilities": [
+            "Participated in the development of UI features improvements for a platform which offers connectors in order to integrate applications and data",
+            "Created new UI features using GWT",
+            "Developed a dashboard application using Angular 4 and SCSS connected to a Rest API in order to have full control of the data related to connectors, OS, browsers, and clients in the platform"
+          ]
+        },
+        "loyaltyPrograms": {
+          "description": "Loyalty programs management application for a US Bank developed in AngularJS",
+          "responsibilities": [
+            [
+              "Co-created a web application for customers and merchants to create and manage loyalty programs and track statistics",
+              "Utilized AngularJS, Angular Materials and Charts.js"
+            ]
+          ]
+        }
+      }
+    },
+    "dada": {
+      "intro": [
+        "Developed UI and UX solutions to implement a horizontal scroll navigation for the whole website.",
+        "Designed UI features across the platform"
+      ]
+    },
+    "ries": {
+      "intro": [
+        "Designed UI solutions for multiple clients using HTML, CSS and Jquery",
+        "Worked on the design and implementation of a mobile-responsive website for insurance products using PHP and Bootstrap",
+        "Participated in the design and implementation of a web and web mobile app used to look for products based on Geolocation",
+        "Utilized HTML, CSS, Bootstrap, Jquery, Jquery Mobile, Google Maps API"
+      ]
+    },
+    "bumeran": {
+      "intro": [
+        "Developed and customized customer's minisites",
+        "Set up graphic proposals and subsequently each minisite's layouts in HTML + CSS",
+        "Worked on UI designs based on the corporate image guidelines for each brand or company"
+      ]
+    },
+    "ola": {
+      "intro": [
+        "Offered web development services to clients in the pharmaceutical industry",
+        "Created web applications to manage loyalty programs for pharmaceutical products using PHP, HTML and CSS",
+        "Created website portfolios for medical products"
+      ]
+    }
+  }
 }

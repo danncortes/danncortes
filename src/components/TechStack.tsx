@@ -13,7 +13,7 @@ export type TechStackProps = {
   data: TechData[];
   height: number;
   bgColor: string;
-  showExperience?: boolean;
+  showExpOnPrint: boolean;
   showLevel?: boolean;
   primaryColor?: string;
   type?: LevelTypeUnion;
@@ -27,17 +27,21 @@ const TechStack = ({
   primaryColor,
   type,
   className,
-  showExperience = true,
+  showExpOnPrint,
   showLevel = false
 }: TechStackProps) => {
   return (
-    <div className={`techstack ${className ?? ''}`}>
+    <div
+      className={`techstack ${className ?? ''} ${
+        showExpOnPrint || 'techstack--no-print-exp'
+      }`}
+    >
       {data.map((tech: TechData) => (
         <Technology
           key={tech.name}
           name={tech.name}
           experience={tech.experience}
-          showExperience={showExperience}
+          showExpOnPrint={showExpOnPrint}
           experienceLevel={
             showLevel && (
               <ToolLevel
