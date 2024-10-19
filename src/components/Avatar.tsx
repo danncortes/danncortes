@@ -7,8 +7,7 @@ type Props = {
   className: string;
 };
 
-export const Avatar = (props: Props) => {
-  const { mode } = props;
+export const Avatar = ({ mode, className }: Props) => {
   let imgModeClass = '';
 
   switch (mode) {
@@ -24,7 +23,7 @@ export const Avatar = (props: Props) => {
 
   return (
     profileImg && (
-      <div className={`avatar ${props.className}`}>
+      <div className={`avatar ${className}`}>
         <img className={imgModeClass} src={profileImg} alt="Profile Pic" />
       </div>
     )

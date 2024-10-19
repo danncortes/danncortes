@@ -17,6 +17,7 @@ export type EducationModel = {
 
 const Education = ({ education }: { education: EducationModel }) => {
   const { title, from, to, place, location } = education;
+
   return (
     <div className="education">
       <p className="education__title">{title}</p>
