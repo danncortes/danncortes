@@ -40,6 +40,7 @@
   "frontendDeveloper": "Frontend Entwickler",
   "seniorFrontendDeveloper": "Senior $t(frontendDeveloper)",
   "moreExpInfo": "Für zusätzliche Berufserfahrung vor 2015 besuchen Sie bitte:",
+  "printOrDownload": "Drucken oder herunterladen",
   "experience": {
     "smartCom": {
       "intro": "Entwickler von Webanwendungsprodukten für die Versicherungs- und Finanzbranche unter Verwendung von JavaScript, TypeScript und Angular unter Anwendung von SCRUM-Prinzipien",

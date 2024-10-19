@@ -1,16 +1,14 @@
 import React from 'react';
-import { ProjectData, WorkExpData } from './WorkExperience';
+import { ProjectData } from './WorkExperience';
 import { useTranslation } from 'react-i18next';
 
-export default ({
-  projects,
-  companyKey,
-  companyName
-}: {
+type Props = {
   projects: ProjectData[];
-  companyKey: WorkExpData['companyKey'];
-  companyName: WorkExpData['companyName'];
-}) => {
+  companyKey: string;
+  companyName: string;
+};
+
+export default ({ projects, companyKey, companyName }: Props) => {
   const { t } = useTranslation();
 
   return (

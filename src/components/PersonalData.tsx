@@ -19,17 +19,14 @@ export type ContactInfoModel = {
   type?: string;
 };
 
-const WrapperTagItem = ({
-  type,
-  value,
-  link,
-  children
-}: {
+type Props = {
   type: ContactInfoModel['type'];
   value: ContactInfoModel['value'];
   link: ContactInfoModel['link'];
   children: React.ReactNode;
-}) => {
+};
+
+const WrapperTagItem = ({ type, value, link, children }: Props) => {
   const className = 'personal-data__content';
 
   if (link) {
@@ -65,8 +62,13 @@ const PersonalDataItem = (
   );
 };
 
-export const PersonalData = (props: PersonalDataProps) => {
-  const { data, mode, titles, icons = false, className } = props;
+export const PersonalData = ({
+  data,
+  mode,
+  titles,
+  icons = false,
+  className
+}: PersonalDataProps) => {
   const containerClass = mode === 'inline' ? 'flex flex-wrap' : '';
 
   return (
