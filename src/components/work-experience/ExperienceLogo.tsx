@@ -1,11 +1,12 @@
 import React, { ReactElement } from 'react';
 
-export default (props: {
+type Props = {
   logo: string;
   companyName: string;
   link: string;
-}): ReactElement => {
-  const { logo, companyName, link } = props;
+};
+
+export default ({ logo, companyName, link }: Props): ReactElement => {
   const img = (
     <img
       className="experience__company-logo"

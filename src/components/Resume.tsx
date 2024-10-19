@@ -1,37 +1,56 @@
-import React, { useEffect, useRef } from 'react';
-import ReactToPrint from 'react-to-print';
+import React, { useEffect, useRef, useState } from 'react';
 import ResumeContent from './ResumeContent';
 import { FontAwesomeIcon } from '../font-awesome';
 import { i18n, Language, supportedLanguages } from '../i18n';
 import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Resume = () => {
-  const { lang } = useParams<{ lang: Language }>();
+  const { t } = useTranslation();
+
+  const { language } = useParams<{ language: Language }>();
+
+  const FontSizesPerLanguage: { [key in Language]: string } = {
+    en: '12.6px',
+    de: '12.2px'
+  };
 
   useEffect(() => {
-    if (supportedLanguages.includes(lang)) {
-      i18n.changeLanguage(lang);
+    const initialFontSize = window.getComputedStyle(document.documentElement)
+      .fontSize;
+
+    window.onbeforeprint = () => {
+      const { language } = i18n;
+      document.documentElement.style.fontSize =
+        FontSizesPerLanguage[language as Language];
+    };
+
+    window.onafterprint = () => {
+      document.documentElement.style.fontSize = initialFontSize;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (supportedLanguages.includes(language)) {
+      i18n.changeLanguage(language);
     }
-  }, [lang]);
+  }, [language]);
 
   const componentRef: any = useRef();
 
+  const onClickPrint = () => {
+    document.documentElement.style.fontSize = '12px';
+    window.print();
+  };
+
   return (
     <div className="resume-wrapper resume">
-      <ReactToPrint
-        removeAfterPrint={true}
-        trigger={() => (
-          <p className="resume__print-tag mb-3 font-semibold">
-            <FontAwesomeIcon icon="print" /> Print or Download
-          </p>
-        )}
-        content={() => componentRef.current}
-      />
-      <div style={{ display: 'none' }}>
-        <div ref={componentRef} className="resume-print-version">
-          <ResumeContent />
-        </div>
-      </div>
+      <button
+        className="resume__print-tag mb-3 font-semibold"
+        onClick={onClickPrint}
+      >
+        <FontAwesomeIcon icon="print" /> {t('printOrDownload')}
+      </button>
       <ResumeContent />
     </div>
   );

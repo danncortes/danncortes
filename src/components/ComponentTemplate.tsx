@@ -1,12 +1,12 @@
 import React from 'react';
 
-const ComponentTemplate = (props: {
+type Props = {
   className?: string;
   title?: string;
   children: React.ReactNode;
-}) => {
-  const { title, children, className } = props;
+};
 
+const ComponentTemplate = ({ title, children, className }: Props) => {
   return (
     <div className={`component-template ${className ?? ''}`}>
       {title && <h3 className={`component-template__title`}>{title}</h3>}
