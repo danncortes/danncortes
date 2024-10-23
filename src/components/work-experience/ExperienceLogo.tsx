@@ -1,4 +1,5 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
+import { loadImage } from '../../utils';
 
 type Props = {
   logo: string;
@@ -7,13 +8,55 @@ type Props = {
 };
 
 export default ({ logo, companyName, link }: Props): ReactElement => {
+  const imagesConfig = [
+    {
+      size: 130,
+      dpr: 1,
+      isDefault: true
+    },
+    {
+      size: 260,
+      dpr: 2
+    }
+  ];
+
+  const [defaultSrc, setDefaultSrc] = useState('');
+  const [srcSet, setSrcSet] = useState('');
+
+  useEffect(() => {
+    const [name, extention] = logo.split('.');
+    setImagesSrc(name, extention);
+  }, [logo]);
+
+  const setImagesSrc = async (name: string, extension: string) => {
+    let srcSetValue = '';
+
+    for (const config of imagesConfig) {
+      const { size, dpr, isDefault } = config;
+      const loadedImage = (await loadImage(`${name}-${size}.${extension}`))
+        .default;
+
+      if (isDefault) {
+        setDefaultSrc(loadedImage);
+      }
+
+      srcSetValue += `${loadedImage} ${dpr}x, `;
+    }
+
+    setSrcSet(srcSetValue.slice(0, -2));
+  };
+
   const img = (
-    <img
-      className="experience__company-logo"
-      src={logo}
-      alt=""
-      aria-label={companyName}
-    />
+    <>
+      <img
+        width="130"
+        className="experience__company-logo"
+        src={defaultSrc}
+        srcSet={srcSet}
+        alt={companyName}
+        aria-label={companyName}
+      />
+    </>
   );
 
   return link ? (
