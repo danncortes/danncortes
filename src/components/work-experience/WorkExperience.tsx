@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import dayjs from 'dayjs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -13,6 +13,7 @@ library.add(faMapMarkerAlt);
 export type ProjectData = {
   projectKey: string;
   name: string;
+  techStack: string;
 };
 
 export type WorkExpData = {
@@ -42,7 +43,6 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
     from,
     to,
     logo,
-    about,
     location,
     projects,
     link,
@@ -50,32 +50,13 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
     showOnPrint = true
   } = experience;
 
-  const renderLogo = (): ReactElement => {
-    const img = (
-      <img
-        className="experience__company-logo"
-        src={logo}
-        alt=""
-        aria-label={companyName}
-      />
-    );
-
-    return link ? (
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        {img}
-      </a>
-    ) : (
-      img
-    );
-  };
-
   return (
     <>
       {
         <div
           className={`experience__item ${!showOnPrint ? 'no-show-print' : ''}`}
         >
-          <div className="experience__header flex justify-between">
+          <div className="experience__header mb-4 flex justify-between">
             <div>
               <h3 className="experience__company-name">
                 {companyName}{' '}
@@ -103,11 +84,28 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
               ></ExperienceLogo>
             )}
           </div>
-          {about && <p className="experience__about">{about}</p>}
-          <ExperienceIntro
-            isIntroArray={isIntroArray}
-            translationKey={`experience.${companyKey}.intro`}
-          ></ExperienceIntro>
+          {(() => {
+            const about = t(`experience.${companyKey}.about`, {
+              defaultValue: ''
+            });
+            return about ? <p className="mb-4">{about}</p> : null;
+          })()}
+          {t(`experience.${companyKey}.intro`, {
+            defaultValue: ''
+          }) && (
+            <ExperienceIntro
+              isIntroArray={isIntroArray}
+              translationKey={`experience.${companyKey}.intro`}
+            ></ExperienceIntro>
+          )}
+
+          {['Endava'].includes(companyName) && (
+            <>
+              <div className="break-page"></div>
+              <div className="break-page"></div>
+              <div className="break-page"></div>
+            </>
+          )}
 
           {projects.length > 0 && (
             <ExperienceProjects

@@ -4,9 +4,9 @@ import ToolLevel, { LevelTypeUnion } from './ToolLevel';
 
 export type TechData = {
   name: string;
-  level: number;
-  scale: number;
-  experience: number;
+  level?: number;
+  scale?: number;
+  experience?: number;
 };
 
 export type TechStackProps = {
@@ -18,6 +18,7 @@ export type TechStackProps = {
   primaryColor?: string;
   type?: LevelTypeUnion;
   className?: string;
+  showExperience: boolean;
 };
 
 const TechStack = ({
@@ -28,35 +29,42 @@ const TechStack = ({
   type,
   className,
   showExpOnPrint,
-  showLevel = false
+  showLevel = false,
+  showExperience
 }: TechStackProps) => {
   return (
     <div
-      className={`techstack ${className ?? ''} ${
-        showExpOnPrint || 'techstack--no-print-exp'
-      }`}
+      className={`techstack ${className ?? ''}${
+        showExpOnPrint ? 'techstack--no-print-exp' : ''
+      }${!showExperience ? 'techstack--no-exp' : ''}`}
     >
-      {data.map((tech: TechData) => (
-        <Technology
-          key={tech.name}
-          name={tech.name}
-          experience={tech.experience}
-          showExpOnPrint={showExpOnPrint}
-          experienceLevel={
-            showLevel && (
-              <ToolLevel
-                className="techstack-level"
-                level={tech.level}
-                scale={tech.scale}
-                bgColor={bgColor}
-                primaryColor={primaryColor}
-                height={height}
-                type={type}
-              />
-            )
-          }
-        />
-      ))}
+      {data.map((tech: TechData) => {
+        const { name, experience, level, scale } = tech;
+        return (
+          <Technology
+            key={name}
+            name={name}
+            experience={experience}
+            showExpOnPrint={showExpOnPrint}
+            showExperience={showExperience}
+            experienceLevel={
+              showLevel &&
+              level &&
+              scale && (
+                <ToolLevel
+                  className="techstack-level"
+                  level={level}
+                  scale={scale}
+                  bgColor={bgColor}
+                  primaryColor={primaryColor}
+                  height={height}
+                  type={type}
+                />
+              )
+            }
+          />
+        );
+      })}
     </div>
   );
 };

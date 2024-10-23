@@ -31,7 +31,7 @@ export const Avatar = ({ mode, className }: Props) => {
 };
 
 Avatar.propTypes = {
-  mode: (props: Props, propName: keyof Props) => {
+  mode: (props: Props) => {
     if (['circle', 'rounded'].includes(props['mode'])) {
       return null;
     }
