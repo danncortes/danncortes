@@ -10,9 +10,7 @@ const path = require('path');
 
 const config = {
   name: 'react-base-ts-webpack',
-  entry: {
-    app: './src/index.tsx'
-  },
+  entry: './src/index.tsx',
   module: {
     rules: [
       {
@@ -25,7 +23,7 @@ const config = {
         use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|avif)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -63,7 +61,8 @@ const config = {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendor',
-          chunks: 'all'
+          chunks: 'all',
+          reuseExistingChunk: true
         }
       }
     },
