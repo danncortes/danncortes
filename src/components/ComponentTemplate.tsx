@@ -8,7 +8,7 @@ type Props = {
 
 const ComponentTemplate = ({ title, children, className }: Props) => {
   return (
-    <div className={`component-template ${className ?? ''}`}>
+    <div className={`component-template mb-8 ${className ?? ''}`}>
       {title && <h3 className={`component-template__title`}>{title}</h3>}
       {children}
     </div>

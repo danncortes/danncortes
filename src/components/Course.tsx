@@ -34,8 +34,10 @@ const Course = ({ course, showYear = false }: CourseProps) => {
           </a>
         </div>
       )}
-      {name === 'Advanced JavaScript' && (
+      {/* Use the following code snippet to render spaces for the page break on print: */}
+      {name === '' && (
         <>
+          <div className="break-page"></div>
           <div className="break-page"></div>
           <div className="break-page"></div>
           <div className="break-page"></div>

@@ -113,10 +113,6 @@ html {
   max-width: 1160px;
 }
 
-.resume-header {
-  display: flex;
-}
-
 .resume-header__left {
   flex: auto;
 }
@@ -149,10 +145,6 @@ html {
 }
 
 /* Component Template  */
-.component-template {
-  margin-bottom: 2rem;
-}
-
 .component-template__title {
   margin-bottom: 0.9rem;
   text-transform: uppercase;
@@ -181,6 +173,10 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   row-gap: 0.8rem;
+}
+
+.techstack--no-exp {
+  row-gap: 0.3rem;
 }
 
 .techstack-level {
@@ -300,9 +296,8 @@ html {
 }
 
 /* Experience  */
-
 .experience__item {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-weight: 500;
   font-size: 0.875rem;
   position: relative;
@@ -329,10 +324,6 @@ html {
   left: calc(var(--column-gap) * -1);
   top: 0.9rem;
   transform: translate(-50%, -50%);
-}
-
-.experience__header {
-  margin-bottom: 1rem;
 }
 
 .experience__company-name {
@@ -372,11 +363,7 @@ html {
   padding-right: 0.5rem;
 }
 
-.experience__job-profile {
-  margin-bottom: 1rem;
-}
-
-ul.experience__job-profile,
+ul.experience__job-intro,
 .experience__project-responsibilities {
   padding-left: 1rem;
   margin-bottom: 1rem;
@@ -397,8 +384,12 @@ ul.experience__job-profile,
   margin-bottom: 0.25rem;
 }
 
-.experience__project-description {
-  margin-bottom: 0.25rem;
+.experience__project-techstack {
+  padding-bottom: 0.25rem;
+  font-size: 0.78rem;
+  font-style: oblique;
+  color: var(--secondary-color);
+  text-align: right;
 }
 
 .more-info {
@@ -446,7 +437,6 @@ ul.experience__job-profile,
 
   .resume-content {
     flex-flow: column;
-    font-size: 0.5rem;
   }
 
   .resume-content__left {

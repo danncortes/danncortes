@@ -8,7 +8,7 @@ type Props = {
   companyName: string;
 };
 
-export default ({ projects, companyKey, companyName }: Props) => {
+export default ({ projects, companyKey }: Props) => {
   const { t } = useTranslation();
 
   return (
@@ -17,27 +17,21 @@ export default ({ projects, companyKey, companyName }: Props) => {
         {t(`project${projects.length > 1 ? 's' : ''}`)}
       </h3>
       <ul>
-        {projects.map((project, i) => (
+        {projects.map((project) => (
           <li key={project.name} className="experience__project">
-            <p className="experience__project-name color-secondary">
-              {project.name}
-            </p>
-            {
-              <p className="experience__project-description">
-                {t(
-                  `experience.${companyKey}.projects.${project.projectKey}.description`
-                )}
+            <div className="experience__project-header flex justify-between">
+              <p className="experience__project-name color-secondary">
+                {project.name}
               </p>
-            }
-            {['Truelogic Software'].includes(companyName) && (
-              <>
-                <div className="break-page"></div>
-                <div className="break-page"></div>
-                <div className="break-page"></div>
-                <div className="break-page"></div>
-              </>
-            )}
-            <p className="font-semibold">{t('responsibilities')}</p>
+              <p className="experience__project-techstack">
+                {`${project.techStack}`}
+              </p>
+            </div>
+            <p className="experience__project-description mb-1">
+              {t(
+                `experience.${companyKey}.projects.${project.projectKey}.description`
+              )}
+            </p>
             <ul className="experience__project-responsibilities">
               {Object.values(
                 t(

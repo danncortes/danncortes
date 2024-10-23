@@ -1,15 +1,11 @@
 {
   "profileInfo": {
     "title": "Senior Frontend Developer",
-    "summary": [
-      "Frontend Developer with 9 years of experience with JavaScript and TypeScript, specializing in building high-performance, responsive, and scalable web applications. Proficient in Angular and React, with a strong commitment to clean code and best practices. Experienced in Agile methodologies, particularly Scrum.",
-      "Goal-oriented, organized, and always striving to stay up-to-date with the latest industry trends and technologies. A strong team player focused on continuous improvement and delivering solutions that meet both user and business needs."
-    ]
+    "summary": "Frontend Developer with 9 years of experience with JavaScript and TypeScript, specializing in building high-performance, responsive, and scalable web applications. Proficient in Angular and React, with a strong commitment to clean code and best practices. Experienced in Agile methodologies, particularly Scrum."
   },
   "lucerne": "Lucerne",
   "switzerland": "Switzerland",
   "colombia": "Colombia",
-  "lucernSwitzerland": "$t(lucerne), $t(switzerland)",
   "profile": "Profile",
   "phone": "Phone",
   "permit": "Permit",
@@ -21,7 +17,7 @@
     "permitType": "B $t(permit)"
   },
   "techStack": "Tech Stack",
-  "otherTools": "Other Tools",
+  "tools": "Tools",
   "workExperience": "Work Experience",
   "courses": "Courses",
   "languages": "Languages",
@@ -30,7 +26,7 @@
     "english": "English",
     "german": "German"
   },
-  "b2IndependentUser": "B2 - Independent User",
+  "b2": "Fluent (B2)",
   "native": "Native",
   "education": "Education",
   "yOfExp": "Years of Exp.",
@@ -43,35 +39,36 @@
   "printOrDownload": "Print or download",
   "experience": {
     "smartCom": {
-      "intro": "Developer web application products for the insurance and financial sectors using JavaScript, TypeScript, and Angular, applying SCRUM principles",
+      "intro": "Developer web application products for the insurance and financial sectors",
       "projects": {
         "reportDashboard": {
-          "description": "Usage dashboard web application developed in Angular",
+          "description": "Usage dashboard web application",
           "responsibilities": [
-            "Designed and implemented responsive user interfaces focused on user experience using Angular Bootstrap and ChartJS",
-            "Contributed to architecture design and performance optimization",
-            "Implemented and maintained Angular components, directives, services, pipes, and modules",
-            "Integration with backend APIs and services to fetch and manipulate data, using Angular's built-in HTTP client",
-            "Unit testing for Angular components and services using Jasmine and Karma testing frameworks"
+            "Designed and implemented responsive user interfaces focused on user experience",
+            "Architecture design and performance optimization",
+            "Developed and maintained components, directives, services, pipes, and modules",
+            "Integration with backend APIs and services to fetch and manipulate data, using HTTP client",
+            "Unit testing for components and services"
           ]
         },
         "documentEditor": {
-          "description": "Document generation and editing web application in TypeScript and JavaScript",
+          "description": "Document generation and editing web application",
           "responsibilities": [
-            "Implemented user interfaces utilizing a corporate UI framework with HTML, CSS, LESS, JavaScript, jQuery, and TypeScript",
-            "Unit testing with Jasmine and Sinon testing libraries on an internal corporate JavaScript/TypeScript framework"
+            "Implemented user interfaces utilizing a corporate UI framework",
+            "Unit testing components and features"
           ]
         }
       }
     },
     "truelogic": {
-      "intro": "Worked for a US-based customer project using JavaScript, VueJS, ReactJS, HTML and CSS technologies while applying agile development",
+      "about": "Truelogic Software offers premium nearshore software development services to American companies",
+      "intro": "",
       "projects": {
         "specimensInventory": {
-          "description": "Patient Specimens Inventory Management Web Apps for Cryogenic Storage in Clinics on VueJS and JavaScript",
+          "description": "Patient Specimens Inventory Management Web-App for Cryogenic Storage in Clinics",
           "responsibilities": [
-            "Designing, implementing and maintaining components and features using VueJS",
-            "Testing features using Jest",
+            "Designing, implementing and maintaining components and features",
+            "Testing components and features",
             "Gathering information, creating tasks and specifying requirements and acceptance criteria for new features",
             "Leading technical interviews of candidates"
           ]
@@ -79,74 +76,82 @@
       }
     },
     "endava": {
-      "intro": "Worked on different projects for US-based customers using JavaScript, HTML and CSS technologies while applying the principles of Scrum",
+      "intro": "Endava is a software development outsourcing company that creates dynamic platforms and intelligent digital experiences for businesses",
       "projects": {
         "yogaAccessories": {
           "description": "Yoga accessories e-shop retailer for USA and Canada developed using ReactJS",
           "responsibilities": [
-            "Maintained and enhanced components adding accessibility features using JavaScript, ReactJS, HTML and CSS",
-            "Used Jest and Enzyme for React testing"
+            "Maintained and enhanced components adding accessibility features",
+            "Testing components and features"
           ]
         }
       }
     },
     "velocity": {
-      "intro": "Worked on different projects for US-based customers using JavaScript, HTML and CSS technologies while applying the principles of Scrum",
+      "intro": "Velocity Partners was an innovative global nearshore software development outsourcing company",
       "projects": {
         "laserPrinter": {
-          "description": "Machine diagnostic tool for 3D laser printer manufacturer using ReactJS and NodeJS",
+          "description": "Machine diagnostic tool for 3D laser printer manufacturer",
           "responsibilities": [
             "Worked on the creation of a command line based feature in NodeJS to run tests connected through SSH console",
-            "Co-developed a React application which connects to a 3D laser printer through an API with the aim of displaying status info and performing diagnostic test for printer hardware components",
-            "Used Redux for data state management",
-            "Used Jest and Enzyme for application testing"
+            "Developed a React application which connects to a 3D laser printer through an API with the aim of displaying status info and performing diagnostic test for printer hardware components",
+            "Testing components and features"
           ]
         },
         "platformConnection": {
           "description": "On-demand multi-tenant cloud integration platform",
           "responsibilities": [
-            "Participated in the development of UI features improvements for a platform which offers connectors in order to integrate applications and data",
-            "Created new UI features using GWT",
-            "Developed a dashboard application using Angular 4 and SCSS connected to a Rest API in order to have full control of the data related to connectors, OS, browsers, and clients in the platform"
+            "Development and optimization of UX functionalities for a platform that offers connectors to integrate applications and data"
           ]
         },
         "loyaltyPrograms": {
           "description": "Loyalty programs management application for a US Bank developed in AngularJS",
           "responsibilities": [
             [
-              "Co-created a web application for customers and merchants to create and manage loyalty programs and track statistics",
-              "Utilized AngularJS, Angular Materials and Charts.js"
+              "Developed web application for customers and merchants to create and manage loyalty programs and track statistics"
             ]
           ]
         }
       }
     },
     "dada": {
-      "intro": [
-        "Developed UI and UX solutions to implement a horizontal scroll navigation for the whole website.",
-        "Designed UI features across the platform"
-      ]
+      "about": "DADA is a social network where people speak to each other through drawings that you can collect on the Ethereum blockchain",
+      "intro": "",
+      "projects": {
+        "dadanyc": {
+          "description": "",
+          "responsibilities": [
+            "Developed UI and UX solutions to implement a horizontal scroll navigation for the whole website.",
+            "Designed UI features across the platform"
+          ]
+        }
+      }
     },
     "ries": {
+      "about": "Ries.inc was a web development agency für clients in the USA",
       "intro": [
-        "Designed UI solutions for multiple clients using HTML, CSS and Jquery",
-        "Worked on the design and implementation of a mobile-responsive website for insurance products using PHP and Bootstrap",
-        "Participated in the design and implementation of a web and web mobile app used to look for products based on Geolocation",
-        "Utilized HTML, CSS, Bootstrap, Jquery, Jquery Mobile, Google Maps API"
+        "Design and development of a responsive website for insurance companies using PHP and Bootstrap",
+        "UI design and UX development of a web-mobile application to find products using geolocation with jQuery, jQuery Mobile, HTML, CSS, and Google Maps API"
       ]
     },
     "bumeran": {
-      "intro": [
-        "Developed and customized customer's minisites",
-        "Set up graphic proposals and subsequently each minisite's layouts in HTML + CSS",
-        "Worked on UI designs based on the corporate image guidelines for each brand or company"
-      ]
+      "about": "Bumeran.com is one of the largest job portals in South America",
+      "intro": "",
+      "projects": {
+        "minisites": {
+          "description": "",
+          "responsibilities": [
+            "Developed and customized customer minisites, created graphic proposals and layouts, and designed UIs based on corporate branding guidelines"
+          ]
+        }
+      }
     },
     "ola": {
+      "about": "Ola Creativa was an independent company that offered web design and graphic services to various clients in Venezuela",
       "intro": [
-        "Offered web development services to clients in the pharmaceutical industry",
-        "Created web applications to manage loyalty programs for pharmaceutical products using PHP, HTML and CSS",
-        "Created website portfolios for medical products"
+        "Web UI development services for clients in the pharmaceutical industry",
+        "Development of a web application for managing loyalty programs for pharmaceutical products using PHP, HTML, and CSS",
+        "Development of website portfolios for medical products"
       ]
     }
   }

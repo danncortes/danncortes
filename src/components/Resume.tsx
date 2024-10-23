@@ -1,17 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
-import ResumeContent from './ResumeContent';
+import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '../font-awesome';
 import { i18n, Language, supportedLanguages } from '../i18n';
+import ResumeContent from './ResumeContent';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Resume = () => {
   const { t } = useTranslation();
-
   const { language } = useParams<{ language: Language }>();
-
   const FontSizesPerLanguage: { [key in Language]: string } = {
-    en: '12.6px',
+    en: '12.4px',
     de: '12.2px'
   };
 
@@ -35,8 +33,6 @@ const Resume = () => {
       i18n.changeLanguage(language);
     }
   }, [language]);
-
-  const componentRef: any = useRef();
 
   const onClickPrint = () => {
     document.documentElement.style.fontSize = '12px';

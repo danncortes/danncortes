@@ -12,7 +12,7 @@ export default ({ isIntroArray, translationKey }: Props) => {
   return (
     <>
       {isIntroArray ? (
-        <ul className="experience__job-profile">
+        <ul className="experience__job-intro mb-4">
           {Object.values(
             t(translationKey, {
               returnObjects: true
@@ -22,7 +22,7 @@ export default ({ isIntroArray, translationKey }: Props) => {
           ))}
         </ul>
       ) : (
-        <p className="experience__job-profile">{t(translationKey)}</p>
+        <p className="experience__job-intro mb-4">{t(translationKey)}</p>
       )}
     </>
   );
