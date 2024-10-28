@@ -90,7 +90,7 @@ html {
 }
 
 .resume-wrapper {
-  color: #555;
+  color: #222;
   padding: 1.5rem 0 0 0;
   background-color: transparent;
 }
@@ -400,17 +400,17 @@ ul.experience__job-intro,
 .language-button {
   cursor: pointer;
   padding: 0.1rem 0.4rem;
-  border: 1px solid #eee;
+  border: 1px solid var(--secondary-color);
   border-radius: 0.2rem;
   margin-right: 0.5rem;
   background: transparent;
   font-size: 0.75rem;
-  color: #ccc;
+  color: var(--secondary-color);
 }
 
 .language-button--active {
-  border: 2px solid #98bfd4;
-  color: #555;
+  background-color: var(--secondary-color);
+  color: white;
 }
 
 @media only screen and (max-width: 767px) {
