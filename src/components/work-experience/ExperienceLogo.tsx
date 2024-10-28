@@ -1,13 +1,14 @@
 import React, { ReactElement, useEffect, useState } from 'react';
-import { loadImage } from '../../utils';
+import { WorkExpData } from './WorkExperience';
 
 type Props = {
-  logo: string;
+  logo: Exclude<WorkExpData['logo'], null>;
   companyName: string;
   link: string;
 };
 
 export default ({ logo, companyName, link }: Props): ReactElement => {
+  const { loadingMode } = logo;
   const imagesConfig = [
     {
       size: 130,
@@ -24,7 +25,7 @@ export default ({ logo, companyName, link }: Props): ReactElement => {
   const [srcSet, setSrcSet] = useState('');
 
   useEffect(() => {
-    const [name, extention] = logo.split('.');
+    const [name, extention] = logo.name.split('.');
     setImagesSrc(name, extention);
   }, [logo]);
 
@@ -33,8 +34,9 @@ export default ({ logo, companyName, link }: Props): ReactElement => {
 
     for (const config of imagesConfig) {
       const { size, dpr, isDefault } = config;
-      const loadedImage = (await loadImage(`${name}-${size}.${extension}`))
-        .default;
+      const loadedImage = (
+        await import(`../../assets/${name}-${size}.${extension}`)
+      ).default;
 
       if (isDefault) {
         setDefaultSrc(loadedImage);
@@ -55,6 +57,7 @@ export default ({ logo, companyName, link }: Props): ReactElement => {
         srcSet={srcSet}
         alt={companyName}
         aria-label={companyName}
+        loading={loadingMode as 'lazy' | 'eager'}
       />
     </>
   );

@@ -23,19 +23,22 @@ export const Avatar = ({ mode, className }: Props) => {
   }
 
   return (
-    profileImgDefault && (
-      <div className={`avatar ${className}`}>
-        <link rel="preload" href={profileImgDefault} as="image" />
-        <img
-          width="180"
-          height="180"
-          className={imgModeClass}
-          src={profileImgDefault}
-          srcSet={`${profileImgDefault} 1x, ${profileImgMobile} 2x`}
-          alt="Profile Pic"
-        />
-      </div>
-    )
+    <div className={`avatar ${className}`}>
+      <link
+        rel="preload"
+        href={profileImgDefault}
+        as="image"
+        fetchPriority="high"
+      />
+      <img
+        width="180"
+        height="180"
+        className={imgModeClass}
+        src={profileImgDefault}
+        srcSet={`${profileImgDefault} 1x, ${profileImgMobile} 2x`}
+        alt="Profile Picture"
+      />
+    </div>
   );
 };
 

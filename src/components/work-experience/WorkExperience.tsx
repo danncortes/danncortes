@@ -23,7 +23,10 @@ export type WorkExpData = {
   to: number | null;
   location: string;
   projects: ProjectData[];
-  logo: string;
+  logo: {
+    name: string;
+    loadingMode: string;
+  } | null;
   companyName: string;
   companyKey: string;
   nameNote?: string;

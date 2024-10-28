@@ -106,7 +106,10 @@
           "techStack": "TypeScript, JavaScript, JQuery, Jasmin, Sinon, HTML, LESS"
         }
       ],
-      "logo": "smart-communications.avif"
+      "logo": {
+        "name": "smart-communications.avif",
+        "loadingMode": "eager"
+      }
     },
     {
       "companyName": "Truelogic Software",
@@ -123,7 +126,10 @@
           "techStack": "VueJS, Vuex, TypeScript, JavaScript, HTML, SASS"
         }
       ],
-      "logo": "truelogic.avif"
+      "logo": {
+        "name": "truelogic.avif",
+        "loadingMode": "eager"
+      }
     },
     {
       "companyName": "Endava",
@@ -140,7 +146,10 @@
           "techStack": "ReactJS, TypeScript, JavaScript, Redux, Jest, Enzyme, HTML, CSS"
         }
       ],
-      "logo": "endava.avif"
+      "logo": {
+        "name": "endava.avif",
+        "loadingMode": "lazy"
+      }
     },
     {
       "companyName": "Velocity Partners",
@@ -168,7 +177,10 @@
           "techStack": "AngularJS, Angular Materials, JavaScript, Charts.js, HTML, CSS"
         }
       ],
-      "logo": "velocity-partners.avif"
+      "logo": {
+        "name": "velocity-partners.avif",
+        "loadingMode": "lazy"
+      }
     },
     {
       "companyName": "Dada",
@@ -186,7 +198,10 @@
           "techStack": "Jquery, HTML, SCSS"
         }
       ],
-      "logo": "dada-nyc.avif",
+      "logo": {
+        "name": "dada-nyc.avif",
+        "loadingMode": "lazy"
+      },
       "showOnPrint": false
     },
     {
@@ -200,7 +215,7 @@
       "about": "",
       "isIntroArray": true,
       "projects": [],
-      "logo": "",
+      "logo": null,
       "showOnPrint": false
     },
     {
@@ -220,7 +235,10 @@
           "techStack": "HTML, CSS, PHP"
         }
       ],
-      "logo": "bumeran.avif",
+      "logo": {
+        "name": "bumeran.avif",
+        "loadingMode": "lazy"
+      },
       "showOnPrint": false
     },
     {
@@ -234,7 +252,7 @@
       "about": "",
       "isIntroArray": true,
       "projects": [],
-      "logo": "",
+      "logo": null,
       "showOnPrint": false
     }
   ],
