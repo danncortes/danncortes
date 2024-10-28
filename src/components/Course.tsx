@@ -30,7 +30,7 @@ const Course = ({ course, showYear = false }: CourseProps) => {
             rel="noopener noreferrer"
             className="course__site"
           >
-            {site}
+            {site.replace('http://', '')}
           </a>
         </div>
       )}
