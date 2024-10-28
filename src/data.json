@@ -129,7 +129,7 @@
       "companyName": "Endava",
       "link": "https://www.endava.com/",
       "position": "seniorFrontendDeveloper",
-      "from": 1509494400000,
+      "from": 1530403200000,
       "to": 1555459200000,
       "location": "Medellin, $t(colombia)",
       "companyKey": "endava",
@@ -148,7 +148,7 @@
       "link": "https://www.endava.com/",
       "position": "frontendDeveloper",
       "from": 1443052800000,
-      "to": 1509494400000,
+      "to": 1530403200000,
       "location": "Medellin, $t(colombia)",
       "companyKey": "velocity",
       "projects": [
