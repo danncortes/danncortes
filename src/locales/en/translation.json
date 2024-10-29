@@ -1,7 +1,7 @@
 {
   "profileInfo": {
     "title": "Senior Frontend Developer",
-    "summary": "Frontend Developer with 9 years of experience with JavaScript and TypeScript, specializing in building high-performance, responsive, and scalable web applications. Proficient in Angular and React, with a strong commitment to clean code and best practices. Experienced in Agile methodologies, particularly Scrum."
+    "summary": "Frontend Developer with 9 years of experience with JavaScript and TypeScript, specializing in building high-performance, responsive, and scalable web applications with Angular and React. Strong commitment to clean code and best practices. Experienced in Agile methodologies, particularly Scrum."
   },
   "lucerne": "Lucerne",
   "switzerland": "Switzerland",
@@ -26,7 +26,7 @@
     "english": "English",
     "german": "German"
   },
-  "b2": "Fluent (B2)",
+  "b2": "Fluent in speech and writing(B2)",
   "native": "Native",
   "education": "Education",
   "yOfExp": "Years of Exp.",

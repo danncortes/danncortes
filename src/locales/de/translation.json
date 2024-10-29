@@ -1,7 +1,7 @@
 {
   "profileInfo": {
     "title": "$t(seniorFrontendDeveloper)",
-    "summary": "Frontend-Entwickler mit 9 Jahren Erfahrung in JavaScript und TypeScript, spezialisiert auf die Entwicklung leistungsstarker, intuitiver, responsiver und skalierbarer Webanwendungen in agilen Teams. Vertraut mit Angular und React sowie HTML und CSS, stark orientiert daran, sauberen Code zu erstellen."
+    "summary": "Frontend-Entwickler mit 9 Jahren Erfahrung in JavaScript und TypeScript, spezialisiert auf die Entwicklung leistungsstarker, intuitiver, responsiver und skalierbarer Webanwendungen in agilen Teams mit Angular und React sowie HTML und CSS. Stark orientiert daran, sauberen Code zu erstellen."
   },
   "lucerne": "Luzern",
   "switzerland": "Schweiz",
@@ -26,7 +26,7 @@
     "english": "Englisch",
     "german": "Deutsch"
   },
-  "b2IndependentUser": "B2 - Selbständiger Sprachverwendung",
+  "b2": "Fließend in Wort und Schrift (B2)",
   "native": "Muttersprache",
   "education": "Ausbildung",
   "yOfExp": "Jahre Erf.",
@@ -61,16 +61,16 @@
       }
     },
     "truelogic": {
-      "about": "Truelogic Software bietet erstklassige Nearshore-Softwareentwicklungsdienste für amerikanische Unternehmen",
+      "about": " Truelogic Software ist ein IT-Dienstleister, der massgeschneiderte Softwareentwicklungs- und Technologielösungen anbietet, vor allem für Kunden in den USA",
       "intro": "",
       "projects": {
         "specimensInventory": {
-          "description": "Entwicklung einer Inventarsoftware zur Verwaltung von Patientensproben",
+          "description": "Entwicklung einer Inventarsoftware zur Verwaltung von Patientenproben",
           "responsibilities": [
             "Entwicklung, Implementierung und Betrieb von Komponenten und UX Funktionalitäten",
             "Unit-Testing für Komponenten und Funktionalitäten",
-            "Erfassung von Informationen, Anforderungsmanagement und Definition neuer Funktionalitäten",
-            "Durchführung der Technischen interviews von Bewerbenden"
+            "Anforderungsmanagement und Definition neuer Funktionalitäten",
+            "Durchführung der technischen Interviews von Bewerbenden"
           ]
         }
       }
@@ -93,23 +93,23 @@
       "intro": "",
       "projects": {
         "laserPrinter": {
-          "description": "Maschinenstatus Anwendung für 3D-Druckerhersteller in den USA",
+          "description": "Maschinenstatus Anwendung für 3D-Laserdrucker",
           "responsibilities": [
-            "Entwicklung einer Befehlszeilenanwendung in NodeJS, um Test an einem 3D-Drucker durchzuführen",
-            "Entwicklung einer standalone Anwendung um Statusinformationen anzuzeigen und Diagnosetests für 3D-Drucker-hardwarekomponenten durchzuführen",
+            "Entwicklung einer Befehlszeilenanwendung in NodeJS, um Tests an einem 3D-Laserdrucker durchzuführen",
+            "Entwicklung einer eigenständigen Anwendung um Statusinformationen anzuzeigen und Diagnosetests für 3D-Laserdrucker Hardwarekomponenten durchzuführen",
             "Unit-Testing für Komponenten und Funktionalitäten"
           ]
         },
         "platformConnection": {
           "description": "On-Demand-Multi-Tenant-Cloud-Integrationsplattform",
           "responsibilities": [
-            "UX-Funktionalitäten Entwicklung und Optimierung für eine Plattform, die Connectoren bietet, um Anwendungen und Daten zu integrieren"
+            "Entwicklung und Optimierung von UX-Funktionalitäten für eine Plattform, welche Konnektoren bereitstellt, um Anwendungen und Daten zu integrieren"
           ]
         },
         "loyaltyPrograms": {
           "description": "Anwendung zur Verwaltung von Loyalitätsprogrammen für eine US-Bank",
           "responsibilities": [
-            "Entwicklung einer Webanwendung für Kunden und Händler zur Erstellung und Verwaltung von Loyalitätsprogrammen und zur Verfolgung von Statistiken"
+            "Entwicklung einer Webanwendung für Kunden und Händler zur Erstellung und Verwaltung von Loyalitätsprogrammen"
           ]
         }
       }
