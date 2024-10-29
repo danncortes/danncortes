@@ -9,8 +9,8 @@ const Resume = () => {
   const { t } = useTranslation();
   const { language } = useParams<{ language: Language }>();
   const FontSizesPerLanguage: { [key in Language]: string } = {
-    en: '12.4px',
-    de: '12.2px'
+    en: '12.5px',
+    de: '12.3px'
   };
 
   useEffect(() => {
