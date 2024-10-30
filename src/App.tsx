@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <div className="App">
         <Switch>
           <Route path="/:language" component={Resume}></Route>

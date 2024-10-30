@@ -5,6 +5,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CreateFileWebpack = require('create-file-webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const path = require('path');
 
@@ -45,7 +46,15 @@ const config = {
       fileName: 'CNAME',
       content: 'danncortes.com'
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'public/404.html'), // Path to your 404.html
+          to: path.resolve(__dirname, 'build/404.html') // Destination in the build folder
+        }
+      ]
+    })
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
