@@ -1,5 +1,4 @@
 import React from 'react';
-import dayjs from 'dayjs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -7,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import ExperienceIntro from './ExperienceIntro';
 import ExperienceLogo from './ExperienceLogo';
 import ExperienceProjects from './ExperienceProjects';
+import { formatDate } from '../../utils';
 
 library.add(faMapMarkerAlt);
 
@@ -19,8 +19,8 @@ export type ProjectData = {
 export type WorkExpData = {
   link: string;
   position: string;
-  from: number;
-  to: number | null;
+  from: string;
+  to: string | null;
   location: string;
   projects: ProjectData[];
   logo: {
@@ -71,8 +71,7 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
                 {t(position)}
               </h4>
               <p className="experience__time">
-                {dayjs(from).format('MMM YYYY')} -{' '}
-                {to ? dayjs(to).format('MMM YYYY') : 'Currently'}
+                {formatDate(from)} - {to ? formatDate(to) : 'Currently'}
                 {<span>|</span>}
                 <span className=" experience__location">
                   <FontAwesomeIcon icon="map-marker-alt" /> {t(location)}

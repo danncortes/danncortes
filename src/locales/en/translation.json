@@ -37,6 +37,20 @@
   "seniorFrontendDeveloper": "Senior $t(frontendDeveloper)",
   "moreExpInfo": "For additional work experience prior to 2015, please visit:",
   "printOrDownload": "Print or download",
+  "months": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ],
   "experience": {
     "smartCom": {
       "intro": "Developer web application products for the insurance and financial sectors",

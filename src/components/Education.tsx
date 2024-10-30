@@ -1,16 +1,16 @@
 import React from 'react';
-import dayjs from 'dayjs';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { formatDate } from '../utils';
 
 library.add(faMapMarkerAlt);
 
 export type EducationModel = {
   title: string;
-  from: number;
-  to: number;
+  from: string;
+  to: string;
   place: string;
   location: string;
 };
@@ -22,7 +22,7 @@ const Education = ({ education }: { education: EducationModel }) => {
     <div className="education">
       <p className="education__title">{title}</p>
       <p className="education__date">
-        {dayjs(from).format('MMM YYYY')} - {dayjs(to).format('MMM YYYY')}
+        {formatDate(from)} - {formatDate(to)}
       </p>
       <p className="education__place">{place}</p>
       <p className="education__icon">

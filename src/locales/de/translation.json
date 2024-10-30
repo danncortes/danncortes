@@ -37,6 +37,20 @@
   "seniorFrontendDeveloper": "Senior $t(frontendDeveloper)",
   "moreExpInfo": "Für zusätzliche Berufserfahrung vor 2015 besuchen Sie bitte:",
   "printOrDownload": "Drucken oder herunterladen",
+  "months": [
+    "Jan.",
+    "Feb.",
+    "März",
+    "Apr.",
+    "Mai",
+    "Jun.",
+    "Jul.",
+    "Aug.",
+    "Sep.",
+    "Okt.",
+    "Nov.",
+    "Dez."
+  ],
   "experience": {
     "smartCom": {
       "intro": "Entwicklung von Webanwendungsprodukten für die Versicherungs- und Finanzbranche",

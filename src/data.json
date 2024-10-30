@@ -90,8 +90,8 @@
       "nameNote": "Assentis Technologies AG",
       "link": "https://smartcommunications.com/",
       "position": "seniorFrontendDeveloper",
-      "from": 1601510400000,
-      "to": 1711843200000,
+      "from": "2020-10-01",
+      "to": "2024-03-21",
       "location": "Rotkreuz - $t(switzerland)",
       "companyKey": "smartCom",
       "projects": [
@@ -115,8 +115,8 @@
       "companyName": "Truelogic Software",
       "link": "https://www.truelogicsoftware.com/",
       "position": "seniorFrontendDeveloper",
-      "from": 1555459200000,
-      "to": 1600387200000,
+      "from": "2019-04-17",
+      "to": "2020-09-18",
       "location": "$t(lucerne) - Remote",
       "companyKey": "truelogic",
       "projects": [
@@ -135,8 +135,8 @@
       "companyName": "Endava",
       "link": "https://www.endava.com/",
       "position": "seniorFrontendDeveloper",
-      "from": 1530403200000,
-      "to": 1555459200000,
+      "from": "2018-07-01",
+      "to": "2019-04-17",
       "location": "Medellin, $t(colombia)",
       "companyKey": "endava",
       "projects": [
@@ -156,8 +156,8 @@
       "nameNote": "Endava",
       "link": "https://www.endava.com/",
       "position": "frontendDeveloper",
-      "from": 1443052800000,
-      "to": 1530403200000,
+      "from": "2015-09-24",
+      "to": "2018-07-01",
       "location": "Medellin, $t(colombia)",
       "companyKey": "velocity",
       "projects": [
@@ -186,8 +186,8 @@
       "companyName": "Dada",
       "link": "https://dada.nyc/",
       "position": "Senior Web Developer",
-      "from": 1393632000000,
-      "to": 1441065600000,
+      "from": "2014-03-01",
+      "to": "2015-09-01",
       "location": "Caracas, Venezuela - Remote",
       "companyKey": "dada",
       "isIntroArray": true,
@@ -208,8 +208,8 @@
       "companyName": "Ries Inc.",
       "link": "",
       "position": "UI Web Developer",
-      "from": 1343779200000,
-      "to": 1393632000000,
+      "from": "2012-08-01",
+      "to": "2014-03-01",
       "location": "Caracas, Venezuela",
       "companyKey": "ries",
       "about": "",
@@ -222,8 +222,8 @@
       "companyName": "Bumeran.com",
       "link": "http://www.bumeran.com/",
       "position": "Senior Web Designer",
-      "from": 1288569600000,
-      "to": 1343779200000,
+      "from": "2010-11-01",
+      "to": "2012-08-01",
       "location": "Caracas, Venezuela",
       "companyKey": "bumeran",
       "about": "",
@@ -245,8 +245,8 @@
       "companyName": "Ola Creativa",
       "link": "",
       "position": "Web Designer / Graphic Designer",
-      "from": 1280620800000,
-      "to": 1441065600000,
+      "from": "2010-08-01",
+      "to": "2015-09-01",
       "location": "Caracas, Venezuela",
       "companyKey": "ola",
       "about": "",
@@ -271,70 +271,70 @@
   "courses": [
     {
       "name": "OWASP Top 10: The Big Picture",
-      "date": 1698796800000,
+      "date": "2023-11-01",
       "note": "",
       "site": "http://www.pluralsight.com",
       "show": false
     },
     {
       "name": "Angular 4 Security Using JSON Web Tokens",
-      "date": 1698796800000,
+      "date": "2023-11-01",
       "note": "",
       "site": "http://www.pluralsight.com",
       "show": false
     },
     {
       "name": "OWASP Top 10: What's New",
-      "date": 1667260800000,
+      "date": "2022-11-01",
       "note": "",
       "site": "http://www.pluralsight.com",
       "show": false
     },
     {
       "name": "NodeJS",
-      "date": 1583020800000,
+      "date": "2020-03-01",
       "note": "",
       "site": "http://www.udemy.com"
     },
     {
       "name": "Advanced React and Redux",
-      "date": 1583020800000,
+      "date": "2020-03-01",
       "note": "",
       "site": "http://www.udemy.com"
     },
     {
       "name": "Git Complete: The definitive, step-by-step guide to Git",
-      "date": 1580515200000,
+      "date": "2020-02-01",
       "note": "",
       "site": "http://www.udemy.com"
     },
     {
       "name": "Modern React with Redux",
-      "date": 1514764800000,
+      "date": "2018-01-01",
       "note": "",
       "site": "http://www.udemy.com"
     },
     {
       "name": "The Complete JavaScript Course: Build a Real-World Project",
-      "date": 1512086400000,
+      "date": "2017-12-01",
       "note": "",
       "site": "http://www.udemy.com"
     },
     {
       "name": "Design Patterns in JavaScript",
-      "date": 1506816000000,
+      "date": "2017-10-01",
       "note": "",
       "site": "http://www.pluralsight.com"
     },
     {
       "name": "Advanced JavaScript",
-      "date": 1501545600000,
+      "date": "2017-08-01",
       "note": "",
       "site": "http://www.pluralsight.com"
     },
     {
       "name": "Diseño Gráfico de Interfaces de Usuario y UX",
-      "date": 1420070400000,
+      "date": "2015-01-01",
       "note": "",
       "site": "http://www.platzi.com"
     }
@@ -350,15 +350,15 @@
   "education": [
     {
       "title": "Graphic Design",
-      "from": 899251200000,
-      "to": 962409600000,
+      "from": "1998-07-01",
+      "to": "2000-07-01",
       "place": "Instituto de Diseño de Caracas",
       "location": "Caracas"
     },
     {
       "title": "Web Master Design",
-      "from": 983404800000,
-      "to": 999302400000,
+      "from": "2001-03-01",
+      "to": "2001-09-01",
       "place": "Centro de Diseño Digital",
       "location": "Caracas"
     }

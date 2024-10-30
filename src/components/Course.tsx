@@ -1,9 +1,9 @@
 import React from 'react';
-import dayjs from 'dayjs';
+import { formatDate } from '../utils';
 
 export type CourseData = {
   name: string;
-  date: number;
+  date: string;
   note: string;
   site: string;
   show?: boolean;
@@ -22,7 +22,7 @@ const Course = ({ course, showYear = false }: CourseProps) => {
         <div className="course">
           <p className="course__name">{name}</p>
           {showYear && (
-            <p className="course__date">{dayjs(date).format('YYYY')}</p>
+            <p className="course__date">{formatDate(date, { full: false })}</p>
           )}
           <a
             href={site}
