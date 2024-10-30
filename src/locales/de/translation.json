@@ -42,6 +42,7 @@
       "intro": "Entwicklung von Webanwendungsprodukten für die Versicherungs- und Finanzbranche",
       "projects": {
         "reportDashboard": {
+          "name": "Usage-Dashboard",
           "description": "Usage-Dashboard-Webanwendung",
           "responsibilities": [
             "Gestaltung und Implementierung von responsiven Benutzeroberflächen mit Fokus auf Benutzererfahrung",
@@ -52,6 +53,7 @@
           ]
         },
         "documentEditor": {
+          "name": "Dokumenteneditor",
           "description": "Webanwendung zur Dokumentenerstellung und -bearbeitung",
           "responsibilities": [
             "Implementierung von Benutzeroberflächen unter Einsatz eines unternehmenseigenen UI-Frameworks",
@@ -65,6 +67,7 @@
       "intro": "",
       "projects": {
         "specimensInventory": {
+          "name": "Probeninventar",
           "description": "Entwicklung einer Inventarsoftware zur Verwaltung von Patientenproben",
           "responsibilities": [
             "Entwicklung, Implementierung und Betrieb von Komponenten und UX Funktionalitäten",
@@ -80,6 +83,7 @@
       "intro": "",
       "projects": {
         "yogaAccessories": {
+          "name": "Yoga-Zubehör e-shop",
           "description": "Implementierung neuer Funktionalitäten für E-Shop",
           "responsibilities": [
             "Entwicklung und Optimierung der Komponenten durch Funktionserweiterungen mit dem Ziel der digitalen Barrierefreiheit",
@@ -93,6 +97,7 @@
       "intro": "",
       "projects": {
         "laserPrinter": {
+          "name": "3D-Laserdrucker",
           "description": "Maschinenstatus Anwendung für 3D-Laserdrucker",
           "responsibilities": [
             "Entwicklung einer Befehlszeilenanwendung in NodeJS, um Tests an einem 3D-Laserdrucker durchzuführen",
@@ -101,12 +106,14 @@
           ]
         },
         "platformConnection": {
+          "name": "Plattform zur Anwendungsanbindung",
           "description": "On-Demand-Multi-Tenant-Cloud-Integrationsplattform",
           "responsibilities": [
             "Entwicklung und Optimierung von UX-Funktionalitäten für eine Plattform, welche Konnektoren bereitstellt, um Anwendungen und Daten zu integrieren"
           ]
         },
         "loyaltyPrograms": {
+          "name": "Loyalitätsprogrammen",
           "description": "Anwendung zur Verwaltung von Loyalitätsprogrammen für eine US-Bank",
           "responsibilities": [
             "Entwicklung einer Webanwendung für Kunden und Händler zur Erstellung und Verwaltung von Loyalitätsprogrammen"
@@ -119,6 +126,7 @@
       "intro": "",
       "projects": {
         "dadanyc": {
+          "name": "Zeichnungs-Soziales Netzwerk",
           "description": "",
           "responsibilities": [
             "Gestaltung und entwicklung UI-UX Funktionalitäten",
@@ -139,6 +147,7 @@
       "intro": "",
       "projects": {
         "minisites": {
+          "name": "Minisites",
           "description": "",
           "responsibilities": [
             "Entwickelte und individualisierte Kunden-Minisites, erstellte grafische Vorschläge und Layouts und gestaltete UIs basierend auf den Corporate-Design-Richtlinien"

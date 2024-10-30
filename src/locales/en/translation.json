@@ -42,6 +42,7 @@
       "intro": "Developer web application products for the insurance and financial sectors",
       "projects": {
         "reportDashboard": {
+          "name": "Usage Dashboard",
           "description": "Usage dashboard web application",
           "responsibilities": [
             "Designed and implemented responsive user interfaces focused on user experience",
@@ -52,6 +53,7 @@
           ]
         },
         "documentEditor": {
+          "name": "Document Editor",
           "description": "Document generation and editing web application",
           "responsibilities": [
             "Implemented user interfaces utilizing a corporate UI framework",
@@ -65,6 +67,7 @@
       "intro": "",
       "projects": {
         "specimensInventory": {
+          "name": "Specimens Inventory",
           "description": "Patient Specimens Inventory Management Web-App for Cryogenic Storage in Clinics",
           "responsibilities": [
             "Designing, implementing and maintaining components and features",
@@ -79,6 +82,7 @@
       "intro": "Endava is a software development outsourcing company that creates dynamic platforms and intelligent digital experiences for businesses",
       "projects": {
         "yogaAccessories": {
+          "name": "Yoga Accessories e-shop",
           "description": "Yoga accessories e-shop retailer for USA and Canada developed using ReactJS",
           "responsibilities": [
             "Maintained and enhanced components adding accessibility features",
@@ -91,6 +95,7 @@
       "intro": "Velocity Partners was an innovative global nearshore software development outsourcing company",
       "projects": {
         "laserPrinter": {
+          "name": "3D laser printer",
           "description": "Machine diagnostic tool for 3D laser printer manufacturer",
           "responsibilities": [
             "Worked on the creation of a command line based feature in NodeJS to run tests connected through SSH console",
@@ -99,12 +104,14 @@
           ]
         },
         "platformConnection": {
+          "name": "Application connection platform",
           "description": "On-demand multi-tenant cloud integration platform",
           "responsibilities": [
             "Development and optimization of UX functionalities for a platform that offers connectors to integrate applications and data"
           ]
         },
         "loyaltyPrograms": {
+          "name": "Loyalty Programs",
           "description": "Loyalty programs management application for a US Bank developed in AngularJS",
           "responsibilities": [
             [
@@ -119,6 +126,7 @@
       "intro": "",
       "projects": {
         "dadanyc": {
+          "name": "Drawing Social Network",
           "description": "",
           "responsibilities": [
             "Developed UI and UX solutions to implement a horizontal scroll navigation for the whole website.",
@@ -139,6 +147,7 @@
       "intro": "",
       "projects": {
         "minisites": {
+          "name": "Minisites",
           "description": "",
           "responsibilities": [
             "Developed and customized customer minisites, created graphic proposals and layouts, and designed UIs based on corporate branding guidelines"

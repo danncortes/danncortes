@@ -21,7 +21,9 @@ export default ({ projects, companyKey }: Props) => {
           <li key={project.name} className="experience__project">
             <div className="experience__project-header flex justify-between">
               <p className="experience__project-name color-secondary">
-                {project.name}
+                {t(
+                  `experience.${companyKey}.projects.${project.projectKey}.name`
+                )}
               </p>
               <p className="experience__project-techstack">
                 {`${project.techStack}`}
