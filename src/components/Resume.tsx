@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { i18n, Language, getLanguage } from '../i18n';
 import ResumeContent from './ResumeContent';
+import { isDesktop } from '../utils';
 
 const Resume = () => {
   const { t } = useTranslation();
@@ -45,12 +46,14 @@ const Resume = () => {
 
   return (
     <div className="resume-wrapper resume">
-      <button
-        className="resume__print-tag mb-3 font-semibold"
-        onClick={onClickPrint}
-      >
-        <FontAwesomeIcon icon="print" /> {t('printOrDownload')}
-      </button>
+      {isDesktop() && (
+        <button
+          className="resume__print-tag mb-3 font-semibold"
+          onClick={onClickPrint}
+        >
+          <FontAwesomeIcon icon="print" /> {t('printOrDownload')}
+        </button>
+      )}
       <ResumeContent />
     </div>
   );

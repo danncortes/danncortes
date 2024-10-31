@@ -1,5 +1,11 @@
 import i18n from 'i18next';
 
+declare global {
+  interface Window {
+    MSStream: any;
+  }
+}
+
 export function formatDate(
   dateString: string,
   config: { full: boolean } = { full: true }
@@ -15,4 +21,24 @@ export function formatDate(
   } else {
     return `${year}`;
   }
+}
+
+function getDeviceType() {
+  const userAgent = navigator.userAgent;
+
+  if (/android/i.test(userAgent)) {
+    return 'Android';
+  } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    return 'iOS';
+  } else if (/windows phone/i.test(userAgent)) {
+    return 'Windows Phone';
+  } else if (/tablet/i.test(userAgent)) {
+    return 'Tablet';
+  } else {
+    return 'Desktop';
+  }
+}
+
+export function isDesktop() {
+  return getDeviceType() === 'Desktop';
 }
