@@ -97,7 +97,9 @@ module.exports = (env, argv) => {
       port: 3001
     });
     config.devtool = 'source-map';
-    config.plugins.push(new BundleAnalyzerPlugin({ analyzerPort: 8899 }));
+    config.plugins.push(
+      new BundleAnalyzerPlugin({ analyzerPort: 8899, openAnalyzer: false })
+    );
     config.optimization.usedExports = true;
   }
   return config;
