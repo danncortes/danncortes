@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdanncortes=self.webpackChunkdanncortes||[]).push([[971],{971:(e,s,a)=>{a.r(s),a.d(s,{default:()=>n});const n=a.p+"images/bumeran-260.avif"}}]);

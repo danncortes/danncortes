@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdanncortes=self.webpackChunkdanncortes||[]).push([[34],{34:(e,s,a)=>{a.r(s),a.d(s,{default:()=>n});const n=a.p+"images/velocity-partners-130.avif"}}]);
