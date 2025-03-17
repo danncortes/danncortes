@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdanncortes=self.webpackChunkdanncortes||[]).push([[206],{206:(s,a,e)=>{e.r(a),e.d(a,{default:()=>n});const n=e.p+"images/smart-communications-130.avif"}}]);
