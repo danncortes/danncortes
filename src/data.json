@@ -41,6 +41,14 @@
       "link": true,
       "type": "link",
       "icon": ["fab", "github"]
+    },
+    {
+      "title": "danncortes.com",
+      "label": "danncortes.com",
+      "value": "https://danncortes.com",
+      "link": true,
+      "type": "link",
+      "icon": ["fas", "globe"]
     }
   ],
   "personalInfo": [

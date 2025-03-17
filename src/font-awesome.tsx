@@ -9,7 +9,8 @@ import {
   faPhone,
   faRing,
   faGlobeAmericas,
-  faIdCard
+  faIdCard,
+  faGlobe
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -21,7 +22,8 @@ library.add(
   faRing,
   faGlobeAmericas,
   faIdCard,
-  faPrint
+  faPrint,
+  faGlobe
 );
 
 export { FontAwesomeIcon };
