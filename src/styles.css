@@ -11,7 +11,7 @@ html {
   --primary-color-700: chocolate;
   --secondary-color: #0369a1;
   --column-gap: 2rem;
-  --border-column-color: #e5e5e5;
+  --border-column-color: #ccc;
 }
 
 /* Helpers */
@@ -132,7 +132,7 @@ html {
 }
 
 .resume-name {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
@@ -185,8 +185,8 @@ html {
 /* Technology */
 .technology__title {
   font-size: 1rem;
-  font-weight: 500;
-  color: var(--secondary-color);
+  font-weight: 450;
+  color: #222;
 }
 
 .technology__experience {
@@ -218,12 +218,12 @@ html {
 }
 
 .course {
-  font-weight: 500;
+  font-weight: 450;
 }
 
 .course__name {
   font-size: 0.875rem;
-  color: var(--secondary-color);
+  color: #222;
 }
 
 .course__date,
@@ -235,13 +235,13 @@ html {
 /* Language */
 
 .language {
-  font-weight: 500;
+  font-weight: 450;
   margin-bottom: 1rem;
 }
 
 .language__name {
   font-size: 0.875rem;
-  color: var(--secondary-color);
+  color: #222;
 }
 
 .language__level {
@@ -253,12 +253,19 @@ html {
 .education {
   font-size: 0.75rem;
   margin-bottom: 1rem;
-  font-weight: 500;
+  font-weight: 450;
 }
 
 .education__title {
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 450;
+  color: #222;
+}
+
+.education__date,
+.education__place,
+.education__icon {
+  color: #666;
 }
 
 /* Personal Data */
@@ -273,7 +280,7 @@ html {
 
 .personal-data__content {
   font-weight: 500;
-  color: var(--secondary-color);
+  color: #666;
   word-break: break-all;
 }
 
@@ -287,7 +294,7 @@ html {
 
 /* Profile */
 .profile {
-  font-weight: 500;
+  font-weight: 450;
   margin-bottom: 2rem;
   padding-left: 1rem;
   list-style: none;
@@ -297,7 +304,7 @@ html {
 /* Experience  */
 .experience__item {
   margin-bottom: 3rem;
-  font-weight: 500;
+  font-weight: 450;
   font-size: 0.875rem;
   position: relative;
 }
@@ -349,8 +356,11 @@ html {
 }
 
 .experience__location {
-  font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.experience__location > svg {
+  font-size: 0.75rem;
 }
 
 .experience__time {
@@ -370,8 +380,12 @@ ul.experience__job-intro,
 }
 
 .experience__header ~ h3 {
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 0.5rem;
+}
+
+.experience__project-header {
+  color: #222;
 }
 
 .experience__project {
@@ -400,16 +414,16 @@ ul.experience__job-intro,
 .language-button {
   cursor: pointer;
   padding: 0.1rem 0.4rem;
-  border: 1px solid var(--secondary-color);
-  border-radius: 0.2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.1rem;
   margin-right: 0.5rem;
   background: transparent;
   font-size: 0.75rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 .language-button--active {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   color: white;
 }
 

@@ -13,7 +13,7 @@ export default ({ projects, companyKey }: Props) => {
 
   return (
     <>
-      <h3 className="color-primary">
+      <h3 className="experience__project-header">
         {t(`project${projects.length > 1 ? 's' : ''}`)}
       </h3>
       <ul>

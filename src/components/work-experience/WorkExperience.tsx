@@ -67,9 +67,7 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
                   <span className="experience__company-note">({nameNote})</span>
                 )}
               </h3>
-              <h4 className="experience__position color-primary">
-                {t(position)}
-              </h4>
+              <h4 className="experience__position">{t(position)}</h4>
               <p className="experience__time">
                 {formatDate(from)} - {to ? formatDate(to) : 'Currently'}
                 {<span>|</span>}
