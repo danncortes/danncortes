@@ -6,7 +6,6 @@ export type PersonalDataProps = {
   data: ContactInfoModel[];
   icons?: boolean;
   titles?: boolean;
-  mode?: 'list' | 'inline';
   className?: string;
 };
 
@@ -49,7 +48,7 @@ const PersonalDataItem = (
 
   return (
     <>
-      {titles && <h4 className="contanct-item-title">{title}</h4>}
+      {titles && <h4 className="contanct-item-title">{t(title)}</h4>}
       {
         <WrapperTagItem type={type} value={value} link={link}>
           {icons && (
@@ -64,15 +63,12 @@ const PersonalDataItem = (
 
 export const PersonalData = ({
   data,
-  mode,
   titles,
   icons = false,
   className
 }: PersonalDataProps) => {
-  const containerClass = mode === 'inline' ? 'flex flex-wrap' : '';
-
   return (
-    <ul className={`personal-data ${className} ${containerClass}`}>
+    <ul className={`personal-data ${className}`}>
       {data.map((item: ContactInfoModel) => (
         <li key={`${item.title}`} className="personal-data__item">
           {PersonalDataItem(item, {
