@@ -27,6 +27,7 @@ export type WorkExpData = {
     name: string;
     loadingMode: string;
   } | null;
+  showLogo?: boolean;
   companyName: string;
   companyKey: string;
   nameNote?: string;
@@ -47,6 +48,7 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
     to,
     logo,
     location,
+    showLogo = false,
     projects,
     link,
     isIntroArray = false,
@@ -55,28 +57,36 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
 
   return (
     <>
+      {['Ries Inc.'].includes(companyName) && (
+        <>
+          <div className="break-page"></div>
+          <div className="break-page"></div>
+          <div className="break-page"></div>
+          <div className="break-page"></div>
+        </>
+      )}
       {
         <div
           className={`experience__item ${!showOnPrint ? 'no-show-print' : ''}`}
         >
           <div className="experience__header mb-4 flex justify-between">
             <div>
-              <h3 className="experience__company-name">
+              <h3 className="experience__position">{t(position)}</h3>
+              <h4 className="experience__company-name">
                 {companyName}{' '}
                 {nameNote && (
                   <span className="experience__company-note">({nameNote})</span>
                 )}
-              </h3>
-              <h4 className="experience__position">{t(position)}</h4>
+              </h4>
               <p className="experience__time">
-                {formatDate(from)} - {to ? formatDate(to) : 'Currently'}
+                {formatDate(from)} - {to ? formatDate(to) : t('currently')}
                 {<span>|</span>}
                 <span className=" experience__location">
                   <FontAwesomeIcon icon="map-marker-alt" /> {t(location)}
                 </span>
               </p>
             </div>
-            {logo && (
+            {logo && showLogo && (
               <ExperienceLogo
                 logo={logo}
                 companyName={companyName}
@@ -99,8 +109,10 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
             ></ExperienceIntro>
           )}
 
-          {['Endava'].includes(companyName) && (
+          {['Truelogic Software'].includes(companyName) && (
             <>
+              <div className="break-page"></div>
+              <div className="break-page"></div>
               <div className="break-page"></div>
               <div className="break-page"></div>
               <div className="break-page"></div>

@@ -43,7 +43,7 @@
       "icon": ["fab", "github"]
     },
     {
-      "title": "danncortes.com",
+      "title": "Website",
       "label": "danncortes.com",
       "value": "https://danncortes.com",
       "link": true,
@@ -79,20 +79,51 @@
       { "name": "NodeJS", "experience": 16, "level": 5, "scale": 9 },
       { "name": "HTML", "experience": 165, "level": 7, "scale": 9 },
       { "name": "CSS", "experience": 165, "level": 7, "scale": 9 },
-      { "name": "SASS", "experience": 60, "level": 7, "scale": 9 },
+      { "name": "SCSS" },
+      { "name": "Agile" },
+      { "name": "Scrum" },
       { "name": "Redux" },
-      { "name": "Vuex" },
       { "name": "Jest" },
       { "name": "Bootstrap" },
+      { "name": "Material UI" },
       { "name": "Express" },
-      { "name": "MongoDB" },
-      { "name": "Tailwind" }
+      { "name": "SQL" },
+      { "name": "Tailwind" },
+      { "name": "Photoshop" },
+      { "name": "Illustrator" },
+      { "name": "Procreate" }
     ],
     "showLevel": false,
     "showExperience": false,
     "showExpOnPrint": false
   },
   "experience": [
+    {
+      "companyName": "",
+      "link": "https://smartcommunications.com/",
+      "position": "",
+      "from": "2024-05-21",
+      "to": "",
+      "location": "Kriens - $t(switzerland)",
+      "companyKey": "aktuell",
+      "isIntroArray": true,
+      "projects": [
+        {
+          "projectKey": "photoAlbum",
+          "name": "Photo Album Layout",
+          "techStack": "Angular 19, TypeScript, SASS, HTML Jasmine, Karma"
+        },
+        {
+          "projectKey": "vokabularyPractice",
+          "name": "Vocabulary Practice Terminal App",
+          "techStack": "TypeScript, NodeJS, SQL, Inquirer, Terminal-Kit"
+        }
+      ],
+      "logo": {
+        "name": "smart-communications.avif",
+        "loadingMode": "eager"
+      }
+    },
     {
       "companyName": "Smart Communications",
       "nameNote": "Assentis Technologies AG",
@@ -203,14 +234,13 @@
         {
           "projectKey": "dadanyc",
           "name": "Drawing Social Network",
-          "techStack": "Jquery, HTML, SCSS"
+          "techStack": "Jquery, HTML, SCSS, Photoshop, Illustrator"
         }
       ],
       "logo": {
         "name": "dada-nyc.avif",
         "loadingMode": "lazy"
-      },
-      "showOnPrint": false
+      }
     },
     {
       "companyName": "Ries Inc.",
@@ -223,8 +253,7 @@
       "about": "",
       "isIntroArray": true,
       "projects": [],
-      "logo": null,
-      "showOnPrint": false
+      "logo": null
     },
     {
       "companyName": "Bumeran.com",
@@ -240,14 +269,13 @@
         {
           "projectKey": "minisites",
           "name": "Companies Landing Pages",
-          "techStack": "HTML, CSS, PHP"
+          "techStack": "HTML, CSS, PHP, Photoshop, Illustrator"
         }
       ],
       "logo": {
         "name": "bumeran.avif",
         "loadingMode": "lazy"
-      },
-      "showOnPrint": false
+      }
     },
     {
       "companyName": "Ola Creativa",
@@ -260,8 +288,20 @@
       "about": "",
       "isIntroArray": true,
       "projects": [],
-      "logo": null,
-      "showOnPrint": false
+      "logo": null
+    },
+    {
+      "companyName": "Alia Consultores C.A.",
+      "link": "",
+      "position": "graphicDesigner",
+      "from": "2001-09",
+      "to": "2009-01",
+      "location": "Caracas, Venezuela",
+      "companyKey": "alia",
+      "about": "",
+      "isIntroArray": true,
+      "projects": [],
+      "logo": null
     }
   ],
   "projects": [
@@ -370,5 +410,6 @@
       "place": "Centro de Diseño Digital",
       "location": "Caracas"
     }
-  ]
+  ],
+  "hobbies": ["hobbies.drawing", "hobbies.mountainBike"]
 }

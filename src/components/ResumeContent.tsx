@@ -50,6 +50,20 @@ const ResumeContent = () => {
             </div>
           </ComponentTemplate>
 
+          {/* Education */}
+          <ComponentTemplate className="md-no-underline" title={t('education')}>
+            {resumeData.education.map((education: EducationModel, i) => (
+              <Education
+                key={`${i}-${education.title}`}
+                education={education}
+              />
+            ))}
+          </ComponentTemplate>
+
+          <div className="break-page"></div>
+          <div className="break-page"></div>
+          <div className="break-page"></div>
+
           {/* Languages */}
           <ComponentTemplate className="md-no-underline" title={t('languages')}>
             {resumeData.languages.map((language: LanguageData, i) => (
@@ -60,19 +74,16 @@ const ResumeContent = () => {
             ))}
           </ComponentTemplate>
 
-          <div className="break-page"></div>
-          <div className="break-page"></div>
-          <div className="break-page"></div>
-          <div className="break-page"></div>
-
-          {/* Education */}
-          <ComponentTemplate className="md-no-underline" title={t('education')}>
-            {resumeData.education.map((education: EducationModel, i) => (
-              <Education
-                key={`${i}-${education.title}`}
-                education={education}
-              />
-            ))}
+          {/* Hobbies */}
+          <ComponentTemplate
+            className="md-no-underline"
+            title={t('hobbies.title')}
+          >
+            <ul className="hobbies">
+              {resumeData.hobbies.map((hobby: string) => (
+                <li key={hobby}>{t(hobby)}</li>
+              ))}
+            </ul>
           </ComponentTemplate>
         </div>
 
@@ -88,25 +99,26 @@ const ResumeContent = () => {
             <LanguageButtons></LanguageButtons>
           </div>
 
-          {/* Personal Data */}
-          <PersonalData
-            data={resumeData.contactInfo}
-            icons={true}
-            titles={false}
-            mode="inline"
-            className="personal-data--a"
-          />
-          <PersonalData
-            data={resumeData.personalInfo}
-            icons={true}
-            titles={false}
-            mode="inline"
-            className="personal-data--b"
-          />
-
           {/* Profile Info */}
-          <ComponentTemplate>
+          <ComponentTemplate marginBottom={1.6}>
             <ul className="profile">{<li>{t(`profileInfo.summary`)}</li>}</ul>
+          </ComponentTemplate>
+
+          {/* Personal Data */}
+
+          <ComponentTemplate>
+            <div className="personal-data-container">
+              <PersonalData
+                data={resumeData.contactInfo}
+                titles={true}
+                className="personal-data--a"
+              />
+              <PersonalData
+                data={resumeData.personalInfo}
+                titles={true}
+                className="personal-data--b"
+              />
+            </div>
           </ComponentTemplate>
 
           {/* Main Tech Stack Right*/}
@@ -136,12 +148,6 @@ const ResumeContent = () => {
               ))}
             </section>
           </ComponentTemplate>
-          <p className="more-info">
-            {t('moreExpInfo')}{' '}
-            <a target="blank" href="http://danncortes.com">
-              danncortes.com
-            </a>
-          </p>
         </div>
       </div>
     </div>

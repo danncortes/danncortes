@@ -1,13 +1,14 @@
 {
   "profileInfo": {
     "title": "Senior Frontend Developer",
-    "summary": "Frontend Developer with 9 years of experience with JavaScript and TypeScript, specializing in building high-performance, responsive, and scalable web applications with Angular and React. Strong commitment to clean code and best practices. Experienced in Agile methodologies, particularly Scrum."
+    "summary": "9 years of experience in developing high-performance, intuitive, responsive, and scalable web applications in agile teams using Angular, TypeScript, and JavaScript, as well as HTML and CSS. Strongly focused on creating business-oriented user experiences with clean code."
   },
   "lucerne": "Lucerne",
   "switzerland": "Switzerland",
   "colombia": "Colombia",
   "profile": "Profile",
   "phone": "Phone",
+  "location": "Location",
   "permit": "Permit",
   "personalInfo": {
     "maritalStatus": "Marital Status",
@@ -26,7 +27,8 @@
     "english": "English",
     "german": "German"
   },
-  "b2": "Fluent in speech and writing(B2)",
+  "currently": "Currently",
+  "b2": "Fluent in speech and writing (B2)",
   "native": "Native",
   "education": "Education",
   "yOfExp": "Years of Exp.",
@@ -35,6 +37,7 @@
   "responsibilities": "Responsibilities",
   "frontendDeveloper": "Frontend Developer",
   "seniorFrontendDeveloper": "Senior $t(frontendDeveloper)",
+  "graphicDesigner": "Graphic Designer",
   "moreExpInfo": "For additional work experience prior to 2015, please visit:",
   "printOrDownload": "Print or download",
   "months": [
@@ -51,7 +54,34 @@
     "Nov",
     "Dec"
   ],
+  "hobbies": {
+    "title": "Hobbies",
+    "mountainBike": "Mountain Bike",
+    "drawing": "Drawing"
+  },
   "experience": {
+    "aktuell": {
+      "intro": [
+        "Ongoing development with current courses: Angular, Algorithms, and Data Structures",
+        "Actively looking for a new professional challenge",
+        "App development for personal use"
+      ],
+      "projects": {
+        "photoAlbum": {
+          "name": "Photo Album Web-App",
+          "description": "",
+          "responsibilities": ["Page layout designer Web-App for photo albums"]
+        },
+        "vokabularyPractice": {
+          "name": "Vokabeln Terminal App",
+          "description": "",
+          "responsibilities": [
+            "Terminal application for practising vocabulary with Spaced Repetition System",
+            "Generation of audio phrases from vocabulary with text-to-speech AI from elevenlabs.io API"
+          ]
+        }
+      }
+    },
     "smartCom": {
       "intro": "Developer web application products for the insurance and financial sectors",
       "projects": {
@@ -153,7 +183,7 @@
       "about": "Ries.inc was a web development agency für clients in the USA",
       "intro": [
         "Design and development of a responsive website for insurance companies using PHP and Bootstrap",
-        "UI design and UX development of a web-mobile application to find products using geolocation with jQuery, jQuery Mobile, HTML, CSS, and Google Maps API"
+        "UI design and UX development of a web-mobile application to find products using geolocation with JavaScript, jQuery, jQuery Mobile, HTML, CSS, and Google Maps API"
       ]
     },
     "bumeran": {
@@ -175,6 +205,13 @@
         "Web UI development services for clients in the pharmaceutical industry",
         "Development of a web application for managing loyalty programs for pharmaceutical products using PHP, HTML, and CSS",
         "Development of website portfolios for medical products"
+      ]
+    },
+    "alia": {
+      "about": "Alia was a small agency that created printed and interactive material for the pharmaceutical industry in Venezuela.",
+      "intro": [
+        "Design of brochures and flyers for product promotion using Illustrator and Photoshop.",
+        "Interactive CD presentations with Adobe Flash"
       ]
     }
   }
