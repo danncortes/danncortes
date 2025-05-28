@@ -113,9 +113,6 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
             <>
               <div className="break-page"></div>
               <div className="break-page"></div>
-              <div className="break-page"></div>
-              <div className="break-page"></div>
-              <div className="break-page"></div>
             </>
           )}
 

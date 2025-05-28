@@ -116,7 +116,7 @@
         {
           "projectKey": "vokabularyPractice",
           "name": "Vocabulary Practice Terminal App",
-          "techStack": "TypeScript, NodeJS, SQL, Inquirer, Terminal-Kit"
+          "techStack": "Angular, TypeScript, NodeJS, Supabase"
         }
       ],
       "logo": {
