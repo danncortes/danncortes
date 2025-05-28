@@ -75,11 +75,35 @@
           ]
         },
         "vokabularyPractice": {
-          "name": "Vokabeln Terminal App",
+          "name": "Vokabeltrainer-App",
           "description": "",
           "responsibilities": [
-            "Terminalanwendung zum Üben von Vokabeln mit Spaced Repetition System",
+            "Webanwendung zum Üben von Vokabeln mit Spaced Repetition System",
             "Generierung von Audiophrasen aus Vokabeln mit Text-to-Speach-KI von elevenlabs.io API"
+          ]
+        }
+      }
+    },
+    "smartCom": {
+      "intro": "Entwicklung von Webanwendungsprodukten für die Versicherungs- und Finanzbranche",
+      "projects": {
+        "reportDashboard": {
+          "name": "Usage-Dashboard",
+          "description": "Usage-Dashboard-Webanwendung",
+          "responsibilities": [
+            "Gestaltung und Implementierung von responsiven Benutzeroberflächen mit Fokus auf Benutzererfahrung",
+            "Architekturdesign und Leistungsoptimierung",
+            "Implementierung und Betrieb von Komponenten, Direktiven, Services, Pipes und Modulen",
+            "Integration mit Backend-APIs und Services zur Abfrage und Manipulation von Daten mit HTTP-Client",
+            "Unit-Testing für Komponenten und Services"
+          ]
+        },
+        "documentEditor": {
+          "name": "Dokumenteneditor",
+          "description": "Webanwendung zur Dokumentenerstellung und -bearbeitung",
+          "responsibilities": [
+            "Implementierung von Benutzeroberflächen unter Einsatz eines unternehmenseigenen UI-Frameworks",
+            "Unit-Testing für Komponenten und Funktionalitäten"
           ]
         }
       }

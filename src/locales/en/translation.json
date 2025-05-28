@@ -73,10 +73,10 @@
           "responsibilities": ["Page layout designer Web-App for photo albums"]
         },
         "vokabularyPractice": {
-          "name": "Vokabeln Terminal App",
+          "name": "Vocabulary learning App",
           "description": "",
           "responsibilities": [
-            "Terminal application for practising vocabulary with Spaced Repetition System",
+            "Web application for practicing vocabulary with Spaced Repetition System",
             "Generation of audio phrases from vocabulary with text-to-speech AI from elevenlabs.io API"
           ]
         }

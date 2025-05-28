@@ -110,13 +110,11 @@
       "projects": [
         {
           "projectKey": "photoAlbum",
-          "name": "Photo Album Layout",
           "techStack": "Angular 19, TypeScript, SASS, HTML Jasmine, Karma"
         },
         {
           "projectKey": "vokabularyPractice",
-          "name": "Vocabulary Practice Terminal App",
-          "techStack": "TypeScript, NodeJS, SQL, Inquirer, Terminal-Kit"
+          "techStack": "Angular, TypeScript, NodeJS, Supabase"
         }
       ],
       "logo": {
