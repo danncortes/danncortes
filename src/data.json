@@ -115,7 +115,7 @@
         },
         {
           "projectKey": "vokabularyPractice",
-          "name": "Vocabulary Practice Terminal App",
+          "name": "Vocabulary Practice App",
           "techStack": "Angular, TypeScript, NodeJS, Supabase"
         }
       ],
