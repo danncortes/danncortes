@@ -20,7 +20,7 @@ export default ({ projects, companyKey }: Props) => {
         {projects.map((project) => (
           <li key={project.name} className="experience__project">
             <div className="experience__project-header flex justify-between">
-              <p className="experience__project-name color-secondary">
+              <p className="experience__project-name color-primary">
                 {t(
                   `experience.${companyKey}.projects.${project.projectKey}.name`
                 )}

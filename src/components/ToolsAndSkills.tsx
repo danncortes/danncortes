@@ -1,16 +1,17 @@
 import React from 'react';
 import Technology from './Technology';
 import ToolLevel, { LevelTypeUnion } from './ToolLevel';
+import { ProfileTypes } from '../types';
 
-export type TechData = {
+export type ToolsAndSkillsData = {
   name: string;
   level?: number;
   scale?: number;
-  experience?: number;
+  profileTypes: Array<ProfileTypes>;
 };
 
-export type TechStackProps = {
-  data: TechData[];
+export type ToolsAndSkillsProps = {
+  data: ToolsAndSkillsData[];
   height: number;
   bgColor: string;
   showExpOnPrint: boolean;
@@ -21,7 +22,7 @@ export type TechStackProps = {
   showExperience: boolean;
 };
 
-const TechStack = ({
+const ToolsAndSkills = ({
   data,
   height,
   bgColor,
@@ -31,20 +32,19 @@ const TechStack = ({
   showExpOnPrint,
   showLevel = false,
   showExperience
-}: TechStackProps) => {
+}: ToolsAndSkillsProps) => {
   return (
     <div
       className={`techstack ${className ?? ''}${
         showExpOnPrint ? 'techstack--no-print-exp' : ''
       }${!showExperience ? 'techstack--no-exp' : ''}`}
     >
-      {data.map((tech: TechData) => {
-        const { name, experience, level, scale } = tech;
+      {data.map((tech: ToolsAndSkillsData) => {
+        const { name, level, scale } = tech;
         return (
           <Technology
             key={name}
             name={name}
-            experience={experience}
             showExpOnPrint={showExpOnPrint}
             showExperience={showExperience}
             experienceLevel={
@@ -69,4 +69,4 @@ const TechStack = ({
   );
 };
 
-export default TechStack;
+export default ToolsAndSkills;

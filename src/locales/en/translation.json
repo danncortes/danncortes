@@ -1,7 +1,10 @@
 {
   "profileInfo": {
     "title": "Senior Frontend Developer",
-    "summary": "9 years of experience in developing high-performance, intuitive, responsive, and scalable web applications in agile teams using Angular, TypeScript, and JavaScript, as well as HTML and CSS. Strongly focused on creating business-oriented user experiences with clean code."
+    "summary": [
+      "9 years of experience in developing high-performance, intuitive, responsive, and scalable web applications in agile teams using Angular, TypeScript, and JavaScript, as well as HTML and CSS. Strongly focused on creating business-oriented user experiences with clean code.",
+      "With a resilient attitude and a passion for teamwork, I contribute solutions that are based on the latest standards and adapted to real user needs."
+    ]
   },
   "lucerne": "Lucerne",
   "switzerland": "Switzerland",

@@ -4,7 +4,7 @@ import Avatar from './Avatar';
 import Course, { CourseData } from './Course';
 import Education, { EducationModel } from './Education';
 import PersonalData from './PersonalData';
-import TechStack from './TechStack';
+import ToolsAndSkills, { ToolsAndSkillsData } from './ToolsAndSkills';
 import WorkExperience from './work-experience/WorkExperience';
 import resumeData from '../data.json';
 import ComponentTemplate from './ComponentTemplate';
@@ -25,19 +25,18 @@ const ResumeContent = () => {
           {/* Avatar */}
           <Avatar mode="circle" className="avatar--left" />
 
-          {/* Main Tech Stack Left*/}
+          {/* Main Tools Left*/}
           <ComponentTemplate
             className="techstack-component--left md-no-underline"
-            title={t(resumeData.mainTechStack.title)}
+            title={t(resumeData.tools.title)}
           >
-            <TechStack
-              data={resumeData.mainTechStack.data}
+            <ToolsAndSkills
+              data={resumeData.tools.data as ToolsAndSkillsData[]}
               height={10}
               bgColor="#ddd"
-              primaryColor="peru"
-              showExpOnPrint={resumeData.mainTechStack.showExpOnPrint}
-              showExperience={resumeData.mainTechStack.showExperience}
-              showLevel={resumeData.mainTechStack.showLevel}
+              showExpOnPrint={resumeData.tools.showExpOnPrint}
+              showExperience={resumeData.tools.showExperience}
+              showLevel={resumeData.tools.showLevel}
             />
           </ComponentTemplate>
 
@@ -101,7 +100,15 @@ const ResumeContent = () => {
 
           {/* Profile Info */}
           <ComponentTemplate marginBottom={1.6}>
-            <ul className="profile">{<li>{t(`profileInfo.summary`)}</li>}</ul>
+            <ul className="profile">
+              {Object.values(
+                t(`profileInfo.summary`, {
+                  returnObjects: true
+                })
+              ).map((resp, index) => (
+                <li key={index}>{resp}</li>
+              ))}
+            </ul>
           </ComponentTemplate>
 
           {/* Personal Data */}
@@ -121,19 +128,18 @@ const ResumeContent = () => {
             </div>
           </ComponentTemplate>
 
-          {/* Main Tech Stack Right*/}
+          {/* Main Tools Right*/}
           <ComponentTemplate
             className="techstack-component--right"
-            title={t(resumeData.mainTechStack.title)}
+            title={t(resumeData.tools.title)}
           >
-            <TechStack
-              data={resumeData.mainTechStack.data}
+            <ToolsAndSkills
+              data={resumeData.tools.data as ToolsAndSkillsData[]}
               height={10}
               bgColor="#ddd"
-              primaryColor="peru"
-              showExpOnPrint={resumeData.mainTechStack.showExpOnPrint}
-              showExperience={resumeData.mainTechStack.showExperience}
-              showLevel={resumeData.mainTechStack.showLevel}
+              showExpOnPrint={resumeData.tools.showExpOnPrint}
+              showExperience={resumeData.tools.showExperience}
+              showLevel={resumeData.tools.showLevel}
             />
           </ComponentTemplate>
 
