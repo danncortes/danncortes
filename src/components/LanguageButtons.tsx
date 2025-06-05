@@ -1,10 +1,10 @@
 import React from 'react';
 import { Language, supportedLanguages } from '../i18n';
 import { i18n } from '../i18n';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const currentLanguage = i18n.language as Language;
 
   return (
@@ -13,7 +13,7 @@ export default () => {
         return (
           <button
             onClick={() => {
-              history.push(`/${language}`);
+              navigate(`/${language}`);
             }}
             key={language}
             className={`language-button ${

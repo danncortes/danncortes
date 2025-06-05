@@ -1,15 +1,15 @@
 import React from 'react';
 import Resume from './components/Resume';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <Router basename="/">
       <div className="App">
-        <Switch>
-          <Route path="/:language" component={Resume}></Route>
-          <Route path="/*" component={Resume}></Route>
-        </Switch>
+        <Routes>
+          <Route path="/:language" element={<Resume />} />
+          <Route path="/*" element={<Resume />} />
+        </Routes>
       </div>
     </Router>
   );
