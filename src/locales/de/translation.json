@@ -1,7 +1,10 @@
 {
   "profileInfo": {
     "title": "$t(seniorFrontendDeveloper)",
-    "summary": "9 Jahre Erfahrung in der Entwicklung leistungsstarker, intuitiver, responsiver und skalierbarer Webanwendungen in agilen Teams mit Angular, TypeScript und JavaScript sowie HTML und CSS. Stark daran orientiert, geschäftsfreundliche User Experiences mit sauberem Code zu erstellen."
+    "summary": [
+      "9 Jahre Erfahrung in der Entwicklung leistungsstarker, intuitiver, responsiver und skalierbarer Webanwendungen in agilen Teams mit Angular, TypeScript und JavaScript sowie HTML und CSS. Stark daran orientiert, geschäftsfreundliche User Experiences mit sauberem Code zu erstellen.",
+      "Mit einer resilienten Haltung und einer Leidenschaft für Teamarbeit trage ich mit Lösungen bei, die auf den neuesten Standards basieren und an die realen Nutzeranforderungen angepasst sind."
+    ]
   },
   "lucerne": "Luzern",
   "switzerland": "Schweiz",
@@ -17,7 +20,6 @@
     "colombian": "Kolumbianisch",
     "permitType": "B $t(permit)"
   },
-  "techStack": "IT-Kenntnissen",
   "tools": "Tools",
   "workExperience": "Berufserfahrung",
   "courses": "Weiterbildungen",

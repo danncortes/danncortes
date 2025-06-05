@@ -46,14 +46,14 @@ const Resume = () => {
 
   return (
     <div className="resume-wrapper resume">
-      {isDesktop() && (
+      {/* {isDesktop() && (
         <button
           className="resume__print-tag mb-3 font-semibold"
           onClick={onClickPrint}
         >
           <FontAwesomeIcon icon="print" /> {t('printOrDownload')}
         </button>
-      )}
+      )} */}
       <ResumeContent />
     </div>
   );
