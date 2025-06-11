@@ -1,17 +1,17 @@
-@import url(./reset.css);
+@import 'tailwindcss';
 
 html {
   font-size: 16px;
   line-height: 1.5;
   font-family: 'Montserrat', sans-serif;
+  color: var(--base-color);
 }
 
 :root {
+  --base-color: #222;
   --primary-color: #00806f;
-  --primary-color-700: chocolate;
-  --secondary-color: #0369a1;
   --column-gap: 2rem;
-  --border-column-color: #ccc;
+  --border-column-color: #bbb;
   --dot-top: 0.8rem;
 }
 
@@ -99,7 +99,6 @@ html {
 }
 
 .resume-wrapper {
-  color: #222;
   padding: 1.5rem 0 0 0;
   background-color: transparent;
 }
@@ -121,10 +120,6 @@ html {
   max-width: 1160px;
 }
 
-.resume-header__left {
-  flex: auto;
-}
-
 .resume-content {
   display: flex;
   gap: var(--column-gap);
@@ -138,18 +133,6 @@ html {
 
 .resume-content__right {
   flex: 5 0 0;
-}
-
-.resume-name {
-  font-weight: 400;
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-}
-
-.resume-title {
-  font-size: 1.24rem;
-  line-height: 1.75rem;
-  margin-bottom: 1rem;
 }
 
 /* Component Template  */
@@ -199,7 +182,6 @@ html {
 .technology__title {
   font-size: 0.9rem;
   font-weight: 450;
-  color: #222;
 }
 
 .technology__experience {
@@ -237,7 +219,6 @@ html {
 
 .course__name {
   font-size: 0.9rem;
-  color: #222;
 }
 
 .course__date,
@@ -255,7 +236,6 @@ html {
 
 .language__name {
   font-size: 0.9rem;
-  color: #222;
 }
 
 .language__level {
@@ -272,7 +252,6 @@ html {
 
 .education__title {
   font-weight: 450;
-  color: #222;
 }
 
 .education__date,
@@ -311,7 +290,6 @@ html {
 
 /* Profile */
 .profile {
-  font-weight: 450;
   padding-left: 1rem;
   list-style: none;
   padding: 0;
@@ -401,7 +379,6 @@ ul.experience__job-intro,
 }
 
 .experience__project-header {
-  color: #222;
 }
 
 .experience__project {
@@ -431,7 +408,6 @@ ul.experience__job-intro,
   cursor: pointer;
   padding: 0.1rem 0.4rem;
   border: 1px solid var(--primary-color);
-  border-radius: 0.1rem;
   margin-right: 0.5rem;
   background: transparent;
   font-size: 0.75rem;
