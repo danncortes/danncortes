@@ -10,63 +10,61 @@ export type ToolsAndSkillsData = {
   profileTypes: Array<ProfileTypes>;
 };
 
-export type ToolsAndSkillsProps = {
+export type ToolsProps = {
   data: ToolsAndSkillsData[];
   height: number;
   bgColor: string;
-  showExpOnPrint: boolean;
   showLevel?: boolean;
   primaryColor?: string;
   type?: LevelTypeUnion;
   className?: string;
-  showExperience: boolean;
+  profileType: ProfileTypes;
 };
 
-const ToolsAndSkills = ({
+const Tools = ({
   data,
   height,
   bgColor,
   primaryColor,
   type,
   className,
-  showExpOnPrint,
   showLevel = false,
-  showExperience
-}: ToolsAndSkillsProps) => {
+  profileType
+}: ToolsProps) => {
   return (
     <div
-      className={`techstack ${className ?? ''}${
-        showExpOnPrint ? 'techstack--no-print-exp' : ''
-      }${!showExperience ? 'techstack--no-exp' : ''}`}
+      className={`tools ${
+        className ?? ''
+      } grid gap-3 grid-cols-5 md:grid-cols-1 md:gap-1 lg:gap-3 lg:grid-cols-2 print:grid-cols-1 print:gap-1`}
     >
       {data.map((tech: ToolsAndSkillsData) => {
-        const { name, level, scale } = tech;
-        return (
-          <Technology
-            key={name}
-            name={name}
-            showExpOnPrint={showExpOnPrint}
-            showExperience={showExperience}
-            experienceLevel={
-              showLevel &&
-              level &&
-              scale && (
-                <ToolLevel
-                  className="techstack-level"
-                  level={level}
-                  scale={scale}
-                  bgColor={bgColor}
-                  primaryColor={primaryColor}
-                  height={height}
-                  type={type}
-                />
-              )
-            }
-          />
-        );
+        const { name, level, scale, profileTypes } = tech;
+        if (profileTypes.includes(profileType)) {
+          return (
+            <Technology
+              key={name}
+              name={name}
+              experienceLevel={
+                showLevel &&
+                level &&
+                scale && (
+                  <ToolLevel
+                    className="techstack-level"
+                    level={level}
+                    scale={scale}
+                    bgColor={bgColor}
+                    primaryColor={primaryColor}
+                    height={height}
+                    type={type}
+                  />
+                )
+              }
+            />
+          );
+        }
       })}
     </div>
   );
 };
 
-export default ToolsAndSkills;
+export default Tools;
