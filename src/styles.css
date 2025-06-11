@@ -157,31 +157,11 @@ html {
   display: none;
 }
 
-/* Techstack */
-.techstack-component--right,
-.other-tools-component--right,
-.skills-component-right {
-  display: none;
-}
-
-.techstack {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  row-gap: 0.8rem;
-}
-
-.techstack--no-exp {
-  row-gap: 0.2rem;
-}
-
-.techstack-level {
-  margin: 0.2rem 0;
-}
-
 /* Technology */
 .technology__title {
   font-size: 0.9rem;
   font-weight: 450;
+  margin-bottom: 0.3rem;
 }
 
 .technology__experience {
@@ -424,13 +404,11 @@ ul.experience__job-intro,
 }
 
 @media only screen and (max-width: 767px) {
-  .techstack-component--left,
   .other-tools-component--left,
   .skills-component--left {
     display: none;
   }
 
-  .techstack-component--right,
   .other-tools-component--right,
   .skills-component--right {
     display: block;
@@ -467,9 +445,11 @@ ul.experience__job-intro,
   }
 }
 
+/* sm */
 @media only screen and (min-width: 640px) {
 }
 
+/* md */
 @media only screen and (min-width: 768px) {
   .resume-wrapper {
     background-color: #e2e8f0;
@@ -480,14 +460,34 @@ ul.experience__job-intro,
     border-bottom: unset;
     padding-bottom: unset;
   }
+
+  .tools .technology {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tools .technology__title {
+    margin-bottom: unset;
+  }
 }
 
+/* lg */
 @media only screen and (min-width: 1024px), print {
+  .tools .technology {
+    display: block;
+  }
+
+  .tools .technology__title {
+    margin-bottom: 0.3rem;
+  }
 }
 
+/* xl */
 @media only screen and (min-width: 1280px) {
 }
 
+/* 2xl */
 @media only screen and (min-width: 1536px) {
 }
 
@@ -522,13 +522,13 @@ ul.experience__job-intro,
     padding-bottom: 1rem;
   }
 
-  .techstack {
+  /* .techstack {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  }
+  } */
 
-  .techstack--no-print-exp {
+  /* .techstack--no-print-exp {
     row-gap: 0.3rem;
-  }
+  } */
 
   .tag-list__tag {
     padding: 0.08rem 0.4rem;
@@ -543,5 +543,15 @@ ul.experience__job-intro,
 
   .more-info {
     display: block;
+  }
+
+  .tools .technology {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tools .technology__title {
+    margin-bottom: unset;
   }
 }

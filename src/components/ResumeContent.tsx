@@ -4,7 +4,7 @@ import Avatar from './Avatar';
 import Course, { CourseData } from './Course';
 import Education, { EducationModel } from './Education';
 import PersonalData from './PersonalData';
-import ToolsAndSkills, { ToolsAndSkillsData } from './ToolsAndSkills';
+import Tools, { ToolsAndSkillsData } from './ToolsAndSkills';
 import WorkExperience from './work-experience/WorkExperience';
 import resumeData from '../data.json';
 import ComponentTemplate from './ComponentTemplate';
@@ -21,6 +21,16 @@ const ResumeContent = () => {
 
   const { profileType } = resumeData.config;
 
+  const toolsComponent = () => (
+    <Tools
+      data={resumeData.tools.data as ToolsAndSkillsData[]}
+      height={8}
+      bgColor="#ddd"
+      showLevel={resumeData.tools.showLevel}
+      profileType={profileType as ProfileTypes}
+    />
+  );
+
   return (
     <div className="resume-page">
       <div className="resume-content">
@@ -30,17 +40,10 @@ const ResumeContent = () => {
 
           {/* Main Tools Left*/}
           <ComponentTemplate
-            className="techstack-component--left md-no-underline"
+            className="techstack-component--left md-no-underline hidden md:block print:block"
             title={t(resumeData.tools.title)}
           >
-            <ToolsAndSkills
-              data={resumeData.tools.data as ToolsAndSkillsData[]}
-              height={10}
-              bgColor="#ddd"
-              showExpOnPrint={resumeData.tools.showExpOnPrint}
-              showExperience={resumeData.tools.showExperience}
-              showLevel={resumeData.tools.showLevel}
-            />
+            {toolsComponent()}
           </ComponentTemplate>
 
           {/* Courses */}
@@ -96,7 +99,7 @@ const ResumeContent = () => {
               <h1 className="text-4xl">{resumeData.name}</h1>
               <span className="text-4xl text-gray-300 ">|</span>
               <h2 className="resume-title color-primary text-2xl">
-                {t(`profileInfo.title.${resumeData.config.profileType}`)}
+                {t(`profileInfo.title.${profileType}`)}
               </h2>
             </div>
             <LanguageButtons></LanguageButtons>
@@ -136,17 +139,10 @@ const ResumeContent = () => {
 
           {/* Main Tools Right*/}
           <ComponentTemplate
-            className="techstack-component--right"
+            className="md:hidden print:hidden"
             title={t(resumeData.tools.title)}
           >
-            <ToolsAndSkills
-              data={resumeData.tools.data as ToolsAndSkillsData[]}
-              height={10}
-              bgColor="#ddd"
-              showExpOnPrint={resumeData.tools.showExpOnPrint}
-              showExperience={resumeData.tools.showExperience}
-              showLevel={resumeData.tools.showLevel}
-            />
+            {toolsComponent()}
           </ComponentTemplate>
 
           {/* Experience Info */}
