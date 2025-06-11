@@ -16,7 +16,7 @@ export default () => {
               navigate(`/${language}`);
             }}
             key={language}
-            className={`language-button ${
+            className={`language-button rounded-sm ${
               currentLanguage === language ? 'language-button--active' : ''
             }`}
           >

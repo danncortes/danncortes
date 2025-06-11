@@ -9,6 +9,7 @@ import WorkExperience from './work-experience/WorkExperience';
 import resumeData from '../data.json';
 import ComponentTemplate from './ComponentTemplate';
 import LanguageButtons from './LanguageButtons';
+import { ProfileTypes } from '../types';
 
 export type LanguageData = {
   name: string;
@@ -17,6 +18,8 @@ export type LanguageData = {
 
 const ResumeContent = () => {
   const { t } = useTranslation();
+
+  const { profileType } = resumeData.config;
 
   return (
     <div className="resume-page">
@@ -88,11 +91,12 @@ const ResumeContent = () => {
 
         <div className="resume-content__right">
           <Avatar mode="circle" className="avatar--right" />
-          <div className="resume-header flex">
-            <div className="resume-header__left">
-              <h1 className="resume-name">{resumeData.name}</h1>
-              <h2 className="resume-title color-primary">
-                {t('profileInfo.title')}
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-3">
+              <h1 className="text-4xl">{resumeData.name}</h1>
+              <span className="text-4xl text-gray-300 ">|</span>
+              <h2 className="resume-title color-primary text-2xl">
+                {t(`profileInfo.title.${resumeData.config.profileType}`)}
               </h2>
             </div>
             <LanguageButtons></LanguageButtons>
@@ -100,14 +104,16 @@ const ResumeContent = () => {
 
           {/* Profile Info */}
           <ComponentTemplate marginBottom={1.6}>
-            <ul className="profile">
-              {Object.values(
-                t(`profileInfo.summary`, {
-                  returnObjects: true
-                })
-              ).map((resp, index) => (
-                <li key={index}>{resp}</li>
-              ))}
+            <ul className="profile flex flex-col gap-2">
+              {(() => {
+                const { profileType } = resumeData.config;
+
+                return Object.values(
+                  t(`profileInfo.summary.${profileType}`, {
+                    returnObjects: true
+                  })
+                ).map((resp, index) => <li key={index}>{resp}</li>);
+              })()}
             </ul>
           </ComponentTemplate>
 

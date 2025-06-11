@@ -22,7 +22,9 @@ const ComponentTemplate = ({
       className={`component-template ${className ?? ''}`}
       style={marginBottomStyle}
     >
-      {title && <h3 className={`component-template__title`}>{title}</h3>}
+      {title && (
+        <h3 className={`component-template__title font-medium`}>{title}</h3>
+      )}
       {children}
     </div>
   );

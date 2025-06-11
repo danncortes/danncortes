@@ -2,12 +2,12 @@
   "compilerOptions": {
     "outDir": "./build/",
     "target": "es2021",
-    "module": "ESNext",
+    "module": "nodenext",
     "strict": true,
     "sourceMap": true,
     "jsx": "react",
     "noImplicitAny": true,
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "resolveJsonModule": true
