@@ -1,0 +1,30 @@
+---
+// Component Imports
+import Resume from '../components/Resume';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta
+			name="description"
+			content="Senior Front End Developer - JavaScript, TypeScript, ReactJS, Angular"
+		/>
+		<title>
+		Daniel Cortés - Senior Frontend Developer - ReactJS | Angular | TypeScript
+		| JavaScript
+		</title>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..600;1,300..600&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<main>
+			<Resume lang="de" client:only="react" />
+		</main>
+	</body>
+</html>
