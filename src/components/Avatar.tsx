@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import profileImgDefault from '../assets/profile-picture-180.avif';
-import profileImgMobile from '../assets/profile-picture-360.avif';
+import profileImgDefault from '../../public/images/profile-picture-180.avif';
+import profileImgMobile from '../../public/images/profile-picture-360.avif';
 
 type Props = {
   mode: string;
@@ -26,7 +26,7 @@ export const Avatar = ({ mode, className }: Props) => {
     <div className={`avatar ${className}`}>
       <link
         rel="preload"
-        href={profileImgDefault}
+        href={profileImgDefault.src}
         as="image"
         fetchPriority="high"
       />
@@ -34,8 +34,8 @@ export const Avatar = ({ mode, className }: Props) => {
         width="180"
         height="180"
         className={imgModeClass}
-        src={profileImgDefault}
-        srcSet={`${profileImgDefault} 1x, ${profileImgMobile} 2x`}
+        src={profileImgDefault.src}
+        srcSet={`${profileImgDefault.src} 1x, ${profileImgMobile.src} 2x`}
         alt="Profile Picture"
       />
     </div>

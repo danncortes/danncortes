@@ -1,15 +1,10 @@
 {
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"],
   "compilerOptions": {
-    "outDir": "./build/",
-    "target": "es2021",
-    "module": "nodenext",
     "strict": true,
-    "sourceMap": true,
-    "jsx": "react",
-    "noImplicitAny": true,
-    "moduleResolution": "nodenext",
-    "allowSyntheticDefaultImports": true,
-    "allowJs": true,
-    "resolveJsonModule": true
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "allowSyntheticDefaultImports": true
   }
 }
