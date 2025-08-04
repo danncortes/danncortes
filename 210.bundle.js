@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdanncortes=self.webpackChunkdanncortes||[]).push([[210],{210:(e,a,s)=>{s.r(a),s.d(a,{default:()=>n});const n=s.p+"images/endava-260.avif"}}]);
