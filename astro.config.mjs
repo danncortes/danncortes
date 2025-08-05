@@ -6,6 +6,9 @@ import i18next from 'astro-i18next';
 
 // https://astro.build/config
 export default defineConfig({
+  json: {
+    namedExports: true // or false if you prefer default only
+  },
   // Enable React to support React JSX components.
   integrations: [
     react(),

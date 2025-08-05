@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import profileImgDefault from '../../public/images/profile-picture-180.avif';
-import profileImgMobile from '../../public/images/profile-picture-360.avif';
+import profileImgDefault from '../images/profile-picture-180.avif';
+import profileImgMobile from '../images/profile-picture-360.avif';
 
 type Props = {
   mode: string;

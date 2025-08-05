@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt';
-import { library } from '@fortawesome/fontawesome-svg-core';
 import { formatDate } from '../utils';
-
-library.add(faMapMarkerAlt);
+import { LocationIcon } from './icons'; // Import the new icon
 
 export type EducationModel = {
   title: string;
@@ -25,8 +21,8 @@ const Education = ({ education }: { education: EducationModel }) => {
         {formatDate(from)} - {formatDate(to)}
       </p>
       <p className="education__place">{place}</p>
-      <p className="education__icon">
-        <FontAwesomeIcon icon="map-marker-alt" /> {location}
+      <p className="education__icon flex items-center gap-1">
+        <LocationIcon /> {location}
       </p>
     </div>
   );

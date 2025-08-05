@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { i18n, Language, getLanguage } from '../i18n';
+import { useEffect } from 'react';
+import { i18n, getLanguage } from '../i18n';
 import '../styles.css';
 
 import ResumeContent from './ResumeContent';
