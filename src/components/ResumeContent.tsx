@@ -102,7 +102,7 @@ const ResumeContent = () => {
                 {t(`profileInfo.title.${profileType}`)}
               </h2>
             </div>
-            {/* <LanguageButtons></LanguageButtons> */}
+            <LanguageButtons></LanguageButtons>
           </div>
 
           {/* Profile Info */}
