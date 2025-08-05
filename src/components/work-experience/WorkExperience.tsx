@@ -1,14 +1,10 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import { library } from '@fortawesome/fontawesome-svg-core';
 import { useTranslation } from 'react-i18next';
 import ExperienceIntro from './ExperienceIntro';
 import ExperienceLogo from './ExperienceLogo';
 import ExperienceProjects from './ExperienceProjects';
 import { formatDate } from '../../utils';
-
-library.add(faMapMarkerAlt);
+import { LocationIcon } from '../icons';
 
 export type ProjectData = {
   projectKey: string;
@@ -78,11 +74,11 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
                   <span className="experience__company-note">({nameNote})</span>
                 )}
               </h4>
-              <p className="experience__time">
+              <p className="experience__time flex items-center">
                 {formatDate(from)} - {to ? formatDate(to) : t('currently')}
                 {<span>|</span>}
-                <span className=" experience__location">
-                  <FontAwesomeIcon icon="map-marker-alt" /> {t(location)}
+                <span className=" experience__location flex items-center gap-0.5">
+                  <LocationIcon /> {t(location)}
                 </span>
               </p>
             </div>

@@ -35,7 +35,7 @@ export default ({ logo, companyName, link }: Props): ReactElement => {
     for (const config of imagesConfig) {
       const { size, dpr, isDefault } = config;
       const loadedImage = (
-        await import(`../../assets/${name}-${size}.${extension}`)
+        await import(`../../../public/${name}-${size}.${extension}`)
       ).default;
 
       if (isDefault) {

@@ -1,10 +1,8 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { t } from 'i18next';
 
 export type PersonalDataProps = {
   data: ContactInfoModel[];
-  icons?: boolean;
   titles?: boolean;
   className?: string;
 };
@@ -12,7 +10,6 @@ export type PersonalDataProps = {
 export type ContactInfoModel = {
   title: string;
   value: string;
-  icon: any;
   label?: string;
   link?: boolean;
   type?: string;
@@ -42,18 +39,15 @@ const WrapperTagItem = ({ type, value, link, children }: Props) => {
 
 const PersonalDataItem = (
   item: ContactInfoModel,
-  { titles, icons }: { titles: PersonalDataProps['titles']; icons: boolean }
+  { titles }: { titles: PersonalDataProps['titles'] }
 ) => {
-  const { title, value, label, type, icon, link } = item;
+  const { title, value, label, type, link } = item;
 
   return (
     <>
       {titles && <h4 className="contanct-item-title">{t(title)}</h4>}
       {
         <WrapperTagItem type={type} value={value} link={link}>
-          {icons && (
-            <FontAwesomeIcon className="personal-data__icon" icon={icon} />
-          )}
           {link ? t(label!) : t(value)}
         </WrapperTagItem>
       }
@@ -64,7 +58,6 @@ const PersonalDataItem = (
 export const PersonalData = ({
   data,
   titles,
-  icons = false,
   className
 }: PersonalDataProps) => {
   return (
@@ -72,8 +65,7 @@ export const PersonalData = ({
       {data.map((item: ContactInfoModel) => (
         <li key={`${item.title}`} className="personal-data__item">
           {PersonalDataItem(item, {
-            titles,
-            icons
+            titles
           })}
         </li>
       ))}
