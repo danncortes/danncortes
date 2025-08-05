@@ -1,0 +1,11 @@
+---
+// Component Imports
+import Resume from '../../components/Resume';
+import MainLayout from '../../layouts/MainLayout.astro';
+
+const pageTitle = 'Daniel Cortés - Senior Frontend Entwickler - TypeScript | JavaScript | Angular | React';
+---
+
+<MainLayout title={pageTitle} lang="de">
+  <Resume lang="de" client:only="react" />
+</MainLayout>

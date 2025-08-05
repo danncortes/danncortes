@@ -1,30 +1,18 @@
 ---
-// Component Imports
-import Resume from '../components/Resume';
+// Redirect to default language
+const defaultLanguage = 'de'; // Change to 'de' if you prefer German as default
+
+// Check if this is running on the server
+if (Astro.request.headers.get('accept')?.includes('text/html')) {
+  return Astro.redirect(`/${defaultLanguage}`);
+}
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta
-			name="description"
-			content="Senior Front End Developer - JavaScript, TypeScript, ReactJS, Angular"
-		/>
-		<title>
-		Daniel Cortés - Senior Frontend Developer - ReactJS | Angular | TypeScript
-		| JavaScript
-		</title>
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..600;1,300..600&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body>
-		<main>
-			<Resume lang="de" client:only="react" />
-		</main>
-	</body>
+<html>
+  <head>
+    <meta http-equiv="refresh" content={`0;url=/${defaultLanguage}`} />
+  </head>
+  <body>
+    <p>Redirecting to <a href={`/${defaultLanguage}`}>default language version</a>...</p>
+  </body>
 </html>
