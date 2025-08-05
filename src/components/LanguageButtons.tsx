@@ -1,29 +1,30 @@
+// Update your language buttons to navigate to the correct routes
 import React from 'react';
-import { Language, supportedLanguages } from '../i18n';
-import { i18n } from '../i18n';
-import { useNavigate } from 'react-router-dom';
 
-export default () => {
-  const navigate = useNavigate();
-  const currentLanguage = i18n.language as Language;
+const LanguageButtons = () => {
+  const currentPath = window.location.pathname;
+  const currentLanguage = currentPath.includes('/de') ? 'de' : 'en';
 
   return (
-    <div className="language-buttons no-show-print">
-      {supportedLanguages.map((language) => {
-        return (
-          <button
-            onClick={() => {
-              navigate(`/${language}`);
-            }}
-            key={language}
-            className={`language-button rounded-sm ${
-              currentLanguage === language ? 'language-button--active' : ''
-            }`}
-          >
-            {language.toUpperCase()}
-          </button>
-        );
-      })}
+    <div className="language-buttons">
+      <a
+        href="/en"
+        className={`language-button ${
+          currentLanguage === 'en' ? 'language-button--active' : ''
+        }`}
+      >
+        EN
+      </a>
+      <a
+        href="/de"
+        className={`language-button ${
+          currentLanguage === 'de' ? 'language-button--active' : ''
+        }`}
+      >
+        DE
+      </a>
     </div>
   );
 };
+
+export default LanguageButtons;

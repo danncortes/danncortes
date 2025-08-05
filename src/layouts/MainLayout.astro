@@ -1,0 +1,30 @@
+---
+// Define the props that can be passed to this layout
+export interface Props {
+  title: string;
+  description?: string;
+  lang: string;
+}
+
+const { title, description = title, lang } = Astro.props;
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..600;1,300..600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
