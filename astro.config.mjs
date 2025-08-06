@@ -6,6 +6,7 @@ import i18next from 'astro-i18next';
 
 // https://astro.build/config
 export default defineConfig({
+  base: '/',
   json: {
     namedExports: true // or false if you prefer default only
   },

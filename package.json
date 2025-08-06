@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && echo > dist/.nojekyll && gh-pages -d dist",
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "gh-pages -d dist",
