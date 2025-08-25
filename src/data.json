@@ -207,7 +207,7 @@
         {
           "projectKey": "documentEditor",
           "name": "Document Editor",
-          "techStack": "TypeScript, JavaScript, JQuery, Jasmin, Sinon, HTML, LESS"
+          "techStack": "TypeScript, JavaScript, JQuery, Jasmine, Sinon, HTML, LESS"
         }
       ],
       "logo": {

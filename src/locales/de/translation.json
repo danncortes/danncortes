@@ -82,16 +82,14 @@
         "photoAlbum": {
           "name": "Photo Album Web-App",
           "description": "",
-          "responsibilities": [
-            "Seiten Layout Gestalter Web-App für Photo-Albums"
-          ]
+          "responsibilities": ["Seiten Layout Gestalter Web-App für Fotoalben"]
         },
         "vokabularyPractice": {
           "name": "Vokabeltrainer-App",
           "description": "",
           "responsibilities": [
             "Webanwendung zum Üben von Vokabeln mit Spaced Repetition System",
-            "Generierung von Audiophrasen aus Vokabeln mit Text-to-Speach-KI von elevenlabs.io API"
+            "Generierung von Audiophrasen aus Vokabeln mit Text-to-Speech-KI von elevenlabs.io API"
           ]
         }
       }
@@ -128,7 +126,7 @@
           "name": "Probeninventar",
           "description": "Entwicklung einer Inventarsoftware zur Verwaltung von Patientenproben",
           "responsibilities": [
-            "Entwicklung, Implementierung und Betrieb von Komponenten und UX Funktionalitäten",
+            "Entwicklung, Implementierung und Betrieb von Komponenten und UX-Funktionalitäten",
             "Unit-Testing für Komponenten und Funktionalitäten",
             "Anforderungsmanagement und Definition neuer Funktionalitäten",
             "Durchführung der technischen Interviews von Bewerbenden"
@@ -187,7 +185,7 @@
           "name": "Zeichnungs-Soziales Netzwerk",
           "description": "",
           "responsibilities": [
-            "Gestaltung und entwicklung UI-UX Funktionalitäten",
+            "Gestaltung und Entwicklung UI-UX-Funktionalitäten",
             "Design und Entwicklung einer UX-Lösung für eine vollständig horizontale Navigation durch die Anwendung"
           ]
         }
