@@ -95,7 +95,7 @@ const ResumeContent = () => {
         <div className="resume-content__right">
           <Avatar mode="circle" className="avatar--right" />
           <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center gap-3">
+            <div className="name-profile flex items-center gap-3">
               <h1 className="text-4xl">{resumeData.name}</h1>
               <span className="text-4xl text-gray-300 ">|</span>
               <h2 className="resume-title color-primary text-2xl">

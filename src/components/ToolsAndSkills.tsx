@@ -35,7 +35,7 @@ const Tools = ({
     <div
       className={`tools ${
         className ?? ''
-      } grid gap-3 grid-cols-5 md:grid-cols-1 md:gap-1 lg:gap-3 lg:grid-cols-2 print:grid-cols-1 print:gap-1`}
+      } grid gap-3 grid-cols-3 sm:grid-cols-5 md:grid-cols-1 md:gap-1 lg:gap-3 lg:grid-cols-2 print:grid-cols-1 print:gap-1`}
     >
       {data.map((tech: ToolsAndSkillsData) => {
         const { name, level, scale, profileTypes } = tech;

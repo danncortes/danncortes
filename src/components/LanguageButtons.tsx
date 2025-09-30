@@ -9,7 +9,7 @@ const LanguageButtons = () => {
     <div className="language-buttons">
       <a
         href="/en"
-        className={`language-button ${
+        className={`language-button rounded-sm ${
           currentLanguage === 'en' ? 'language-button--active' : ''
         }`}
       >
@@ -17,7 +17,7 @@ const LanguageButtons = () => {
       </a>
       <a
         href="/de"
-        className={`language-button ${
+        className={`language-button rounded-sm ${
           currentLanguage === 'de' ? 'language-button--active' : ''
         }`}
       >
