@@ -33,6 +33,7 @@
   "tools": "Tools",
   "workExperience": "Work Experience",
   "courses": "Courses",
+  "hours": "Hours",
   "languages": "Languages",
   "lang": {
     "spanish": "Spanish",
@@ -40,7 +41,7 @@
     "german": "German"
   },
   "currently": "Currently",
-  "b2": "Fluent in speech and writing (B2)",
+  "languageLevel": "Fluent in speech and writing",
   "native": "Native",
   "education": "Education",
   "yOfExp": "Years of Exp.",
@@ -70,7 +71,9 @@
   "hobbies": {
     "title": "Hobbies",
     "mountainBike": "Mountain Bike",
-    "drawing": "Drawing"
+    "drawing": "Drawing",
+    "trekking": "Trekking",
+    "salsaDance": "Salsa Dance"
   },
   "experience": {
     "aktuell": {

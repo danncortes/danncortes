@@ -92,13 +92,13 @@ const ResumeContent = () => {
           </ComponentTemplate>
         </div>
 
+        {/* Right Column */}
         <div className="resume-content__right">
           <Avatar mode="circle" className="avatar--right" />
           <div className="flex items-center justify-between mb-6">
-            <div className="name-profile flex items-center gap-3">
-              <h1 className="text-4xl">{resumeData.name}</h1>
-              <span className="text-4xl text-gray-300 ">|</span>
-              <h2 className="resume-title color-primary text-2xl">
+            <div className="name-profile flex flex-wrap items-end gap-1">
+              <h1 className="text-4xl text-nowrap mr-5">{resumeData.name}</h1>
+              <h2 className="resume-title text-nowrap color-primary text-2xl">
                 {t(`profileInfo.title.${profileType}`)}
               </h2>
             </div>

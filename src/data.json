@@ -116,6 +116,12 @@
         "profileTypes": ["frontend"]
       },
       {
+        "name": "SQL",
+        "level": 2,
+        "scale": 6,
+        "profileTypes": ["frontend"]
+      },
+      {
         "name": "Tailwind",
         "level": 3,
         "scale": 6,
@@ -383,80 +389,91 @@
   ],
   "courses": [
     {
-      "name": "OWASP Top 10: The Big Picture",
-      "date": "2023-11-01",
+      "name": "JavaScript Algorithms and Data Structures Masterclass",
+      "date": "2025-08-01",
       "note": "",
-      "site": "http://www.pluralsight.com",
-      "show": false
+      "site": "udemy.com",
+      "url": "http://www.udemy.com",
+      "duration": 22,
+      "where": "online"
     },
     {
-      "name": "Angular 4 Security Using JSON Web Tokens",
-      "date": "2023-11-01",
+      "name": "Advanced CSS and Sass: Flexbox, Grid, Animations",
+      "date": "2020-08-01",
       "note": "",
-      "site": "http://www.pluralsight.com",
-      "show": false
+      "site": "udemy.com",
+      "url": "http://www.udemy.com",
+      "duration": 28,
+      "where": "online"
     },
     {
-      "name": "OWASP Top 10: What's New",
-      "date": "2022-11-01",
-      "note": "",
-      "site": "http://www.pluralsight.com",
-      "show": false
-    },
-    {
-      "name": "NodeJS",
+      "name": "The Complete Node.js Developer Course",
       "date": "2020-03-01",
       "note": "",
-      "site": "http://www.udemy.com"
+      "site": "udemy.com",
+      "url": "http://www.udemy.com",
+      "duration": 35,
+      "where": "online"
     },
     {
       "name": "Advanced React and Redux",
       "date": "2020-03-01",
       "note": "",
-      "site": "http://www.udemy.com"
+      "site": "udemy.com",
+      "url": "http://www.udemy.com",
+      "duration": 21,
+      "where": "online"
     },
     {
       "name": "Git Complete: The definitive, step-by-step guide to Git",
       "date": "2020-02-01",
       "note": "",
-      "site": "http://www.udemy.com"
+      "site": "udemy.com",
+      "url": "http://www.udemy.com",
+      "duration": 6,
+      "where": "online"
     },
     {
       "name": "Modern React with Redux",
       "date": "2018-01-01",
       "note": "",
-      "site": "http://www.udemy.com"
+      "site": "udemy.com",
+      "url": "http://www.udemy.com",
+      "duration": 27,
+      "where": "online"
+    },
+    {
+      "name": "Certified Scrum Developer® (CSD®)",
+      "date": "2016-01-01",
+      "note": "",
+      "site": "Scrum Alliance®",
+      "url": "https://bcert.me/sjsketuf"
     },
     {
       "name": "The Complete JavaScript Course: Build a Real-World Project",
       "date": "2017-12-01",
       "note": "",
-      "site": "http://www.udemy.com"
-    },
-    {
-      "name": "Design Patterns in JavaScript",
-      "date": "2017-10-01",
-      "note": "",
-      "site": "http://www.pluralsight.com"
-    },
-    {
-      "name": "Advanced JavaScript",
-      "date": "2017-08-01",
-      "note": "",
-      "site": "http://www.pluralsight.com"
+      "site": "udemy.com",
+      "url": "http://www.udemy.com",
+      "duration": 18,
+      "where": "online"
     },
     {
       "name": "Diseño Gráfico de Interfaces de Usuario y UX",
       "date": "2015-01-01",
       "note": "",
-      "site": "http://www.platzi.com"
+      "site": "platzi.com",
+      "url": "http://www.platzi.com",
+      "duration": 9,
+      "show": false,
+      "where": "online"
     }
   ],
   "languages": [
-    { "name": "lang.german", "level": "b2" },
+    { "name": "lang.german", "level": "languageLevel" },
     {
       "name": "lang.english",
-      "level": "b2"
+      "level": "languageLevel"
     },
     { "name": "lang.spanish", "level": "native" }
   ],
@@ -476,5 +493,10 @@
       "location": "Caracas"
     }
   ],
-  "hobbies": ["hobbies.drawing", "hobbies.mountainBike"]
+  "hobbies": [
+    "hobbies.drawing",
+    "hobbies.mountainBike",
+    "hobbies.trekking",
+    "hobbies.salsaDance"
+  ]
 }

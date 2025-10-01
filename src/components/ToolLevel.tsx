@@ -36,7 +36,7 @@ const ExperienceLevelDot = ({
     dots.push(
       <div
         key={i}
-        className="tool-level__dot rounded-full"
+        className="tool-level__dot rounded-full shrink-0"
         style={{
           width: `${height}px`,
           height: `${height}px`,

@@ -11,8 +11,11 @@ html {
   --base-color: #222;
   --primary-color: #00806f;
   --column-gap: 2rem;
+  --item-gap: 0.85rem;
+  --title-gap: 0.5rem;
   --border-column-color: #bbb;
   --dot-top: 0.8rem;
+  --component-gap: 1.8rem;
 }
 
 /* Helpers */
@@ -137,11 +140,11 @@ html {
 
 /* Component Template  */
 .component-template {
-  margin-bottom: 2.4rem;
+  margin-bottom: var(--component-gap);
 }
 
 .component-template__title {
-  margin-bottom: 0.9rem;
+  margin-bottom: var(--title-gap);
   text-transform: uppercase;
   color: var(--primary-color);
   padding-bottom: 0.4rem;
@@ -189,7 +192,7 @@ html {
 .courses {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  gap: var(--item-gap);
 }
 
 .course {
@@ -201,17 +204,11 @@ html {
   font-size: 0.9rem;
 }
 
-.course__date,
-.course__site {
-  font-size: 0.75rem;
-  color: #6b7280;
-}
-
 /* Language */
 
 .language {
   font-weight: 450;
-  margin-bottom: 1rem;
+  margin-bottom: var(--item-gap);
 }
 
 .language__name {
@@ -226,7 +223,7 @@ html {
 /* Education */
 .education {
   font-size: 0.9rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--item-gap);
   font-weight: 450;
 }
 

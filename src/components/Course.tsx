@@ -1,12 +1,16 @@
 import React from 'react';
 import { formatDate } from '../utils';
+import { useTranslation } from 'react-i18next';
 
 export type CourseData = {
   name: string;
   date: string;
   note: string;
   site: string;
+  url: string;
+  duration?: number;
   show?: boolean;
+  where?: string;
 };
 
 export type CourseProps = {
@@ -14,24 +18,25 @@ export type CourseProps = {
   showYear?: boolean;
 };
 
-const Course = ({ course, showYear = false }: CourseProps) => {
-  const { name, date, site, show = true } = course;
+const Course = ({ course, showYear = true }: CourseProps) => {
+  const { t } = useTranslation();
+  const { name, date, site, show = true, url, duration, where } = course;
   return (
     <>
       {show && (
         <div className="course">
-          <p className="course__name">{name}</p>
-          {showYear && (
-            <p className="course__date">{formatDate(date, { full: false })}</p>
-          )}
+          <p className="course__name mb-1">{name}</p>
           <a
-            href={site}
+            href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="course__site"
+            className="course__site text-xs font-normal text-gray-600 mb-1"
           >
-            {site.split('.')[1] ? site.split('.')[1] : ''}
+            {showYear && formatDate(date, { full: false })} - {site}
           </a>
+          <p className="text-xs font-normal text-gray-600">
+            {duration && `${duration} ${t('hours')}`} {where}
+          </p>
         </div>
       )}
       {/* Use the following code snippet to render spaces for the page break on print: */}
