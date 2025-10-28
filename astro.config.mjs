@@ -3,23 +3,23 @@
 import react from '@astrojs/react';
 import { defineConfig } from 'astro/config';
 import i18next from 'astro-i18next';
+import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
   base: '/',
-  json: {
-    namedExports: true // or false if you prefer default only
-  },
-  // Enable React to support React JSX components.
   integrations: [
     react(),
     i18next({
       defaultLocale: 'en',
       locales: ['en', 'de'],
-      loadLocaleFrom: (locale) =>
+      loadLocaleFrom: /** @param {string} locale */ (locale) =>
         import(`./src/locales/${locale}/translation.json`).then(
           (m) => m.default
         )
     })
-  ]
+  ],
+  vite: {
+    plugins: [tailwindcss()]
+  }
 });

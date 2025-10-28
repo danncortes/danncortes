@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { i18n, getLanguage } from '../i18n';
-import '../styles.css';
+import '../styles/resume.css';
 
 import ResumeContent from './ResumeContent';
 

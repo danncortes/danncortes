@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+import Resume from '../components/Resume';
 // Define the props that can be passed to this layout
 export interface Props {
   title: string;
@@ -7,6 +9,10 @@ export interface Props {
 }
 
 const { title, description = title, lang } = Astro.props;
+
+// Dynamically import translations based on lang
+const translations = await import(`../locales/${lang}/translation.json`);
+const t = translations.default;
 ---
 
 <html lang={lang}>
@@ -24,7 +30,38 @@ const { title, description = title, lang } = Astro.props;
   </head>
   <body>
     <main>
-      <slot />
+      <section class="page" id="home">
+        <a class="btn btn-secondary" href="#resume">Resume</a>
+      </section>
+      <section class="page" id="resume">
+        <Resume lang={lang} client:only="react" />
+      </section>
+      <section class="page" id="about">
+        About
+      </section>
     </main>
+    <script>
+      // Update URL hash based on visible section
+      const sections = document.querySelectorAll('section.page[id]');
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+              const id = entry.target.getAttribute('id');
+              if (id && window.location.hash !== `#${id}`) {
+                history.replaceState(null, '', `#${id}`);
+              }
+            }
+          });
+        },
+        {
+          threshold: 0.5,
+          rootMargin: '0px'
+        }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    </script>
   </body>
 </html>

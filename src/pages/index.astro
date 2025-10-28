@@ -10,9 +10,16 @@ if (Astro.request.headers.get('accept')?.includes('text/html')) {
 
 <html>
   <head>
-    <meta http-equiv="refresh" content={`0;url=/${defaultLanguage}`} />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="refresh" content={`0;url=/${defaultLanguage}/`} />
+    <style>
+      @import 'tailwindcss';
+    </style>
   </head>
-  <body>
-    <p>Redirecting to <a href={`/${defaultLanguage}`}>default language version</a>...</p>
+  <body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <p class="text-lg text-gray-700">
+      Redirecting to <a href={`/${defaultLanguage}`} class="text-blue-600 hover:underline">default language version</a>...
+    </p>
   </body>
 </html>
