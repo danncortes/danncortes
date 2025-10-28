@@ -16,7 +16,13 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: ['**/serviceWorker.js', '**/setupTests.js']
+    ignores: [
+      '**/serviceWorker.js',
+      '**/setupTests.js',
+      'astro.config.mjs',
+      'eslint.config.mjs',
+      'postcss.config.mjs'
+    ]
   },
   ...compat.extends(
     'eslint:recommended',

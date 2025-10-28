@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+@plugin "daisyui" {
+  themes: light --default, dark --preferslight;
+}
+
+:root {
+  --base-color: #222;
+  --primary-color: #00806f;
+  --column-gap: 2rem;
+  --item-gap: 0.85rem;
+  --title-gap: 0.5rem;
+  --border-column-color: #bbb;
+  --dot-top: 0.8rem;
+  --component-gap: 1.8rem;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--base-color);
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+section.page {
+  min-height: 100vh;
+  overflow: auto;
+  scrollbar-width: none;
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
