@@ -1,0 +1,42 @@
+---
+// Props passed from parent
+interface Props {
+  currentLang: string;
+}
+
+const { currentLang } = Astro.props;
+---
+
+<div class="flex gap-2">
+  <a
+    href="/de/"
+    data-lang="de"
+    class={`btn btn-xs language-btn ${currentLang === 'de' ? 'btn-primary' : 'btn-default'}`}
+  >
+    DE
+  </a>
+  <a
+    href="/en/"
+    data-lang="en"
+    class={`btn btn-xs language-btn ${currentLang === 'en' ? 'btn-primary' : 'btn-default'}`}
+  >
+    EN
+  </a>
+</div>
+
+<script>
+  // Preserve hash when clicking language buttons
+  document.addEventListener('DOMContentLoaded', () => {
+    const languageButtons = document.querySelectorAll('.language-btn');
+
+    languageButtons.forEach((button) => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const currentHash = window.location.hash;
+        const lang = button.getAttribute('data-lang');
+        const newUrl = `/${lang}/${currentHash}`;
+        window.location.href = newUrl;
+      });
+    });
+  });
+</script>

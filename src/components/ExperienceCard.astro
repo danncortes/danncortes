@@ -1,0 +1,67 @@
+---
+import { i18n } from '../i18n';
+const { t } = i18n;
+import ProjectsDetails from './ProjectsDetails.astro';
+import type { Experience } from '../types/experience';
+import { formatDate } from '../utils';
+
+interface Props {
+  experience: Experience;
+  class?: string;
+}
+
+const { experience, class: className } = Astro.props;
+
+const fromDate = formatDate(experience.from);
+const toDate = experience.to ? formatDate(experience.to) : t('currently');
+const dateRange = `${fromDate} - ${toDate}`;
+---
+
+<div
+  class:list={[
+    'bg-base-200 p-6 pt-5 rounded-xl border border-base-300 flex flex-col gap-3 animate-on-scroll',
+    className
+  ]}
+>
+  <div>
+    <div class="flex justify-between">
+      <h3 class="text-xl text-primary">{t(experience.position)}</h3>
+      <p class="text-sm text-base-content/50">
+        {dateRange}
+      </p>
+    </div>
+    {
+      (experience.name || experience.location) && (
+        <div class="flex justify-between">
+          <div class="flex gap-2 items-center">
+            {experience.name && (
+              <h3 class="text-base-content/80 font-light">
+                {t(experience.name)}
+              </h3>
+            )}
+            {experience.nameNote && (
+              <span class="text-sm text-base-content/50">
+                ({t(experience.nameNote)})
+              </span>
+            )}
+          </div>
+          {experience.location && (
+            <p class="text-sm text-base-content/50">{t(experience.location)}</p>
+          )}
+        </div>
+      )
+    }
+  </div>
+  {
+    experience.intro && (
+      <ul class="intro list-disc list-inside text-base-content/80">
+        {(t(`${experience.intro}`, { returnObjects: true }) as string[]).map(
+          (p: string) => (
+            <li>{p}</li>
+          )
+        )}
+      </ul>
+    )
+  }
+  <ProjectsDetails projects={experience.projects} />
+</div>

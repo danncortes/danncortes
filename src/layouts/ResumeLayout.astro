@@ -1,0 +1,94 @@
+---
+import { i18n } from '../i18n';
+const { t } = i18n;
+import data from '../data.json';
+import Experiences from '../components/Experiences.astro';
+import Section from '../components/Section.astro';
+import Courses from '../components/Courses.astro';
+import Education from '../components/Education.astro';
+import Interests from '../components/Interests.astro';
+---
+
+<section class="resume flex max-w-6xl gap-14 h-fit">
+  <section class="resume__left min-w-[300px] sticky top-0 self-start">
+    <div
+      class="profile-card p-8 bg-base-200 rounded-xl flex flex-col gap-6 animate-on-scroll border border-base-300"
+    >
+      <img
+        class="profile-pic w-60 rounded-full"
+        src="/src/images/profile-pic-md.avif"
+        alt="Profile Picture"
+      />
+      <div class="profile-info flex flex-col items-center">
+        <h1 class="text-4xl font-extrabold">
+          {data.profile.name}
+        </h1>
+        <p class="text-2xl font-extralight text-primary">
+          {t(`${data.profile.title}`)}
+        </p>
+      </div>
+      <div class="contact flex justify-center">
+        {
+          data.contactInfo
+            .filter((contact) => contact.show && contact.icon)
+            .map((contact) => (
+              <a
+                href={contact.value}
+                class="btn btn-link btn-xs"
+                target="_blank"
+                aria-label={contact.title}
+                set:html={contact.icon}
+              />
+            ))
+        }
+      </div>
+    </div>
+  </section>
+  <section class="resume__right flex flex-col gap-10">
+    <div class="usp flex flex-col gap-4 text-xl font-light pt-10">
+      {
+        (t(`${data.profile.usp}`, { returnObjects: true }) as string[]).map(
+          (p: string) => <p>{p}</p>
+        )
+      }
+    </div>
+
+    <div class="technologies">
+      <h2 class="mb-4 text-2xl font-bold">{t(data.tools.title)}</h2>
+      <ul class="flex flex-wrap gap-10 justify-center">
+        {
+          data.tools.data
+            .filter((tool) => tool.show && tool.icon)
+            .map((tool) => (
+              <li>
+                <img
+                  class="h-10"
+                  src={tool.icon}
+                  alt={tool.name}
+                  title={tool.name}
+                />
+              </li>
+            ))
+        }
+      </ul>
+    </div>
+    <Section title={t('currently')} sectionName="currently">
+      <Experiences experiences={data.currently} />
+    </Section>
+    <Section
+      title={t('professionalExperience')}
+      sectionName="professional-experience"
+    >
+      <Experiences experiences={data.experience} />
+    </Section>
+    <Section title={t('courses')} sectionName="courses">
+      <Courses courses={data.courses} />
+    </Section>
+    <Section title={t('education')} sectionName="education">
+      <Education education={data.education} />
+    </Section>
+    <Section title={t('interests.title')} sectionName="interests">
+      <Interests interests={data.interests} />
+    </Section>
+  </section>
+</section>

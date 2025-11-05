@@ -1,11 +1,28 @@
 @import 'tailwindcss';
+
 @plugin "daisyui" {
-  themes: light --default, dark --preferslight;
+  themes:
+    dark --default,
+    light --prefersdark;
+}
+
+@plugin "daisyui/theme" {
+  name: 'light';
+  default: false;
+  --color-primary: var(--color-cyan-700);
+  --color-secondary: var(--color-pink-600);
+}
+
+@plugin "daisyui/theme" {
+  name: 'dark';
+  default: true;
+  --color-primary: var(--color-cyan-600);
+  --color-secondary: var(--color-pink-600);
 }
 
 :root {
   --base-color: #222;
-  --primary-color: #00806f;
+  --primary-color: var(--color-cyan-700);
   --column-gap: 2rem;
   --item-gap: 0.85rem;
   --title-gap: 0.5rem;
@@ -17,17 +34,38 @@
 html {
   font-size: 16px;
   line-height: 1.5;
-  font-family: 'Montserrat', sans-serif;
-  color: var(--base-color);
+  font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
 
 section.page {
-  min-height: 100vh;
+  height: 100vh;
   overflow: auto;
   scrollbar-width: none;
-  height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+}
+
+/* Scroll animations with Intersection Observer */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Theme-based logo visibility */
+[data-theme='light'] .logo-light {
+  display: none;
+}
+
+[data-theme='dark'] .logo-dark {
+  display: none;
 }

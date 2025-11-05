@@ -1,143 +1,169 @@
 {
+  "profile": {
+    "name": "Daniel Cortés",
+    "title": "profileInfo.title.frontend",
+    "usp": "profileInfo.usp.frontend"
+  },
   "config": { "profileType": "frontend" },
-  "name": "Daniel Cortés",
   "contactInfo": [
     {
       "title": "Email",
       "label": "danncortes@gmail.com",
       "value": "mailto:danncortes@gmail.com",
-      "link": true,
-      "type": "email",
-      "icon": ["fas", "envelope"]
-    },
-    {
-      "title": "Location",
-      "label": "Kriens, $t(switzerland)",
-      "value": "https://www.google.com.co/maps/search/Luzern+Switzerland",
-      "link": true,
-      "type": "map",
-      "icon": ["fas", "map-marker-alt"]
+      "show": true,
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"size-6\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75\"></path></svg>"
     },
     {
       "title": "phone",
       "label": "+41 76 725 1794",
       "value": "+41 76 725 1794",
-      "link": false,
-      "type": "phone",
-      "icon": ["fas", "phone"]
+      "show": false
     },
     {
       "title": "LinkedIn",
       "label": "linkedin.com/in/danncortes",
       "value": "http://linkedin.com/in/danncortes",
-      "link": true,
-      "type": "link",
-      "icon": ["fab", "linkedin"]
+      "show": true,
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" class=\"size-9\"><path d=\"M8.25 17.25h-2.5v-7.5h2.5v7.5ZM7 8.625a1.375 1.375 0 1 1 0-2.75 1.375 1.375 0 0 1 0 2.75ZM18.25 17.25h-2.5v-3.75c0-.69-.56-1.25-1.25-1.25s-1.25.56-1.25 1.25v3.75h-2.5v-7.5h2.5v1.032c.449-.483 1.09-.782 1.75-.782 1.519 0 2.75 1.231 2.75 2.75v4.5Z\"></path></svg>"
     },
     {
       "title": "Github",
       "label": "github.com/danncortes",
       "value": "https://github.com/danncortes",
-      "link": true,
-      "type": "link",
-      "icon": ["fab", "github"]
+      "show": true,
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" class=\"size-5\"><path d=\"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z\"></path></svg>"
     },
     {
       "title": "Website",
       "label": "danncortes.com",
       "value": "https://danncortes.com",
-      "link": true,
-      "type": "link",
-      "icon": ["fas", "globe"]
+      "show": true,
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"size-6\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244\"></path></svg>"
+    },
+    {
+      "title": "Instagram",
+      "label": "instagram.com/danncort",
+      "value": "https://www.instagram.com/danncort/",
+      "show": true,
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"size-6\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\" ry=\"5\"></rect><path d=\"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z\"></path><line x1=\"17.5\" y1=\"6.5\" x2=\"17.51\" y2=\"6.5\"></line></svg>"
     }
   ],
   "personalInfo": [
     {
       "title": "personalInfo.maritalStatus",
-      "value": "personalInfo.married",
-      "icon": ["fas", "ring"]
+      "value": "personalInfo.married"
     },
     {
       "title": "personalInfo.nationality",
-      "value": "personalInfo.colombian",
-      "icon": ["fas", "globe-americas"]
+      "value": "personalInfo.colombian"
     },
     {
       "title": "permit",
-      "value": "personalInfo.permitType",
-      "icon": ["fas", "id-card"]
+      "value": "personalInfo.permitType"
+    },
+    {
+      "title": "location",
+      "value": "Kriens, $t(switzerland)"
     }
   ],
   "tools": {
     "title": "tools",
     "data": [
       {
-        "name": "JavaScript",
+        "name": "Angular",
         "level": 4,
         "scale": 6,
-        "profileTypes": ["frontend", "ui/ux"]
+        "profileTypes": ["frontend", "ui/ux"],
+        "show": true,
+        "icon": "/src/images/angular-logo.png"
+      },
+      {
+        "name": "React",
+        "level": 4,
+        "scale": 6,
+        "profileTypes": ["frontend", "ui/ux"],
+        "show": true,
+        "icon": "/src/images/react-logo.png"
       },
       {
         "name": "TypeScript",
         "level": 4,
         "scale": 6,
-        "profileTypes": ["frontend", "ui/ux"]
+        "profileTypes": ["frontend", "ui/ux"],
+        "show": true,
+        "icon": "/src/images/typescript-logo.png"
       },
       {
-        "name": "Angular",
+        "name": "JavaScript",
         "level": 4,
         "scale": 6,
-        "profileTypes": ["frontend", "ui/ux"]
+        "profileTypes": ["frontend", "ui/ux"],
+        "show": true,
+        "icon": "/src/images/javascript-logo.png"
       },
-      { "name": "React", "level": 3, "scale": 6, "profileTypes": ["frontend"] },
-      { "name": "VueJS", "level": 2, "scale": 6, "profileTypes": ["frontend"] },
       {
         "name": "NodeJS",
         "level": 3,
         "scale": 6,
-        "profileTypes": ["frontend"]
+        "profileTypes": ["frontend"],
+        "show": true,
+        "icon": "/src/images/nodejs-logo.png"
       },
       {
         "name": "HTML",
         "level": 4,
         "scale": 6,
-        "profileTypes": ["frontend", "ui/ux"]
+        "profileTypes": ["frontend", "ui/ux"],
+        "show": true,
+        "icon": "/src/images/html-logo.png"
       },
       {
         "name": "CSS",
         "level": 4,
         "scale": 6,
-        "profileTypes": ["frontend", "ui/ux"]
+        "profileTypes": ["frontend", "ui/ux"],
+        "show": true,
+        "icon": "/src/images/css-logo.png"
       },
       {
-        "name": "Express",
+        "name": "VueJS",
         "level": 2,
         "scale": 6,
-        "profileTypes": ["frontend"]
+        "profileTypes": ["frontend"],
+        "show": false,
+        "icon": "/src/images/vuejs-logo.png"
       },
       {
         "name": "SQL",
         "level": 2,
         "scale": 6,
-        "profileTypes": ["frontend"]
+        "profileTypes": ["frontend"],
+        "show": true,
+        "icon": "/src/images/sql-logo.png"
       },
       {
         "name": "Tailwind",
         "level": 3,
         "scale": 6,
-        "profileTypes": ["frontend", "ui/ux"]
+        "profileTypes": ["frontend", "ui/ux"],
+        "show": true,
+        "icon": "/src/images/tailwind-logo.svg"
       },
       {
         "name": "Photoshop",
         "level": 3,
         "scale": 6,
-        "profileTypes": ["ui/ux"]
+        "profileTypes": ["ui/ux"],
+        "show": false,
+        "icon": "/src/images/photoshop-logo.png"
       },
       {
         "name": "Illustrator",
         "level": 3,
         "scale": 6,
-        "profileTypes": ["ui/ux"]
+        "profileTypes": ["ui/ux"],
+        "show": false,
+        "icon": "/src/images/illustrator-logo.png"
       }
     ],
     "showLevel": true,
@@ -168,51 +194,64 @@
     "showExperience": false,
     "showExpOnPrint": false
   },
-  "experience": [
+  "currently": [
     {
-      "companyName": "",
-      "link": "https://smartcommunications.com/",
-      "position": "",
-      "from": "2024-05-21",
+      "name": "",
+      "link": "",
+      "position": "experience.currently.position",
+      "from": "2025-02-01",
       "to": "",
-      "location": "Kriens - $t(switzerland)",
-      "companyKey": "aktuell",
+      "experienceKey": "currently",
       "isIntroArray": true,
+      "intro": "experience.currently.intro",
       "projects": [
         {
-          "projectKey": "photoAlbum",
-          "name": "Photo Album Layout",
+          "name": "experience.currently.projects.photoAlbum.name",
+          "description": "experience.currently.projects.photoAlbum.description",
+          "responsibilities": "experience.currently.projects.photoAlbum.responsibilities",
           "techStack": "Angular 19, TypeScript, SASS, HTML Jasmine, Karma"
         },
         {
-          "projectKey": "vokabularyPractice",
-          "name": "Vocabulary Practice App",
+          "name": "experience.currently.projects.vokabularyPractice.name",
+          "description": "experience.currently.projects.vokabularyPractice.description",
+          "responsibilities": "experience.currently.projects.vokabularyPractice.responsibilities",
           "techStack": "Angular, TypeScript, NodeJS, Supabase"
         }
-      ],
-      "logo": {
-        "name": "smart-communications.avif",
-        "loadingMode": "eager"
-      }
+      ]
     },
     {
-      "companyName": "Smart Communications",
+      "name": "",
+      "link": "",
+      "position": "experience.personal.position",
+      "from": "2024-06-01",
+      "to": "2025-01-31",
+      "experienceKey": "personal",
+      "isIntroArray": true,
+      "intro": "experience.personal.intro",
+      "projects": []
+    }
+  ],
+  "experience": [
+    {
+      "name": "Smart Communications",
       "nameNote": "Assentis Technologies AG",
       "link": "https://smartcommunications.com/",
       "position": "seniorFrontendDeveloper",
       "from": "2020-10-01",
       "to": "2024-05-21",
       "location": "Rotkreuz - $t(switzerland)",
-      "companyKey": "smartCom",
+      "experienceKey": "smartCom",
       "projects": [
         {
-          "projectKey": "reportDashboard",
-          "name": "Report Dashboard",
+          "name": "experience.smartCom.projects.reportDashboard.name",
+          "description": "experience.smartCom.projects.reportDashboard.description",
+          "responsibilities": "experience.smartCom.projects.reportDashboard.responsibilities",
           "techStack": "Angular 12, TypeScript, Bootstrap, ChartJS, Jasmine, Karma, HTML, SASS"
         },
         {
-          "projectKey": "documentEditor",
           "name": "Document Editor",
+          "description": "experience.smartCom.projects.documentEditor.description",
+          "responsibilities": "experience.smartCom.projects.documentEditor.responsibilities",
           "techStack": "TypeScript, JavaScript, JQuery, Jasmine, Sinon, HTML, LESS"
         }
       ],
@@ -222,17 +261,19 @@
       }
     },
     {
-      "companyName": "Truelogic Software",
+      "name": "Truelogic Software",
       "link": "https://www.truelogicsoftware.com/",
       "position": "seniorFrontendDeveloper",
       "from": "2019-04-17",
       "to": "2020-09-18",
       "location": "$t(lucerne) - Remote",
-      "companyKey": "truelogic",
+      "experienceKey": "truelogic",
       "projects": [
         {
           "projectKey": "specimensInventory",
           "name": "Patient Specimens Inventory Apps",
+          "description": "experience.truelogic.projects.specimensInventory.description",
+          "responsibilities": "experience.truelogic.projects.specimensInventory.responsibilities",
           "techStack": "VueJS, Vuex, TypeScript, JavaScript, HTML, SASS"
         }
       ],
@@ -242,17 +283,18 @@
       }
     },
     {
-      "companyName": "Endava",
+      "name": "Endava",
       "link": "https://www.endava.com/",
       "position": "seniorFrontendDeveloper",
       "from": "2018-07-01",
       "to": "2019-04-17",
       "location": "Medellin, $t(colombia)",
-      "companyKey": "endava",
+      "experienceKey": "endava",
       "projects": [
         {
-          "projectKey": "yogaAccessories",
-          "name": "Yoga accessories e-shop retailer",
+          "name": "experience.endava.projects.yogaAccessories.name",
+          "description": "experience.endava.projects.yogaAccessories.description",
+          "responsibilities": "experience.endava.projects.yogaAccessories.responsibilities",
           "techStack": "ReactJS, TypeScript, JavaScript, Redux, Jest, Enzyme, HTML, CSS"
         }
       ],
@@ -262,28 +304,31 @@
       }
     },
     {
-      "companyName": "Velocity Partners",
+      "name": "Velocity Partners",
       "nameNote": "Endava",
       "link": "https://www.endava.com/",
       "position": "frontendDeveloper",
       "from": "2015-09-24",
       "to": "2018-07-01",
       "location": "Medellin, $t(colombia)",
-      "companyKey": "velocity",
+      "experienceKey": "velocity",
       "projects": [
         {
-          "projectKey": "laserPrinter",
-          "name": "3D laser printer",
+          "name": "experience.velocity.projects.laserPrinter.name",
+          "description": "experience.velocity.projects.laserPrinter.description",
+          "responsibilities": "experience.velocity.projects.laserPrinter.responsibilities",
           "techStack": "ReactJS, NodeJS, Redux, Jest, Enzyme, HTML, CSS"
         },
         {
-          "projectKey": "platformConnection",
-          "name": "Application connection platform",
+          "name": "experience.velocity.projects.platformConnection.name",
+          "description": "experience.velocity.projects.platformConnection.description",
+          "responsibilities": "experience.velocity.projects.platformConnection.responsibilities",
           "techStack": "Angular 4, TypeScript, HTML, SCSS, GWT"
         },
         {
-          "projectKey": "loyaltyPrograms",
-          "name": "Loyalty programs management application",
+          "name": "experience.velocity.projects.loyaltyPrograms.name",
+          "description": "experience.velocity.projects.loyaltyPrograms.description",
+          "responsibilities": "experience.velocity.projects.loyaltyPrograms.responsibilities",
           "techStack": "AngularJS, Angular Materials, JavaScript, Charts.js, HTML, CSS"
         }
       ],
@@ -293,18 +338,19 @@
       }
     },
     {
-      "companyName": "Dada",
+      "name": "Dada",
       "link": "https://dada.nyc/",
       "position": "Senior Web Developer",
       "from": "2014-03-01",
       "to": "2015-09-01",
       "location": "Caracas, Venezuela - Remote",
-      "companyKey": "dada",
+      "experienceKey": "dada",
       "isIntroArray": true,
       "projects": [
         {
-          "projectKey": "dadanyc",
-          "name": "Drawing Social Network",
+          "name": "experience.dada.projects.dadanyc.name",
+          "description": "experience.dada.projects.dadanyc.description",
+          "responsibilities": "experience.dada.projects.dadanyc.responsibilities",
           "techStack": "Jquery, HTML, SCSS, Photoshop, Illustrator"
         }
       ],
@@ -314,32 +360,33 @@
       }
     },
     {
-      "companyName": "Ries Inc.",
+      "name": "Ries Inc.",
       "link": "",
       "position": "UI Web Developer",
       "from": "2012-08-01",
       "to": "2014-03-01",
       "location": "Caracas, Venezuela",
-      "companyKey": "ries",
+      "experienceKey": "ries",
       "about": "",
       "isIntroArray": true,
       "projects": [],
       "logo": null
     },
     {
-      "companyName": "Bumeran.com",
+      "name": "Bumeran.com",
       "link": "http://www.bumeran.com/",
       "position": "Senior Web Designer",
       "from": "2010-11-01",
       "to": "2012-08-01",
       "location": "Caracas, Venezuela",
-      "companyKey": "bumeran",
+      "experienceKey": "bumeran",
       "about": "",
       "isIntroArray": true,
       "projects": [
         {
-          "projectKey": "minisites",
-          "name": "Companies Landing Pages",
+          "name": "experience.bumeran.projects.minisites.name",
+          "description": "experience.bumeran.projects.minisites.description",
+          "responsibilities": "experience.bumeran.projects.minisites.responsibilities",
           "techStack": "HTML, CSS, PHP, Photoshop, Illustrator"
         }
       ],
@@ -349,26 +396,26 @@
       }
     },
     {
-      "companyName": "Ola Creativa",
+      "name": "Ola Creativa",
       "link": "",
       "position": "Web Designer / Graphic Designer",
       "from": "2010-08-01",
       "to": "2015-09-01",
       "location": "Caracas, Venezuela",
-      "companyKey": "ola",
+      "experienceKey": "ola",
       "about": "",
       "isIntroArray": true,
       "projects": [],
       "logo": null
     },
     {
-      "companyName": "Alia Consultores C.A.",
+      "name": "Alia Consultores C.A.",
       "link": "",
       "position": "graphicDesigner",
       "from": "2001-09",
       "to": "2009-01",
       "location": "Caracas, Venezuela",
-      "companyKey": "alia",
+      "experienceKey": "alia",
       "about": "",
       "isIntroArray": true,
       "projects": [],
@@ -493,10 +540,26 @@
       "location": "Caracas"
     }
   ],
-  "hobbies": [
-    "hobbies.drawing",
-    "hobbies.mountainBike",
-    "hobbies.trekking",
-    "hobbies.salsaDance"
+  "interests": [
+    {
+      "name": "interests.sketchCircle.name",
+      "description": "interests.sketchCircle.description",
+      "logo": "/src/images/meetup-logo-symbol-red.webp",
+      "logoDark": "/src/images/meetup-logo-symbol-white.webp",
+      "link": "https://www.meetup.com/luzern-drawing-meetup-group/",
+      "size": "medium"
+    },
+    {
+      "name": "interests.mountainBike.name",
+      "size": "small"
+    },
+    {
+      "name": "interests.trekking.name",
+      "size": "small"
+    },
+    {
+      "name": "interests.salsaDance.name",
+      "size": "small"
+    }
   ]
 }

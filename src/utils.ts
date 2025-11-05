@@ -6,21 +6,43 @@ declare global {
   }
 }
 
-export function formatDate(
-  dateString: string,
-  config: { full: boolean } = { full: true }
-): string {
-  const date = new Date(dateString);
-  const year = date.getFullYear();
-  const month = date.getMonth();
+/**
+ * Format date string (YYYY-MM) to localized month and year (e.g., "Apr 2024")
+ * @param dateString - Date in YYYY-MM format
+ * @returns Formatted date string with translated month abbreviation
+ */
+export function formatDate(dateString: string): string {
+  if (!dateString) return '';
 
-  const formattedMonth = i18n.t(`months.${month}`);
+  const [year, month] = dateString.split('-');
+  const monthIndex = parseInt(month, 10) - 1;
+  const months = i18n.t('months', { returnObjects: true }) as string[];
 
-  if (config.full) {
-    return `${formattedMonth} ${year}`;
-  } else {
-    return `${year}`;
-  }
+  return `${months[monthIndex]} ${year}`;
+}
+
+/**
+ * Initialize scroll animations for elements with 'animate-on-scroll' class
+ * Call this function after DOM is loaded
+ */
+export function initScrollAnimations() {
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+  animatedElements.forEach((element) => observer.observe(element));
 }
 
 function getDeviceType() {

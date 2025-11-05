@@ -1,0 +1,43 @@
+---
+import { i18n } from '../i18n';
+const { t } = i18n;
+import Card from './Card.astro';
+
+interface Course {
+  name: string;
+  date: string;
+  note: string;
+  site: string;
+  url: string;
+  duration?: number;
+  where?: string;
+  show?: boolean;
+}
+
+interface Props {
+  courses: Course[];
+}
+
+const { courses } = Astro.props;
+---
+
+<div
+  class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-5 grid-flow-row"
+>
+  {
+    courses.map((course) => (
+      <Card title={course.name}>
+        <a
+          class="text-sm font-light text-base-content/50"
+          href={course.url}
+          target="_blank"
+        >
+          {course.site}
+        </a>
+        {course.duration && (
+          <p class="text-sm font-light text-base-content/50">{`${course.duration} ${t('hours')}`}</p>
+        )}
+      </Card>
+    ))
+  }
+</div>

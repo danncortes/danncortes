@@ -1,0 +1,32 @@
+---
+const { greeting, intro } = Astro.props;
+---
+
+<section
+  class="home-content flex flex-col md:flex-row-reverse justify-center items-center max-w-6xl p-14 gap-14 xl:gap-26 transition-all duration-300"
+>
+  <img
+    class="profile-pic w-70 md:w-70 lg:w-96 xl:w-110 rounded-full transition-all duration-300"
+    src="/src/images/profile-pic-md.avif"
+    alt="Profile Picture"
+  />
+  <div class="flex flex-col gap-8 items-center md:items-start">
+    <h1
+      class="text-6xl text-center md:text-left lg:text-7xl font-extrabold flex flex-col gap-3 transition-all duration-300 whitespace-nowrap animate-on-scroll"
+    >
+      <span
+        class="text-4xl lg:text-5xl font-extralight block text-primary transition-all duration-300 animate-on-scroll"
+        >{greeting}</span
+      >
+      Daniel Cortés
+    </h1>
+    <h2
+      class="text-xl lg:text-2xl text-center md:text-left max-w-100 transition-all duration-300"
+    >
+      {intro}
+    </h2>
+    <a class="btn btn-primary btn-lg" href="#resume">Resume</a>
+  </div>
+</section>
+
+<style></style>

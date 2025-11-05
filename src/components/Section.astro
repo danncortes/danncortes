@@ -1,0 +1,18 @@
+---
+import { i18n } from '../i18n';
+const { t } = i18n;
+
+export interface Props {
+  title: string;
+  sectionName: string;
+}
+
+const { title, sectionName } = Astro.props;
+---
+
+<div class={`resume-section ${sectionName}`}>
+  <h2 class="mb-4 text-2xl font-bold">
+    {title}
+  </h2>
+  <slot />
+</div>
