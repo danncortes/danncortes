@@ -9,6 +9,7 @@ import { LocationIcon } from '../icons';
 export type ProjectData = {
   projectKey: string;
   name: string;
+  responsibilities: string;
   techStack: string;
 };
 
@@ -19,13 +20,13 @@ export type WorkExpData = {
   to: string | null;
   location: string;
   projects: ProjectData[];
-  logo: {
+  logo?: {
     name: string;
     loadingMode: string;
   } | null;
   showLogo?: boolean;
-  companyName: string;
-  companyKey: string;
+  name: string;
+  experienceKey: string;
   nameNote?: string;
   about?: string;
   isIntroArray?: boolean;
@@ -36,8 +37,8 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
   const { t } = useTranslation();
 
   const {
-    companyName,
-    companyKey,
+    name,
+    experienceKey: experienceKey,
     nameNote,
     position,
     from,
@@ -53,7 +54,7 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
 
   return (
     <>
-      {['Ries Inc.'].includes(companyName) && (
+      {['Ries Inc.'].includes(name) && (
         <>
           <div className="break-page"></div>
           <div className="break-page"></div>
@@ -69,7 +70,7 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
             <div>
               <h3 className="experience__position">{t(position)}</h3>
               <h4 className="experience__company-name">
-                {companyName}{' '}
+                {name}{' '}
                 {nameNote && (
                   <span className="experience__company-note">({nameNote})</span>
                 )}
@@ -85,27 +86,27 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
             {logo && showLogo && (
               <ExperienceLogo
                 logo={logo}
-                companyName={companyName}
+                name={name}
                 link={link}
               ></ExperienceLogo>
             )}
           </div>
           {(() => {
-            const about = t(`experience.${companyKey}.about`, {
+            const about = t(`experience.about`, {
               defaultValue: ''
             });
             return about ? <p className="mb-4">{about}</p> : null;
           })()}
-          {t(`experience.${companyKey}.intro`, {
+          {t(`experience.intro`, {
             defaultValue: ''
           }) && (
             <ExperienceIntro
               isIntroArray={isIntroArray}
-              translationKey={`experience.${companyKey}.intro`}
+              translationKey={`experience.intro`}
             ></ExperienceIntro>
           )}
 
-          {['Truelogic Software'].includes(companyName) && (
+          {['Truelogic Software'].includes(name) && (
             <>
               <div className="break-page"></div>
               <div className="break-page"></div>
@@ -115,8 +116,8 @@ const WorkExperience = ({ experience }: { experience: WorkExpData }) => {
           {projects.length > 0 && (
             <ExperienceProjects
               projects={projects}
-              companyKey={companyKey}
-              companyName={companyName}
+              experienceKey={experienceKey}
+              name={name}
             ></ExperienceProjects>
           )}
         </div>

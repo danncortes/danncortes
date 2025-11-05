@@ -8,7 +8,6 @@ import Tools, { ToolsAndSkillsData } from './ToolsAndSkills';
 import WorkExperience from './work-experience/WorkExperience';
 import resumeData from '../data.json';
 import ComponentTemplate from './ComponentTemplate';
-import LanguageButtons from './LanguageButtons';
 import { ProfileTypes } from '../types';
 
 export type LanguageData = {
@@ -97,12 +96,13 @@ const ResumeContent = () => {
           <Avatar mode="circle" className="avatar--right" />
           <div className="flex items-center justify-between mb-6">
             <div className="name-profile flex flex-wrap items-end gap-1">
-              <h1 className="text-4xl text-nowrap mr-5">{resumeData.name}</h1>
+              <h1 className="text-4xl text-nowrap mr-5">
+                {resumeData.profile.name}
+              </h1>
               <h2 className="resume-title text-nowrap color-primary text-2xl">
                 {t(`profileInfo.title.${profileType}`)}
               </h2>
             </div>
-            <LanguageButtons></LanguageButtons>
           </div>
 
           {/* Profile Info */}
@@ -112,7 +112,7 @@ const ResumeContent = () => {
                 const { profileType } = resumeData.config;
 
                 return Object.values(
-                  t(`profileInfo.summary.${profileType}`, {
+                  t(`profileInfo.usp.${profileType}`, {
                     returnObjects: true
                   })
                 ).map((resp, index) => <li key={index}>{resp}</li>);
@@ -150,7 +150,7 @@ const ResumeContent = () => {
             <section className="experience">
               {resumeData.experience.map((experience, i) => (
                 <WorkExperience
-                  key={`${i}-${experience.companyName}`}
+                  key={`${i}-${experience.name}`}
                   experience={experience}
                 />
               ))}

@@ -1,20 +1,17 @@
 {
   "profileInfo": {
+    "intro": "I am a $t(frontendDeveloper) and Illustrator, and I live in Lucerne.",
     "title": {
-      "frontend": "$t(frontendDeveloper)",
-      "uiux": "$t(uiuxDesigner)"
+      "frontend": "$t(frontendDeveloper)"
     },
-    "summary": {
+    "usp": {
       "frontend": [
         "9 years of experience in developing high-performance, intuitive, responsive, and scalable web applications in agile teams using Angular, TypeScript, and JavaScript, as well as HTML and CSS. Strongly focused on creating business-oriented user experiences with clean code.",
-        "With a resilient attitude and a passion for teamwork, I contribute solutions that are based on the latest standards and adapted to real user needs."
-      ],
-      "uiux": [
-        "14 years of experience in developing high-performance, intuitive, responsive, and scalable web applications in agile teams using Angular, TypeScript, and JavaScript, as well as HTML and CSS. Strongly focused on creating business-oriented user experiences with clean code.",
         "With a resilient attitude and a passion for teamwork, I contribute solutions that are based on the latest standards and adapted to real user needs."
       ]
     }
   },
+  "greeting": "Hello, I am",
   "lucerne": "Lucerne",
   "switzerland": "Switzerland",
   "colombia": "Colombia",
@@ -41,9 +38,12 @@
     "german": "German"
   },
   "currently": "Currently",
+  "showMore": "Show more",
+  "showLess": "Show less",
   "languageLevel": "Fluent in speech and writing",
   "native": "Native",
   "education": "Education",
+  "professionalExperience": "Professional Experience",
   "yOfExp": "Years of Exp.",
   "project": "Project",
   "projects": "Projects",
@@ -51,9 +51,9 @@
   "frontendDeveloper": "Frontend Developer",
   "seniorFrontendDeveloper": "Senior $t(frontendDeveloper)",
   "graphicDesigner": "Graphic Designer",
-  "uiuxDesigner": "UI/UX Web Designer",
   "moreExpInfo": "For additional work experience prior to 2015, please visit:",
   "printOrDownload": "Print or download",
+  "visit": "Visit",
   "months": [
     "Jan",
     "Feb",
@@ -68,38 +68,49 @@
     "Nov",
     "Dec"
   ],
-  "hobbies": {
-    "title": "Hobbies",
-    "mountainBike": "Mountain Bike",
-    "drawing": "Drawing",
-    "trekking": "Trekking",
-    "salsaDance": "Salsa Dance"
+  "interests": {
+    "title": "Interests",
+    "sketchCircle": {
+      "name": "Sketch Circle Lucerne | Organizer",
+      "description": "Monthly meetup for drawing and sketching together"
+    },
+    "mountainBike": {
+      "name": "Mountain Bike"
+    },
+    "trekking": {
+      "name": "Trekking"
+    },
+    "salsaDance": {
+      "name": "Salsa Dance"
+    }
   },
   "experience": {
-    "aktuell": {
+    "personal": {
+      "position": "Personal and Family Time",
+      "intro": ["Two-month trip to Colombia", "Caring for and raising my child"]
+    },
+    "currently": {
+      "position": "Professional Development and Personal Projects",
       "intro": [
-        "Ongoing development with current courses: Angular, Algorithms, and Data Structures",
         "Actively looking for a new professional challenge",
+        "Ongoing development with current courses: Angular, Algorithms, and Data Structures",
         "App development for personal use"
       ],
       "projects": {
         "photoAlbum": {
           "name": "Photo Album Web-App",
-          "description": "",
-          "responsibilities": ["Page layout designer Web-App for photo albums"]
+          "description": "Page layout designer Web-App for photo albums",
+          "responsibilities": []
         },
         "vokabularyPractice": {
-          "name": "Vocabulary learning App",
-          "description": "",
-          "responsibilities": [
-            "Web application for practicing vocabulary with Spaced Repetition System",
-            "Generation of audio phrases from vocabulary with text-to-speech AI from elevenlabs.io API"
-          ]
+          "name": "Vocabulary Practice App",
+          "description": "Web application for practicing vocabulary with Spaced Repetition System. Generation of audio phrases from vocabulary with text-to-speech AI from elevenlabs.io API",
+          "responsibilities": []
         }
       }
     },
     "smartCom": {
-      "intro": "Developer web application products for the insurance and financial sectors",
+      "intro": "Development of web application products for the insurance and financial sectors",
       "projects": {
         "reportDashboard": {
           "name": "Usage Dashboard",
@@ -108,7 +119,7 @@
             "Designed and implemented responsive user interfaces focused on user experience",
             "Architecture design and performance optimization",
             "Developed and maintained components, directives, services, pipes, and modules",
-            "Integration with backend APIs and services to fetch and manipulate data, using HTTP client",
+            "Integration with backend APIs and services to fetch and manipulate data using HTTP client",
             "Unit testing for components and services"
           ]
         },
@@ -117,86 +128,86 @@
           "description": "Document generation and editing web application",
           "responsibilities": [
             "Implemented user interfaces utilizing a corporate UI framework",
-            "Unit testing components and features"
+            "Unit testing for components and features"
           ]
         }
       }
     },
     "truelogic": {
-      "about": "Truelogic Software offers premium nearshore software development services to American companies",
+      "about": "Truelogic Software is an IT service provider offering custom software development and technology solutions, primarily for clients in the USA",
       "intro": "",
       "projects": {
         "specimensInventory": {
           "name": "Specimens Inventory",
-          "description": "Patient Specimens Inventory Management Web-App for Cryogenic Storage in Clinics",
+          "description": "Development of inventory software for managing patient specimens",
           "responsibilities": [
-            "Designing, implementing and maintaining components and features",
-            "Testing components and features",
-            "Gathering information, creating tasks and specifying requirements and acceptance criteria for new features",
-            "Leading technical interviews of candidates"
+            "Designing, implementing, and maintaining components and UX features",
+            "Unit testing for components and features",
+            "Requirements management and definition of new features",
+            "Conducting technical interviews of candidates"
           ]
         }
       }
     },
     "endava": {
-      "intro": "Endava is a software development outsourcing company that creates dynamic platforms and intelligent digital experiences for businesses",
+      "about": "Endava is a software development outsourcing company that creates dynamic platforms and intelligent digital experiences for businesses",
+      "intro": "",
       "projects": {
         "yogaAccessories": {
           "name": "Yoga Accessories e-shop",
-          "description": "Yoga accessories e-shop retailer for USA and Canada developed using ReactJS",
+          "description": "Implementation of new features for e-shop",
           "responsibilities": [
-            "Maintained and enhanced components adding accessibility features",
-            "Testing components and features"
+            "Development and optimization of components through feature enhancements with the goal of digital accessibility",
+            "Unit testing for components and features"
           ]
         }
       }
     },
     "velocity": {
-      "intro": "Velocity Partners was an innovative global nearshore software development outsourcing company",
+      "about": "Velocity Partners was an innovative global nearshore software development outsourcing company",
+      "intro": "",
       "projects": {
         "laserPrinter": {
-          "name": "3D laser printer",
-          "description": "Machine diagnostic tool for 3D laser printer manufacturer",
+          "name": "3D Laser Printer",
+          "description": "Machine status application for 3D laser printer",
           "responsibilities": [
-            "Worked on the creation of a command line based feature in NodeJS to run tests connected through SSH console",
-            "Developed a React application which connects to a 3D laser printer through an API with the aim of displaying status info and performing diagnostic test for printer hardware components",
-            "Testing components and features"
+            "Development of a command line application in NodeJS to run tests on a 3D laser printer",
+            "Development of a standalone application to display status information and perform diagnostic tests for 3D laser printer hardware components",
+            "Unit testing for components and features"
           ]
         },
         "platformConnection": {
-          "name": "Application connection platform",
+          "name": "Application Connection Platform",
           "description": "On-demand multi-tenant cloud integration platform",
           "responsibilities": [
-            "Development and optimization of UX functionalities for a platform that offers connectors to integrate applications and data"
+            "Development and optimization of UX functionalities for a platform that provides connectors to integrate applications and data"
           ]
         },
         "loyaltyPrograms": {
           "name": "Loyalty Programs",
-          "description": "Loyalty programs management application for a US Bank developed in AngularJS",
+          "description": "Application for managing loyalty programs for a US Bank",
           "responsibilities": [
-            [
-              "Developed web application for customers and merchants to create and manage loyalty programs and track statistics"
-            ]
+            "Development of a web application for customers and merchants to create and manage loyalty programs"
           ]
         }
       }
     },
     "dada": {
-      "about": "DADA is a social network where people speak to each other through drawings that you can collect on the Ethereum blockchain",
+      "about": "DADA.nyc is a social network where people communicate with each other through drawings that you can collect on the Ethereum blockchain",
       "intro": "",
       "projects": {
         "dadanyc": {
           "name": "Drawing Social Network",
           "description": "",
           "responsibilities": [
-            "Developed UI and UX solutions to implement a horizontal scroll navigation for the whole website.",
-            "Designed UI features across the platform"
+            "Design and development of UI-UX features",
+            "Design and development of a UX solution for fully horizontal navigation through the application"
           ]
         }
       }
     },
     "ries": {
-      "about": "Ries.inc was a web development agency für clients in the USA",
+      "about": "Ries.inc was a web development agency for clients in the USA",
       "intro": [
         "Design and development of a responsive website for insurance companies using PHP and Bootstrap",
         "UI design and UX development of a web-mobile application to find products using geolocation with JavaScript, jQuery, jQuery Mobile, HTML, CSS, and Google Maps API"
@@ -224,9 +235,9 @@
       ]
     },
     "alia": {
-      "about": "Alia was a small agency that created printed and interactive material for the pharmaceutical industry in Venezuela.",
+      "about": "Alia was a small agency that created printed and interactive material for the pharmaceutical industry in Venezuela",
       "intro": [
-        "Design of brochures and flyers for product promotion using Illustrator and Photoshop.",
+        "Design of brochures and flyers for product promotion using Illustrator and Photoshop",
         "Interactive CD presentations with Adobe Flash"
       ]
     }

@@ -1,0 +1,68 @@
+---
+import { i18n } from '../i18n';
+const { t } = i18n;
+
+interface Interest {
+  name: string;
+  description?: string;
+  logo?: string;
+  logoDark?: string;
+  size?: string;
+  link?: string;
+}
+
+interface Props {
+  interests: Interest[];
+}
+
+const { interests } = Astro.props;
+---
+
+<div
+  class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5 grid-flow-row"
+>
+  {
+    interests.map((interest) => (
+      <div
+        class="interest-item p-5 bg-base-200 rounded-md animate-on-scroll border border-base-300 flex gap-4"
+        class:list={[
+          { 'row-span-2': interest.size === 'medium' },
+          { 'row-span-3': interest.size === 'big' }
+        ]}
+      >
+        {interest.logo && (
+          <>
+            <img
+              src={interest.logo}
+              alt={t(interest.name)}
+              class="w-12 h-12 logo-dark"
+            />
+            <img
+              src={interest.logoDark || interest.logo}
+              alt={t(interest.name)}
+              class="w-12 h-12 logo-light"
+            />
+          </>
+        )}
+        <div class="flex flex-col gap-1">
+          <h3 class="text-lg text-primary">{t(interest.name)}</h3>
+          {interest.description && (
+            <p class="text-sm font-light text-base-content/50">
+              {t(interest.description)}
+            </p>
+          )}
+          {interest.link && (
+            <a
+              href={interest.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-light text-primary/50"
+            >
+              {t('visit')}
+            </a>
+          )}
+        </div>
+      </div>
+    ))
+  }
+</div>

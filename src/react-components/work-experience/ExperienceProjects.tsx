@@ -4,11 +4,11 @@ import { useTranslation } from 'react-i18next';
 
 type Props = {
   projects: ProjectData[];
-  companyKey: string;
-  companyName: string;
+  experienceKey: string;
+  name: string;
 };
 
-export default ({ projects, companyKey }: Props) => {
+export default ({ projects }: Props) => {
   const { t } = useTranslation();
 
   return (
@@ -21,27 +21,20 @@ export default ({ projects, companyKey }: Props) => {
           <li key={project.name} className="experience__project">
             <div className="experience__project-header flex justify-between">
               <p className="experience__project-name color-primary">
-                {t(
-                  `experience.${companyKey}.projects.${project.projectKey}.name`
-                )}
+                {t(`experience.projects.name`)}
               </p>
               <p className="experience__project-techstack">
                 {`${project.techStack}`}
               </p>
             </div>
             <p className="experience__project-description mb-1">
-              {t(
-                `experience.${companyKey}.projects.${project.projectKey}.description`
-              )}
+              {t(`experience.projects.description`)}
             </p>
             <ul className="experience__project-responsibilities">
               {Object.values(
-                t(
-                  `experience.${companyKey}.projects.${project.projectKey}.responsibilities`,
-                  {
-                    returnObjects: true
-                  }
-                )
+                t(`experience.projects.responsibilities`, {
+                  returnObjects: true
+                })
               ).map((resp, index) => (
                 <li key={index}>{resp}</li>
               ))}

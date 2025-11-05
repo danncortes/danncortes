@@ -1,0 +1,36 @@
+---
+import { i18n } from '../i18n';
+const { t } = i18n;
+import Card from './Card.astro';
+
+interface Education {
+  title: string;
+  from: string;
+  to: string;
+  place: string;
+  location: string;
+}
+
+interface Props {
+  education: Education[];
+}
+
+const { education } = Astro.props;
+---
+
+<div
+  class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-5 grid-flow-row"
+>
+  {
+    education.map((edu) => (
+      <Card title={edu.title}>
+        <p class="text-sm font-light text-base-content/50">
+          {edu.place}, {edu.location}
+        </p>
+        <p class="text-sm font-light text-base-content/50">
+          {edu.from.split('-')[0]} - {edu.to.split('-')[0]}
+        </p>
+      </Card>
+    ))
+  }
+</div>

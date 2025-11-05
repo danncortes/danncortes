@@ -1,6 +1,12 @@
 ---
+import { i18n } from '../i18n';
 import '../styles/global.css';
-import Resume from '../components/Resume';
+import Resume from '../react-components/Resume';
+import Home from '../components/home.astro';
+import LanguageButtons from '../components/LanguageButtons.astro';
+import ThemeController from '../components/ThemeController.astro';
+import ResumeLayout from './ResumeLayout.astro';
+
 // Define the props that can be passed to this layout
 export interface Props {
   title: string;
@@ -10,12 +16,11 @@ export interface Props {
 
 const { title, description = title, lang } = Astro.props;
 
-// Dynamically import translations based on lang
-const translations = await import(`../locales/${lang}/translation.json`);
-const t = translations.default;
+await i18n.changeLanguage(lang);
+const { t } = i18n;
 ---
 
-<html lang={lang}>
+<html lang={lang} data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -23,22 +28,26 @@ const t = translations.default;
     <meta name="description" content={description} />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300..600;1,300..600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="text-base-content">
     <main>
-      <section class="page" id="home">
-        <a class="btn btn-secondary" href="#resume">Resume</a>
+      <div class="flex fixed top-4 right-4 z-[1000] gap-4 items-center">
+        <LanguageButtons currentLang={lang} />
+        <ThemeController />
+      </div>
+      <section class="page flex items-center justify-center" id="home">
+        <Home greeting={t('greeting')} intro={t('profileInfo.intro')} />
       </section>
-      <section class="page" id="resume">
-        <Resume lang={lang} client:only="react" />
+      <section class="page p-10 flex justify-center" id="resume">
+        <ResumeLayout />
       </section>
-      <section class="page" id="about">
-        About
-      </section>
+      <section class="page" id="about">About</section>
     </main>
     <script>
       // Update URL hash based on visible section

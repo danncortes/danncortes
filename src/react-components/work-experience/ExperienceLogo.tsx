@@ -2,13 +2,13 @@ import React, { ReactElement, useEffect, useState } from 'react';
 import { WorkExpData } from './WorkExperience';
 
 type Props = {
-  logo: Exclude<WorkExpData['logo'], null>;
-  companyName: string;
+  logo?: Exclude<WorkExpData['logo'], null>;
+  name: string;
   link: string;
 };
 
-export default ({ logo, companyName, link }: Props): ReactElement => {
-  const { loadingMode } = logo;
+export default ({ logo, name, link }: Props): ReactElement => {
+  const { loadingMode = 'lazy' } = logo || {};
   const imagesConfig = [
     {
       size: 130,
@@ -25,6 +25,7 @@ export default ({ logo, companyName, link }: Props): ReactElement => {
   const [srcSet, setSrcSet] = useState('');
 
   useEffect(() => {
+    if (!logo) return;
     const [name, extention] = logo.name.split('.');
     setImagesSrc(name, extention);
   }, [logo]);
@@ -55,8 +56,8 @@ export default ({ logo, companyName, link }: Props): ReactElement => {
         className="experience__company-logo"
         src={defaultSrc}
         srcSet={srcSet}
-        alt={companyName}
-        aria-label={companyName}
+        alt={name}
+        aria-label={name}
         loading={loadingMode as 'lazy' | 'eager'}
       />
     </>

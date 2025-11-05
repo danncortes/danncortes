@@ -1,20 +1,17 @@
 {
   "profileInfo": {
+    "intro": "Ich bin ein $t(frontendDeveloper) und Illustrator und lebe in Luzern.",
     "title": {
-      "frontend": "$t(frontendDeveloper)",
-      "uiux": "$t(uiuxDesigner)"
+      "frontend": "$t(frontendDeveloper)"
     },
-    "summary": {
+    "usp": {
       "frontend": [
         "9 Jahre Erfahrung in der Entwicklung leistungsstarker, intuitiver, responsiver und skalierbarer Webanwendungen in agilen Teams mit Angular, TypeScript und JavaScript sowie HTML und CSS. Stark daran orientiert, geschäftsfreundliche User Experiences mit sauberem Code zu erstellen.",
-        "Mit einer resilienten Haltung und einer Leidenschaft für Teamarbeit trage ich mit Lösungen bei, die auf den neuesten Standards basieren und an die realen Nutzeranforderungen angepasst sind."
-      ],
-      "uiux": [
-        "14 Jahre Erfahrung in der Entwicklung leistungsstarker, intuitiver, responsiver und skalierbarer Webanwendungen in agilen Teams mit Angular, TypeScript und JavaScript sowie HTML und CSS. Stark daran orientiert, geschäftsfreundliche User Experiences mit sauberem Code zu erstellen.",
         "Mit einer resilienten Haltung und einer Leidenschaft für Teamarbeit trage ich mit Lösungen bei, die auf den neuesten Standards basieren und an die realen Nutzeranforderungen angepasst sind."
       ]
     }
   },
+  "greeting": "Hallo, ich bin",
   "lucerne": "Luzern",
   "switzerland": "Schweiz",
   "colombia": "Kolumbien",
@@ -40,9 +37,12 @@
     "german": "Deutsch"
   },
   "currently": "Aktuell",
+  "showMore": "Mehr anzeigen",
+  "showLess": "Weniger anzeigen",
   "languageLevel": "Fließend in Wort und Schrift",
   "native": "Muttersprache",
   "education": "Ausbildung",
+  "professionalExperience": "Berufserfahrung",
   "yOfExp": "Jahre Erf.",
   "project": "Projekt",
   "projects": "Projekte",
@@ -50,9 +50,9 @@
   "frontendDeveloper": "Frontend Entwickler",
   "seniorFrontendDeveloper": "Senior $t(frontendDeveloper)",
   "graphicDesigner": "Grafik Designer",
-  "uiuxDesigner": "UI/UX Web Designer",
   "moreExpInfo": "Für zusätzliche Berufserfahrung vor 2015 besuchen Sie bitte:",
   "printOrDownload": "Drucken oder herunterladen",
+  "visit": "Besuchen",
   "months": [
     "Jan.",
     "Feb.",
@@ -67,33 +67,47 @@
     "Nov.",
     "Dez."
   ],
-  "hobbies": {
-    "title": "Hobbys",
-    "mountainBike": "Mountain Bike",
-    "drawing": "Zeichnen",
-    "trekking": "Wandern",
-    "salsaDance": "Salsa Tanzen"
+  "interests": {
+    "title": "Interessen",
+    "sketchCircle": {
+      "name": "Sketch Circle Luzern | Organizator",
+      "description": "Monatliches Treffen zum gemeinsamen Zeichnen und Skizzieren"
+    },
+    "mountainBike": {
+      "name": "Mountain Bike"
+    },
+    "trekking": {
+      "name": "Wandern"
+    },
+    "salsaDance": {
+      "name": "Salsa Tanzen"
+    }
   },
   "experience": {
-    "aktuell": {
+    "personal": {
+      "position": "Persönliche und Familienzeit",
       "intro": [
-        "Weiterentwicklung mit laufenden Kursen: Angular, Algorithmen und Datenstrukturen",
+        "Zwei Monate Reise in Kolumbien",
+        "Betreuung und Erziehung meines Kindes"
+      ]
+    },
+    "currently": {
+      "position": "Weiterentwicklung und Persönliche Projekte",
+      "intro": [
         "Aktive Stellensuche",
+        "Weiterentwicklung mit laufenden Kursen: Angular, Algorithmen und Datenstrukturen",
         "App-Entwicklung für den persönlichen Gebrauch"
       ],
       "projects": {
         "photoAlbum": {
           "name": "Photo Album Web-App",
-          "description": "",
-          "responsibilities": ["Seiten Layout Gestalter Web-App für Fotoalben"]
+          "description": "Seiten Layout Gestalter Web-App für Fotoalben",
+          "responsibilities": []
         },
         "vokabularyPractice": {
           "name": "Vokabeltrainer-App",
-          "description": "",
-          "responsibilities": [
-            "Webanwendung zum Üben von Vokabeln mit Spaced Repetition System",
-            "Generierung von Audiophrasen aus Vokabeln mit Text-to-Speech-KI von elevenlabs.io API"
-          ]
+          "description": "Webanwendung zum Üben von Vokabeln mit Spaced Repetition System. Generierung von Audiophrasen aus Vokabeln mit Text-to-Speech-KI von elevenlabs.io API",
+          "responsibilities": []
         }
       }
     },

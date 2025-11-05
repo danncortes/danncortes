@@ -1,0 +1,75 @@
+---
+import { i18n } from '../i18n';
+const { t } = i18n;
+import ExperienceCard from './ExperienceCard.astro';
+import type { Experience } from '../types/experience';
+
+interface Props {
+  experiences: Experience[];
+}
+
+const { experiences } = Astro.props;
+const showLimit = 4;
+const hasMore = experiences.length > showLimit;
+---
+
+<div class="flex flex-col gap-6 experiences-list">
+  {
+    experiences.map((exp, index) => (
+      <ExperienceCard
+        class:list={['experience-item', { hidden: index >= showLimit }]}
+        experience={exp}
+      />
+    ))
+  }
+</div>
+{
+  hasMore && (
+    <div class="flex justify-center">
+      <button
+        class="show-more-btn btn btn-sm mt-6"
+        data-show-text={t('showMore')}
+        data-show-less-text={t('showLess')}
+      >
+        {t('showMore')}
+      </button>
+    </div>
+  )
+}
+
+<script>
+  import { initScrollAnimations } from '../utils';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Initialize scroll animations
+    initScrollAnimations();
+
+    // Show more/less functionality
+    const buttons = document.querySelectorAll('.show-more-btn');
+
+    buttons.forEach((button) => {
+      const list = button.parentElement?.previousElementSibling;
+      if (!list) return;
+
+      const items = list.querySelectorAll('.experience-item');
+      if (!items.length) return;
+
+      const showMoreText = button.getAttribute('data-show-text') || 'Show more';
+      const showLessText =
+        button.getAttribute('data-show-less-text') || 'Show less';
+      let isExpanded = false;
+
+      button.addEventListener('click', () => {
+        isExpanded = !isExpanded;
+
+        items.forEach((item, index) => {
+          if (index >= 4) {
+            item.classList.toggle('hidden', !isExpanded);
+          }
+        });
+
+        button.textContent = isExpanded ? showLessText : showMoreText;
+      });
+    });
+  });
+</script>
