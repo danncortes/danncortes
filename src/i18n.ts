@@ -1,15 +1,14 @@
 import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
 import de from './locales/de/translation.json';
 import en from './locales/en/translation.json';
 
-i18n.use(initReactI18next).init({
+i18n.init({
   lng: 'en', // Set initial language
   fallbackLng: 'en',
   supportedLngs: ['en', 'de'], // Explicitly define supported languages
   debug: true, // Enable debug to see what's happening
   interpolation: {
-    escapeValue: false // React already escapes values
+    escapeValue: false // Astro handles escaping
   },
   // Enable nesting feature for $t() syntax
   nsSeparator: false, // Disable namespace separator to avoid conflicts

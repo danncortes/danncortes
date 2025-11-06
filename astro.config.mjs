@@ -1,6 +1,5 @@
 // @ts-check
 
-import react from '@astrojs/react';
 import { defineConfig } from 'astro/config';
 import i18next from 'astro-i18next';
 import tailwindcss from '@tailwindcss/vite';
@@ -9,7 +8,6 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   base: '/',
   integrations: [
-    react(),
     i18next({
       defaultLocale: 'en',
       locales: ['en', 'de'],
