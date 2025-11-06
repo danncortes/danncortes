@@ -1,6 +1,6 @@
 {
   "profileInfo": {
-    "intro": "Ich bin ein $t(frontendDeveloper) und Illustrator und lebe in Luzern.",
+    "intro": "Ich bin $t(frontendDeveloper) mit Leidenschaft für die Entwicklung intuitiver und skalierbarer Webanwendungen und lebe in $t(lucerne).",
     "title": {
       "frontend": "$t(frontendDeveloper)"
     },
@@ -36,6 +36,17 @@
     "english": "Englisch",
     "german": "Deutsch"
   },
+  "professionalExpertise": "Fachkompetenzen",
+  "expertise": {
+    "softwareArchitecture": "Software-Architektur",
+    "webOptimization": "Web-Optimierung",
+    "scrum": "Scrum",
+    "cleanCode": "Clean Code",
+    "wireframing": "Wireframing",
+    "prototyping": "Prototyping",
+    "responsiveDesign": "Responsive Design",
+    "unitTesting": "Unit Testing"
+  },
   "currently": "Aktuell",
   "showMore": "Mehr anzeigen",
   "showLess": "Weniger anzeigen",
@@ -47,12 +58,20 @@
   "project": "Projekt",
   "projects": "Projekte",
   "responsibilities": "Verantwortlichkeiten",
-  "frontendDeveloper": "Frontend Entwickler",
+  "frontendDeveloper": "Frontend-Entwickler",
   "seniorFrontendDeveloper": "Senior $t(frontendDeveloper)",
   "graphicDesigner": "Grafik Designer",
   "moreExpInfo": "Für zusätzliche Berufserfahrung vor 2015 besuchen Sie bitte:",
   "printOrDownload": "Drucken oder herunterladen",
   "visit": "Besuchen",
+  "about": {
+    "title": "Über mich",
+    "description": [
+      "Ich wurde in Venezuela mit kolumbianischen Wurzeln geboren und wurde schon früh von einer Leidenschaft für das Zeichnen und einer Neugier für Technologie angetrieben. Nach meinem Abschluss in Grafikdesign in den frühen Tagen des Web-Booms wurde ich schnell von Webdesign und -entwicklung fasziniert. Meine Neugier führte mich zur Programmierung, die seit 2015 im Mittelpunkt meines beruflichen Weges steht.",
+      "Einige dieser Veränderungen gingen Hand in Hand mit persönlichen Herausforderungen – darunter zwei Migrationen – und mein Bauchgefühl hat mich durch diese Achterbahnfahrt geführt, sowohl beruflich als auch persönlich, an Orte, die ich mir nie hätte vorstellen können.",
+      "Heute lebe ich in Luzern mit meiner wunderbaren Familie und bin dankbar für den Weg, der mich hierher gebracht hat."
+    ]
+  },
   "months": [
     "Jan.",
     "Feb.",

@@ -20,6 +20,8 @@
   --color-secondary: var(--color-pink-600);
 }
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 :root {
   --base-color: #222;
   --primary-color: var(--color-cyan-700);
@@ -47,6 +49,10 @@ section.page {
   scroll-snap-stop: always;
 }
 
+section.page:focus-visible {
+  outline: none;
+}
+
 /* Scroll animations with Intersection Observer */
 .animate-on-scroll {
   opacity: 0;
@@ -59,13 +65,4 @@ section.page {
 .animate-on-scroll.animate-in {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Theme-based logo visibility */
-[data-theme='light'] .logo-light {
-  display: none;
-}
-
-[data-theme='dark'] .logo-dark {
-  display: none;
 }

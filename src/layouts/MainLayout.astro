@@ -1,11 +1,12 @@
 ---
 import { i18n } from '../i18n';
 import '../styles/global.css';
-import Resume from '../react-components/Resume';
-import Home from '../components/home.astro';
+import Home from '../components/Home.astro';
 import LanguageButtons from '../components/LanguageButtons.astro';
 import ThemeController from '../components/ThemeController.astro';
 import ResumeLayout from './ResumeLayout.astro';
+import Contact from '../components/Contact.astro';
+import data from '../data.json';
 
 // Define the props that can be passed to this layout
 export interface Props {
@@ -37,22 +38,64 @@ const { t } = i18n;
   </head>
   <body class="text-base-content">
     <main>
-      <div class="flex fixed top-4 right-4 z-[1000] gap-4 items-center">
-        <LanguageButtons currentLang={lang} />
-        <ThemeController />
-      </div>
-      <section class="page flex items-center justify-center" id="home">
+      <header
+        class="flex justify-between lg:justify-end items-center fixed top-0 left-0 right-0 z-[1000] p-4 bg-base-100 lg:bg-transparent"
+      >
+        <h2
+          id="mobile-header-title"
+          class="text-xl font-bold flex gap-2 block lg:hidden animate-on-scroll"
+        >
+          Daniel Cortés
+          <span class="font-light">|</span>
+          <span class="font-light text-primary">{t(data.profile.title)}</span>
+        </h2>
+        <div class="flex gap-4">
+          <LanguageButtons currentLang={lang} />
+          <ThemeController />
+        </div>
+      </header>
+      <section
+        class="page page--home flex justify-center items-center-safe"
+        id="home"
+      >
         <Home greeting={t('greeting')} intro={t('profileInfo.intro')} />
       </section>
-      <section class="page p-10 flex justify-center" id="resume">
+      <section class="page p-10 pt-20 flex justify-center" id="resume">
         <ResumeLayout />
       </section>
-      <section class="page" id="about">About</section>
+      <section
+        class="page page--about flex justify-center items-center-safe"
+        id="about"
+      >
+        <div
+          class="about-content flex flex-col md:flex-row justify-center items-center max-w-6xl p-14 gap-18 transition-all duration-300"
+        >
+          <img
+            class="profile-pic w-80 h-80 object-cover rounded-full transition-all duration-300 shadow-2xl border border-3 border-base-300/40"
+            src="/src/images/about-pic-2.avif"
+            alt="Profile Picture"
+          />
+          <div class="flex flex-col gap-4">
+            <h2 class="text-4xl font-bold mb-4">{t('about.title')}</h2>
+            {
+              (
+                t('about.description', { returnObjects: true }) as string[]
+              ).map((paragraph: string) => (
+                <p class="text-lg text-base-content/80">{paragraph}</p>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+      <footer class="lg:hidden p-2 fixed bottom-0 left-0 right-0 bg-base-100">
+        <Contact contactInfo={data.contactInfo} />
+      </footer>
     </main>
     <script>
-      // Update URL hash based on visible section
+      // Update URL hash based on visible section and handle mobile header visibility
       const sections = document.querySelectorAll('section.page[id]');
-
+      const mobileHeaderTitle = document.getElementById('mobile-header-title');
+      const header = document.querySelector('header');
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -60,6 +103,25 @@ const { t } = i18n;
               const id = entry.target.getAttribute('id');
               if (id && window.location.hash !== `#${id}`) {
                 history.replaceState(null, '', `#${id}`);
+              }
+
+              // Hide mobile header title when on home section
+              if (mobileHeaderTitle) {
+                if (id === 'home') {
+                  mobileHeaderTitle.classList.add('!hidden');
+                } else {
+                  mobileHeaderTitle.classList.remove('!hidden');
+                }
+              }
+
+              if (header) {
+                if (id === 'home') {
+                  header.classList.remove('bg-base-100');
+                  header.classList.add('justify-end');
+                } else {
+                  header.classList.add('bg-base-100');
+                  header.classList.remove('justify-end');
+                }
               }
             }
           });
@@ -71,6 +133,29 @@ const { t } = i18n;
       );
 
       sections.forEach((section) => observer.observe(section));
+
+      // Set initial state based on current hash
+      const currentHash = window.location.hash.replace('#', '') || 'home';
+      if (mobileHeaderTitle && currentHash === 'home') {
+        mobileHeaderTitle.classList.add('!hidden');
+      }
     </script>
   </body>
 </html>
+
+<style>
+  [data-theme='dark'] .page--about {
+    background: -webkit-linear-gradient(
+      to bottom,
+      transparent,
+      transparent,
+      var(--color-gray-900)
+    );
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      transparent,
+      var(--color-gray-900)
+    );
+  }
+</style>

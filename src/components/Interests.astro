@@ -35,12 +35,12 @@ const { interests } = Astro.props;
             <img
               src={interest.logo}
               alt={t(interest.name)}
-              class="w-12 h-12 logo-dark"
+              class="w-12 h-12 block dark:hidden"
             />
             <img
               src={interest.logoDark || interest.logo}
               alt={t(interest.name)}
-              class="w-12 h-12 logo-light"
+              class="w-12 h-12 hidden dark:block"
             />
           </>
         )}

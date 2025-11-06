@@ -1,0 +1,31 @@
+---
+interface ContactInfo {
+  title: string;
+  label: string;
+  value: string;
+  show: boolean;
+  icon?: string;
+}
+
+interface Props {
+  contactInfo: ContactInfo[];
+}
+
+const { contactInfo } = Astro.props;
+---
+
+<div class="contact flex justify-center">
+  {
+    contactInfo
+      .filter((contact) => contact.show && contact.icon)
+      .map((contact) => (
+        <a
+          href={contact.value}
+          class="btn btn-link btn-xs"
+          target="_blank"
+          aria-label={contact.title}
+          set:html={contact.icon}
+        />
+      ))
+  }
+</div>
