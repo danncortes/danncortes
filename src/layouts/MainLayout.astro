@@ -1,7 +1,7 @@
 ---
 import { i18n } from '../i18n';
 import '../styles/global.css';
-import Home from '../components/Home.astro';
+import Home from '../components/home.astro';
 import LanguageButtons from '../components/LanguageButtons.astro';
 import ThemeController from '../components/ThemeController.astro';
 import AnimatedBg from '../components/AnimatedBg.astro';
@@ -180,8 +180,12 @@ const structuredData = {
             <h2 class="text-4xl font-bold mb-4">{t('about.title')}</h2>
             {
               (() => {
-                const description = t('about.description', { returnObjects: true });
-                const paragraphs = Array.isArray(description) ? description : [description];
+                const description = t('about.description', {
+                  returnObjects: true
+                });
+                const paragraphs = Array.isArray(description)
+                  ? description
+                  : [description];
                 return paragraphs.map((paragraph: string) => (
                   <p class="text-lg text-base-content/80">{paragraph}</p>
                 ));
