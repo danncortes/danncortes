@@ -2,6 +2,7 @@
   "profile": {
     "title": "profileInfo.title.frontend",
     "name": "Daniel Cortés",
+    "completeTitle": "Daniel Cortés - $t(profileInfo.title.frontend)",
     "usp": "profileInfo.usp.frontend"
   },
   "config": { "profileType": "frontend" },
