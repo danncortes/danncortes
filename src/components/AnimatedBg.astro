@@ -1,0 +1,148 @@
+<div
+  class="animated-bg fixed top-0 bottom-0 left-0 right-0 overflow-hidden pointer-events-none opacity-80 z-[-1]"
+>
+  <div
+    class="box-container absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 opacity-10 dark:opacity-20"
+  >
+    <div class="box">
+      <div class="face-1"></div>
+      <div class="face-3"></div>
+      <div class="face-4"></div>
+      <div class="face-2"></div>
+      <div class="face-5"></div>
+      <div class="face-6"></div>
+    </div>
+  </div>
+  <div class="gradient-orb orb-1 hidden dark:block"></div>
+  <div class="gradient-orb orb-2 hidden dark:block"></div>
+  <div class="gradient-orb orb-3 hidden dark:block"></div>
+</div>
+
+<style>
+  .gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    animation: float 20s ease-in-out infinite;
+  }
+
+  .orb-1 {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(135deg, transparent 0%, #667eea 100%);
+    top: -10%;
+    left: -10%;
+    animation-delay: 0s;
+    animation-duration: 25s;
+  }
+
+  .orb-2 {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #c084cc 0%, #d4788c 100%);
+    top: 50%;
+    right: -10%;
+    animation-delay: -8s;
+    animation-duration: 20s;
+  }
+
+  .orb-3 {
+    width: 450px;
+    height: 450px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    bottom: -40%;
+    left: 20%;
+    animation-delay: -15s;
+    animation-duration: 30s;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 30px) scale(0.9);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gradient-orb {
+      animation: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .orb-1,
+    .orb-2,
+    .orb-3 {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  @keyframes rotateBox {
+    0% {
+      transform: rotateX(40deg) rotateY(60deg) rotateZ(10deg);
+    }
+    100% {
+      transform: rotateX(320deg) rotateY(300deg) rotateZ(10deg);
+    }
+  }
+
+  .box-container {
+    --box-size: 1000px;
+    height: var(--box-size);
+    width: var(--box-size);
+    perspective: 2000px;
+  }
+
+  .box {
+    width: var(--box-size);
+    height: var(--box-size);
+    transform-style: preserve-3d;
+    transition: all 200ms;
+    transform: rotateX(40deg) rotateY(0deg) rotateZ(10deg);
+    animation: rotateBox 640s linear infinite;
+  }
+
+  .box [class^='face'] {
+    position: absolute;
+    width: var(--box-size);
+    height: var(--box-size);
+    outline: 2px dashed var(--color-primary);
+    outline-offset: -2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box .face-1 {
+    transform: translateX(0) translateY(0) translateZ(calc(var(--box-size) / 2));
+  }
+
+  .box .face-2 {
+    transform: translateX(-50%) translateY(0%) translateZ(0) rotateY(90deg);
+  }
+
+  .box .face-3 {
+    transform: translateX(0) translateY(-50%) translateZ(0) rotateX(90deg);
+  }
+
+  .box .face-4 {
+    transform: translateX(0) translateY(50%) translateZ(0) rotateX(90deg);
+  }
+
+  .box .face-5 {
+    transform: translateX(50%) translateY(0%) translateZ(0) rotateY(90deg);
+  }
+
+  .box .face-6 {
+    transform: translateX(0) translateY(0)
+      translateZ(calc(var(--box-size) / -2));
+  }
+</style>
