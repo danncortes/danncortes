@@ -14,7 +14,7 @@ export interface Props {
   image?: string;
 }
 
-const { lang, image = '/src/images/profile-pic-180.avif' } = Astro.props;
+const { lang, image = '/og-image.avif' } = Astro.props;
 
 await i18n.changeLanguage(lang);
 const { t } = i18n;
