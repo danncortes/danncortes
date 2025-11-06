@@ -1,11 +1,6 @@
 ---
 // Redirect to default language
 const defaultLanguage = 'de'; // Change to 'de' if you prefer German as default
-
-// Check if this is running on the server
-if (Astro.request.headers.get('accept')?.includes('text/html')) {
-  return Astro.redirect(`/${defaultLanguage}`);
-}
 ---
 
 <html>
