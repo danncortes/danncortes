@@ -76,7 +76,7 @@
         "scale": 6,
         "profileTypes": ["frontend", "ui/ux"],
         "show": true,
-        "icon": "/src/images/angular-logo.png"
+        "icon": "/images/angular-logo.png"
       },
       {
         "name": "React",
@@ -84,7 +84,7 @@
         "scale": 6,
         "profileTypes": ["frontend", "ui/ux"],
         "show": true,
-        "icon": "/src/images/react-logo.png"
+        "icon": "/images/react-logo.png"
       },
       {
         "name": "TypeScript",
@@ -92,7 +92,7 @@
         "scale": 6,
         "profileTypes": ["frontend", "ui/ux"],
         "show": true,
-        "icon": "/src/images/typescript-logo.png"
+        "icon": "/images/typescript-logo.png"
       },
       {
         "name": "JavaScript",
@@ -100,7 +100,7 @@
         "scale": 6,
         "profileTypes": ["frontend", "ui/ux"],
         "show": true,
-        "icon": "/src/images/javascript-logo.png"
+        "icon": "/images/javascript-logo.png"
       },
       {
         "name": "NodeJS",
@@ -108,7 +108,7 @@
         "scale": 6,
         "profileTypes": ["frontend"],
         "show": true,
-        "icon": "/src/images/nodejs-logo.png"
+        "icon": "/images/nodejs-logo.png"
       },
       {
         "name": "SQL",
@@ -116,7 +116,7 @@
         "scale": 6,
         "profileTypes": ["frontend"],
         "show": true,
-        "icon": "/src/images/sql-logo.png"
+        "icon": "/images/sql-logo.png"
       },
       {
         "name": "HTML",
@@ -124,7 +124,7 @@
         "scale": 6,
         "profileTypes": ["frontend", "ui/ux"],
         "show": true,
-        "icon": "/src/images/html-logo.png"
+        "icon": "/images/html-logo.png"
       },
       {
         "name": "CSS",
@@ -132,7 +132,7 @@
         "scale": 6,
         "profileTypes": ["frontend", "ui/ux"],
         "show": true,
-        "icon": "/src/images/css-logo.png"
+        "icon": "/images/css-logo.png"
       },
       {
         "name": "VueJS",
@@ -140,7 +140,7 @@
         "scale": 6,
         "profileTypes": ["frontend"],
         "show": false,
-        "icon": "/src/images/vuejs-logo.png"
+        "icon": "/images/vuejs-logo.png"
       },
       {
         "name": "Tailwind",
@@ -148,7 +148,7 @@
         "scale": 6,
         "profileTypes": ["frontend", "ui/ux"],
         "show": true,
-        "icon": "/src/images/tailwind-logo.svg"
+        "icon": "/images/tailwind-logo.svg"
       },
       {
         "name": "Photoshop",
@@ -156,7 +156,7 @@
         "scale": 6,
         "profileTypes": ["ui/ux"],
         "show": false,
-        "icon": "/src/images/photoshop-logo.png"
+        "icon": "/images/photoshop-logo.png"
       },
       {
         "name": "Illustrator",
@@ -164,7 +164,7 @@
         "scale": 6,
         "profileTypes": ["ui/ux"],
         "show": false,
-        "icon": "/src/images/illustrator-logo.png"
+        "icon": "/images/illustrator-logo.png"
       }
     ],
     "showLevel": true,
@@ -545,8 +545,8 @@
     {
       "name": "interests.sketchCircle.name",
       "description": "interests.sketchCircle.description",
-      "logo": "/src/images/meetup-logo-symbol-red.webp",
-      "logoDark": "/src/images/meetup-logo-symbol-white.webp",
+      "logo": "/images/meetup-logo-symbol-red.webp",
+      "logoDark": "/images/meetup-logo-symbol-white.webp",
       "link": "https://www.meetup.com/luzern-drawing-meetup-group/",
       "size": "medium"
     },
