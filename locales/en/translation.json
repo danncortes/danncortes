@@ -1,0 +1,272 @@
+{
+  "seo": {
+    "metaDescription": "$t(frontendDeveloper) specialized in TypeScript, JavaScript, Angular, and React. Based in $t(lucerne), $t(switzerland). Building scalable, high-performance web applications."
+  },
+  "skipToMainContent": "Skip to main content",
+  "siteHeader": "Site header with language and theme controls",
+  "introduction": "Introduction",
+  "resumeSection": "Resume and professional experience",
+  "contactInformation": "Contact information",
+  "profileInfo": {
+    "intro": "A $t(frontendDeveloper) passionate about creating intuitive and scalable web applications, based in $t(lucerne).",
+    "title": {
+      "frontend": "$t(frontendDeveloper)"
+    },
+    "usp": {
+      "frontend": [
+        "9 years of experience in developing high-performance, intuitive, responsive, and scalable web applications in agile teams using Angular, TypeScript, and JavaScript, as well as HTML and CSS. Strongly focused on creating business-oriented user experiences with clean code.",
+        "With a resilient attitude and a passion for teamwork, I contribute solutions that are based on the latest standards and adapted to real user needs."
+      ]
+    }
+  },
+  "greeting": "Hello, I am",
+  "lucerne": "Lucerne",
+  "switzerland": "Switzerland",
+  "colombia": "Colombia",
+  "profile": "Profile",
+  "phone": "Phone",
+  "location": "Location",
+  "permit": "Permit",
+  "personalInfo": {
+    "maritalStatus": "Marital Status",
+    "married": "Married",
+    "nationality": "Nationality",
+    "colombian": "Colombian",
+    "permitType": "B $t(permit)"
+  },
+  "techStack": "Tech Stack",
+  "tools": "Tools",
+  "workExperience": "Work Experience",
+  "courses": "Courses",
+  "hours": "Hours",
+  "languages": "Languages",
+  "lang": {
+    "spanish": "Spanish",
+    "english": "English",
+    "german": "German"
+  },
+  "professionalExpertise": "Professional Expertise",
+  "expertise": {
+    "softwareArchitecture": "Software Architecture",
+    "webOptimization": "Web Optimization",
+    "scrum": "Scrum",
+    "cleanCode": "Clean Code",
+    "wireframing": "Wireframing",
+    "prototyping": "Prototyping",
+    "responsiveDesign": "Responsive Design",
+    "unitTesting": "Unit Testing"
+  },
+  "currently": "Currently",
+  "showMore": "Show more",
+  "showLess": "Show less",
+  "languageLevel": "Fluent in speech and writing",
+  "native": "Native",
+  "education": "Education",
+  "professionalExperience": "Professional Experience",
+  "yOfExp": "Years of Exp.",
+  "project": "Project",
+  "projects": "Projects",
+  "responsibilities": "Responsibilities",
+  "frontendDeveloper": "Frontend Developer",
+  "seniorFrontendDeveloper": "Senior $t(frontendDeveloper)",
+  "graphicDesigner": "Graphic Designer",
+  "moreExpInfo": "For additional work experience prior to 2015, please visit:",
+  "printOrDownload": "Print or download",
+  "visit": "Visit",
+  "about": {
+    "title": "About me",
+    "description": [
+      "I was born in Venezuela with Colombian roots, always driven by a passion for drawing and a curiosity for technology. After graduating in Graphic Design during the early days of the web boom, I quickly became fascinated by web design and development. My curiosity led me to explore programming, which has been at the heart of my professional path since 2015.",
+      "Some of these changes came hand in hand with personal challenges, including two migrations and my attitude toward them, has guided me through this professional and personal roller-coaster journey, leading me to places I could never have imagined.",
+      "Today, I live in Lucerne with my wonderful family, grateful for the path that brought me here."
+    ]
+  },
+  "months": [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ],
+  "interests": {
+    "title": "Interests",
+    "sketchCircle": {
+      "name": "Sketch Circle Lucerne | Organizer",
+      "description": "Monthly meetup for drawing and sketching together"
+    },
+    "mountainBike": {
+      "name": "Mountain Bike"
+    },
+    "trekking": {
+      "name": "Trekking"
+    },
+    "salsaDance": {
+      "name": "Salsa Dance"
+    }
+  },
+  "experience": {
+    "personal": {
+      "position": "Personal and Family Time",
+      "intro": ["Two-month trip to Colombia", "Caring for and raising my child"]
+    },
+    "currently": {
+      "position": "Professional Development and Personal Projects",
+      "intro": [
+        "Actively looking for a new professional challenge",
+        "Ongoing development with current courses: Angular, Algorithms, and Data Structures",
+        "App development for personal use"
+      ],
+      "projects": {
+        "photoAlbum": {
+          "name": "Photo Album Web-App",
+          "description": "Page layout designer Web-App for photo albums",
+          "responsibilities": []
+        },
+        "vokabularyPractice": {
+          "name": "Vocabulary Practice App",
+          "description": "Web application for practicing vocabulary with Spaced Repetition System. Generation of audio phrases from vocabulary with text-to-speech AI from elevenlabs.io API",
+          "responsibilities": []
+        }
+      }
+    },
+    "smartCom": {
+      "intro": "Development of web application products for the insurance and financial sectors",
+      "projects": {
+        "reportDashboard": {
+          "name": "Usage Dashboard",
+          "description": "Usage dashboard web application",
+          "responsibilities": [
+            "Designed and implemented responsive user interfaces focused on user experience",
+            "Architecture design and performance optimization",
+            "Developed and maintained components, directives, services, pipes, and modules",
+            "Integration with backend APIs and services to fetch and manipulate data using HTTP client",
+            "Unit testing for components and services"
+          ]
+        },
+        "documentEditor": {
+          "name": "Document Editor",
+          "description": "Document generation and editing web application",
+          "responsibilities": [
+            "Implemented user interfaces utilizing a corporate UI framework",
+            "Unit testing for components and features"
+          ]
+        }
+      }
+    },
+    "truelogic": {
+      "about": "Truelogic Software is an IT service provider offering custom software development and technology solutions, primarily for clients in the USA",
+      "intro": "",
+      "projects": {
+        "specimensInventory": {
+          "name": "Specimens Inventory",
+          "description": "Development of inventory software for managing patient specimens",
+          "responsibilities": [
+            "Designing, implementing, and maintaining components and UX features",
+            "Unit testing for components and features",
+            "Requirements management and definition of new features",
+            "Conducting technical interviews of candidates"
+          ]
+        }
+      }
+    },
+    "endava": {
+      "about": "Endava is a software development outsourcing company that creates dynamic platforms and intelligent digital experiences for businesses",
+      "intro": "",
+      "projects": {
+        "yogaAccessories": {
+          "name": "Yoga Accessories e-shop",
+          "description": "Implementation of new features for e-shop",
+          "responsibilities": [
+            "Development and optimization of components through feature enhancements with the goal of digital accessibility",
+            "Unit testing for components and features"
+          ]
+        }
+      }
+    },
+    "velocity": {
+      "about": "Velocity Partners was an innovative global nearshore software development outsourcing company",
+      "intro": "",
+      "projects": {
+        "laserPrinter": {
+          "name": "3D Laser Printer",
+          "description": "Machine status application for 3D laser printer",
+          "responsibilities": [
+            "Development of a command line application in NodeJS to run tests on a 3D laser printer",
+            "Development of a standalone application to display status information and perform diagnostic tests for 3D laser printer hardware components",
+            "Unit testing for components and features"
+          ]
+        },
+        "platformConnection": {
+          "name": "Application Connection Platform",
+          "description": "On-demand multi-tenant cloud integration platform",
+          "responsibilities": [
+            "Development and optimization of UX functionalities for a platform that provides connectors to integrate applications and data"
+          ]
+        },
+        "loyaltyPrograms": {
+          "name": "Loyalty Programs",
+          "description": "Application for managing loyalty programs for a US Bank",
+          "responsibilities": [
+            "Development of a web application for customers and merchants to create and manage loyalty programs"
+          ]
+        }
+      }
+    },
+    "dada": {
+      "about": "DADA.nyc is a social network where people communicate with each other through drawings that you can collect on the Ethereum blockchain",
+      "intro": "",
+      "projects": {
+        "dadanyc": {
+          "name": "Drawing Social Network",
+          "description": "",
+          "responsibilities": [
+            "Design and development of UI-UX features",
+            "Design and development of a UX solution for fully horizontal navigation through the application"
+          ]
+        }
+      }
+    },
+    "ries": {
+      "about": "Ries.inc was a web development agency for clients in the USA",
+      "intro": [
+        "Design and development of a responsive website for insurance companies using PHP and Bootstrap",
+        "UI design and UX development of a web-mobile application to find products using geolocation with JavaScript, jQuery, jQuery Mobile, HTML, CSS, and Google Maps API"
+      ]
+    },
+    "bumeran": {
+      "about": "Bumeran.com is one of the largest job portals in South America",
+      "intro": "",
+      "projects": {
+        "minisites": {
+          "name": "Minisites",
+          "description": "",
+          "responsibilities": [
+            "Developed and customized customer minisites, created graphic proposals and layouts, and designed UIs based on corporate branding guidelines"
+          ]
+        }
+      }
+    },
+    "ola": {
+      "about": "Ola Creativa was an independent company that offered web design and graphic services to various clients in Venezuela",
+      "intro": [
+        "Web UI development services for clients in the pharmaceutical industry",
+        "Development of a web application for managing loyalty programs for pharmaceutical products using PHP, HTML, and CSS",
+        "Development of website portfolios for medical products"
+      ]
+    },
+    "alia": {
+      "about": "Alia was a small agency that created printed and interactive material for the pharmaceutical industry in Venezuela",
+      "intro": [
+        "Design of brochures and flyers for product promotion using Illustrator and Photoshop",
+        "Interactive CD presentations with Adobe Flash"
+      ]
+    }
+  }
+}
