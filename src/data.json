@@ -1,7 +1,7 @@
 {
   "profile": {
-    "name": "Daniel Cortés",
     "title": "profileInfo.title.frontend",
+    "name": "Daniel Cortés",
     "usp": "profileInfo.usp.frontend"
   },
   "config": { "profileType": "frontend" },
@@ -110,6 +110,14 @@
         "icon": "/src/images/nodejs-logo.png"
       },
       {
+        "name": "SQL",
+        "level": 2,
+        "scale": 6,
+        "profileTypes": ["frontend"],
+        "show": true,
+        "icon": "/src/images/sql-logo.png"
+      },
+      {
         "name": "HTML",
         "level": 4,
         "scale": 6,
@@ -132,14 +140,6 @@
         "profileTypes": ["frontend"],
         "show": false,
         "icon": "/src/images/vuejs-logo.png"
-      },
-      {
-        "name": "SQL",
-        "level": 2,
-        "scale": 6,
-        "profileTypes": ["frontend"],
-        "show": true,
-        "icon": "/src/images/sql-logo.png"
       },
       {
         "name": "Tailwind",
@@ -170,25 +170,25 @@
     "showExperience": false,
     "showExpOnPrint": true
   },
-  "skills": {
-    "title": "professionalSkills",
+  "expertise": {
+    "title": "professionalExpertise",
     "data": [
       {
-        "name": "softwareArchitecture",
+        "name": "expertise.softwareArchitecture",
         "level": 6,
         "scale": 9
       },
-      { "name": "webOptimization", "level": 6, "scale": 9 },
+      { "name": "expertise.webOptimization", "level": 6, "scale": 9 },
       {
-        "name": "Scrum",
+        "name": "expertise.scrum",
         "level": 7,
         "scale": 9
       },
-      { "name": "Clean Code", "level": 6, "scale": 9 },
-      { "name": "Wireframing", "level": 6, "scale": 9 },
-      { "name": "Prototyping", "level": 6, "scale": 9 },
-      { "name": "Responsive Design", "level": 6, "scale": 9 },
-      { "name": "Unit Testing", "level": 6, "scale": 9 }
+      { "name": "expertise.cleanCode", "level": 6, "scale": 9 },
+      { "name": "expertise.wireframing", "level": 6, "scale": 9 },
+      { "name": "expertise.prototyping", "level": 6, "scale": 9 },
+      { "name": "expertise.responsiveDesign", "level": 6, "scale": 9 },
+      { "name": "expertise.unitTesting", "level": 6, "scale": 9 }
     ],
     "showLevel": false,
     "showExperience": false,

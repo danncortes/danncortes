@@ -1,6 +1,6 @@
 {
   "profileInfo": {
-    "intro": "I am a $t(frontendDeveloper) and Illustrator, and I live in Lucerne.",
+    "intro": "I am a $t(frontendDeveloper) passionate about creating intuitive and scalable web applications, based in $t(lucerne).",
     "title": {
       "frontend": "$t(frontendDeveloper)"
     },
@@ -37,6 +37,17 @@
     "english": "English",
     "german": "German"
   },
+  "professionalExpertise": "Professional Expertise",
+  "expertise": {
+    "softwareArchitecture": "Software Architecture",
+    "webOptimization": "Web Optimization",
+    "scrum": "Scrum",
+    "cleanCode": "Clean Code",
+    "wireframing": "Wireframing",
+    "prototyping": "Prototyping",
+    "responsiveDesign": "Responsive Design",
+    "unitTesting": "Unit Testing"
+  },
   "currently": "Currently",
   "showMore": "Show more",
   "showLess": "Show less",
@@ -54,6 +65,14 @@
   "moreExpInfo": "For additional work experience prior to 2015, please visit:",
   "printOrDownload": "Print or download",
   "visit": "Visit",
+  "about": {
+    "title": "About me",
+    "description": [
+      "I was born in Venezuela with Colombian roots, always driven by a passion for drawing and a curiosity for technology. After graduating in Graphic Design during the early days of the web boom, I quickly became fascinated by web design and development. My curiosity led me to explore programming, which has been at the heart of my professional path since 2015.",
+      "Some of these changes came hand in hand with personal challenges — including two migrations — and my gut feelings have guided me through this roller-coaster journey, both professionally and personally, to places I could never have imagined.",
+      "Today, I live in Lucerne with my wonderful family, grateful for the path that brought me here."
+    ]
+  },
   "months": [
     "Jan",
     "Feb",

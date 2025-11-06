@@ -5,13 +5,15 @@ const { t } = i18n;
 export interface Props {
   title: string;
   sectionName: string;
+  titleSize?: 'xs' | 'sm' | 'md' | 'xl' | '2xl';
 }
 
-const { title, sectionName } = Astro.props;
+const { title, sectionName, titleSize } = Astro.props;
+const titleSizeClass = titleSize ? `text-${titleSize}` : 'text-2xl';
 ---
 
 <div class={`resume-section ${sectionName}`}>
-  <h2 class="mb-4 text-2xl font-bold">
+  <h2 class={`mb-4 ${titleSizeClass} font-bold`}>
     {title}
   </h2>
   <slot />
