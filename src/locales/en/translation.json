@@ -2,6 +2,11 @@
   "seo": {
     "metaDescription": "$t(frontendDeveloper) specialized in TypeScript, JavaScript, Angular, and React. Based in $t(lucerne), $t(switzerland). Building scalable, high-performance web applications."
   },
+  "skipToMainContent": "Skip to main content",
+  "siteHeader": "Site header with language and theme controls",
+  "introduction": "Introduction",
+  "resumeSection": "Resume and professional experience",
+  "contactInformation": "Contact information",
   "profileInfo": {
     "intro": "A $t(frontendDeveloper) passionate about creating intuitive and scalable web applications, based in $t(lucerne).",
     "title": {

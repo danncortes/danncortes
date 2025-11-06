@@ -2,6 +2,11 @@
   "seo": {
     "metaDescription": "$t(frontendDeveloper) spezialisiert auf TypeScript, JavaScript, Angular und React. Ansässig in $t(lucerne), $t(switzerland). Entwicklung skalierbarer, hochperformanter Webanwendungen."
   },
+  "skipToMainContent": "Zum Hauptinhalt springen",
+  "siteHeader": "Kopfzeile mit Sprach- und Designsteuerung",
+  "introduction": "Einführung",
+  "resumeSection": "Lebenslauf und Berufserfahrung",
+  "contactInformation": "Kontaktinformationen",
   "profileInfo": {
     "intro": "$t(frontendDeveloper) mit Leidenschaft für die Entwicklung intuitiver und skalierbarer Webanwendungen und lebe in $t(lucerne).",
     "title": {
