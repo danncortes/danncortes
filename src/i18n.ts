@@ -1,35 +1,39 @@
-import i18n from 'i18next';
-import de from './locales/de/translation.json';
+import i18next from 'i18next';
 import en from './locales/en/translation.json';
-
-i18n.init({
-  lng: 'en', // Set initial language
-  fallbackLng: 'en',
-  supportedLngs: ['en', 'de'], // Explicitly define supported languages
-  debug: true, // Enable debug to see what's happening
-  interpolation: {
-    escapeValue: false // Astro handles escaping
-  },
-  // Enable nesting feature for $t() syntax
-  nsSeparator: false, // Disable namespace separator to avoid conflicts
-  keySeparator: '.', // Use dot for nested keys
-  returnObjects: false,
-  resources: {
-    en: {
-      translation: en
-    },
-    de: {
-      translation: de
-    }
-  }
-});
+import de from './locales/de/translation.json';
 
 export type Language = 'en' | 'de';
 export const supportedLanguages: Language[] = ['en', 'de'];
 
-export function getLanguage() {
-  const browserLanguage = navigator.language.split('-')[0] as Language;
-  return supportedLanguages.includes(browserLanguage) ? browserLanguage : 'en';
+// Initialize i18next for server-side rendering
+if (!i18next.isInitialized) {
+  i18next.init({
+    fallbackLng: 'en',
+    supportedLngs: ['en', 'de'],
+    interpolation: {
+      escapeValue: false
+    },
+    nsSeparator: false,
+    keySeparator: '.',
+    returnObjects: true,
+    resources: {
+      en: {
+        translation: en
+      },
+      de: {
+        translation: de
+      }
+    }
+  });
 }
 
-export { i18n };
+export function getLanguage() {
+  if (typeof navigator !== 'undefined') {
+    const browserLanguage = navigator.language.split('-')[0] as Language;
+    return supportedLanguages.includes(browserLanguage) ? browserLanguage : 'en';
+  }
+  return 'en';
+}
+
+export const t = i18next.t.bind(i18next);
+export { i18next as i18n };

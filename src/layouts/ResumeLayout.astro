@@ -1,6 +1,5 @@
 ---
-import { i18n } from '../i18n';
-const { t } = i18n;
+import { t } from '../i18n';
 import data from '../data.json';
 import Experiences from '../components/Experiences.astro';
 import Section from '../components/Section.astro';
@@ -35,11 +34,11 @@ import Contact from '../components/Contact.astro';
   </section>
   <section class="resume__right flex flex-col gap-10">
     <div class="usp flex flex-col gap-4 text-xl font-light">
-      {
-        (t(`${data.profile.usp}`, { returnObjects: true }) as string[]).map(
-          (p: string) => <p>{p}</p>
-        )
-      }
+      {(() => {
+        const usp = t(`${data.profile.usp}`, { returnObjects: true });
+        const items = Array.isArray(usp) ? usp : [usp];
+        return items.map((p: string) => <p>{p}</p>);
+      })()}
     </div>
 
     <div class="grid grid-cols-6 gap-12 grid-flow-row-dense">

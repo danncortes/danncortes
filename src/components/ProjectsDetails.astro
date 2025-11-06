@@ -1,6 +1,5 @@
 ---
-import { i18n } from '../i18n';
-const { t } = i18n;
+import { t } from '../i18n';
 import type { Project } from '../types/experience';
 
 interface Props {
@@ -21,13 +20,13 @@ const { projects } = Astro.props;
             <p class="mb-2 text-sm italic">{t(project.techStack)}</p>
             <p class="mb-2">{t(project.description)}</p>
             <ul class="list-disc list-inside">
-              {(
-                t(`${project.responsibilities}`, {
+              {(() => {
+                const responsibilities = t(`${project.responsibilities}`, {
                   returnObjects: true
-                }) as string[]
-              ).map((p: string) => (
-                <li>{p}</li>
-              ))}
+                });
+                const items = Array.isArray(responsibilities) ? responsibilities : [responsibilities];
+                return items.map((p: string) => <li>{p}</li>);
+              })()}
             </ul>
           </div>
         ))}

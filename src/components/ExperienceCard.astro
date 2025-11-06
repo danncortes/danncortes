@@ -1,6 +1,5 @@
 ---
-import { i18n } from '../i18n';
-const { t } = i18n;
+import { t } from '../i18n';
 import ProjectsDetails from './ProjectsDetails.astro';
 import type { Experience } from '../types/experience';
 import { formatDate } from '../utils';
@@ -55,11 +54,11 @@ const dateRange = `${fromDate} - ${toDate}`;
   {
     experience.intro && (
       <ul class="intro list-disc list-inside text-base-content/80">
-        {(t(`${experience.intro}`, { returnObjects: true }) as string[]).map(
-          (p: string) => (
-            <li>{p}</li>
-          )
-        )}
+        {(() => {
+          const intro = t(`${experience.intro}`, { returnObjects: true });
+          const items = Array.isArray(intro) ? intro : [intro];
+          return items.map((p: string) => <li>{p}</li>);
+        })()}
       </ul>
     )
   }
