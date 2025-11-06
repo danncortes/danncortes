@@ -10,30 +10,111 @@ import data from '../data.json';
 
 // Define the props that can be passed to this layout
 export interface Props {
-  title: string;
-  description?: string;
   lang: string;
+  image?: string;
 }
 
-const { title, description = title, lang } = Astro.props;
+const { lang, image = '/src/images/profile-pic-180.avif' } = Astro.props;
 
 await i18n.changeLanguage(lang);
 const { t } = i18n;
+
+const title = `${t(data.profile.completeTitle)}- TypeScript | JavaScript | Angular | React`;
+const description = t('seo.metaDescription');
+
+// SEO configuration
+const siteUrl = 'https://danncortes.com';
+const currentUrl = `${siteUrl}${Astro.url.pathname}`;
+const canonicalUrl = currentUrl;
+const alternateEn = `${siteUrl}/en/`;
+const alternateDe = `${siteUrl}/de/`;
+const ogImage = `${siteUrl}${image}`;
+
+// JSON-LD Structured Data
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: data.profile.name,
+  jobTitle: t(data.profile.title),
+  url: siteUrl,
+  image: ogImage,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: t('lucerne'),
+    addressCountry: 'CH'
+  },
+  email: 'danncortes@gmail.com',
+  sameAs: [
+    'https://linkedin.com/in/danncortes',
+    'https://github.com/danncortes',
+    'https://www.instagram.com/danncort/'
+  ],
+  knowsAbout: [
+    'Frontend Development',
+    'TypeScript',
+    'JavaScript',
+    'Angular',
+    'React',
+    'Web Development',
+    'Software Architecture',
+    'Web Optimization',
+    'Scrum',
+    'Clean Code'
+  ],
+  alumniOf: {
+    '@type': 'EducationalOrganization',
+    name: 'Instituto de Diseño de Caracas'
+  }
+};
 ---
 
 <html lang={lang} data-theme="dark">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#1f2937" />
     <title>{title}</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Alternate Language Links -->
+    <link rel="alternate" hreflang="en" href={alternateEn} />
+    <link rel="alternate" hreflang="de" href={alternateDe} />
+    <link rel="alternate" hreflang="x-default" href={alternateEn} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={lang === 'en' ? 'en_US' : 'de_CH'} />
+    <meta property="og:site_name" content={t(data.profile.completeTitle)} />
+
+    <!-- Author & Keywords -->
+    <meta name="author" content={t(`${data.profile.name}`)} />
+    <meta name="keywords" content={t('seo.metaKeywords')} />
+
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- JSON-LD Structured Data -->
+    <script
+      type="application/ld+json"
+      is:inline
+      set:html={JSON.stringify(structuredData)}
     />
   </head>
   <body class="text-base-content">
@@ -45,7 +126,7 @@ const { t } = i18n;
           id="mobile-header-title"
           class="text-xl font-bold flex gap-2 block lg:hidden animate-on-scroll"
         >
-          Daniel Cortés
+          {t(`${data.profile.name}`)}
           <span class="font-light">|</span>
           <span class="font-light text-primary">{t(data.profile.title)}</span>
         </h2>
@@ -73,16 +154,16 @@ const { t } = i18n;
           <img
             class="profile-pic w-80 h-80 object-cover rounded-full transition-all duration-300 shadow-2xl border border-3 border-base-300/40"
             src="/src/images/about-pic-2.avif"
-            alt="Profile Picture"
+            alt={t(data.profile.completeTitle)}
           />
           <div class="flex flex-col gap-4">
             <h2 class="text-4xl font-bold mb-4">{t('about.title')}</h2>
             {
-              (
-                t('about.description', { returnObjects: true }) as string[]
-              ).map((paragraph: string) => (
-                <p class="text-lg text-base-content/80">{paragraph}</p>
-              ))
+              (t('about.description', { returnObjects: true }) as string[]).map(
+                (paragraph: string) => (
+                  <p class="text-lg text-base-content/80">{paragraph}</p>
+                )
+              )
             }
           </div>
         </div>

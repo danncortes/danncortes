@@ -20,7 +20,7 @@ import Contact from '../components/Contact.astro';
       <img
         class="profile-pic w-50 rounded-full"
         src="/src/images/profile-pic-md.avif"
-        alt="Profile Picture"
+        alt={t(data.profile.completeTitle)}
       />
       <div class="profile-info flex flex-col items-center">
         <h1 class="text-4xl font-extrabold">
