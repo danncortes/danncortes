@@ -4,6 +4,7 @@ import '../styles/global.css';
 import Home from '../components/Home.astro';
 import LanguageButtons from '../components/LanguageButtons.astro';
 import ThemeController from '../components/ThemeController.astro';
+import AnimatedBg from '../components/AnimatedBg.astro';
 import ResumeLayout from './ResumeLayout.astro';
 import Contact from '../components/Contact.astro';
 import data from '../data.json';
@@ -118,6 +119,7 @@ const structuredData = {
     />
   </head>
   <body class="text-base-content">
+    <AnimatedBg />
     <!-- Skip Link for Keyboard Navigation -->
     <a
       href="#main-content"
