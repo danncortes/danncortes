@@ -40,10 +40,20 @@ html {
   scroll-behavior: smooth;
 }
 
+section.page {
+  min-height: 100vh;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+section.page:focus-visible {
+  outline: none;
+}
+
 /* Scroll snapping only on desktop */
 @media (min-width: 1024px) {
   html {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
   }
 
   section.page {
@@ -63,16 +73,6 @@ html {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
-}
-
-section.page {
-  height: 100vh;
-  overflow: auto;
-  scrollbar-width: none;
-}
-
-section.page:focus-visible {
-  outline: none;
 }
 
 /* Scroll animations with Intersection Observer */

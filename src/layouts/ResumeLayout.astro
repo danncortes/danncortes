@@ -34,11 +34,13 @@ import Contact from '../components/Contact.astro';
   </section>
   <section class="resume__right flex flex-col gap-10">
     <div class="usp flex flex-col gap-4 text-xl font-light">
-      {(() => {
-        const usp = t(`${data.profile.usp}`, { returnObjects: true });
-        const items = Array.isArray(usp) ? usp : [usp];
-        return items.map((p: string) => <p>{p}</p>);
-      })()}
+      {
+        (() => {
+          const usp = t(`${data.profile.usp}`, { returnObjects: true });
+          const items = Array.isArray(usp) ? usp : [usp];
+          return items.map((p: string) => <p>{p}</p>);
+        })()
+      }
     </div>
 
     <div class="grid grid-cols-6 gap-12 grid-flow-row-dense">
@@ -83,12 +85,14 @@ import Contact from '../components/Contact.astro';
                 .filter((tool) => tool.show && tool.icon)
                 .map((tool) => (
                   <li>
-                    <img
-                      class="h-9"
-                      src={tool.icon}
-                      alt={tool.name}
-                      title={tool.name}
-                    />
+                    <div class="tooltip tooltip-bottom" data-tip={tool.name}>
+                      <img
+                        class="h-9"
+                        src={tool.icon}
+                        alt={tool.name}
+                        title={tool.name}
+                      />
+                    </div>
                   </li>
                 ))
             }
