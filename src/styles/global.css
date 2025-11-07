@@ -38,7 +38,18 @@ html {
   line-height: 1.5;
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+}
+
+/* Scroll snapping only on desktop */
+@media (min-width: 1024px) {
+  html {
+    scroll-snap-type: y mandatory;
+  }
+
+  section.page {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+  }
 }
 
 /* Screen Reader Only utility class */
@@ -58,8 +69,6 @@ section.page {
   height: 100vh;
   overflow: auto;
   scrollbar-width: none;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
 section.page:focus-visible {
