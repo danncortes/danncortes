@@ -7,8 +7,8 @@ const { title } = Astro.props;
 ---
 
 <div
-  class="card p-5 bg-base-200 rounded-md animate-on-scroll flex flex-col gap-1 border border-base-300"
+  class="card p-4 pt-3 sm:p-5 sm:pt-4 bg-base-200 rounded-md animate-on-scroll flex flex-col gap-1 border border-base-300"
 >
-  <h3 class="text-lg text-primary">{title}</h3>
+  <h3 class="text-primary">{title}</h3>
   <slot />
 </div>

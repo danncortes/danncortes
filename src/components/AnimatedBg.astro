@@ -84,7 +84,6 @@
       height: 300px;
     }
   }
-
   @keyframes rotateBox {
     0% {
       transform: rotateX(40deg) rotateY(60deg) rotateZ(10deg);
@@ -101,9 +100,13 @@
     perspective: 2000px;
   }
 
+  @media (max-width: 767px) {
+    .box-container {
+      --box-size: 500px;
+    }
+  }
+
   .box {
-    width: var(--box-size);
-    height: var(--box-size);
     transform-style: preserve-3d;
     transition: all 200ms;
     transform: rotateX(40deg) rotateY(0deg) rotateZ(10deg);

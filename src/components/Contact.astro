@@ -21,7 +21,7 @@ const { contactInfo } = Astro.props;
       .map((contact) => (
         <a
           href={contact.value}
-          class="btn btn-link btn-xs"
+          class="btn btn-link btn-xs scale-80 sm:scale-100"
           target="_blank"
           aria-label={contact.title}
           set:html={contact.icon}

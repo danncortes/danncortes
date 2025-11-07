@@ -5,16 +5,16 @@ const { greeting, intro } = Astro.props;
 ---
 
 <section
-  class="home-content flex flex-col md:flex-row-reverse justify-center items-center max-w-6xl p-14 gap-14 xl:gap-26 transition-all duration-300"
+  class="home-content flex flex-col md:flex-row-reverse justify-center items-center max-w-6xl p-8 sm:p-14 gap-8 sm:gap-14 xl:gap-26 transition-all duration-300"
 >
   <img
-    class="profile-pic w-70 md:w-70 lg:w-96 xl:w-110 rounded-full transition-all duration-300 shadow-2xl border border-3 border-base-300/40"
+    class="profile-pic w-60 sm:w-70 lg:w-96 xl:w-110 rounded-full transition-all duration-300 shadow-2xl border border-3 border-base-300/40"
     src="/images/profile-pic-md.avif"
     alt={t(data.profile.completeTitle)}
   />
-  <div class="flex flex-col gap-8 items-center md:items-start">
+  <div class="flex flex-col gap-6 sm:gap-8 items-center md:items-start">
     <h1
-      class="text-6xl text-center md:text-left lg:text-7xl font-extrabold flex flex-col gap-3 transition-all duration-300 whitespace-nowrap animate-on-scroll"
+      class="text-5xl sm:text-6xl text-center md:text-left lg:text-7xl font-extrabold flex flex-col gap-3 transition-all duration-300 whitespace-nowrap animate-on-scroll"
     >
       <span
         class="text-4xl lg:text-5xl font-extralight block text-primary transition-all duration-300 animate-on-scroll"
@@ -23,11 +23,11 @@ const { greeting, intro } = Astro.props;
       {data.profile.name}
     </h1>
     <h2
-      class="text-xl lg:text-xl text-center font-light md:text-left max-w-110 transition-all duration-300 text-base-content/80"
+      class="text-md sm:text-xl text-center font-light md:text-left max-w-110 transition-all duration-300 text-base-content/80"
     >
       {intro}
     </h2>
-    <a class="btn btn-primary btn-lg" href="#resume">Resume</a>
+    <a class="btn btn-primary md:btn-lg" href="#resume">Resume</a>
   </div>
 </section>
 

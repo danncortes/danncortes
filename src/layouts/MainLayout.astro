@@ -131,17 +131,17 @@ const structuredData = {
       <header
         role="banner"
         aria-label={t('siteHeader')}
-        class="flex justify-between lg:justify-end items-center fixed top-0 left-0 right-0 z-[1000] p-4 bg-base-100 lg:bg-transparent"
+        class="flex justify-between lg:justify-end items-center fixed top-0 left-0 right-0 z-[1000] p-2 px-3 sm:p-4 bg-base-100 lg:bg-transparent"
       >
         <h2
           id="mobile-header-title"
-          class="text-xl font-bold flex gap-2 block lg:hidden animate-on-scroll"
+          class="text-sm sm:text-xl font-bold flex flex-col sm:flex-row sm:gap-2 block lg:hidden animate-on-scroll"
         >
           {t(`${data.profile.name}`)}
-          <span class="font-light">|</span>
+          <span class="font-light hidden sm:block">|</span>
           <span class="font-light text-primary">{t(data.profile.title)}</span>
         </h2>
-        <div class="flex gap-4">
+        <div class="flex gap-2 sm:gap-4">
           <LanguageButtons currentLang={lang} />
           <ThemeController />
         </div>
@@ -155,7 +155,7 @@ const structuredData = {
         <Home greeting={t('greeting')} intro={t('profileInfo.intro')} />
       </section>
       <section
-        class="page p-10 pt-20 flex justify-center"
+        class="page page-resume p-6 pb-12 sm:p-10 pt-20 flex justify-center"
         id="resume"
         tabindex="-1"
         aria-label={t('resumeSection')}
@@ -169,10 +169,10 @@ const structuredData = {
         aria-label={t('about.title')}
       >
         <div
-          class="about-content flex flex-col md:flex-row justify-center items-center max-w-6xl p-14 gap-18 transition-all duration-300"
+          class="about-content flex flex-col lg:flex-row justify-center items-center max-w-6xl p-8 pt-16 pb-12 sm:p-14 gap-8 sm:gap-18 transition-all duration-300"
         >
           <img
-            class="profile-pic w-80 h-80 object-cover rounded-full transition-all duration-300 shadow-2xl border border-3 border-base-300/40"
+            class="profile-pic aspect-square max-w-[80%] sm:max-w-80 object-cover rounded-full transition-all duration-300 shadow-2xl border border-3 border-base-300/40"
             src="/images/about-pic-2.avif"
             alt={t(data.profile.completeTitle)}
           />
@@ -198,7 +198,7 @@ const structuredData = {
       <footer
         role="contentinfo"
         aria-label={t('contactInformation')}
-        class="lg:hidden p-2 fixed bottom-0 left-0 right-0 bg-base-100"
+        class="lg:hidden p-2 fixed bottom-0 left-0 right-0 bg-base-100/80"
       >
         <Contact contactInfo={data.contactInfo} />
       </footer>
