@@ -212,7 +212,7 @@ const structuredData = {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
               const id = entry.target.getAttribute('id');
               if (id && window.location.hash !== `#${id}`) {
                 history.replaceState(null, '', `#${id}`);
@@ -240,8 +240,8 @@ const structuredData = {
           });
         },
         {
-          threshold: 0.5,
-          rootMargin: '0px'
+          threshold: [0, 0.3, 0.5, 1],
+          rootMargin: '-80px 0px 0px 0px'
         }
       );
 
