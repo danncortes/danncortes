@@ -118,7 +118,7 @@ const structuredData = {
       set:html={JSON.stringify(structuredData)}
     />
   </head>
-  <body class="text-base-content">
+  <body class="text-base-content overflow-hidden">
     <AnimatedBg />
     <!-- Skip Link for Keyboard Navigation -->
     <a
@@ -131,23 +131,34 @@ const structuredData = {
       <header
         role="banner"
         aria-label={t('siteHeader')}
-        class="flex justify-between lg:justify-end items-center fixed top-0 left-0 right-0 z-[1000] p-2 px-3 sm:p-4 bg-base-100 lg:bg-transparent"
+        class="flex justify-end items-center fixed top-0 left-0 right-0 z-[1000] p-2 px-3 sm:py-4 bg-base-100 lg:bg-transparent"
       >
         <h2
           id="mobile-header-title"
-          class="text-sm sm:text-xl font-bold flex flex-col sm:flex-row sm:gap-2 block lg:hidden animate-on-scroll"
+          class="lg:w-1/3 grow-2 text-sm sm:text-xl font-bold flex flex-col sm:flex-row sm:gap-2 block lg:hidden animate-on-scroll"
         >
           {t(`${data.profile.name}`)}
           <span class="font-light hidden sm:block">|</span>
           <span class="font-light text-primary">{t(data.profile.title)}</span>
         </h2>
-        <div class="flex gap-2 sm:gap-4">
+        <nav class="flex justify-center grow-1 lg:w-1/3 lg:grow-0">
+          <div class="flex gap-1 p-1 rounded-full bg-base-200">
+            <a href="#home" class="btn btn-xs md:btn-sm rounded-full"> Home </a>
+            <a href="#resume" class="btn btn-xs md:btn-sm rounded-full">
+              Resume
+            </a>
+            <a href="#about" class="btn btn-xs md:btn-sm rounded-full">
+              {t('about.title')}
+            </a>
+          </div>
+        </nav>
+        <div class="flex gap-2 sm:gap-4 grow-1 lg:w-1/3 lg:grow-0 justify-end">
           <LanguageButtons currentLang={lang} />
           <ThemeController />
         </div>
       </header>
       <section
-        class="page page--home flex justify-center items-center-safe"
+        class="page page--home flex justify-center items-center-safe h-screen"
         id="home"
         tabindex="-1"
         aria-label={t('introduction')}
@@ -155,7 +166,7 @@ const structuredData = {
         <Home greeting={t('greeting')} intro={t('profileInfo.intro')} />
       </section>
       <section
-        class="page page-resume p-6 pb-12 sm:p-10 pt-20 flex justify-center"
+        class="page page-resume p-6 pb-12 sm:p-10 sm:pt-20 flex justify-center h-screen"
         id="resume"
         tabindex="-1"
         aria-label={t('resumeSection')}
@@ -163,7 +174,7 @@ const structuredData = {
         <ResumeLayout />
       </section>
       <section
-        class="page page--about flex justify-center items-center-safe"
+        class="page page--about flex justify-center items-center-safe h-screen"
         id="about"
         tabindex="-1"
         aria-label={t('about.title')}
@@ -205,52 +216,56 @@ const structuredData = {
     </main>
 
     <script>
-      // Update URL hash based on visible section and handle mobile header visibility
-      const sections = document.querySelectorAll('section.page[id]');
+      // Handle mobile header and header background based on URL hash
       const mobileHeaderTitle = document.getElementById('mobile-header-title');
       const header = document.querySelector('header');
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
-              const id = entry.target.getAttribute('id');
-              if (id && window.location.hash !== `#${id}`) {
-                history.replaceState(null, '', `#${id}`);
-              }
+      const nav = document.querySelector('nav');
+      const navButtons = document.querySelectorAll('nav a');
 
-              // Hide mobile header title when on home section
-              if (mobileHeaderTitle) {
-                if (id === 'home') {
-                  mobileHeaderTitle.classList.add('!hidden');
-                } else {
-                  mobileHeaderTitle.classList.remove('!hidden');
-                }
-              }
+      function updateHeaderForHash(hash: string) {
+        navButtons.forEach((btn) => {
+          btn.classList.remove('btn-primary');
+          if (btn.getAttribute('href')?.includes(hash)) {
+            btn.classList.add('btn-primary');
+          }
+        });
 
-              if (header) {
-                if (id === 'home') {
-                  header.classList.remove('bg-base-100');
-                  header.classList.add('justify-end');
-                } else {
-                  header.classList.add('bg-base-100');
-                  header.classList.remove('justify-end');
-                }
-              }
-            }
-          });
-        },
-        {
-          threshold: [0, 0.3, 0.5, 1],
-          rootMargin: '-80px 0px 0px 0px'
+        // Update mobile header title visibility
+        if (mobileHeaderTitle && nav) {
+          if (hash === 'home') {
+            mobileHeaderTitle.classList.add('!hidden');
+            nav.classList.add('!hidden');
+          } else {
+            mobileHeaderTitle.classList.remove('!hidden');
+            nav.classList.remove('!hidden');
+          }
         }
-      );
 
-      sections.forEach((section) => observer.observe(section));
-
-      const currentHash = window.location.hash.replace('#', '') || 'home';
-      if (mobileHeaderTitle && currentHash === 'home') {
-        mobileHeaderTitle.classList.add('!hidden');
+        // Update header background
+        if (header) {
+          if (hash === 'home') {
+            header.classList.remove('bg-base-100');
+          } else {
+            header.classList.add('bg-base-100');
+          }
+        }
       }
+
+      // Listen for hash changes
+      window.addEventListener('hashchange', () => {
+        const hash = window.location.hash.replace('#', '') || 'home';
+        updateHeaderForHash(hash);
+
+        // Scroll to the section
+        const section = document.getElementById(hash);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      // Set initial state on page load
+      const currentHash = window.location.hash.replace('#', '') || 'home';
+      updateHeaderForHash(currentHash);
     </script>
   </body>
 </html>

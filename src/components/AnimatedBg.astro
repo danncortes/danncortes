@@ -94,7 +94,7 @@
   }
 
   .box-container {
-    --box-size: 1000px;
+    --box-size: 1200px;
     height: var(--box-size);
     width: var(--box-size);
     perspective: 2000px;
@@ -107,10 +107,12 @@
   }
 
   .box {
+    width: var(--box-size);
+    height: var(--box-size);
     transform-style: preserve-3d;
     transition: all 200ms;
     transform: rotateX(40deg) rotateY(0deg) rotateZ(10deg);
-    animation: rotateBox 640s linear infinite;
+    animation: rotateBox 600s linear infinite;
   }
 
   .box [class^='face'] {
