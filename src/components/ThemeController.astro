@@ -3,8 +3,7 @@
   <!-- this hidden checkbox controls the state -->
   <input
     type="checkbox"
-    id="theme-toggle"
-    class="theme-controller"
+    class="theme-controller theme-toggle-checkbox"
     aria-label="Toggle between dark and light theme"
   />
 
@@ -32,25 +31,36 @@
 </label>
 
 <script>
-  // Theme switching logic
-  const themeToggle = document.getElementById(
-    'theme-toggle'
-  ) as HTMLInputElement;
+  // Theme switching logic - works with multiple instances
+  const themeToggles = document.querySelectorAll(
+    '.theme-toggle-checkbox'
+  ) as NodeListOf<HTMLInputElement>;
   const htmlElement = document.documentElement;
 
-  // Check for saved theme preference or default to 'light'
+  // Check for saved theme preference or default to 'dark'
   const currentTheme = localStorage.getItem('theme') || 'dark';
 
   // Set initial theme
   htmlElement.setAttribute('data-theme', currentTheme);
-  if (currentTheme === 'dark') {
-    themeToggle.checked = true;
-  }
 
-  // Toggle theme on checkbox change
-  themeToggle.addEventListener('change', () => {
-    const newTheme = themeToggle.checked ? 'dark' : 'light';
-    htmlElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
+  // Set all checkboxes to the current theme
+  themeToggles.forEach((toggle) => {
+    if (currentTheme === 'dark') {
+      toggle.checked = true;
+    }
+  });
+
+  // Add change listener to all theme toggles
+  themeToggles.forEach((toggle) => {
+    toggle.addEventListener('change', () => {
+      const newTheme = toggle.checked ? 'dark' : 'light';
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+
+      // Sync all other toggles
+      themeToggles.forEach((otherToggle) => {
+        otherToggle.checked = toggle.checked;
+      });
+    });
   });
 </script>
