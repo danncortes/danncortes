@@ -1,6 +1,6 @@
 # Daniel Cortes Resume
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A bilingual (English/German) resume and portfolio website built with Astro, Tailwind CSS, and DaisyUI, featuring smooth animations and dark mode support.
 
 ## Published on
 
