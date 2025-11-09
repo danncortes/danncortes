@@ -50,18 +50,6 @@ section.page:focus-visible {
   outline: none;
 }
 
-/* Scroll snapping only on desktop */
-@media (min-width: 1024px) {
-  html {
-    scroll-snap-type: y proximity;
-  }
-
-  section.page {
-    scroll-snap-align: start;
-    scroll-snap-stop: normal;
-  }
-}
-
 /* Screen Reader Only utility class */
 .sr-only {
   position: absolute;
