@@ -1,0 +1,299 @@
+---
+import { i18n } from '../i18n';
+import '../styles/global.css';
+import '../styles/print.css';
+import data from '../data.json';
+
+export interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+await i18n.changeLanguage(lang);
+const { t } = i18n;
+
+const title = `${t(data.profile.completeTitle)} - Print Version`;
+---
+
+<html lang={lang} data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+  </head>
+  <body class="print-layout">
+    <div class="no-print">
+      <button onclick="window.print()" class="print-btn">🖨️ Print</button>
+      <a href={`/${lang}`} class="back-btn">← Back</a>
+    </div>
+
+    <!-- PAGE 1 -->
+    <div class="print-page">
+      <!-- Header -->
+      <div class="pg1-header">
+        <img src="/images/profile-picture-360.avif" alt={data.profile.name} class="pg1-photo" />
+        <div class="pg1-header-text">
+          <h1 class="pg1-name">{data.profile.name} <span class="pg1-sep">|</span> <span class="pg1-title">{t(data.profile.title)}</span></h1>
+          <div class="pg1-usp">
+            {(() => {
+              const usp = t(`${data.profile.usp}`, { returnObjects: true });
+              const items = Array.isArray(usp) ? usp : [usp];
+              return items.map((p: string) => <p>{p}</p>);
+            })()}
+          </div>
+        </div>
+      </div>
+
+      <!-- Main 2-column: Skills | (Contact + Content) -->
+      <div class="pg1-main">
+        <!-- LEFT: Skills sidebar -->
+        <div class="pg1-left">
+          <section class="sk-section">
+            <h3 class="sk-title">Tools</h3>
+            {data.tools.data.filter((t) => t.show).map((tool) => (
+              <div class="tool">
+                <div class="tool-name">{tool.name}</div>
+                <div class="tool-dots">
+                  {Array.from({ length: tool.scale }).map((_, i) => (
+                    <span class={`dot ${i < tool.level ? 'filled' : ''}`}></span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </section>
+
+          <section class="sk-section">
+            <h3 class="sk-title">{t('professionalExpertise')}</h3>
+            {data.expertise.data.map((item) => (
+              <div class="exp-item">{t(item.name)}</div>
+            ))}
+          </section>
+
+          <section class="sk-section">
+            <h3 class="sk-title">{t('education')}</h3>
+            {data.education.map((edu) => (
+              <div class="edu">
+                <div class="edu-t">{edu.title}</div>
+                <div class="edu-s">{edu.place}</div>
+                <div class="edu-s">{edu.location}</div>
+                <div class="edu-y">{new Date(edu.from).getFullYear()} – {new Date(edu.to).getFullYear()}</div>
+              </div>
+            ))}
+          </section>
+
+          <section class="sk-section">
+            <h3 class="sk-title">{t('languages')}</h3>
+            {data.languages.map((lang) => (
+              <div class="lng">
+                <div class="lng-n">{t(lang.name)}</div>
+                <div class="lng-l">{t(lang.level)}</div>
+              </div>
+            ))}
+          </section>
+        </div>
+
+        <!-- RIGHT: Contact + Content -->
+        <div class="pg1-right">
+          <!-- Contact info -->
+          <div class="pg1-contact">
+            <div class="c-item"><div class="c-label">{t('phone')}</div><div class="c-val">+41 76 725 1794</div></div>
+            <div class="c-item"><div class="c-label">Website</div><div class="c-val">danncortes.com</div></div>
+            <div class="c-item"><div class="c-label">{t('permit')}</div><div class="c-val">{t('personalInfo.permitType')}</div></div>
+            <div class="c-item"><div class="c-label">{t('location')}</div><div class="c-val">Kriens, {t('switzerland')}</div></div>
+            <div class="c-item"><div class="c-label">Github</div><div class="c-val">github.com/danncortes</div></div>
+            <div class="c-item"><div class="c-label">{t('personalInfo.nationality')}</div><div class="c-val">{t('personalInfo.colombian')}</div></div>
+            <div class="c-item"><div class="c-label">Email</div><div class="c-val">danncortes@gmail.com</div></div>
+            <div class="c-item"><div class="c-label">LinkedIn</div><div class="c-val">linkedin.com/in/danncortes</div></div>
+            <div class="c-item"><div class="c-label">{t('personalInfo.maritalStatus')}</div><div class="c-val">{t('personalInfo.married')}, 1 Kind</div></div>
+          </div>
+
+          <!-- Aktuell -->
+          <section class="pg1-section">
+            <h2 class="s-title">{t('currently')}</h2>
+            {data.currently.map((item) => (
+              <div class="curr-block">
+                <div class="curr-head">
+                  <strong>{t(item.position)}</strong>
+                  <span class="curr-date">
+                    {new Date(item.from).toLocaleDateString(lang, { month: '2-digit', year: 'numeric' })}
+                    {' – '}
+                    {item.to ? new Date(item.to).toLocaleDateString(lang, { month: '2-digit', year: 'numeric' }) : t('present')}
+                  </span>
+                </div>
+                {item.intro && (
+                  <div class="curr-intro">
+                    {(() => {
+                      const intro = t(item.intro, { returnObjects: true });
+                      const items = Array.isArray(intro) ? intro : [intro];
+                      return items.map((p: string) => <p>{p}</p>);
+                    })()}
+                  </div>
+                )}
+                {item.projects && item.projects.length > 0 && (
+                  <div class="curr-projects">
+                    {item.projects.map((project) => (
+                      <div class="curr-proj">
+                        <div class="curr-proj-name">{t(project.name)}</div>
+                        <div class="curr-proj-tech">{project.techStack}</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </section>
+
+          <!-- Berufliche Stationen -->
+          <section class="pg1-section">
+            <h2 class="s-title">{t('professionalExperience')}</h2>
+            {data.experience.map((exp) => (
+              <div class="job-item">
+                <div class="job-row">
+                  <div>
+                    <div class="job-pos">{t(exp.position)}</div>
+                    <div class="job-co">{exp.name}{exp.nameNote && <span class="job-note"> ({exp.nameNote})</span>}</div>
+                  </div>
+                  <div class="job-right">
+                    <div class="job-date">
+                      {new Date(exp.from).toLocaleDateString(lang, { month: '2-digit', year: 'numeric' })}
+                      {' – '}
+                      {new Date(exp.to).toLocaleDateString(lang, { month: '2-digit', year: 'numeric' })}
+                    </div>
+                    <div class="job-loc">{exp.location}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="print-page">
+      <div class="pg2-grid">
+        <!-- Left sidebar -->
+        <div class="pg2-left">
+          <section class="sb-section">
+            <h3 class="sb-title">{t('courses')}</h3>
+            {data.courses.slice(0, 8).map((course) => (
+              <div class="crs">
+                <div class="crs-n">{course.name}</div>
+                <div class="crs-m">{new Date(course.date).getFullYear()} - {course.site}</div>
+                {course.duration && <div class="crs-m">{course.duration} {t('hours')} {t('online')}</div>}
+                {course.url && course.url !== 'http://www.udemy.com' && <div class="crs-u">{course.url}</div>}
+              </div>
+            ))}
+          </section>
+
+          <section class="sb-section">
+            <h3 class="sb-title">{t('additionalQualifications')}</h3>
+            <div class="qua">
+              <div class="qua-n">Goju-ryu Karate. 1. Dan</div>
+              <div class="qua-m">(Schwarzen Gürtel)</div>
+              <div class="qua-m">(OGKK - ogkk.jp)</div>
+              <div class="qua-m">2001 – 2011</div>
+            </div>
+          </section>
+
+          <section class="sb-section">
+            <h3 class="sb-title">{t('interests.title')}</h3>
+            <div class="int-txt">Zeichnen, Mountainbike, Wandern, Salsa Tanzen.</div>
+          </section>
+
+          <section class="sb-section">
+            <h3 class="sb-title">{t('references')}</h3>
+            <div class="ref-txt">{t('referencesAvailable')}</div>
+          </section>
+
+          <section class="sb-section">
+            <h3 class="sb-title">{t('startDate')}</h3>
+            <div class="ent-txt">{t('immediatelyOrByAgreement')}</div>
+          </section>
+        </div>
+
+        <!-- Right main -->
+        <div class="pg2-right">
+          <h2 class="s-title">{t('professionalExperience')}</h2>
+          {data.experience.slice(0, 1).map((exp) => (
+            <div class="exp-det">
+              <div class="exp-det-h">
+                <div>
+                  <div class="exp-pos">{t(exp.position)}</div>
+                  <div class="exp-co">{exp.name}{exp.nameNote && ` (${exp.nameNote})`}</div>
+                </div>
+                <div class="exp-meta">
+                  <div>{new Date(exp.from).toLocaleDateString(lang, { month: '2-digit', year: 'numeric' })} – {new Date(exp.to).toLocaleDateString(lang, { month: '2-digit', year: 'numeric' })}</div>
+                  <div>{exp.location}</div>
+                </div>
+              </div>
+              {exp.projects && exp.projects.map((project) => (
+                <div class="proj-det">
+                  <div class="proj-n">{t(project.name)}</div>
+                  <div class="proj-t">{project.techStack}</div>
+                  <ul class="resp">
+                    {(() => {
+                      const resp = t(project.responsibilities, { returnObjects: true });
+                      const items = Array.isArray(resp) ? resp : [resp];
+                      return items.map((item: string) => <li>{item}</li>);
+                    })()}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="print-page">
+      {data.experience.slice(1, 5).map((exp) => (
+        <div class="exp-det">
+          <div class="exp-det-h">
+            <div>
+              <div class="exp-pos">{t(exp.position)}</div>
+              <div class="exp-co">{exp.name}{exp.nameNote && ` (${exp.nameNote})`}</div>
+            </div>
+            <div class="exp-meta">
+              <div>{new Date(exp.from).toLocaleDateString(lang, { month: '2-digit', year: 'numeric' })} – {new Date(exp.to).toLocaleDateString(lang, { month: '2-digit', year: 'numeric' })}</div>
+              <div>{exp.location}</div>
+            </div>
+          </div>
+          {exp.experienceKey && t(`experience.${exp.experienceKey}.about`) && (
+            <div class="co-desc">{t(`experience.${exp.experienceKey}.about`)}</div>
+          )}
+          {exp.projects && exp.projects.length > 0 ? (
+            exp.projects.map((project) => (
+              <div class="proj-det">
+                <div class="proj-n">{t(project.name)}</div>
+                <div class="proj-t">{project.techStack}</div>
+                {project.responsibilities && (
+                  <ul class="resp">
+                    {(() => {
+                      const resp = t(project.responsibilities, { returnObjects: true });
+                      const items = Array.isArray(resp) ? resp : [resp];
+                      return items.map((item: string) => <li>{item}</li>);
+                    })()}
+                  </ul>
+                )}
+              </div>
+            ))
+          ) : (exp as any).intro && (
+            <div class="intro-list">
+              {(() => {
+                const intro = t((exp as any).intro, { returnObjects: true });
+                const items = Array.isArray(intro) ? intro : [intro];
+                return items.map((p: string) => <p>{p}</p>);
+              })()}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </body>
+</html>

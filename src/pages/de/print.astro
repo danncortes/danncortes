@@ -1,0 +1,11 @@
+---
+// Component Imports
+import PrintLayout from '../../layouts/PrintLayout.astro';
+
+// Only allow in development
+if (import.meta.env.PROD) {
+  return Astro.redirect('/de');
+}
+---
+
+<PrintLayout lang="de" />
