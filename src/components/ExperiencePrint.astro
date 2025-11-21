@@ -1,0 +1,47 @@
+---
+import type { i18n } from 'i18next';
+import ExperienceHeadPrint from './ExperienceHeadPrint.astro';
+
+export interface Props {
+  exp: any;
+  t: i18n['t'];
+}
+
+const { exp, t } = Astro.props;
+---
+
+<div class="experience">
+  <ExperienceHeadPrint exp={exp} t={t} />
+  {exp.about && <div>{t(exp.about)}</div>}
+  {
+    exp.intro && (
+      <ul class="list-disc list-outside pl-4">
+        {(() => {
+          const intro = t(exp.intro, {
+            returnObjects: true
+          });
+          const items = Array.isArray(intro) ? intro : [intro];
+          return items.map((item: string) => <li>{item}</li>);
+        })()}
+      </ul>
+    )
+  }
+  {
+    exp.projects &&
+      exp.projects.map((project: any) => (
+        <div class="project">
+          <div class="project-title">{t(project.name)}</div>
+          <div class="project-stack">{project.techStack}</div>
+          <ul class="project-responsibilities">
+            {(() => {
+              const resp = t(project.responsibilities, {
+                returnObjects: true
+              });
+              const items = Array.isArray(resp) ? resp : [resp];
+              return items.map((item: string) => <li>{item}</li>);
+            })()}
+          </ul>
+        </div>
+      ))
+  }
+</div>

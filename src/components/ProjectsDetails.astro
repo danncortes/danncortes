@@ -24,7 +24,9 @@ const { projects } = Astro.props;
                 const responsibilities = t(`${project.responsibilities}`, {
                   returnObjects: true
                 });
-                const items = Array.isArray(responsibilities) ? responsibilities : [responsibilities];
+                const items = Array.isArray(responsibilities)
+                  ? responsibilities
+                  : [responsibilities];
                 return items.map((p: string) => <li>{p}</li>);
               })()}
             </ul>

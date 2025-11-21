@@ -1,419 +1,110 @@
-/* Print Resume CSS */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+@import 'tailwindcss';
 
-body.print-layout {
-  font-family: 'Inter', sans-serif;
-  background: #f0f0f0;
-  color: #1a1a1a;
-  font-size: 10px;
-  line-height: 1.35;
+.page {
+  @apply max-w-6xl bg-white shadow-md rounded-md flex flex-col gap-8;
 }
 
-/* Buttons */
-.no-print {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 999;
-  display: flex;
-  gap: 8px;
+.layout {
+  @apply flex justify-between gap-14 items-start;
 }
 
-.print-btn, .back-btn {
-  padding: 10px 18px;
-  border-radius: 6px;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  font-size: 13px;
-  text-decoration: none;
+.layout .left {
+  @apply w-1/4 flex flex-col gap-6;
 }
 
-.print-btn { background: #3b82f6; color: white; }
-.back-btn { background: #e5e7eb; color: #1a1a1a; }
-
-/* Page */
-.print-page {
-  width: 210mm;
-  min-height: 297mm;
-  padding: 12mm;
-  margin: 0 auto 20px;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+.layout .right {
+  @apply w-3/4 flex flex-col gap-7;
 }
 
-/* ===== PAGE 1 ===== */
-
-/* Header */
-.pg1-header {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 14px;
-  align-items: flex-start;
+.title {
+  @apply text-lg font-bold mb-1;
+  color: var(--primary-color);
 }
 
-.pg1-photo {
-  width: 100px;
-  height: 100px;
+.experiences {
+  @apply flex flex-col;
+  margin-left: -18px;
+}
+
+.experience {
+  @apply relative flex flex-col gap-4 pl-5 pb-5;
+  border-left: 1px solid var(--color-gray-300);
+}
+
+.experience::before {
+  content: '';
+  @apply absolute top-0 left-0 w-[0.02mm] h-full;
+  background-color: var(--color-gray-300);
+}
+
+.experience::after {
+  content: '';
+  top: 4px;
+  left: -5px;
+  position: absolute;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
+  background-color: var(--color-gray-300);
 }
 
-.pg1-header-text { flex: 1; }
-
-.pg1-name {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 8px;
+.experience-head {
+  @apply grid grid-cols-4;
 }
 
-.pg1-sep {
-  color: #3b82f6;
-  margin: 0 4px;
+.experience-head .position,
+.experience-head .company {
+  @apply col-span-3;
 }
 
-.pg1-title { color: #3b82f6; }
-
-.pg1-usp {
-  font-size: 9px;
-  line-height: 1.45;
+.experience-head .position {
+  @apply font-bold;
 }
 
-.pg1-usp p { margin-bottom: 5px; }
-
-/* Main grid: Skills | Content+Contact */
-.pg1-main {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 10px;
+.experience-head .date,
+.experience-head .location {
+  @apply col-span-1 text-right;
 }
 
-/* LEFT: Skills */
-.pg1-left {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.experience-head .location,
+.experience-head .date {
+  @apply text-sm;
 }
 
-/* RIGHT: Contact + Content */
-.pg1-right {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.project-title {
+  @apply font-semibold;
 }
 
-/* Contact */
-.pg1-contact {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px 10px;
-  margin-bottom: 12px;
+.project-stack {
+  @apply italic mb-2;
+  color: var(--primary-color);
 }
 
-.c-item { font-size: 8px; }
-.c-label { font-weight: 700; margin-bottom: 1px; }
-.c-val { line-height: 1.3; }
-
-.pg1-section { margin-bottom: 8px; }
-
-.s-title {
-  font-size: 10px;
-  font-weight: 700;
-  color: #3b82f6;
-  text-transform: uppercase;
-  margin-bottom: 7px;
-  letter-spacing: 0.3px;
+.project-responsibilities {
+  @apply list-disc list-outside pl-4;
 }
-
-/* Current */
-.curr-block { margin-bottom: 9px; }
-
-.curr-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 4px;
-  font-size: 9px;
-}
-
-.curr-head strong { font-weight: 700; }
-
-.curr-date {
-  font-size: 8px;
-  color: #6b7280;
-  white-space: nowrap;
-}
-
-.curr-intro {
-  font-size: 8px;
-  margin-bottom: 5px;
-  line-height: 1.4;
-}
-
-.curr-intro p { margin-bottom: 3px; }
-
-.curr-projects {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.curr-proj {
-  padding-left: 7px;
-  border-left: 2px solid #3b82f6;
-}
-
-.curr-proj-name {
-  font-size: 8px;
-  font-weight: 600;
-  margin-bottom: 2px;
-}
-
-.curr-proj-tech {
-  font-size: 7px;
-  color: #3b82f6;
-  font-style: italic;
-}
-
-/* Jobs list */
-.job-item { margin-bottom: 5px; }
-
-.job-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-}
-
-.job-pos {
-  font-size: 9px;
-  font-weight: 700;
-  margin-bottom: 1px;
-}
-
-.job-co { font-size: 8px; }
-.job-note { color: #6b7280; }
-
-.job-right {
-  text-align: right;
-  font-size: 7px;
-  color: #6b7280;
-  line-height: 1.3;
-}
-
-.job-date, .job-loc { margin: 0; }
-
-.sk-section { margin-bottom: 6px; }
-
-.sk-title {
-  font-size: 9px;
-  font-weight: 700;
-  color: #3b82f6;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-  letter-spacing: 0.3px;
-}
-
-/* Tool */
-.tool { margin-bottom: 4px; }
-
-.tool-name {
-  font-size: 8px;
-  font-weight: 600;
-  margin-bottom: 2px;
-}
-
-.tool-dots {
-  display: flex;
-  gap: 2px;
-}
-
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #e5e7eb;
-}
-
-.dot.filled { background: #3b82f6; }
-
-/* Expertise */
-.exp-item {
-  font-size: 8px;
-  margin-bottom: 3px;
-}
-
-/* Education */
-.edu { margin-bottom: 7px; }
-.edu-t { font-size: 8px; font-weight: 700; margin-bottom: 1px; }
-.edu-s { font-size: 7px; color: #6b7280; line-height: 1.3; }
-.edu-y { font-size: 7px; color: #6b7280; }
-
-/* Languages */
-.lng { margin-bottom: 5px; }
-.lng-n { font-size: 8px; font-weight: 700; margin-bottom: 1px; }
-.lng-l { font-size: 7px; color: #6b7280; }
-
-/* ===== PAGE 2 ===== */
-
-.pg2-grid {
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 12px;
-}
-
-/* Left sidebar */
-.pg2-left {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.sb-section { margin-bottom: 7px; }
-
-.sb-title {
-  font-size: 9px;
-  font-weight: 700;
-  color: #3b82f6;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-  letter-spacing: 0.3px;
-}
-
-/* Courses */
-.crs { margin-bottom: 7px; font-size: 8px; }
-.crs-n { font-weight: 600; margin-bottom: 2px; line-height: 1.3; }
-.crs-m { font-size: 7px; color: #6b7280; line-height: 1.3; }
-.crs-u { font-size: 7px; color: #3b82f6; word-break: break-all; }
-
-/* Qualification */
-.qua { font-size: 8px; }
-.qua-n { font-weight: 700; margin-bottom: 2px; }
-.qua-m { font-size: 7px; color: #6b7280; }
-
-/* Text sections */
-.int-txt, .ref-txt, .ent-txt { font-size: 8px; }
-
-/* Right content */
-.pg2-right {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-/* Experience detail */
-.exp-det { margin-bottom: 12px; }
-
-.exp-det-h {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  margin-bottom: 5px;
-}
-
-.exp-pos {
-  font-size: 10px;
-  font-weight: 700;
-  margin-bottom: 2px;
-}
-
-.exp-co { font-size: 9px; }
-
-.exp-meta {
-  text-align: right;
-  font-size: 8px;
-  color: #6b7280;
-  line-height: 1.3;
-}
-
-.co-desc {
-  font-size: 8px;
-  color: #4b5563;
-  font-style: italic;
-  margin-bottom: 6px;
-}
-
-/* Project detail */
-.proj-det {
-  margin-bottom: 9px;
-  padding-left: 7px;
-  border-left: 3px solid #3b82f6;
-}
-
-.proj-n {
-  font-size: 9px;
-  font-weight: 700;
-  margin-bottom: 2px;
-}
-
-.proj-t {
-  font-size: 8px;
-  color: #3b82f6;
-  font-style: italic;
-  margin-bottom: 4px;
-}
-
-.resp {
-  list-style: disc;
-  padding-left: 15px;
-  font-size: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.resp li { line-height: 1.4; }
-
-/* Intro list */
-.intro-list { font-size: 8px; }
-.intro-list p { margin-bottom: 3px; line-height: 1.4; }
-
-/* ===== PRINT ===== */
 
 @media print {
-  body { background: white !important; }
-  .no-print { display: none !important; }
+  body > * {
+    visibility: hidden;
+  }
 
-  .print-page {
-    width: 210mm;
-    min-height: 297mm;
-    padding: 10mm;
-    margin: 0;
+  body main {
+    visibility: visible;
+    width: 20cm;
+  }
+
+  html {
+    font-family: 'Inter', sans-serif;
+    font-size: 11.5px;
+  }
+
+  .page {
     box-shadow: none;
-    page-break-after: always;
+    max-width: 100%;
   }
 
-  .print-page:last-child { page-break-after: auto; }
-
-  /* Preserve colors */
-  .pg1-sep, .pg1-title, .s-title, .sk-title, .sb-title,
-  .curr-proj-tech, .proj-t, .crs-u {
-    color: #2563eb !important;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
+  @page {
+    @apply my-14 mx-10;
   }
-
-  .dot.filled {
-    background: #2563eb !important;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-  }
-
-  .curr-proj, .proj-det {
-    border-left-color: #2563eb !important;
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-  }
-
-  /* Prevent breaks */
-  .curr-block, .job-item, .exp-det, .proj-det, .crs {
-    page-break-inside: avoid;
-  }
-
-  a { text-decoration: none; color: inherit; }
-}
-
-@media screen {
-  .print-page:last-child { margin-bottom: 50px; }
 }

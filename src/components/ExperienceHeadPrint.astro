@@ -1,0 +1,23 @@
+---
+import type { i18n } from 'i18next';
+import { formatDate } from '../utils/dateFormat';
+
+export interface Props {
+  exp: any;
+  t: i18n['t'];
+}
+
+const { exp, t } = Astro.props;
+---
+
+<div class="experience-head">
+  <div class="position">{t(exp.position)}</div>
+  <div class="date">
+    {formatDate(exp.from)} – {formatDate(exp.to)}
+  </div>
+  <div class="company">
+    {exp.name}
+    {exp.nameNote && ` (${exp.nameNote})`}
+  </div>
+  <div class="location">{t(exp.location)}</div>
+</div>

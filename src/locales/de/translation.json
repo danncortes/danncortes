@@ -36,6 +36,7 @@
   },
   "tools": "Tools",
   "workExperience": "Berufserfahrung",
+  "workStations": "Berufliche Stationen",
   "courses": "Weiterbildungen",
   "hours": "Stunden",
   "languages": "Sprachen",
@@ -78,7 +79,6 @@
   "immediatelyOrByAgreement": "Per sofort oder nach Vereinbarung",
   "additionalQualifications": "Zusatzqualifikationen",
   "online": "Online",
-  "present": "aktuell",
   "about": {
     "title": "Über mich",
     "description": [

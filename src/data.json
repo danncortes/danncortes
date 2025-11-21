@@ -12,19 +12,22 @@
       "label": "danncortes@gmail.com",
       "value": "mailto:danncortes@gmail.com",
       "show": true,
+      "showOnPrint": true,
       "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"size-6\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75\"></path></svg>"
     },
     {
       "title": "phone",
       "label": "+41 76 725 1794",
-      "value": "+41 76 725 1794",
-      "show": false
+      "value": "tel:+41767251794",
+      "show": false,
+      "showOnPrint": true
     },
     {
       "title": "LinkedIn",
       "label": "linkedin.com/in/danncortes",
       "value": "http://linkedin.com/in/danncortes",
       "show": true,
+      "showOnPrint": true,
       "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" class=\"size-9\"><path d=\"M8.25 17.25h-2.5v-7.5h2.5v7.5ZM7 8.625a1.375 1.375 0 1 1 0-2.75 1.375 1.375 0 0 1 0 2.75ZM18.25 17.25h-2.5v-3.75c0-.69-.56-1.25-1.25-1.25s-1.25.56-1.25 1.25v3.75h-2.5v-7.5h2.5v1.032c.449-.483 1.09-.782 1.75-.782 1.519 0 2.75 1.231 2.75 2.75v4.5Z\"></path></svg>"
     },
     {
@@ -32,6 +35,7 @@
       "label": "github.com/danncortes",
       "value": "https://github.com/danncortes",
       "show": true,
+      "showOnPrint": true,
       "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" class=\"size-5\"><path d=\"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z\"></path></svg>"
     },
     {
@@ -39,6 +43,7 @@
       "label": "danncortes.com",
       "value": "https://danncortes.com",
       "show": true,
+      "showOnPrint": true,
       "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"size-6\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244\"></path></svg>"
     },
     {
@@ -46,10 +51,15 @@
       "label": "instagram.com/danncort",
       "value": "https://www.instagram.com/danncort/",
       "show": true,
+      "showOnPrint": false,
       "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"size-6\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\" ry=\"5\"></rect><path d=\"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z\"></path><line x1=\"17.5\" y1=\"6.5\" x2=\"17.51\" y2=\"6.5\"></line></svg>"
     }
   ],
   "personalInfo": [
+    {
+      "title": "location",
+      "value": "Kriens, $t(switzerland)"
+    },
     {
       "title": "personalInfo.maritalStatus",
       "value": "personalInfo.married"
@@ -61,18 +71,30 @@
     {
       "title": "permit",
       "value": "personalInfo.permitType"
-    },
-    {
-      "title": "location",
-      "value": "Kriens, $t(switzerland)"
     }
   ],
   "tools": {
     "title": "tools",
     "data": [
       {
+        "name": "TypeScript",
+        "level": 5,
+        "scale": 6,
+        "profileTypes": ["frontend", "ui/ux"],
+        "show": true,
+        "icon": "/images/typescript-logo.png"
+      },
+      {
+        "name": "JavaScript",
+        "level": 5,
+        "scale": 6,
+        "profileTypes": ["frontend", "ui/ux"],
+        "show": true,
+        "icon": "/images/javascript-logo.png"
+      },
+      {
         "name": "Angular",
-        "level": 4,
+        "level": 5,
         "scale": 6,
         "profileTypes": ["frontend", "ui/ux"],
         "show": true,
@@ -87,22 +109,6 @@
         "icon": "/images/react-logo.png"
       },
       {
-        "name": "TypeScript",
-        "level": 4,
-        "scale": 6,
-        "profileTypes": ["frontend", "ui/ux"],
-        "show": true,
-        "icon": "/images/typescript-logo.png"
-      },
-      {
-        "name": "JavaScript",
-        "level": 4,
-        "scale": 6,
-        "profileTypes": ["frontend", "ui/ux"],
-        "show": true,
-        "icon": "/images/javascript-logo.png"
-      },
-      {
         "name": "NodeJS",
         "level": 3,
         "scale": 6,
@@ -112,7 +118,7 @@
       },
       {
         "name": "SQL",
-        "level": 2,
+        "level": 3,
         "scale": 6,
         "profileTypes": ["frontend"],
         "show": true,
@@ -120,7 +126,7 @@
       },
       {
         "name": "HTML",
-        "level": 4,
+        "level": 5,
         "scale": 6,
         "profileTypes": ["frontend", "ui/ux"],
         "show": true,
@@ -128,7 +134,7 @@
       },
       {
         "name": "CSS",
-        "level": 4,
+        "level": 5,
         "scale": 6,
         "profileTypes": ["frontend", "ui/ux"],
         "show": true,
@@ -144,7 +150,7 @@
       },
       {
         "name": "Tailwind",
-        "level": 3,
+        "level": 4,
         "scale": 6,
         "profileTypes": ["frontend", "ui/ux"],
         "show": true,
@@ -216,7 +222,7 @@
           "name": "experience.currently.projects.vokabularyPractice.name",
           "description": "experience.currently.projects.vokabularyPractice.description",
           "responsibilities": "experience.currently.projects.vokabularyPractice.responsibilities",
-          "techStack": "Angular, TypeScript, NodeJS, Supabase"
+          "techStack": "Angular 19, NgRx, TypeScript, NodeJS, Supabase"
         }
       ]
     },
@@ -247,7 +253,7 @@
           "name": "experience.smartCom.projects.reportDashboard.name",
           "description": "experience.smartCom.projects.reportDashboard.description",
           "responsibilities": "experience.smartCom.projects.reportDashboard.responsibilities",
-          "techStack": "Angular 12, TypeScript, Bootstrap, ChartJS, Jasmine, Karma, HTML, SASS"
+          "techStack": "Angular 12, RxJS, TypeScript, Bootstrap, ChartJS, Jasmine, Karma, HTML, SASS"
         },
         {
           "name": "Document Editor",
@@ -263,6 +269,7 @@
     },
     {
       "name": "Truelogic Software",
+      "about": "experience.truelogic.about",
       "link": "https://www.truelogicsoftware.com/",
       "position": "seniorFrontendDeveloper",
       "from": "2019-04-17",
@@ -285,6 +292,7 @@
     },
     {
       "name": "Endava",
+      "about": "experience.endava.about",
       "link": "https://www.endava.com/",
       "position": "seniorFrontendDeveloper",
       "from": "2018-07-01",
@@ -306,6 +314,7 @@
     },
     {
       "name": "Velocity Partners",
+      "about": "experience.velocity.about",
       "nameNote": "Endava",
       "link": "https://www.endava.com/",
       "position": "frontendDeveloper",
@@ -339,12 +348,13 @@
       }
     },
     {
-      "name": "Dada",
+      "name": "Dada.nyc",
+      "about": "experience.dada.about",
       "link": "https://dada.nyc/",
       "position": "Senior Web Developer",
       "from": "2014-03-01",
       "to": "2015-09-01",
-      "location": "Caracas, Venezuela - Remote",
+      "location": "Caracas, Venezuela",
       "experienceKey": "dada",
       "isIntroArray": true,
       "projects": [
@@ -359,6 +369,20 @@
         "name": "dada-nyc.avif",
         "loadingMode": "lazy"
       }
+    },
+    {
+      "name": "Ola Creativa",
+      "about": "experience.ola.about",
+      "intro": "experience.ola.intro",
+      "link": "",
+      "position": "Web Designer / Graphic Designer",
+      "from": "2010-10-01",
+      "to": "2015-03-01",
+      "location": "Caracas, Venezuela",
+      "experienceKey": "ola",
+      "isIntroArray": true,
+      "projects": [],
+      "logo": null
     },
     {
       "name": "Ries Inc.",
@@ -377,7 +401,7 @@
       "name": "Bumeran.com",
       "link": "http://www.bumeran.com/",
       "position": "Senior Web Designer",
-      "from": "2010-11-01",
+      "from": "2010-09-01",
       "to": "2012-08-01",
       "location": "Caracas, Venezuela",
       "experienceKey": "bumeran",
@@ -397,24 +421,11 @@
       }
     },
     {
-      "name": "Ola Creativa",
-      "link": "",
-      "position": "Web Designer / Graphic Designer",
-      "from": "2010-08-01",
-      "to": "2015-09-01",
-      "location": "Caracas, Venezuela",
-      "experienceKey": "ola",
-      "about": "",
-      "isIntroArray": true,
-      "projects": [],
-      "logo": null
-    },
-    {
       "name": "Alia Consultores C.A.",
       "link": "",
       "position": "graphicDesigner",
       "from": "2001-09",
-      "to": "2009-01",
+      "to": "2009-09",
       "location": "Caracas, Venezuela",
       "experienceKey": "alia",
       "about": "",
@@ -527,17 +538,17 @@
   ],
   "education": [
     {
-      "title": "Graphic Design",
-      "from": "1998-07-01",
-      "to": "2000-07-01",
-      "place": "Instituto de Diseño de Caracas",
-      "location": "Caracas"
-    },
-    {
       "title": "Web Master Design",
       "from": "2001-03-01",
       "to": "2001-09-01",
       "place": "Centro de Diseño Digital",
+      "location": "Caracas"
+    },
+    {
+      "title": "Graphic Design",
+      "from": "1998-07-01",
+      "to": "2000-07-01",
+      "place": "Instituto de Diseño de Caracas",
       "location": "Caracas"
     }
   ],
