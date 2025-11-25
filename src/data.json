@@ -248,6 +248,7 @@
       "to": "2024-05-21",
       "location": "Rotkreuz - $t(switzerland)",
       "experienceKey": "smartCom",
+      "profile": "frontend",
       "projects": [
         {
           "name": "experience.smartCom.projects.reportDashboard.name",
@@ -276,6 +277,7 @@
       "to": "2020-09-18",
       "location": "$t(lucerne) - Remote",
       "experienceKey": "truelogic",
+      "profile": "frontend",
       "projects": [
         {
           "projectKey": "specimensInventory",
@@ -299,6 +301,7 @@
       "to": "2019-04-17",
       "location": "Medellin, $t(colombia)",
       "experienceKey": "endava",
+      "profile": "frontend",
       "projects": [
         {
           "name": "experience.endava.projects.yogaAccessories.name",
@@ -322,6 +325,7 @@
       "to": "2018-07-01",
       "location": "Medellin, $t(colombia)",
       "experienceKey": "velocity",
+      "profile": "frontend",
       "projects": [
         {
           "name": "experience.velocity.projects.laserPrinter.name",
@@ -356,6 +360,7 @@
       "to": "2015-09-01",
       "location": "Caracas, Venezuela",
       "experienceKey": "dada",
+      "profile": "frontend",
       "isIntroArray": true,
       "projects": [
         {
@@ -380,6 +385,7 @@
       "to": "2015-03-01",
       "location": "Caracas, Venezuela",
       "experienceKey": "ola",
+      "profile": "web-designer",
       "isIntroArray": true,
       "projects": [],
       "logo": null
@@ -392,6 +398,7 @@
       "to": "2014-03-01",
       "location": "Caracas, Venezuela",
       "experienceKey": "ries",
+      "profile": "frontend",
       "about": "",
       "isIntroArray": true,
       "projects": [],
@@ -405,6 +412,7 @@
       "to": "2012-08-01",
       "location": "Caracas, Venezuela",
       "experienceKey": "bumeran",
+      "profile": "web-designer",
       "about": "",
       "isIntroArray": true,
       "projects": [
@@ -428,6 +436,7 @@
       "to": "2009-09",
       "location": "Caracas, Venezuela",
       "experienceKey": "alia",
+      "profile": "graphic-designer",
       "about": "",
       "isIntroArray": true,
       "projects": [],
@@ -538,14 +547,15 @@
   ],
   "education": [
     {
-      "title": "Web Master Design",
+      "title": "education.webMasterDesign.title",
       "from": "2001-03-01",
       "to": "2001-09-01",
       "place": "Centro de Diseño Digital",
       "location": "Caracas"
     },
     {
-      "title": "Graphic Design",
+      "title": "education.graphicDesign.title",
+      "note": "education.graphicDesign.note",
       "from": "1998-07-01",
       "to": "2000-07-01",
       "place": "Instituto de Diseño de Caracas",

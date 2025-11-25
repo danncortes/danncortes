@@ -10,7 +10,7 @@ export interface Props {
 const { exp, t } = Astro.props;
 ---
 
-<div class="experience">
+<div class=`experience ${exp.profile}`>
   <ExperienceHeadPrint exp={exp} t={t} />
   {exp.about && <div>{t(exp.about)}</div>}
   {

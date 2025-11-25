@@ -10,7 +10,7 @@ export interface Props {
 const { exp, t } = Astro.props;
 ---
 
-<div class="experience-head">
+<div class=`experience-head ${exp.profile}`>
   <div class="position">{t(exp.position)}</div>
   <div class="date">
     {formatDate(exp.from)} – {formatDate(exp.to)}
