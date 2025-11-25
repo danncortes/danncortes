@@ -35,9 +35,48 @@ const title = `${t(data.profile.completeTitle)} - Print Version`;
     class="bg-gray-200 text-md p-8 flex flex-col items-center justify-center print:p-0 print:bg-white"
   >
     <main>
-      <div class="print:hidden flex gap-4">
-        <button onclick="window.print()" class="btn btn-primary">Print</button>
-        <a href={`/${lang}`} class="btn">← Back</a>
+      <div class="flex mb-6 gap-4 justify-center print:hidden">
+        <div class="join">
+          <input
+            class="join-item btn btn-sm"
+            type="radio"
+            name="lang-options"
+            aria-label="DE"
+            id="set-de"
+            checked={lang === 'de'}
+          />
+          <input
+            class="join-item btn btn-sm"
+            type="radio"
+            name="lang-options"
+            aria-label="EN"
+            id="set-en"
+            checked={lang === 'en'}
+          />
+        </div>
+        <div class="join">
+          <input
+            class="join-item btn btn-sm"
+            type="radio"
+            name="options"
+            aria-label="Original"
+            id="view-original"
+            checked
+          />
+          <input
+            class="join-item btn btn-sm"
+            type="radio"
+            name="options"
+            aria-label="Compact"
+            id="view-compact"
+          />
+        </div>
+        <div class="flex gap-2">
+          <button onclick="window.print()" class="btn btn-sm btn-primary"
+            >Print</button
+          >
+          <a href={`/${lang}`} class="btn btn-sm">← Back</a>
+        </div>
       </div>
 
       <!-- PAGE 1 -->
@@ -215,7 +254,7 @@ const title = `${t(data.profile.completeTitle)} - Print Version`;
             </section>
 
             <!-- Berufliche Stationen -->
-            <section>
+            <section class="experience-summary">
               <h2 class="title">{t('workStations')}</h2>
               <div class="flex flex-col gap-5">
                 {
@@ -322,9 +361,57 @@ const title = `${t(data.profile.completeTitle)} - Print Version`;
                   .map((exp) => <ExperiencePrint exp={exp} t={t} />)
               }
             </div>
+
+            <div class="compact-only-message hidden text-sm">
+              {t('moreExpInfoCompact')}{' '}
+              <a
+                href="https://danncortes.com"
+                target="_blank"
+                class="text-primary underline"
+              >
+                danncortes.com
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </main>
+
+    <script>
+      const viewOriginal = document.getElementById(
+        'view-original'
+      ) as HTMLInputElement;
+      const viewCompact = document.getElementById(
+        'view-compact'
+      ) as HTMLInputElement;
+      const main = document.querySelector('main');
+
+      function updateViewMode() {
+        const viewMode = viewCompact?.checked ? 'compact' : 'original';
+        main?.setAttribute('data-view', viewMode);
+      }
+
+      viewOriginal?.addEventListener('change', updateViewMode);
+      viewCompact?.addEventListener('change', updateViewMode);
+
+      // Set initial state
+      updateViewMode();
+
+      const langDeBtn = document.getElementById('set-de') as HTMLInputElement;
+
+      const langEnBtn = document.getElementById('set-en') as HTMLInputElement;
+
+      langDeBtn?.addEventListener('change', () => {
+        if (langDeBtn.checked) {
+          window.location.href = '/de/print';
+        }
+      });
+
+      langEnBtn?.addEventListener('change', () => {
+        if (langEnBtn.checked) {
+          window.location.href = '/en/print';
+        }
+      });
+    </script>
   </body>
 </html>

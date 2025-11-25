@@ -14,8 +14,8 @@
     },
     "usp": {
       "frontend": [
-        "9 years of experience in developing high-performance, intuitive, responsive, and scalable web applications in agile teams using Angular, TypeScript, and JavaScript, as well as HTML and CSS. Strongly focused on creating business-oriented user experiences with clean code.",
-        "With a resilient attitude and a passion for teamwork, I contribute solutions that are based on the latest standards and adapted to real user needs."
+        "10 years of experience in developing responsive, optimized, and scalable web applications in agile teams using TypeScript and JavaScript technologies, as well as HTML and CSS. Strongly focused on creating intuitive user experiences with clean code.",
+        "With a passion for teamwork, I contribute solutions that are based on the latest standards and adapted to real user needs."
       ]
     }
   },
@@ -62,7 +62,6 @@
   "showLess": "Show less",
   "languageLevel": "Fluent in speech and writing",
   "native": "Native",
-  "education": "Education",
   "professionalExperience": "Professional Experience",
   "yOfExp": "Years of Exp.",
   "project": "Project",
@@ -72,6 +71,7 @@
   "seniorFrontendDeveloper": "Senior $t(frontendDeveloper)",
   "graphicDesigner": "Graphic Designer",
   "moreExpInfo": "For additional work experience prior to 2015, please visit:",
+  "moreExpInfoCompact": "To see more work experience, visit",
   "printOrDownload": "Print or download",
   "visit": "Visit",
   "references": "References",
@@ -103,6 +103,16 @@
     "Nov",
     "Dec"
   ],
+  "education": {
+    "title": "Education",
+    "webMasterDesign": {
+      "title": "Webmaster Design"
+    },
+    "graphicDesign": {
+      "title": "Graphic Designer",
+      "note": "(Equivalent to Graphic Designer EFZ)"
+    }
+  },
   "interests": {
     "title": "Interests",
     "sketchCircle": {

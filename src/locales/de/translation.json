@@ -14,8 +14,8 @@
     },
     "usp": {
       "frontend": [
-        "9 Jahre Erfahrung in der Entwicklung leistungsstarker, intuitiver, responsiver und skalierbarer Webanwendungen in agilen Teams mit Angular, TypeScript und JavaScript sowie HTML und CSS. Stark daran orientiert, geschäftsfreundliche User Experiences mit sauberem Code zu erstellen.",
-        "Mit einer resilienten Haltung und einer Leidenschaft für Teamarbeit trage ich mit Lösungen bei, die auf den neuesten Standards basieren und an die realen Nutzeranforderungen angepasst sind."
+        "10 Jahre Erfahrung in der Entwicklung responsiver, optimierter und skalierbarer Webanwendungen in agilen Teams mit TypeScript- und JavaScript-Technologien sowie HTML und CSS. Stark daran orientiert, intuitive User Experiences mit sauberem Code zu erstellen.",
+        "Mit Leidenschaft für Teamarbeit trage ich mit Lösungen bei, die auf den neuesten Standards basieren und an die realen Nutzeranforderungen angepasst sind."
       ]
     }
   },
@@ -71,6 +71,7 @@
   "seniorFrontendDeveloper": "Senior $t(frontendDeveloper)",
   "graphicDesigner": "Grafik Designer",
   "moreExpInfo": "Für zusätzliche Berufserfahrung vor 2015 besuchen Sie bitte:",
+  "moreExpInfoCompact": "Für mehr Berufserfahrung besuchen Sie",
   "printOrDownload": "Drucken oder herunterladen",
   "visit": "Besuchen",
   "references": "Referenzen",
@@ -101,6 +102,16 @@
     "Nov.",
     "Dez."
   ],
+  "education": {
+    "title": "Ausbildung",
+    "webMasterDesign": {
+      "title": "Spezialisierung Webdesigner"
+    },
+    "graphicDesign": {
+      "title": "Grafikdesigner",
+      "note": "(Entspricht Grafiker EFZ)"
+    }
+  },
   "interests": {
     "title": "Interessen",
     "sketchCircle": {
