@@ -139,17 +139,25 @@
       "intro": [
         "Actively looking for a new professional challenge",
         "Ongoing development with current courses: Angular, Algorithms, and Data Structures",
-        "App development for personal use"
+        "App development for personal use",
+        "Volunteer mentor at PowerCoders Bootcamp",
+        "Volunteering for www.mentalhealthinitiative.ch"
       ],
       "projects": {
+        "vokabularyPractice": {
+          "name": "Vocabulary Practice App",
+          "description": "Web application for practicing vocabulary with Spaced Repetition System. Generation of audio phrases from vocabulary with text-to-speech AI from elevenlabs.io API",
+          "responsibilities": []
+        },
         "photoAlbum": {
           "name": "Photo Album Web-App",
           "description": "Page layout designer Web-App for photo albums",
           "responsibilities": []
         },
-        "vokabularyPractice": {
-          "name": "Vocabulary Practice App",
-          "description": "Web application for practicing vocabulary with Spaced Repetition System. Generation of audio phrases from vocabulary with text-to-speech AI from elevenlabs.io API",
+        "komunumo": {
+          "name": "Open Source Contributor - Komunumo",
+          "description": "Komunumo is an Open Source Community Manager",
+          "link": "https://github.com/McPringle/komunumo",
           "responsibilities": []
         }
       }

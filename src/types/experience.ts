@@ -3,6 +3,7 @@ export interface Project {
   description: string;
   responsibilities: string;
   techStack: string;
+  link?: string;
 }
 
 export interface Experience {

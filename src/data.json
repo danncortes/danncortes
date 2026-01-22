@@ -213,16 +213,23 @@
       "intro": "experience.currently.intro",
       "projects": [
         {
+          "name": "experience.currently.projects.vokabularyPractice.name",
+          "description": "experience.currently.projects.vokabularyPractice.description",
+          "responsibilities": "experience.currently.projects.vokabularyPractice.responsibilities",
+          "techStack": "Angular 19, NgRx, TypeScript, NodeJS, Supabase"
+        },
+        {
           "name": "experience.currently.projects.photoAlbum.name",
           "description": "experience.currently.projects.photoAlbum.description",
           "responsibilities": "experience.currently.projects.photoAlbum.responsibilities",
           "techStack": "Angular 19, TypeScript, SASS, HTML Jasmine, Karma"
         },
         {
-          "name": "experience.currently.projects.vokabularyPractice.name",
-          "description": "experience.currently.projects.vokabularyPractice.description",
-          "responsibilities": "experience.currently.projects.vokabularyPractice.responsibilities",
-          "techStack": "Angular 19, NgRx, TypeScript, NodeJS, Supabase"
+          "name": "experience.currently.projects.komunumo.name",
+          "description": "experience.currently.projects.komunumo.description",
+          "link": "experience.currently.projects.komunumo.link",
+          "responsibilities": "experience.currently.projects.komunumo.responsibilities",
+          "techStack": "Java, Vaadin, Spring Boot, MariaDB"
         }
       ]
     },
