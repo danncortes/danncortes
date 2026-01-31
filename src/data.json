@@ -110,7 +110,7 @@
       },
       {
         "name": "NodeJS",
-        "level": 3,
+        "level": 4,
         "scale": 6,
         "profileTypes": ["frontend"],
         "show": true,

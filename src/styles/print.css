@@ -30,17 +30,14 @@
   margin-left: -18px;
 }
 
+/* General styles */
+.page {
+  @apply mb-10 p-8;
+}
+
 main[data-view='compact'] .experience:not(.frontend),
 main[data-view='compact'] .experience-head:not(.frontend) {
   display: none;
-}
-
-main[data-view='compact'] .layout:nth-of-type(2) .right {
-  @apply gap-14;
-}
-
-main[data-view='compact'] .layout:nth-of-type(2) .right .experience-summary {
-  @apply mb-8;
 }
 
 main[data-view='compact'] .compact-only-message {
@@ -113,6 +110,7 @@ main[data-view='compact'] .compact-only-message {
   body main {
     visibility: visible;
     width: 20cm;
+    @apply px-10;
   }
 
   html {
@@ -123,9 +121,47 @@ main[data-view='compact'] .compact-only-message {
   .page {
     box-shadow: none;
     max-width: 100%;
+    @apply p-0 mb-10;
   }
 
-  @page {
-    @apply my-14 mx-10;
+  .page .experiences .experience {
+    @apply gap-5;
+  }
+
+  div.page:nth-of-type(1) {
+    @apply pt-8;
+  }
+
+  div.page:nth-of-type(2) {
+    @apply pt-10 mb-0;
+  }
+
+  /* General English */
+  html[lang='en'] .experience .application-connection-platform {
+    @apply mt-40;
+  }
+
+  /* General German */
+  html[lang='de'] .experience .plattform-zur-anwendungsanbindung {
+    @apply mt-20;
+  }
+
+  /* General Compact */
+  main[data-view='compact'] .layout:nth-of-type(2) .right {
+    @apply gap-9;
+  }
+
+  /* General Original */
+  main[data-view='original'] .layout:nth-of-type(2) .right {
+    @apply gap-6;
+  }
+
+  main[data-view='original'] .right .experience-summary > div {
+    @apply gap-4;
+  }
+
+  /* Original German */
+  html[lang='de'] main[data-view='original'] .right .experience-summary > div {
+    @apply gap-3;
   }
 }

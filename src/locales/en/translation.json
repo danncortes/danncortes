@@ -15,7 +15,7 @@
     "usp": {
       "frontend": [
         "10 years of experience in developing responsive, optimized, and scalable web applications in agile teams using TypeScript and JavaScript technologies, as well as HTML and CSS. Strongly focused on creating intuitive user experiences with clean code.",
-        "With a passion for teamwork, I contribute solutions that are based on the latest standards and adapted to real user needs."
+        "Boosting productivity through AI-assisted development using agentic tools like Claude Code."
       ]
     }
   },
@@ -32,7 +32,7 @@
     "married": "Married",
     "nationality": "Nationality",
     "colombian": "Colombian",
-    "permitType": "B $t(permit)"
+    "permitType": "C $t(permit)"
   },
   "techStack": "Tech Stack",
   "tools": "Tools",

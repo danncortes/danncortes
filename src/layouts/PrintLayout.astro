@@ -79,303 +79,308 @@ const title = `${t(data.profile.completeTitle)} - Print Version`;
         </div>
       </div>
 
-      <!-- PAGE 1 -->
-      <div class="page p-8 mb-10 print:mb-8 print:px-0 print:pt-10 print:gap-6">
-        <!-- Header -->
-        <div class="layout !items-center">
-          <div class="left">
-            <img
-              src="/images/profile-picture-360.avif"
-              alt={data.profile.name}
-              class="rounded-full"
-            />
-          </div>
-          <div class="right">
-            <div>
-              <h1 class="mb-4 text-4xl">
-                {data.profile.name}
-                <span class="font-light text-gray-300">|</span>
-                <span class="font-light text-primary"
-                  >{t(data.profile.title)}</span
-                >
-              </h1>
-              <div class="flex flex-col gap-3 print:text-lg">
-                {
-                  (() => {
-                    const usp = t(`${data.profile.usp}`, {
-                      returnObjects: true
-                    });
-                    const items = Array.isArray(usp) ? usp : [usp];
-                    return items.map((p: string) => <p>{p}</p>);
-                  })()
-                }
+      <div class="pages">
+        <!-- PAGE 1 -->
+        <div class="page">
+          <!-- Header -->
+          <div class="layout !items-center">
+            <div class="left">
+              <img
+                src="/images/profile-picture-360.avif"
+                alt={data.profile.name}
+                class="rounded-full"
+              />
+            </div>
+            <div class="right">
+              <div>
+                <h1 class="mb-4 text-4xl">
+                  {data.profile.name}
+                  <span class="font-light text-gray-300">|</span>
+                  <span class="font-light text-primary"
+                    >{t(data.profile.title)}</span
+                  >
+                </h1>
+                <div class="flex flex-col gap-3 print:text-lg">
+                  {
+                    (() => {
+                      const usp = t(`${data.profile.usp}`, {
+                        returnObjects: true
+                      });
+                      const items = Array.isArray(usp) ? usp : [usp];
+                      return items.map((p: string) => <p>{p}</p>);
+                    })()
+                  }
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Main 2-column: Skills | (Contact + Content) -->
-        <div class="layout">
-          <!-- LEFT: Skills sidebar -->
-          <div class="left">
-            <section class="skills">
-              <h3 class="title">Tools</h3>
-              {
-                data.tools.data
-                  .filter((t) => t.show)
-                  .map((tool) => (
-                    <div class="flex justify-between items-center">
-                      <div>{tool.name}</div>
-                      <div class="flex gap-1">
-                        {Array.from({ length: tool.scale }).map((_, i) => (
-                          <span
-                            class={`dot rounded-full w-[7px] h-[7px] ${i < tool.level ? 'bg-primary' : 'bg-gray-300'}`}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  ))
-              }
-            </section>
-
-            <section class="section">
-              <h3 class="title">{t('professionalExpertise')}</h3>
-              {data.expertise.data.map((item) => <div>{t(item.name)}</div>)}
-            </section>
-
-            <section class="section">
-              <h3 class="title">{t('education.title')}</h3>
-              <div class="flex flex-col gap-3">
+          <!-- Main 2-column: Skills | (Contact + Content) -->
+          <div class="layout">
+            <!-- LEFT: Skills sidebar -->
+            <div class="left">
+              <section class="skills">
+                <h3 class="title">Tools</h3>
                 {
-                  data.education.map((edu) => (
-                    <div>
-                      <div class="font-bold">{t(edu.title)}</div>
-                      {edu.note && (
-                        <div class="italic text-base-content/70 text-sm">
-                          {t(edu.note)}
+                  data.tools.data
+                    .filter((t) => t.show)
+                    .map((tool) => (
+                      <div class="flex justify-between items-center">
+                        <div>{tool.name}</div>
+                        <div class="flex gap-1">
+                          {Array.from({ length: tool.scale }).map((_, i) => (
+                            <span
+                              class={`dot rounded-full w-[7px] h-[7px] ${i < tool.level ? 'bg-primary' : 'bg-gray-300'}`}
+                            />
+                          ))}
                         </div>
-                      )}
-                      <div>{edu.place}</div>
-                      <div>{edu.location}</div>
-                      <div>
-                        {new Date(edu.from).getFullYear()} –{' '}
-                        {new Date(edu.to).getFullYear()}
                       </div>
-                    </div>
-                  ))
+                    ))
                 }
-              </div>
-            </section>
+              </section>
 
-            <section class="sk-section">
-              <h3 class="title">{t('languages')}</h3>
-              <div class="flex flex-col gap-3">
+              <section class="section">
+                <h3 class="title">{t('professionalExpertise')}</h3>
+                {data.expertise.data.map((item) => <div>{t(item.name)}</div>)}
+              </section>
+
+              <section class="section">
+                <h3 class="title">{t('education.title')}</h3>
+                <div class="flex flex-col gap-3">
+                  {
+                    data.education.map((edu) => (
+                      <div>
+                        <div class="font-bold">{t(edu.title)}</div>
+                        {edu.note && (
+                          <div class="italic text-base-content/70 text-sm">
+                            {t(edu.note)}
+                          </div>
+                        )}
+                        <div>{edu.place}</div>
+                        <div>{edu.location}</div>
+                        <div>
+                          {new Date(edu.from).getFullYear()} –{' '}
+                          {new Date(edu.to).getFullYear()}
+                        </div>
+                      </div>
+                    ))
+                  }
+                </div>
+              </section>
+
+              <section class="sk-section">
+                <h3 class="title">{t('languages')}</h3>
+                <div class="flex flex-col gap-3">
+                  {
+                    data.languages.map((lang) => (
+                      <div>
+                        <div class="font-bold">{t(lang.name)}</div>
+                        <div>{t(lang.level)}</div>
+                      </div>
+                    ))
+                  }
+                </div>
+              </section>
+            </div>
+
+            <!-- RIGHT: Contact + Content -->
+            <div class="right">
+              <!-- Contact info -->
+              <div class="grid grid-cols-3 gap-2">
                 {
-                  data.languages.map((lang) => (
-                    <div>
-                      <div class="font-bold">{t(lang.name)}</div>
-                      <div>{t(lang.level)}</div>
-                    </div>
-                  ))
+                  data.contactInfo
+                    .filter((item) => item.showOnPrint)
+                    .map((item) => (
+                      <div>
+                        <div class="text-primary text-sm">{t(item.title)}</div>
+                        <a class="underline" href={item.value} target="_blank">
+                          {item.label}
+                        </a>
+                      </div>
+                    ))
                 }
-              </div>
-            </section>
-          </div>
-
-          <!-- RIGHT: Contact + Content -->
-          <div class="right">
-            <!-- Contact info -->
-            <div class="grid grid-cols-3 gap-2">
-              {
-                data.contactInfo
-                  .filter((item) => item.showOnPrint)
-                  .map((item) => (
+                {
+                  data.personalInfo.map((item) => (
                     <div>
                       <div class="text-primary text-sm">{t(item.title)}</div>
-                      <a class="underline" href={item.value} target="_blank">
-                        {item.label}
-                      </a>
+                      <p>{t(item.value)}</p>
                     </div>
                   ))
-              }
-              {
-                data.personalInfo.map((item) => (
-                  <div>
-                    <div class="text-primary text-sm">{t(item.title)}</div>
-                    <p>{t(item.value)}</p>
-                  </div>
-                ))
-              }
-            </div>
+                }
+              </div>
 
-            <!-- Aktuell -->
-            <section>
-              <h2 class="title">{t('currently')}</h2>
-              <div class="flex flex-col gap-6">
-                {
-                  data.currently.map((item) => (
-                    <div class="flex flex-col gap-3">
-                      <div>
-                        <div class="flex justify-between items-center">
-                          <strong>{t(item.position)}</strong>
-                          <span class="text-sm">
-                            {formatDate(item.from)}
-                            {' – '}
-                            {item.to ? formatDate(item.to) : t('currently')}
-                          </span>
+              <!-- Aktuell -->
+              <section>
+                <h2 class="title">{t('currently')}</h2>
+                <div class="flex flex-col gap-6">
+                  {
+                    data.currently.map((item) => (
+                      <div class="flex flex-col gap-3">
+                        <div>
+                          <div class="flex justify-between items-center">
+                            <strong>{t(item.position)}</strong>
+                            <span class="text-sm">
+                              {formatDate(item.from)}
+                              {' – '}
+                              {item.to ? formatDate(item.to) : t('currently')}
+                            </span>
+                          </div>
+                          {item.intro && (
+                            <div>
+                              {(() => {
+                                const intro = t(item.intro, {
+                                  returnObjects: true
+                                });
+                                const items = Array.isArray(intro)
+                                  ? intro
+                                  : [intro];
+                                return items.map((p: string) => <p>{p}</p>);
+                              })()}
+                            </div>
+                          )}
                         </div>
-                        {item.intro && (
-                          <div>
-                            {(() => {
-                              const intro = t(item.intro, {
-                                returnObjects: true
-                              });
-                              const items = Array.isArray(intro)
-                                ? intro
-                                : [intro];
-                              return items.map((p: string) => <p>{p}</p>);
-                            })()}
+
+                        {item.projects && item.projects.length > 0 && (
+                          <div class="flex flex-col gap-3">
+                            {item.projects.map((project) => (
+                              <div>
+                                <div class="font-semibold">
+                                  {t(project.name)}
+                                </div>
+                                <div class="text-primary italic">
+                                  {project.techStack}
+                                </div>
+                                <div>{t(project.description)}</div>
+                              </div>
+                            ))}
                           </div>
                         )}
                       </div>
+                    ))
+                  }
+                </div>
+              </section>
 
-                      {item.projects && item.projects.length > 0 && (
-                        <div class="flex flex-col gap-3">
-                          {item.projects.map((project) => (
-                            <div>
-                              <div class="font-semibold">{t(project.name)}</div>
-                              <div class="text-primary italic">
-                                {project.techStack}
-                              </div>
-                              <div>{t(project.description)}</div>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ))
-                }
-              </div>
-            </section>
-
-            <!-- Berufliche Stationen -->
-            <section class="experience-summary">
-              <h2 class="title">{t('workStations')}</h2>
-              <div class="flex flex-col gap-5">
-                {
-                  data.experience
-                    .slice(0, 6)
-                    .map((exp) => <ExperienceHeadPrint exp={exp} t={t} />)
-                }
-              </div>
-            </section>
+              <!-- Berufliche Stationen -->
+              <section class="experience-summary">
+                <h2 class="title">{t('workStations')}</h2>
+                <div class="flex flex-col gap-5">
+                  {
+                    data.experience
+                      .slice(0, 6)
+                      .map((exp) => <ExperienceHeadPrint exp={exp} t={t} />)
+                  }
+                </div>
+              </section>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- PAGE 2 -->
-      <div class="page p-8 mb-10 print:mb-0 print:p-0 print:pt-14">
-        <div class="layout">
-          <!-- Left sidebar -->
-          <div class="left">
-            <section>
-              <h3 class="title">{t('courses')}</h3>
-              <div class="flex flex-col gap-4">
-                {
-                  data.courses.slice(0, 8).map((course) => (
-                    <div>
-                      <div class="font-semibold">{course.name}</div>
+        <!-- PAGE 2 -->
+        <div class="page">
+          <div class="layout">
+            <!-- Left sidebar -->
+            <div class="left">
+              <section>
+                <h3 class="title">{t('courses')}</h3>
+                <div class="flex flex-col gap-4">
+                  {
+                    data.courses.slice(0, 8).map((course) => (
                       <div>
-                        {new Date(course.date).getFullYear()} - {course.site}
-                      </div>
-                      {course.duration && (
+                        <div class="font-semibold">{course.name}</div>
                         <div>
-                          {course.duration} {t('hours')} {t('online')}
+                          {new Date(course.date).getFullYear()} - {course.site}
                         </div>
-                      )}
-                      {course.url && course.url !== 'http://www.udemy.com' && (
-                        <div>{course.url}</div>
-                      )}
-                    </div>
-                  ))
-                }
-              </div>
-            </section>
+                        {course.duration && (
+                          <div>
+                            {course.duration} {t('hours')} {t('online')}
+                          </div>
+                        )}
+                        {course.url &&
+                          course.url !== 'http://www.udemy.com' && (
+                            <div>{course.url}</div>
+                          )}
+                      </div>
+                    ))
+                  }
+                </div>
+              </section>
 
-            <section>
-              <h3 class="title">{t('additionalQualifications')}</h3>
-              <div>
-                <div>Goju-ryu Karate. 1. Dan</div>
-                <div>(Schwarzen Gürtel)</div>
-                <div>(OGKK - ogkk.jp)</div>
-                <div>2001 – 2011</div>
-              </div>
-            </section>
+              <section>
+                <h3 class="title">{t('additionalQualifications')}</h3>
+                <div>
+                  <div>Goju-ryu Karate. 1. Dan</div>
+                  <div>(Schwarzen Gürtel)</div>
+                  <div>(OGKK - ogkk.jp)</div>
+                  <div>2001 – 2011</div>
+                </div>
+              </section>
 
-            <section>
-              <h3 class="title">{t('interests.title')}</h3>
-              <div class="flex flex-col gap-2">
-                {
-                  data.interests.map((interest) => (
-                    <div>{t(interest.name)}</div>
-                  ))
-                }
-              </div>
-            </section>
+              <section>
+                <h3 class="title">{t('interests.title')}</h3>
+                <div class="flex flex-col gap-2">
+                  {
+                    data.interests.map((interest) => (
+                      <div>{t(interest.name)}</div>
+                    ))
+                  }
+                </div>
+              </section>
 
-            <section>
-              <h3 class="title">{t('references')}</h3>
-              <div>{t('referencesAvailable')}</div>
-            </section>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <section>
-              <h3 class="title">{t('startDate')}</h3>
-              <div>{t('immediatelyOrByAgreement')}</div>
-            </section>
+              <section>
+                <h3 class="title">{t('references')}</h3>
+                <div>{t('referencesAvailable')}</div>
+              </section>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <section>
+                <h3 class="title">{t('startDate')}</h3>
+                <div>{t('immediatelyOrByAgreement')}</div>
+              </section>
+            </div>
+
+            <!-- Right main -->
+            <div class="right">
+              <section>
+                <h2 class="title">{t('professionalExperience')}</h2>
+                <div class="experiences">
+                  {
+                    data.experience
+                      .slice(0, 4)
+                      .map((exp) => <ExperiencePrint exp={exp} t={t} />)
+                  }
+                </div>
+              </section>
+            </div>
           </div>
+        </div>
 
-          <!-- Right main -->
-          <div class="right">
-            <section>
-              <h2 class="title">{t('professionalExperience')}</h2>
+        <!-- PAGE 3 -->
+        <div class="page">
+          <div class="layout">
+            <div class="left"></div>
+            <div class="right">
               <div class="experiences">
                 {
                   data.experience
-                    .slice(0, 4)
+                    .slice(4, 9)
                     .map((exp) => <ExperiencePrint exp={exp} t={t} />)
                 }
               </div>
-            </section>
-          </div>
-        </div>
-      </div>
 
-      <!-- PAGE 3 -->
-      <div class="page page p-8 mb-10 print:mb-0 print:p-0">
-        <div class="layout">
-          <div class="left"></div>
-          <div class="right">
-            <div class="experiences">
-              {
-                data.experience
-                  .slice(4, 9)
-                  .map((exp) => <ExperiencePrint exp={exp} t={t} />)
-              }
-            </div>
-
-            <div class="compact-only-message hidden text-sm">
-              {t('moreExpInfoCompact')}{' '}
-              <a
-                href="https://danncortes.com"
-                target="_blank"
-                class="text-primary underline"
-              >
-                danncortes.com
-              </a>
+              <div class="compact-only-message hidden text-sm">
+                {t('moreExpInfoCompact')}{' '}
+                <a
+                  href="https://danncortes.com"
+                  target="_blank"
+                  class="text-primary underline"
+                >
+                  danncortes.com
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -383,40 +388,52 @@ const title = `${t(data.profile.completeTitle)} - Print Version`;
     </main>
 
     <script>
-      const viewOriginal = document.getElementById(
-        'view-original'
-      ) as HTMLInputElement;
-      const viewCompact = document.getElementById(
-        'view-compact'
-      ) as HTMLInputElement;
-      const main = document.querySelector('main');
+      viewModes();
+      langModes();
 
-      function updateViewMode() {
-        const viewMode = viewCompact?.checked ? 'compact' : 'original';
-        main?.setAttribute('data-view', viewMode);
+      function langModes() {
+        const langDeBtn = document.getElementById('set-de') as HTMLInputElement;
+        const langEnBtn = document.getElementById('set-en') as HTMLInputElement;
+
+        const setLang = (lang: string) => {
+          window.location.href = `/${lang}/print`;
+        };
+
+        langDeBtn?.addEventListener('change', () => setLang('de'));
+        langEnBtn?.addEventListener('change', () => setLang('en'));
       }
 
-      viewOriginal?.addEventListener('change', updateViewMode);
-      viewCompact?.addEventListener('change', updateViewMode);
+      function viewModes() {
+        const viewOriginal = document.getElementById(
+          'view-original'
+        ) as HTMLInputElement;
+        const viewCompact = document.getElementById(
+          'view-compact'
+        ) as HTMLInputElement;
+        const main = document.querySelector('main');
 
-      // Set initial state
-      updateViewMode();
-
-      const langDeBtn = document.getElementById('set-de') as HTMLInputElement;
-
-      const langEnBtn = document.getElementById('set-en') as HTMLInputElement;
-
-      langDeBtn?.addEventListener('change', () => {
-        if (langDeBtn.checked) {
-          window.location.href = '/de/print';
+        // Load saved view mode from localStorage
+        const savedViewMode = localStorage.getItem('printViewMode');
+        if (savedViewMode === 'compact') {
+          viewCompact.checked = true;
+          viewOriginal.checked = false;
+        } else {
+          viewOriginal.checked = true;
+          viewCompact.checked = false;
         }
-      });
 
-      langEnBtn?.addEventListener('change', () => {
-        if (langEnBtn.checked) {
-          window.location.href = '/en/print';
+        function updateViewMode() {
+          const viewMode = viewCompact?.checked ? 'compact' : 'original';
+          main?.setAttribute('data-view', viewMode);
+          localStorage.setItem('printViewMode', viewMode);
         }
-      });
+
+        viewOriginal?.addEventListener('change', updateViewMode);
+        viewCompact?.addEventListener('change', updateViewMode);
+
+        // Set initial state
+        updateViewMode();
+      }
     </script>
   </body>
 </html>

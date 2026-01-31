@@ -29,7 +29,9 @@ const { exp, t } = Astro.props;
   {
     exp.projects &&
       exp.projects.map((project: any) => (
-        <div class="project">
+        <div
+          class={`project ${t(project.name).split(' ').join('-').toLowerCase()}`}
+        >
           <div class="project-title">{t(project.name)}</div>
           <div class="project-stack">{project.techStack}</div>
           <ul class="project-responsibilities">
