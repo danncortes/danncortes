@@ -30,7 +30,9 @@ if (!i18next.isInitialized) {
 export function getLanguage() {
   if (typeof navigator !== 'undefined') {
     const browserLanguage = navigator.language.split('-')[0] as Language;
-    return supportedLanguages.includes(browserLanguage) ? browserLanguage : 'en';
+    return supportedLanguages.includes(browserLanguage)
+      ? browserLanguage
+      : 'en';
   }
   return 'en';
 }

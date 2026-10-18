@@ -17,6 +17,8 @@ const compat = new FlatCompat({
 export default [
   {
     ignores: [
+      '.astro/**',
+      'dist/**',
       '**/serviceWorker.js',
       '**/setupTests.js',
       'astro.config.mjs',

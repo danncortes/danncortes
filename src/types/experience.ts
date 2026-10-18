@@ -2,12 +2,12 @@ export interface Project {
   name: string;
   description: string;
   responsibilities: string;
-  techStack: string;
+  techStack?: string;
   link?: string;
 }
 
 export interface Experience {
-  name: string;
+  name?: string;
   from: string;
   to: string;
   projects: Project[];

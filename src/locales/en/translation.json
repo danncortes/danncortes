@@ -8,14 +8,15 @@
   "resumeSection": "Resume and professional experience",
   "contactInformation": "Contact information",
   "profileInfo": {
-    "intro": "A $t(frontendDeveloper) passionate about creating intuitive and scalable web applications, based in $t(lucerne).",
+    "intro": "A $t(fullstackDeveloper) passionate about creating intuitive and scalable web applications, based in $t(lucerne).",
     "title": {
-      "frontend": "$t(frontendDeveloper)"
+      "frontend": "$t(frontendDeveloper)",
+      "fullstack": "$t(fullstackDeveloper)"
     },
     "usp": {
       "frontend": [
         "10 years of experience in developing responsive, optimized, and scalable web applications in agile teams using TypeScript and JavaScript technologies, as well as HTML and CSS. Strongly focused on creating intuitive user experiences with clean code.",
-        "Streamlined development processes using agentic AI tools like Claude Code for code automation and debugging."
+        "Streamlined development processes using agentic AI tools for code automation and debugging."
       ]
     }
   },
@@ -62,12 +63,14 @@
   "showLess": "Show less",
   "languageLevel": "Fluent in speech and writing",
   "native": "Native",
+  "education": "Education",
   "professionalExperience": "Professional Experience",
   "yOfExp": "Years of Exp.",
   "project": "Project",
   "projects": "Projects",
   "responsibilities": "Responsibilities",
   "frontendDeveloper": "Frontend Developer",
+  "fullstackDeveloper": "Fullstack Developer",
   "seniorFrontendDeveloper": "Senior $t(frontendDeveloper)",
   "graphicDesigner": "Graphic Designer",
   "moreExpInfo": "For additional work experience prior to 2015, please visit:",
@@ -103,7 +106,7 @@
     "Nov",
     "Dec"
   ],
-  "education": {
+  "formation": {
     "title": "Education",
     "webMasterDesign": {
       "title": "Webmaster Design"
@@ -130,35 +133,42 @@
     }
   },
   "experience": {
-    "personal": {
-      "position": "Personal and Family Time",
-      "intro": ["Two-month trip to Colombia", "Caring for and raising my child"]
-    },
-    "currently": {
-      "position": "Professional Development and Personal Projects",
-      "intro": [
-        "Actively looking for a new professional challenge",
-        "Ongoing development with current courses: Angular, Algorithms, and Data Structures",
-        "App development for personal use",
-        "Volunteer mentor at PowerCoders Bootcamp",
-        "Volunteering for www.mentalhealthinitiative.ch"
-      ],
+    "easylearn": {
+      "position": "Professional Web Developer",
       "projects": {
-        "vokabularyPractice": {
-          "name": "Vocabulary Practice App",
-          "description": "Web application for practicing vocabulary with Spaced Repetition System. Generation of audio phrases from vocabulary with text-to-speech AI from elevenlabs.io API",
-          "responsibilities": []
+        "lms": {
+          "description": "Development and maintenance of the Easylearn learning platform.",
+          "responsibilities": [
+            "Developing and optimizing frontend and backend features for the learning management system",
+            "Building responsive user interfaces with React, Next.js, HTML, and CSS",
+            "Developing and maintaining server-side functionality with PHP and Symfony",
+            "Analyzing and managing relational data with HeidiSQL",
+            "Troubleshooting, reviewing code, and continuously improving platform stability and maintainability"
+          ]
+        }
+      }
+    },
+    "timeoff": {
+      "position": "Career break",
+      "projects": {
+        "familie": {
+          "name": "Personal and family time",
+          "description": "",
+          "responsibilities": [
+            "Two-month trip to Colombia",
+            "Caring for and raising my child"
+          ]
         },
-        "photoAlbum": {
-          "name": "Photo Album Web-App",
-          "description": "Page layout designer Web-App for photo albums",
-          "responsibilities": []
-        },
-        "komunumo": {
-          "name": "Open Source Contributor - Komunumo",
-          "description": "Komunumo is an Open Source Community Manager",
-          "link": "https://github.com/McPringle/komunumo",
-          "responsibilities": []
+        "weiterentwicklung": {
+          "name": "Further development and personal projects",
+          "description": "",
+          "responsibilities": [
+            "Actively searching for a position",
+            "Continuing development through ongoing courses: Angular, algorithms, and data structures",
+            "App development for personal use",
+            "Mentor at the PowerCoders Bootcamp",
+            "Volunteer work for www.mentalhealthinitiative.ch"
+          ]
         }
       }
     },

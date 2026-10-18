@@ -1,6 +1,6 @@
 {
   "profile": {
-    "title": "profileInfo.title.frontend",
+    "title": "profileInfo.title.fullstack",
     "name": "Daniel Cortés",
     "completeTitle": "Daniel Cortés - $t(profileInfo.title.frontend)",
     "usp": "profileInfo.usp.frontend"
@@ -117,6 +117,14 @@
         "icon": "/images/nodejs-logo.png"
       },
       {
+        "name": "PHP",
+        "level": 3,
+        "scale": 6,
+        "profileTypes": ["frontend"],
+        "show": true,
+        "icon": "/images/php-logo.svg"
+      },
+      {
         "name": "SQL",
         "level": 3,
         "scale": 6,
@@ -201,51 +209,43 @@
     "showExperience": false,
     "showExpOnPrint": false
   },
-  "currently": [
+  "currently": [],
+  "experience": [
     {
-      "name": "",
-      "link": "",
-      "position": "experience.currently.position",
-      "from": "2025-02-01",
-      "to": "",
-      "experienceKey": "currently",
-      "isIntroArray": true,
-      "intro": "experience.currently.intro",
+      "name": "Easylearn Schweiz AG",
+      "position": "experience.easylearn.position",
+      "from": "2026-03-01",
+      "to": "today",
+      "experienceKey": "easylearn",
+      "profile": "frontend",
       "projects": [
         {
-          "name": "experience.currently.projects.vokabularyPractice.name",
-          "description": "experience.currently.projects.vokabularyPractice.description",
-          "responsibilities": "experience.currently.projects.vokabularyPractice.responsibilities",
-          "techStack": "Angular 19, NgRx, TypeScript, NodeJS, Supabase"
-        },
-        {
-          "name": "experience.currently.projects.photoAlbum.name",
-          "description": "experience.currently.projects.photoAlbum.description",
-          "responsibilities": "experience.currently.projects.photoAlbum.responsibilities",
-          "techStack": "Angular 19, TypeScript, SASS, HTML Jasmine, Karma"
-        },
-        {
-          "name": "experience.currently.projects.komunumo.name",
-          "description": "experience.currently.projects.komunumo.description",
-          "link": "experience.currently.projects.komunumo.link",
-          "responsibilities": "experience.currently.projects.komunumo.responsibilities",
-          "techStack": "Java, Vaadin, Spring Boot, MariaDB"
+          "name": "Easylearn LMS",
+          "description": "experience.easylearn.projects.lms.description",
+          "responsibilities": "experience.easylearn.projects.lms.responsibilities",
+          "techStack": "PHP, Symfony, React, Next.js, HTML, CSS, HeidiSQL"
         }
       ]
     },
     {
-      "name": "",
-      "link": "",
-      "position": "experience.personal.position",
+      "position": "experience.timeoff.position",
       "from": "2024-06-01",
-      "to": "2025-01-31",
-      "experienceKey": "personal",
-      "isIntroArray": true,
-      "intro": "experience.personal.intro",
-      "projects": []
-    }
-  ],
-  "experience": [
+      "to": "2026-03-01",
+      "experienceKey": "timeoff",
+      "profile": "frontend",
+      "projects": [
+        {
+          "name": "experience.timeoff.projects.weiterentwicklung.name",
+          "description": "experience.timeoff.projects.weiterentwicklung.description",
+          "responsibilities": "experience.timeoff.projects.weiterentwicklung.responsibilities"
+        },
+        {
+          "name": "experience.timeoff.projects.familie.name",
+          "description": "experience.timeoff.projects.familie.description",
+          "responsibilities": "experience.timeoff.projects.familie.responsibilities"
+        }
+      ]
+    },
     {
       "name": "Smart Communications",
       "nameNote": "Assentis Technologies AG",
@@ -554,15 +554,15 @@
   ],
   "education": [
     {
-      "title": "education.webMasterDesign.title",
+      "title": "formation.webMasterDesign.title",
       "from": "2001-03-01",
       "to": "2001-09-01",
       "place": "Centro de Diseño Digital",
       "location": "Caracas"
     },
     {
-      "title": "education.graphicDesign.title",
-      "note": "education.graphicDesign.note",
+      "title": "formation.graphicDesign.title",
+      "note": "formation.graphicDesign.note",
       "from": "1998-07-01",
       "to": "2000-07-01",
       "place": "Instituto de Diseño de Caracas",

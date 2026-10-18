@@ -6,6 +6,7 @@ import data from '../data.json';
 import ExperiencePrint from '../components/ExperiencePrint.astro';
 import ExperienceHeadPrint from '../components/ExperienceHeadPrint.astro';
 import { formatDate } from '../utils/dateFormat';
+import type { Experience } from '../types/experience';
 
 export interface Props {
   lang: string;
@@ -16,6 +17,7 @@ await i18n.changeLanguage(lang);
 const { t } = i18n;
 
 const title = `${t(data.profile.completeTitle)} - Print Version`;
+const currently: Experience[] = data.currently;
 ---
 
 <html lang={lang} data-theme="light">
@@ -95,7 +97,7 @@ const title = `${t(data.profile.completeTitle)} - Print Version`;
               <div>
                 <h1 class="mb-4 text-4xl">
                   {data.profile.name}
-                  <span class="font-light text-gray-300">|</span>
+                  <span class="font-light text-gray-300 px-2">|</span>
                   <span class="font-light text-primary"
                     >{t(data.profile.title)}</span
                   >
@@ -145,7 +147,7 @@ const title = `${t(data.profile.completeTitle)} - Print Version`;
               </section>
 
               <section class="section">
-                <h3 class="title">{t('education.title')}</h3>
+                <h3 class="title">{t('formation.title')}</h3>
                 <div class="flex flex-col gap-3">
                   {
                     data.education.map((edu) => (
@@ -210,56 +212,63 @@ const title = `${t(data.profile.completeTitle)} - Print Version`;
               </div>
 
               <!-- Aktuell -->
-              <section>
-                <h2 class="title">{t('currently')}</h2>
-                <div class="flex flex-col gap-6">
-                  {
-                    data.currently.map((item) => (
-                      <div class="flex flex-col gap-3">
-                        <div>
-                          <div class="flex justify-between items-center">
-                            <strong>{t(item.position)}</strong>
-                            <span class="text-sm">
-                              {formatDate(item.from)}
-                              {' – '}
-                              {item.to ? formatDate(item.to) : t('currently')}
-                            </span>
+              {
+                currently.length > 0 && (
+                  <section>
+                    <h2 class="title">{t('currently')}</h2>
+                    <div class="flex flex-col gap-6">
+                      {currently.map((item) => (
+                        <div class="flex flex-col gap-3">
+                          <div>
+                            <div class="flex justify-between items-center">
+                              <div>
+                                <strong>{t(item.position)}</strong>
+                                {item.name && <div>{t(item.name)}</div>}
+                              </div>
+                              <span class="text-sm">
+                                {formatDate(item.from)}
+                                {' – '}
+                                {item.to && item.to.toLowerCase() !== 'today'
+                                  ? formatDate(item.to)
+                                  : t('currently')}
+                              </span>
+                            </div>
+                            {item.intro && (
+                              <div>
+                                {(() => {
+                                  const intro = t(item.intro, {
+                                    returnObjects: true
+                                  });
+                                  const items = Array.isArray(intro)
+                                    ? intro
+                                    : [intro];
+                                  return items.map((p: string) => <p>{p}</p>);
+                                })()}
+                              </div>
+                            )}
                           </div>
-                          {item.intro && (
-                            <div>
-                              {(() => {
-                                const intro = t(item.intro, {
-                                  returnObjects: true
-                                });
-                                const items = Array.isArray(intro)
-                                  ? intro
-                                  : [intro];
-                                return items.map((p: string) => <p>{p}</p>);
-                              })()}
+
+                          {item.projects && item.projects.length > 0 && (
+                            <div class="flex flex-col gap-3">
+                              {item.projects.map((project) => (
+                                <div>
+                                  <div class="font-semibold">
+                                    {t(project.name)}
+                                  </div>
+                                  <div class="text-primary italic">
+                                    {project.techStack}
+                                  </div>
+                                  <div>{t(project.description)}</div>
+                                </div>
+                              ))}
                             </div>
                           )}
                         </div>
-
-                        {item.projects && item.projects.length > 0 && (
-                          <div class="flex flex-col gap-3">
-                            {item.projects.map((project) => (
-                              <div>
-                                <div class="font-semibold">
-                                  {t(project.name)}
-                                </div>
-                                <div class="text-primary italic">
-                                  {project.techStack}
-                                </div>
-                                <div>{t(project.description)}</div>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))
-                  }
-                </div>
-              </section>
+                      ))}
+                    </div>
+                  </section>
+                )
+              }
 
               <!-- Berufliche Stationen -->
               <section class="experience-summary">
@@ -267,7 +276,7 @@ const title = `${t(data.profile.completeTitle)} - Print Version`;
                 <div class="flex flex-col gap-5">
                   {
                     data.experience
-                      .slice(0, 6)
+                      .slice(0, 8)
                       .map((exp) => <ExperienceHeadPrint exp={exp} t={t} />)
                   }
                 </div>
@@ -330,15 +339,6 @@ const title = `${t(data.profile.completeTitle)} - Print Version`;
               <section>
                 <h3 class="title">{t('references')}</h3>
                 <div>{t('referencesAvailable')}</div>
-              </section>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <section>
-                <h3 class="title">{t('startDate')}</h3>
-                <div>{t('immediatelyOrByAgreement')}</div>
               </section>
             </div>
 

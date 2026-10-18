@@ -8,14 +8,15 @@
   "resumeSection": "Lebenslauf und Berufserfahrung",
   "contactInformation": "Kontaktinformationen",
   "profileInfo": {
-    "intro": "$t(frontendDeveloper) mit Leidenschaft für die Entwicklung intuitiver und skalierbarer Webanwendungen und wohne in $t(lucerne).",
+    "intro": "$t(fullstackDeveloper) mit Leidenschaft für die Entwicklung intuitiver und skalierbarer Webanwendungen und wohne in $t(lucerne).",
     "title": {
-      "frontend": "$t(frontendDeveloper)"
+      "frontend": "$t(frontendDeveloper)",
+      "fullstack": "$t(fullstackDeveloper)"
     },
     "usp": {
       "frontend": [
         "10 Jahre Erfahrung in der Entwicklung responsiver, optimierter und skalierbarer Webanwendungen in agilen Teams mit TypeScript- und JavaScript-Technologien sowie HTML und CSS. Stark daran orientiert, intuitive User Experiences mit sauberem Code zu erstellen.",
-        "Optimierung von Entwicklungsprozessen durch agentische KI-Tools wie Claude Code für Code-Automatisierung und Debugging."
+        "Optimierung von Entwicklungsprozessen durch agentische KI-Tools für Code-Automatisierung und Debugging."
       ]
     }
   },
@@ -68,6 +69,7 @@
   "projects": "Projekte",
   "responsibilities": "Verantwortlichkeiten",
   "frontendDeveloper": "Frontend-Entwickler",
+  "fullstackDeveloper": "Fullstack-Entwickler",
   "seniorFrontendDeveloper": "Senior $t(frontendDeveloper)",
   "graphicDesigner": "Grafik Designer",
   "moreExpInfo": "Für zusätzliche Berufserfahrung vor 2015 besuchen Sie bitte:",
@@ -102,7 +104,7 @@
     "Nov.",
     "Dez."
   ],
-  "education": {
+  "formation": {
     "title": "Ausbildung",
     "webMasterDesign": {
       "title": "Spezialisierung Webdesigner"
@@ -129,38 +131,42 @@
     }
   },
   "experience": {
-    "personal": {
-      "position": "Persönliche und Familienzeit",
-      "intro": [
-        "Zwei Monate Reise in Kolumbien",
-        "Betreuung und Erziehung meines Kindes"
-      ]
-    },
-    "currently": {
-      "position": "Weiterentwicklung und Persönliche Projekte",
-      "intro": [
-        "Aktive Stellensuche",
-        "Weiterentwicklung mit laufenden Kursen: Angular, Algorithmen und Datenstrukturen",
-        "App-Entwicklung für den persönlichen Gebrauch",
-        "Ehrenamtlicher Mentor bei PowerCoders Bootcamp",
-        "Volontariat für www.mentalhealthinitiative.ch"
-      ],
+    "easylearn": {
+      "position": "Professional Web Entwickler",
       "projects": {
-        "vokabularyPractice": {
-          "name": "Vokabeltrainer-App",
-          "description": "Webanwendung zum Üben von Vokabeln mit Spaced Repetition System. Generierung von Audiophrasen aus Vokabeln mit Text-to-Speech-KI von elevenlabs.io API",
-          "responsibilities": []
+        "lms": {
+          "description": "Weiterentwicklung und Wartung der Easylearn-Lernplattform.",
+          "responsibilities": [
+            "Entwicklung und Optimierung von Funktionen für das Learning-Management-System im Frontend und Backend",
+            "Umsetzung responsiver Benutzeroberflächen mit React, Next.js, HTML und CSS",
+            "Entwicklung und Pflege serverseitiger Funktionalitäten mit PHP und Symfony",
+            "Analyse und Verwaltung relationaler Daten mit HeidiSQL",
+            "Fehleranalyse, Code-Reviews und kontinuierliche Verbesserung der Stabilität und Wartbarkeit der Plattform"
+          ]
+        }
+      }
+    },
+    "timeoff": {
+      "position": "Berufliche Auszeit",
+      "projects": {
+        "familie": {
+          "name": "Persönliche und Familienzeit - Jun. 2024 - Jan. 2025",
+          "description": "",
+          "responsibilities": [
+            "Zwei Monate Reise in Kolumbien",
+            "Betreuung und Erziehung meines Kindes"
+          ]
         },
-        "photoAlbum": {
-          "name": "Photo Album Web-App",
-          "description": "Seiten Layout Gestalter Web-App für Fotoalben",
-          "responsibilities": []
-        },
-        "komunumo": {
-          "name": "Open Source Contributor - Komunumo",
-          "description": "Komunumo ist ein Open Source Community Manager",
-          "link": "https://github.com/McPringle/komunumo",
-          "responsibilities": []
+        "weiterentwicklung": {
+          "name": "Weiterentwicklung und Persönliche Projekte - Feb. 2025 - Feb. 2026",
+          "description": "",
+          "responsibilities": [
+            "Aktive Stellensuche",
+            "Weiterentwicklung mit laufenden Kursen: Angular, Algorithmen und Datenstrukturen",
+            "App-Entwicklung für den persönlichen Gebrauch",
+            "Mentor bei PowerCoders Bootcamp",
+            "Volontariat für www.mentalhealthinitiative.ch"
+          ]
         }
       }
     },

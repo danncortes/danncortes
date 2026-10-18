@@ -105,9 +105,14 @@ import Contact from '../components/Contact.astro';
       </div>
     </div>
 
-    <Section title={t('currently')} sectionName="currently">
-      <Experiences experiences={data.currently} />
-    </Section>
+    {
+      data.currently.length > 0 && (
+        <Section title={t('currently')} sectionName="currently">
+          <Experiences experiences={data.currently} />
+        </Section>
+      )
+    }
+
     <Section
       title={t('professionalExperience')}
       sectionName="professional-experience"

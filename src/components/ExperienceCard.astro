@@ -12,7 +12,10 @@ interface Props {
 const { experience, class: className } = Astro.props;
 
 const fromDate = formatDate(experience.from);
-const toDate = experience.to ? formatDate(experience.to) : t('currently');
+const toDate =
+  !experience.to || experience.to.toLowerCase() === 'today'
+    ? t('currently')
+    : formatDate(experience.to);
 const dateRange = `${fromDate} - ${toDate}`;
 ---
 
